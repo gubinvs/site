@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+.egrul-table-section {
+    padding: 40px 0px 20px 0px;
+    background-color: #F8F8F8;
+    margin-bottom: 100px;
+}
+
+.egrul-table-section__title {
+    margin-bottom: 20px;
+}
+
+.egrul-table-section__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.egrul-table-section__file {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.egrul-table-section__td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.icon-file {
+    width: 50px;
+}

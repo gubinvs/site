@@ -1,0 +1,564 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'normalize.scss';
+@import 'variables.scss';
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  font-family: $font-family;
+}
+
+header {
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.h1-min {
+  font-size: 0.1px;
+  line-height: 0.1px;
+}
+
+a {
+  color: $palitra_2;
+}
+
+a:hover {
+  color: $palitra_1;
+}
+
+.container {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+#button-link:hover {
+  color: $palitra_2;
+  font-weight: 600;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+} 
+
+.h1__visually {
+  font-size: 0.1px;
+  margin-bottom: 0px !important;
+}
+
+
+// ------------- Стили для страницы товара ---------------------
+#vendor-code {
+  display: inline;
+}
+
+.main-section {
+  margin-bottom: 80px;
+}
+
+.main-section__img-block {
+  width: 522px;
+  height: 500px;
+  padding-top: 10px;
+  margin-right: 40px;
+  border: 1px solid $palitra_4;
+}
+
+.main-section__img {
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-block {
+  width: 100%;
+}
+
+.article-block {
+  margin-bottom: 20px;
+}
+
+.article-title {
+  margin-right: 20px;
+}
+
+.hr {
+  border-top: 0.1px solid $palitra_4;
+  margin-bottom: 20px;
+}
+
+.main-section-price-block { 
+  display: flex;
+  justify-content: flex-end;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.main-section-price__price {
+  color: $palitra_2;
+  margin-right: 10px;
+  font-family: $font-title;
+}
+
+.main-section-price__icon {
+  padding-top: 3px;
+}
+
+
+// -------------------------
+.characteristics-block {
+  width: 521px;
+  margin-bottom: 80px;
+}
+
+.characteristics-block__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.characteristics-block__item {
+  justify-content: space-between;
+}
+
+.characteristics-block__item:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.characteristics-block__button-block {
+  justify-content: space-between;
+}
+
+
+// ------------------------------
+.button-section {
+  margin-bottom: 80px;
+}
+
+.button-characteristics__all {
+    width: 413px;
+    height: 34px;
+    padding-top: 4px;
+    text-align: center;
+    background-color: $palitra_4;
+    color: $palitra_2;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.button-characteristics__offer {  
+    width: 305px;
+    height: 34px;
+    padding-top: 4px;
+    text-align: center;
+    background-color: $palitra_1;
+    color: $palitra_2;
+    cursor: pointer;
+}
+
+// ---------------------------------
+.attention-section {
+  margin-bottom: 80px;
+} 
+
+.attention-container {
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  border-radius: 20px;
+  border: 1px solid $palitra_4;
+}
+
+.attention-section__title-block {
+  align-items: center;
+}
+
+.attention-section-title-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $palitra_1;
+  margin-right: 20px;
+}
+
+.attention-section-title__title {
+  font-size: 60px;
+  font-family: $font-title;
+  font-size: 60px;  
+  font-weight: 800;
+}
+
+.attention-section__discription {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+// ------------------------------
+.discription-section {
+  margin-bottom: 80px;
+}
+
+.discription-section__left-block {
+  width: 738px;
+  margin-right: 100px;
+}
+
+.button-section__button {
+  width: 413px;
+  height: 40px;
+  text-align: center;
+  padding-top: 8px;
+  font-weight: 600;
+  background-color: $palitra_4;
+  color: $palitra_2;
+  cursor: pointer;
+}
+
+.button-section__button:hover {
+    background-color: $palitra_1;
+}
+
+.button-section__button:not(:last-of-type) {
+  margin-right: 20px;
+} 
+
+.discription-section__discr {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.discription-section-right-block__title {
+  padding-top: 80px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.discription-section-right-block__download-file {
+  margin-bottom: 40px;
+}
+
+.download-file__download-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/download_1D252C.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.download-file__download-icon:hover {
+  background-image: url(../img/download_F3DE09.svg);
+}
+
+.download-file__list-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/list_icon_wite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 20px;
+}
+
+.download-file__list-link {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.discription-section-right-block__button {
+  width: 305px;
+  height: 34px;
+  text-align: center;
+  padding-top: 4px;
+  background-color: $palitra_4;
+  color: $palitra_2;
+  cursor: pointer;
+} 
+
+.discription-section-right-block__button:hover {
+  background-color: $palitra_2;
+  color: #ffffff;
+}
+
+// ----------------------- advantages-section ----------------
+.advantages-section {
+  margin-bottom: 80px;
+}
+
+.advantages-section__title {
+  text-transform: uppercase;
+  font-family: $font-title;
+  font-weight: 800;
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.advantages-section__container {
+  margin-bottom: 80px;
+}
+
+.advantages-section__left-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  height: 180px; 
+  background-color: $palitra_1;
+}
+
+.advantages-section__left-block_triangle {
+  position: absolute;
+  top: 0px;
+  right: -199px;
+  z-index: 1;
+}
+
+.advantages-section__right-block {
+  position: relative;
+}
+
+.advantages-section__right-block {
+  position: relative;
+  width: 50%;
+  height: 180px;
+  background-color: #ffffff;
+}
+
+.advantages-section__img {
+  position: absolute;
+  top: 60px;
+  left: 340px;
+  width: 240px;
+  height: 500px;
+}
+
+.advantages-section__item {
+  width: 700px;
+  padding-left: 50px;
+  background-image: url(../img/arrow_yellow.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.advantages-section__item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+
+// ------------------------ technical-specifications---------------
+.technical-specifications-section {
+  margin-bottom: 80px;
+}
+
+.technical-specifications-section__table {
+  width: 100%;
+}
+
+.technical-specifications-list {
+  width: 100%;
+}
+
+.technical-specifications-list__item {
+  display: flex;
+  
+}
+
+.equipment-section {
+  margin-bottom: 80px;
+}
+
+.specifications-item__name,
+.equipment-section-item__article,
+.equipment-section-item__name,
+.equipment-section-item__quantity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 847px;
+  height: 50px;
+  padding-left: 18px;
+  font-size: 20px;
+  font-weight: 200;
+  margin-right: 20px;
+}
+
+.specifications-item__tech {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 413px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.grey {
+  background-color: #F3F3F4;
+}
+.title {
+  font-weight: 800;
+}
+
+.technical-specifications-section__title-block {
+  margin-bottom: 40px;
+}
+
+.equipment-section-item__article,
+.equipment-section-item__name,
+.equipment-section-item__quantity {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.equipment-section-item__article {
+  width: 306px;
+}
+  
+.equipment-section-item__name {
+  width: 738px;
+
+}
+
+.equipment-section-item__quantity {
+  width: 197px;
+  justify-content: center;
+}
+
+.button-equipment {
+  width: 200px;
+  height: 40px;
+  padding-top: 6px;
+  text-align: center;
+  background-color: $palitra_1;
+  color: $palitra_2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-equipment:hover {
+  color: #ffffff;
+}
+// --------------------- equipment-section ---------------------
+.equipment-section-item {
+  width: 414px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.equipment-section-item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 640px;
+  }
+}
+
+@import "modules/header.scss";
+@import "modules/main-index-page.scss";
+@import "modules/index_solve-problems_section.scss";
+@import "modules/index-case-section.scss";
+@import "modules/about-main-section.scss";
+@import "modules/feedback-section.scss";
+@import 'modules/egrul-table-section.scss';
+@import 'modules/production-main-section.scss';
+@import 'modules/portfolio-section.scss';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "modules/footer.scss";

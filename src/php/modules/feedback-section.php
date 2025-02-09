@@ -10,7 +10,7 @@
                 подберет оптимальное решение под ваши требования и ответит на все интересующие вопросы!
             </div>
         </div>
-        <form class="feedback-section__form" action="https://encomponent.ru/php/send_feedback.php" method="POST">
+        <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
             <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>

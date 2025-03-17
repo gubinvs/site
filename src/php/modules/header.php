@@ -6,11 +6,7 @@ include "php/class/api_Connector.php";
     <div class="container header__container">
         <a href="https://encomponent.ru/index.php">
             <div class="header-logo-block">
-                <picture>
-                    <source srcset="https://encomponent.ru/img/header_logo_1280.svg" media="(max-width: 1280px)">
-                    <source srcset="https://encomponent.ru/img/header_logo_960.svg" media="(max-width: 960px)">
-                    <img src="https://encomponent.ru/img/header_logo_1920.svg" alt="Логотип компании в желто-черных красках с изображением кнопки и названия на английском языке энерджи копмонентс">
-                </picture>
+                <img src="img/header_logo_1920.svg" alt="Логотип компании в желто-черных красках с изображением кнопки и названия на английском языке энерджи копмонентс">
             </div>
         </a>
         <div class="header-navigation-block">
@@ -18,7 +14,7 @@ include "php/class/api_Connector.php";
                 <div class="search-input-block">
                     <span class="search-input-block__slogan">Энергия для ваших решений</span>
                 </div>
-                <a href="https://www.iek.ru/upload/pictures/katalogi/ru_ru/catalog-all-latest.zip" class="download-icon">Каталог IEK</a>
+                <!-- <a href="https://www.iek.ru/upload/pictures/katalogi/ru_ru/catalog-all-latest.zip" class="download-icon">Каталог IEK</a> -->
                 <div class="header-validation-block">
                     <a href=<?php echo $shopURL . "/Autorization"  ?>>
                         <div class="button-ecpro">ECPRO Вход</div>

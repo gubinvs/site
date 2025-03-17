@@ -22,30 +22,30 @@ $price = $out;
     <title>NKU10-RUSM-51102074-01, Щит управления РУСМ5110-2074 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 1А IEK</title>
 
     <script type="text/javascript">
-            (function(m, e, t, r, i, k, a) {
-                m[i] = m[i] || function() {
-                    (m[i].a = m[i].a || []).push(arguments)
-                };
-                m[i].l = 1 * new Date();
-                for (var j = 0; j < document.scripts.length; j++) {
-                    if (document.scripts[j].src === r) {
-                        return;
-                    }
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
                 }
-                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-            })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-            ym(98501628, "init", {
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true,
-                webvisor: true
-            });
-        </script>
-        <noscript>
-            <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="" /></div>
-        </noscript>
+        ym(98501628, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
     <!-- /Yandex.Metrika counter-->
 </head>
 
@@ -115,7 +115,9 @@ $price = $out;
                         <div class="button-characteristics__all">
                             <a href="#technical" id="button-link">Посмотреть все характеристики</a>
                         </div>
-                        <div class="button-characteristics__offer" id="button-buy">Купить</div>
+                        <a href=<?php echo $shopURL . '/Basket/?vendorCode=NKU10-RUSM-51102074-01' ?>>
+                            <button class="button-characteristics__offer" id="button-buy">Купить</button>
+                        </a>
                     </div>
                 </div>
             </section>

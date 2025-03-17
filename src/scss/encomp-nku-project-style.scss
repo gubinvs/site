@@ -171,12 +171,14 @@ a:hover {
 .button-characteristics__offer {  
     width: 305px;
     height: 34px;
-    padding-top: 4px;
+    padding-top: 0px;
     text-align: center;
+    border: 0px;
     background-color: $palitra_1;
     color: $palitra_2;
     cursor: pointer;
 }
+
 
 // ---------------------------------
 .attention-section {
@@ -480,6 +482,17 @@ a:hover {
 .equipment-section-item:not(:last-of-type) {
   margin-right: 20px;
 }
+
+// Для страницы о добавленном сообщении
+.feedback__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+
 
 
 @media only screen and (max-width: 1280px) {

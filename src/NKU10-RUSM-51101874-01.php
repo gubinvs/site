@@ -112,74 +112,77 @@ $price = $out;
                         <div class="button-characteristics__all">
                             <a href="#technical" id="button-link">Посмотреть все характеристики</a>
                         </div>
-                       <div class="button-characteristics__offer" id="button-buy">Купить</div>
-                    </div>
-                </div>
-            </section>
-            <section class="attention-section">
-                <h2 class="h1-min">Важная информация</h2>
-                <div class="container attention-container">
-                    <div class="attention-section__title-block flex">
-                        <div class="attention-section-title-icon">
-                            <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="15" cy="15" r="14.5" fill="#F3DE09" stroke="#1D252C" />
-                                <line x1="8" y1="14.5" x2="23" y2="14.5" stroke="black" />
-                                <line x1="15.5" y1="23" x2="15.5" y2="7" stroke="black" />
-                                <line x1="25.3536" y1="25.6464" x2="32.4246" y2="32.7175" stroke="black" />
-                            </svg>
-                        </div>
-                        <div class="attention-section-title__title">ОБРАТИТЕ ВНИМАНИЕ</div>
-                    </div>
-                    <hr class="hr">
-                    <div class="attention-section__discription">
-                        Данный щит управления РУСМ5110-1874 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 0,6А IEK, артикул NKU10-RUSM-51101874-01 — это схемное решение IEK GROUP,
-                        которая собирается по чертежам и комплектности разработчика (подробная комплектация указана ниже на странице).
-                        <b>Стоимость устройства</b>, отраженная на данной странице сайта, <b>является актуальной</b> на текущий момент, так как формируется автоматически
-                        при загрузке страницы (путем опроса базы данных и прайс-листов IEK GROOP)
-
-                    </div>
-                </div>
-            </section>
-            <section class="button-section flex">
-                <h2 class="h1-min">Доступна для заказа ВРУ1-21-10 </h2>
-                <div class="button-section__button"><a href="#attention" id="button-link">Описание и особенности</a></div>
-                <div class="button-section__button"><a href="#technical" id="button-link">Характеристики</a></div>
-                <div class="button-section__button"><a href="#documents" id="button-link">Документация</a></div>
-            </section>
-            <section class="discription-section flex">
-                <h2 class="h1-min">Описание вводно-распределительного шкафа </h2>
-                <div class="discription-section__left-block">
-                    <div class="attention-section__title-block flex">
-                        <div class="attention-section-title-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" fill="#F3DE09" stroke="#1D252C" />
-                                <line x1="9" y1="12" x2="23" y2="12" stroke="black" stroke-width="2" />
-                                <line x1="11" y1="18" x2="21" y2="18" stroke="black" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <div class="attention-section-title__title" id="attention">Описание</div>
-                    </div>
-                    <hr class="hr">
-                    <div class="discription-section__discr">
-                        Щит управления типа РУСМ5000 IEK предназначены для местного, дистанционного и автоматического управления асинхронными электродвигателями с короткозамкнутым ротором мощностью до 75 кВт,
-                        работающими в продолжительном, кратковременном и повторно-кратковременном режимах. Ящики управления РУСМ5000 применяются в помещениях с высокой влажностью и изготавливаются со степенью защиты
-                        IP54. Ящики управления монтируются в металлических шкафах с монтажной панелью. Ящики комплектуются в зависимости от обозначения и типового индекса: автоматическими выключателями,
-                        контакторами, тепловыми реле, светосигнальной арматурой и аппаратурой управления (кнопки, переключатели). Номинальное напряжение главной цепи – 400 В.
-                        Номинальное напряжение цепи управления – 230 В.
-                    </div>
-                </div>
-                <div class="discription-section__right-block">
-                    <div class="discription-section-right-block__title">Основные документы</div>
-                    <div class="discription-section-right-block__download-file flex">
-                        <a href="https://encomponent.ru/files/NKU10-RUSM-51101874-01/627114f8f8c602cdffab2a634d3022cf94d39bfe69cfe4d73ff38e4a1e21bf04.zip">
-                            <p class="download-file__download-icon"></p>
+                        <a href=<?php echo $shopURL . '/Basket/?vendorCode=NKU10-RUSM-51101874-01' ?>>
+                            <button class="button-characteristics__offer" id="button-buy">Купить</button>
                         </a>
-                        <div class="download-file__list-icon"></div>
-                        <a href="https://encomponent.ru/files/NKU10-RUSM-51101874-01/627114f8f8c602cdffab2a634d3022cf94d39bfe69cfe4d73ff38e4a1e21bf04.png" class="download-file__list-link">Смотреть Подключения (PNG, 23,57КБ)</a>
                     </div>
-                    <div class="discription-section-right-block__button"><a href="#documents">Посмотреть все документы</a></div>
                 </div>
-            </section>
+        </div>
+        </section>
+        <section class="attention-section">
+            <h2 class="h1-min">Важная информация</h2>
+            <div class="container attention-container">
+                <div class="attention-section__title-block flex">
+                    <div class="attention-section-title-icon">
+                        <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="14.5" fill="#F3DE09" stroke="#1D252C" />
+                            <line x1="8" y1="14.5" x2="23" y2="14.5" stroke="black" />
+                            <line x1="15.5" y1="23" x2="15.5" y2="7" stroke="black" />
+                            <line x1="25.3536" y1="25.6464" x2="32.4246" y2="32.7175" stroke="black" />
+                        </svg>
+                    </div>
+                    <div class="attention-section-title__title">ОБРАТИТЕ ВНИМАНИЕ</div>
+                </div>
+                <hr class="hr">
+                <div class="attention-section__discription">
+                    Данный щит управления РУСМ5110-1874 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 0,6А IEK, артикул NKU10-RUSM-51101874-01 — это схемное решение IEK GROUP,
+                    которая собирается по чертежам и комплектности разработчика (подробная комплектация указана ниже на странице).
+                    <b>Стоимость устройства</b>, отраженная на данной странице сайта, <b>является актуальной</b> на текущий момент, так как формируется автоматически
+                    при загрузке страницы (путем опроса базы данных и прайс-листов IEK GROOP)
+
+                </div>
+            </div>
+        </section>
+        <section class="button-section flex">
+            <h2 class="h1-min">Доступна для заказа ВРУ1-21-10 </h2>
+            <div class="button-section__button"><a href="#attention" id="button-link">Описание и особенности</a></div>
+            <div class="button-section__button"><a href="#technical" id="button-link">Характеристики</a></div>
+            <div class="button-section__button"><a href="#documents" id="button-link">Документация</a></div>
+        </section>
+        <section class="discription-section flex">
+            <h2 class="h1-min">Описание вводно-распределительного шкафа </h2>
+            <div class="discription-section__left-block">
+                <div class="attention-section__title-block flex">
+                    <div class="attention-section-title-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" fill="#F3DE09" stroke="#1D252C" />
+                            <line x1="9" y1="12" x2="23" y2="12" stroke="black" stroke-width="2" />
+                            <line x1="11" y1="18" x2="21" y2="18" stroke="black" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="attention-section-title__title" id="attention">Описание</div>
+                </div>
+                <hr class="hr">
+                <div class="discription-section__discr">
+                    Щит управления типа РУСМ5000 IEK предназначены для местного, дистанционного и автоматического управления асинхронными электродвигателями с короткозамкнутым ротором мощностью до 75 кВт,
+                    работающими в продолжительном, кратковременном и повторно-кратковременном режимах. Ящики управления РУСМ5000 применяются в помещениях с высокой влажностью и изготавливаются со степенью защиты
+                    IP54. Ящики управления монтируются в металлических шкафах с монтажной панелью. Ящики комплектуются в зависимости от обозначения и типового индекса: автоматическими выключателями,
+                    контакторами, тепловыми реле, светосигнальной арматурой и аппаратурой управления (кнопки, переключатели). Номинальное напряжение главной цепи – 400 В.
+                    Номинальное напряжение цепи управления – 230 В.
+                </div>
+            </div>
+            <div class="discription-section__right-block">
+                <div class="discription-section-right-block__title">Основные документы</div>
+                <div class="discription-section-right-block__download-file flex">
+                    <a href="https://encomponent.ru/files/NKU10-RUSM-51101874-01/627114f8f8c602cdffab2a634d3022cf94d39bfe69cfe4d73ff38e4a1e21bf04.zip">
+                        <p class="download-file__download-icon"></p>
+                    </a>
+                    <div class="download-file__list-icon"></div>
+                    <a href="https://encomponent.ru/files/NKU10-RUSM-51101874-01/627114f8f8c602cdffab2a634d3022cf94d39bfe69cfe4d73ff38e4a1e21bf04.png" class="download-file__list-link">Смотреть Подключения (PNG, 23,57КБ)</a>
+                </div>
+                <div class="discription-section-right-block__button"><a href="#documents">Посмотреть все документы</a></div>
+            </div>
+        </section>
         </div>
         <section class="advantages-section flex">
             <div class="advantages-section__left-block">

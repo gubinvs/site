@@ -42,10 +42,13 @@ if ($_POST['robot'] == null) {
     // Отправляем данные боту
     $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
     header('Content-Type: text/html; charset=utf-8');
+    echo '<link rel="stylesheet" href="../css/encomp-nku-project-style.css">';
 
     // Проверка на успешную отправку
     if ($sendToTelegram) {
-        echo "Спасибо! Ваше сообщение принято. Мы свяжемся с Вами в ближайшее время.";
+        echo '<div class="container feedback__container">';
+        echo "<h2>Спасибо! Ваше сообщение принято.<br> Мы свяжемся с Вами в ближайшее время.</h2>";
+        echo '</div>';
     } else {
         echo "Что-то пошло не так. Сообщение в Telegram не отправлено!";
     }
@@ -72,7 +75,7 @@ if ($_POST['robot'] == null) {
         )";
 
     if ($conn->query($ins)) {
-        echo "Данные успешно добавлены в базу данных";
+        //echo "Данные успешно добавлены в базу данных";
     } else {
         die ("Ошибка: " . $conn->error);
     }

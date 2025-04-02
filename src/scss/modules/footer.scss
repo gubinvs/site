@@ -1,9 +1,7 @@
-@import "../variables.scss";
-
 .footer {
     height: 400px;
     padding-top: 40px;
-    background-color: $palitra_2;
+    background-color: #1D252C;
 }
 
 .footer__container {
@@ -55,7 +53,6 @@
     color: #ffffff;
 }
 
-
 .footer-logo-block__logo {
     margin-bottom: 140px;
 }
@@ -66,11 +63,8 @@
     padding-bottom: 40px;
 }
 
-
-
-
-
 @media only screen and (max-width: 1280px) {
+
     .footer-logo-block,
     .footer-contact {
         width: 235px;
@@ -82,6 +76,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
     .footer-logo-block,
     .footer-contact {
         width: 233px;
@@ -90,10 +85,10 @@
     .footer-nav {
         width: 475px;
     }
-  
 }
 
 @media only screen and (max-width: 960px) {
+
     .footer-logo-block,
     .footer-contact {
         width: 193px;
@@ -104,7 +99,7 @@
     }
 
     .footer-nav {
-        width:395px;
+        width: 395px;
         margin-right: 10px;
     }
 
@@ -122,5 +117,18 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .footer-logo-block {
+        width: 100px;
+    }
 
+    .footer-nav {
+        width: 320px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .footer-logo-block {
+        display: none;
+    }
 }

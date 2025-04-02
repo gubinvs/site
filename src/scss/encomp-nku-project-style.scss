@@ -78,6 +78,9 @@ a:hover {
 }
 
 .main-section__img-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 522px;
   height: 500px;
   padding-top: 10px;
@@ -152,6 +155,7 @@ a:hover {
 }
 
 
+
 // ------------------------------
 .button-section {
   margin-bottom: 80px;
@@ -160,12 +164,13 @@ a:hover {
 .button-characteristics__all {
     width: 413px;
     height: 34px;
-    padding-top: 4px;
     text-align: center;
     background-color: $palitra_4;
     color: $palitra_2;
+    border: 0px;
     cursor: pointer;
     margin-right: 20px;
+    
 }
 
 .button-characteristics__offer {  

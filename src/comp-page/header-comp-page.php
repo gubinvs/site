@@ -18,6 +18,25 @@
                 <div class="search-input-block search-input-block_guest">
                     <button class="button-catalog button-catalog_guest">Каталог</button>
                     <input class="search-input search-input_guest" placeholder="Поиск по артикулу">
+                    <script>
+                        //При нажатии кнопки или ввод в поле input, перенаправит на сайт магазина
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const searchInput = document.querySelector(".search-input.search-input_guest");
+                            const catalogButton = document.querySelector(".button-catalog.button-catalog_guest");
+
+                            if (searchInput) {
+                                searchInput.addEventListener("focus", function() {
+                                    window.location.href = "https://shop.encomponent.ru";
+                                });
+                            }
+
+                            if (catalogButton) {
+                                catalogButton.addEventListener("click", function() {
+                                    window.location.href = "https://shop.encomponent.ru";
+                                });
+                            }
+                        });
+                    </script>
                 </div>
             </div>
             <div class="header-navigation-block__botttom">
@@ -26,7 +45,7 @@
                         <a href="https://www.iek.ru/products/catalog/tipovye_resheniya_nku">Типовые решения</a>
                     </li>
                     <li class="header-navigation__item header-navigation__item_guest">
-                        <a>Доставка и оплата</a>
+                        <a href="https://shop.encomponent.ru/DeliveryAndPayment">Доставка и оплата</a>
                     </li>
                     <li class="header-navigation__item header-navigation__item_guest">
                         <a href="https://encomponent.ru/about.php">Контакты</a>

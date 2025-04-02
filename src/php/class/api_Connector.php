@@ -3,5 +3,9 @@
     $apiServer = "https://api.encomponent.ru";
 
     // Переменная с адресом интернет магазина
-    $shopURL = "https://shop.encomponent.ru"; 
+    $shopURL = "https://shop.encomponent.ru";
+
+    //$shopURL = "http://localhost:3000";
+
+
 ?>

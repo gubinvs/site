@@ -481,6 +481,7 @@ a:hover {
 
 .technical-specifications-list__item {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .equipment-section {

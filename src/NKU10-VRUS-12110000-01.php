@@ -18,33 +18,6 @@ $price = $out;
     <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
     <meta name="description" content="Панель вводно-распределительная ВРУ1-21-10 УХЛ4 рубильник 1х250А выключатели автоматические 1Р 2х6А плавкие вставки 6х63А 9х100А 3х250А и учет IEK">
     <title>NKU10-VRUS-12110000-01, Панель вводно-распределительная ВРУ1-21-10</title>
-    <!-- Yandex.Metrika counter -->
-    <!-- <script type="text/javascript">
-            (function(m, e, t, r, i, k, a) {
-                m[i] = m[i] || function() {
-                    (m[i].a = m[i].a || []).push(arguments)
-                };
-                m[i].l = 1 * new Date();
-                for (var j = 0; j < document.scripts.length; j++) {
-                    if (document.scripts[j].src === r) {
-                        return;
-                    }
-                }
-                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-            })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-            ym(98501628, "init", {
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true,
-                webvisor: true
-            });
-        </script>
-        <noscript>
-            <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="" /></div>
-        </noscript> -->
-    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -216,7 +189,7 @@ $price = $out;
                             <line x1="9" y1="14.5" x2="15" y2="14.5" stroke="black" />
                         </svg>
                     </div>
-                    <div class="attention-section-title__title">Технические характеристики</div>
+                <div class="attention-section-title__title">Технические характеристики</div>
                 </div>
                 <div class="technical-specifications-section__table">
                     <ul class="technical-specifications-list">

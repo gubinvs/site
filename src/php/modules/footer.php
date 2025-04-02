@@ -4,18 +4,16 @@
             <div class="header-logo-block footer-logo-block">
                 <div class="footer-logo-block__logo flex">
                     <div class="logo-icon">
-                        <img src="img/footer_logo_1920.svg" alt="Логотип компании в желто-черных красках с изображением кнопки и названия на английском языке энерджи копмонентс">
+                        <img class="foter-logo-icon" src="../../img/footer_logo_1920.svg" alt="Логотип компании в желто-черных красках с изображением кнопки и названия на английском языке энерджи копмонентс" />
                     </div>
                     <div class="logo-title"></div>
                 </div>
             </div>
             <div class="footer-nav">
                 <ul class="footer-nav__list">
-                    <div class="footer-nav__item"><a href="https://www.iek.ru/support/faq/" class="footer-nav__link">Часто задаваемые вопросы</a></div>
-                    <div class="footer-nav__item"><a href="https://www.iek.ru/support/equipment/" class="footer-nav__link">Помощь в поиске информации по продукции</a></div>
-                    <div class="footer-nav__item"><a href="https://encomponent.ru/production.php" class="footer-nav__link">Услуги по сборке щитов автоматики</a></div>
+                    <div class="footer-nav__item"><a href="https://encomponent.ru/production.php" class="footer-nav__link">Производство щитов автоматики</a></div>
                     <!-- <div class="footer-nav__item"><a href="https://encomponent.ru/snab.html" class="footer-nav__link">Аутсорсинг рутины снабжения</a></div> -->
-                    <div class="footer-nav__item"><a href="closed.php" class="footer-nav__link">Интернет магазин комплектующих</a></div>
+                    <div class="footer-nav__item"><a href="https://shop.encomponent.ru/" class="footer-nav__link">Интернет-магазин комплектующих</a></div>
                     <div class="footer-nav__item"><a href="https://encomponent.ru/about.php" class="footer-nav__link">Центр раскрытия корпоративной информации</a></div>
                     <div class="footer-nav__item"><a href="https://encomponent.ru/pp-page.html" class="footer-nav__link">Политика обработки персональных данных</a></div>
                 </ul>
@@ -29,7 +27,7 @@
                             <circle cx="8" cy="8" r="2.5" fill="#1D252C" stroke="#1D252C" />
                         </svg>
                     </div>
-                    <div class="footer-contact-item__text">Пермь:<br> 614046, ул. Татьяны Барамзиной, 54</div>
+                    <div class="footer-contact-item__text">Пермь:<br /> 614046, ул. Татьяны Барамзиной, 54</div>
                 </div>
                 <div class="footer-contact__item">
                     <div class="footer-contact-item__icon">
@@ -39,7 +37,7 @@
                             <circle cx="8" cy="8" r="2.5" fill="#1D252C" stroke="#1D252C" />
                         </svg>
                     </div>
-                    <div class="footer-contact-item__text">Санкт-Перетбург:<br> 197349, ул. Вербная, 27 БЦ Лайнер</div>
+                    <div class="footer-contact-item__text">Санкт-Перетбург:<br /> 194292, 3-й Верхний переулок, 17Д</div>
                 </div>
                 <div class="footer-contact__item">
                     <div class="footer-contact-item__icon">
@@ -98,7 +96,7 @@
             </div>
         </div>
         <div class="footer__copyright">
-            <div class="copyright">&copy; 2025 | Группа компаний<br> &nbsp; &nbsp;"Компоненты энергии"</div>
+            <div class="copyright">&copy; 2025 | Группа компаний<br /> &nbsp; &nbsp;"Компоненты энергии"</div>
         </div>
     </div>
 </footer>

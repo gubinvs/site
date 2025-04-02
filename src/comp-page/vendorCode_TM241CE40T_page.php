@@ -39,6 +39,33 @@ foreach ($data as $item) {
     <meta name="description" content="Страница с описанием товара : TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET">
     <title>TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET</title>
 </head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m, e, t, r, i, k, a) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) {
+                return;
+            }
+        }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(98501628, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+    });
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
 
 <body>
     <?php
@@ -46,7 +73,7 @@ foreach ($data as $item) {
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
     <main>
-        <section class="discription-product-section">
+        <div class="discription-product-section">
             <div class="container">
                 <h1 class="discription-product-section__title">TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET</h1>
                 <section class="main-section flex">
@@ -116,7 +143,209 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
-        </section>
+                <section class="attention-section">
+                    <h2 class="h1-min">Важная информация</h2>
+                    <div class="container attention-container">
+                        <div class="attention-section__title-block flex">
+                            <div class="attention-section-title-icon">
+                                <svg width="24" height="24" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="15" cy="15" r="14.5" fill="#F3DE09" stroke="#1D252C" />
+                                    <line x1="8" y1="14.5" x2="23" y2="14.5" stroke="black" />
+                                    <line x1="15.5" y1="23" x2="15.5" y2="7" stroke="black" />
+                                    <line x1="25.3536" y1="25.6464" x2="32.4246" y2="32.7175" stroke="black" />
+                                </svg>
+                            </div>
+                            <div class="attention-section-title__title">ОБРАТИТЕ ВНИМАНИЕ</div>
+                        </div>
+                        <hr class="hr">
+                        <div class="attention-section__discription">
+                            <b>Компактный базовый контроллер M241-40</b> – это надежное решение для повышения производительности и увеличения прибыльности. Интуитивно понятное программирование в среде SoMachine, готовые функциональные блоки и масштабируемое управление позволяют оптимизировать работу оборудования, обеспечивая максимальную эффективность. Благодаря поддержке Ethernet подключение возможно в любом месте.
+                            <br><br>
+                            <b>Преимущества:</b>
+                            – Увеличение прибыльности и повышение энергоэффективности за счет гибкого управления автоматизацией с Modicon.
+                            – Простое и удобное ПО для управления станками способствует технологическому прогрессу.
+                            <br><br>
+                            <b>Области применения:</b>
+                            – Человеко-машинные интерфейсы и системы управления насосным оборудованием.
+
+                        </div>
+                    </div>
+                </section>
+                <section class="technical-specifications-section" id="technical">
+                    <div class="container">
+                        <div class="attention-section__title-block technical-specifications-section__title-block flex">
+                            <div class="attention-section-title-icon">
+                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1" y="3" width="18" height="18" rx="3" fill="#F3DE09" stroke="#1D252C" stroke-width="2" />
+                                    <rect x="5" y="1" width="10" height="4" rx="2" fill="#F3DE09" stroke="#1D252C" stroke-width="2" />
+                                    <line x1="6" y1="10.5" x2="8" y2="10.5" stroke="black" />
+                                    <line x1="9" y1="10.5" x2="15" y2="10.5" stroke="black" />
+                                    <line x1="6" y1="12.5" x2="8" y2="12.5" stroke="black" />
+                                    <line x1="9" y1="12.5" x2="15" y2="12.5" stroke="black" />
+                                    <line x1="6" y1="14.5" x2="8" y2="14.5" stroke="black" />
+                                    <line x1="9" y1="14.5" x2="15" y2="14.5" stroke="black" />
+                                </svg>
+                            </div>
+                            <div class="attention-section-title__title">Технические характеристики</div>
+                        </div>
+                        <div class="technical-specifications-section__table">
+                            <ul class="technical-specifications-list">
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Артикул производителя</div>
+                                    <div class="specifications-item__tech grey">TM241CE40T</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Производитель</div>
+                                    <div class="specifications-item__tech">Schneider Electric</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Серия</div>
+                                    <div class="specifications-item__tech grey">OEM ПЛК Modicon</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Монтаж на рейку</div>
+                                    <div class="specifications-item__tech">Да</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name  grey">Монтаж на стену/непосредственная установка</div>
+                                    <div class="specifications-item__tech  grey">Да</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Тип питающего напряжения</div>
+                                    <div class="specifications-item__tech">DC (постоян.)</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name  grey">Напряжение питания постоян. тока (DC)</div>
+                                    <div class="specifications-item__tech  grey">19.2...28.8</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Поддержка протокола EtherNet/IP</div>
+                                    <div class="specifications-item__tech">Да</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Поддержка протокола MODBUS</div>
+                                    <div class="specifications-item__tech grey">Да</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Поддержка протокола TCP/IP</div>
+                                    <div class="specifications-item__tech">Да</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Количество HW-интерфейсов RS-232</div>
+                                    <div class="specifications-item__tech grey">2</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Количество цифров. выходов</div>
+                                    <div class="specifications-item__tech">16</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Количество цифров. входов</div>
+                                    <div class="specifications-item__tech grey">24</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Количество HW-интерфейсов USB</div>
+                                    <div class="specifications-item__tech">1</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Количество HW-интерфейсов RS-485</div>
+                                    <div class="specifications-item__tech grey">2</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Количество HW-интерфейсов Industrial Ethernet</div>
+                                    <div class="specifications-item__tech">1</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Возможность установки дополнительной памяти</div>
+                                    <div class="specifications-item__tech grey">1</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Время обработки (1К, бинарная операция)</div>
+                                    <div class="specifications-item__tech">0.022</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Тип памяти</div>
+                                    <div class="specifications-item__tech grey">NVRAM</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Объем памяти</div>
+                                    <div class="specifications-item__tech">64000</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Категория согл. EN 954-1</div>
+                                    <div class="specifications-item__tech grey">1</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Вес нетто (кг)</div>
+                                    <div class="specifications-item__tech">0.62</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Ширина, мм</div>
+                                    <div class="specifications-item__tech grey">190</div>
+                                </div>
+
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Высота, мм</div>
+                                    <div class="specifications-item__tech">90</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Глубина, мм</div>
+                                    <div class="specifications-item__tech grey">95</div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="documents-section" id="documents">
+                    <div class="container">
+                        <div class="attention-section__title-block technical-specifications-section__title-block flex">
+                            <div class="attention-section-title-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" fill="#F3DE09" stroke="#1D252C" />
+                                    <line x1="9" y1="12" x2="23" y2="12" stroke="black" stroke-width="2" />
+                                    <line x1="11" y1="18" x2="21" y2="18" stroke="black" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="attention-section-title__title">Документация</div>
+                        </div>
+                        <div class="technical-specifications-section__table mb-40">
+                            <ul class="technical-specifications-list">
+                                <div class="technical-specifications-list__item">
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/TM241CE40T/Modicon-M241_TM241CE40T.pdf" class="download-file__list-link">Технические данные (PDF, 358КБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/TM241CE40T/HRB59603_07.pdf" class="download-file__list-link">Инструкция (PDF, 5,2MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/TM241CE40T/M241-UserGuide-EN-EIO0000004267-05.pdf" class="download-file__list-link">Руководство пользователя (PDF, 28,3MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/TM241CE40T/Catalog Modicon M241 Programmable Logic Controller for performance demanding applications_October 2023.pdf" class="download-file__list-link">Каталог (PDF, 8,7MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/TM241CE40T/MCADID0000736_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 3,4MБ)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
     </main>
     <?php include_once 'footer-comp-page.php' ?>
 </body>

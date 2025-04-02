@@ -393,17 +393,19 @@ a:hover {
 }
 
 .technical-specifications-list {
-  width: 100%;
+  
+  width: 100%;  
 }
 
 .technical-specifications-list__item {
   display: flex;
-  
+  flex-wrap: wrap;
 }
 
 .equipment-section {
   margin-bottom: 80px;
 }
+
 
 .specifications-item__name,
 .equipment-section-item__article,

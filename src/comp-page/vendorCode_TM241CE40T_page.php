@@ -161,11 +161,11 @@ foreach ($data as $item) {
                         <div class="attention-section__discription">
                             <b>Компактный базовый контроллер M241-40</b> – это надежное решение для повышения производительности и увеличения прибыльности. Интуитивно понятное программирование в среде SoMachine, готовые функциональные блоки и масштабируемое управление позволяют оптимизировать работу оборудования, обеспечивая максимальную эффективность. Благодаря поддержке Ethernet подключение возможно в любом месте.
                             <br><br>
-                            <b>Преимущества:</b>
+                            <b>Преимущества:</b><br>
                             – Увеличение прибыльности и повышение энергоэффективности за счет гибкого управления автоматизацией с Modicon.
                             – Простое и удобное ПО для управления станками способствует технологическому прогрессу.
                             <br><br>
-                            <b>Области применения:</b>
+                            <b>Области применения:</b><br>
                             – Человеко-машинные интерфейсы и системы управления насосным оборудованием.
 
                         </div>
@@ -275,7 +275,7 @@ foreach ($data as $item) {
                                     <div class="specifications-item__tech grey">1</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Вес нетто (кг)</div>
+                                    <div class="specifications-item__name">Вес нетто, кг</div>
                                     <div class="specifications-item__tech">0.62</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
@@ -331,7 +331,7 @@ foreach ($data as $item) {
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE40T/Catalog Modicon M241 Programmable Logic Controller for performance demanding applications_October 2023.pdf" class="download-file__list-link">Каталог (PDF, 8,7MБ)</a>
+                                            <a href="../files/TM241CE40T/catalog_ModiconM241__October_2023.pdf" class="download-file__list-link">Каталог (PDF, 8,7MБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">

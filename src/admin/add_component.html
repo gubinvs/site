@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/project-style.css" media="all">
+    <link rel="stylesheet" href="../css/admin.css" media="all">
+    <link rel="stylesheet" href="../css/admin-add_component.css" media="all">
+    <title>Добавление товара</title>
+</head>
+<body>
+    <div class="container add-component-section__container">
+        <h1 class="h1">Добавить товар в базу данных</h1>
+        <form action="" method="post"> 
+            <ul class="elemet-form-list">
+                <li class="elemet-form-list__item">
+                    <div class="elemet-form-list__item__name">Наименование товара:</div>
+                    <input type="text" name="nameComponent" class="add-component-input" required>     
+                </li>
+                <li class="elemet-form-list__item">
+                    <div class="elemet-form-list__item__name">Артикул товара:</div>
+                    <input type="text" name="vendorСode" class="add-component-input" required> 
+                </li>
+                <li class="elemet-form-list__item">
+                    <div class="elemet-form-list__item__name">Производитель:</div>
+                    <select type="text" name="manufacturer" class="add-component-input">
+                        <option value="Schneider Electric">Schneider Electric</option>
+                        <option value="PHOENIX CONTACT">ABB</option>
+                        <option value="PHOENIX CONTACT">PHOENIX CONTACT</option>
+                        <option value="IEK GROOP">IEK GROOP</option>
+                        <option value="IKF GROOP">IKF GROOP</option>
+                        <option value="ОВЕН">ОВЕН</option>
+                        <option value="КЭАЗ">КЭАЗ</option>
+                    </select>
+                </li>
+                <li class="elemet-form-list__item">
+                    <div class="elemet-form-list__item__name">Количество в наличии:</div>
+                    <input type="text" name="quantity" class="add-component-input" required> 
+                </li>
+                <li class="elemet-form-list__item">
+                    <div class="elemet-form-list__item__name">Доставка в днях:</div>
+                    <input type="text" name="deliveryТime" class="add-component-input" required> 
+                </li>
+                <li class="elemet-form-list__item">
+                    <div class="elemet-form-list__item__name">Стоимость товара:</div>
+                    <input type="text" name="price" class="add-component-input" required> 
+                </li>
+                <li class="elemet-form-list__item">
+                    <div class="elemet-form-list__item__name">Раздел сайта:</div>
+                    <select type="text" name="chapter" class="add-component-input">
+                        <option value="Программируемые контроллеры">Программируемые контроллеры</option>
+                        <option value="Модули расширения">Модули расширения</option>
+                        <option value="Модульные автоматы">Модульные автоматы</option>
+                        <option value="Концевые стопоры">Концевые стопоры</option>
+                        <option value="Сигнальные лампы">Сигнальные лампы</option>
+                        <option value="Релейные модули">Релейные модули</option>
+                        <option value="Блоки питания">Источники питания</option>
+                        <option value="Переключатели и кнопки">Переключатели и кнопки</option>
+                        <option value="Клеммы и маркировка">Клеммы и маркировка</option>
+                        <option value="Клеммы и маркировка">Устройства плавного пуска</option>
+                    </select>
+                </li>
+            </ul>
+            <button type="submit" class="button"> добавить товар</button>
+            <input type="hidden" name="act" value="order">
+        </form>
+    </div>
+</body>
+</html>

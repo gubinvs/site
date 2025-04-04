@@ -193,7 +193,7 @@ foreach ($data as $item) {
                             <ul class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Артикул производителя</div>
-                                    <div class="specifications-item__tech grey">TM241CE40T</div>
+                                    <div class="specifications-item__tech grey"><?php echo $article ?></div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Производитель</div>

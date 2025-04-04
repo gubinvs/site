@@ -116,7 +116,6 @@ a:hover {
   justify-content: flex-end;
   font-size: 34px;
   font-weight: 800;
-  margin-bottom: 20px;
 }
 
 .main-section-price__price {
@@ -152,6 +151,26 @@ a:hover {
 
 .characteristics-block__button-block {
   justify-content: space-between;
+}
+
+.warehouse-item-quantity {
+  display: flex;
+  justify-content: flex-end;
+  color: #32C120;
+  margin-bottom: 20px;
+
+}
+
+.warehouse-item-quantity__name {
+  margin-right: 10px;
+}
+
+.warehouse-item-quantity__quantity {
+  margin-right: 10px;
+}
+
+.warehouse-item-quantity__null > div {
+  color: #DFE0E1;
 }
 
 

@@ -22,6 +22,7 @@ $data = json_decode($response, true);
 
 foreach ($data as $item) {
     $price = $item["price"];
+    $quantity = $item["quantity"];
     //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
 }
 
@@ -83,10 +84,9 @@ foreach ($data as $item) {
                     <div class="main-section__discription">
                         <div class="article-block flex">
                             <div class="article-title">Артикул:</div>
-                            <div class="article-name">TM241CE40T</div>
+                            <div class="article-name"><?php echo $article ?></div>
                         </div>
                         <hr class="hr">
-
                         <div class="main-section-price-block">
                             <div class="main-section-price__price">
                                 <?php echo number_format($price, 0, ',', ' '); ?>
@@ -103,6 +103,12 @@ foreach ($data as $item) {
                                     </defs>
                                 </svg>
                             </div>
+                        </div>
+                        <!-- // Количество на складе -->
+                        <div class="<?php echo $quantity>0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null'?>">
+                            <div class="warehouse-item-quantity__name">В наличии:</div>
+                            <div class="warehouse-item-quantity__quantity"><?php echo $quantity ?></div>
+                            <div class="warehouse-item-quantity__discr">шт.</div>
                         </div>
                         <div class="characteristics-block">
                             <div class="characteristics-block__title">Основные характеристики:</div>
@@ -137,7 +143,7 @@ foreach ($data as $item) {
                             <a href="#technical" id="button-link">
                                 <button class="button-characteristics__all">Посмотреть все характеристики</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=TM241CE40T' ?>>
+                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
                                 <button class="button-characteristics__offer" id="button-buy">Купить</button>
                             </a>
                         </div>
@@ -167,7 +173,6 @@ foreach ($data as $item) {
                             <br><br>
                             <b>Области применения:</b><br>
                             – Человеко-машинные интерфейсы и системы управления насосным оборудованием.
-
                         </div>
                     </div>
                 </section>

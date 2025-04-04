@@ -1,7 +1,7 @@
 <?php
 include "../php/class/api_Connector.php";
 
-$article = "TM241CE24T"; // Замените на нужный артикул
+$article = "TM3DQ16T"; // Замените на нужный артикул
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
 $options = [
@@ -22,6 +22,7 @@ $data = json_decode($response, true);
 
 foreach ($data as $item) {
     $price = $item["price"];
+    $quantity = $item["quantity"];
     //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
 }
 
@@ -37,7 +38,7 @@ foreach ($data as $item) {
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
     <meta name="description" content="Страница с описанием товара : TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET">
-    <title>TM241CE24T,SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</title>
+    <title>TM3DQ16T, SE Дискретный модуль расширения ТМ3 16 выходов транзисторный источник, Schneider Electric</title>
 </head>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -75,10 +76,10 @@ foreach ($data as $item) {
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title">TM241CE24T, SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</h1>
+                <h1 class="discription-product-section__title">TM3DQ16T, SE Дискретный модуль расширения ТМ3 16 выходов транзисторный источник, Schneider Electric</h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg" alt="Контроллер M241-40IO транзисторный источник ETHERNET" class="main-section__img">
+                        <img class="discription-product__img" src="../img/img-product/TM3DQ16T/TM3DQ16T_big_1920.jpg" alt="TM3DQ16T, SE Дискретный модуль расширения ТМ3 16 выходов транзисторный источник, Schneider Electric" class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -86,7 +87,6 @@ foreach ($data as $item) {
                             <div class="article-name"><?php echo $article ?></div>
                         </div>
                         <hr class="hr">
-
                         <div class="main-section-price-block">
                             <div class="main-section-price__price">
                                 <?php echo number_format($price, 0, ',', ' '); ?>
@@ -122,20 +122,16 @@ foreach ($data as $item) {
                                     <div class="characteristics-item__discr">OEM ПЛК Modicon</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Тип подключения</div>
-                                    <div class="characteristics-item__discr">Ethernet</div>
-                                </li>
-                                <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Высота, мм</div>
                                     <div class="characteristics-item__discr">90</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Глубина, мм</div>
-                                    <div class="characteristics-item__discr">95</div>
+                                    <div class="characteristics-item__discr">84,6</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Ширина, мм</div>
-                                    <div class="characteristics-item__discr">150</div>
+                                    <div class="characteristics-item__discr">27,4</div>
                                 </li>
                             </ul>
                         </div>
@@ -165,18 +161,14 @@ foreach ($data as $item) {
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Компактный базовый блок M241-24</b> — это оптимальное решение для повышения производительности и рентабельности.
-                            Интуитивно понятное программирование в ПО SoMachine с готовыми приложениями и функциональными блоками обеспечивает гибкое и масштабируемое
-                            управление оборудованием, способствуя росту эффективности. Устройство поддерживает подключение через Ethernet,
-                            что позволяет легко интегрировать его в любую систему.
+                            <b>Модули расширения Modicon TM3</b> оснащены удобным механизмом соединения, который упрощает сборку и интеграцию с логическими контроллерами.
+                            Специальный шинный соединитель обеспечивает надёжную передачу данных и питание, обеспечивая бесшовную работу всей системы автоматизации.
                             <br><br>
                             <b>Преимущества:</b><br>
-                            - Максимизация прибыли и повышение энергоэффективности за счет масштабируемого управления автоматикой с помощью Modicon.
-                            - Удобное ПО для станков ускоряет технологический прогресс и упрощает внедрение решений.
+                            Повышайте прибыльность и энергоэффективность за счёт масштабируемого управления автоматикой с решениями Modicon. Интуитивно понятное программное обеспечение для оборудования ускоряет внедрение новых технологий и способствует технологическому прогрессу.
                             <br><br>
-                            <b>Области применения:</b><br>
-                            ✅ Человеко-машинные интерфейсы<br>
-                            ✅ Автоматизированные системы управления насосами
+                            <b>Применение:</b>
+                            Системы человеко-машинного интерфейса (HMI), управление насосным оборудованием и другие задачи автоматизации.
                         </div>
                     </div>
                 </section>
@@ -245,11 +237,11 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Количество цифров. выходов</div>
-                                    <div class="specifications-item__tech">10</div>
+                                    <div class="specifications-item__tech">16</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Количество цифров. входов</div>
-                                    <div class="specifications-item__tech grey">14</div>
+                                    <div class="specifications-item__tech grey">24</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Количество HW-интерфейсов USB</div>
@@ -281,7 +273,7 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Категория согл. EN 954-1</div>
-                                    <div class="specifications-item__tech grey">Да</div>
+                                    <div class="specifications-item__tech grey">1</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Вес нетто, кг</div>
@@ -289,8 +281,9 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Ширина, мм</div>
-                                    <div class="specifications-item__tech grey">150</div>
+                                    <div class="specifications-item__tech grey">190</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Высота, мм</div>
                                     <div class="specifications-item__tech">90</div>
@@ -321,19 +314,19 @@ foreach ($data as $item) {
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE24T/technical_data_Modicon-M241_TM241CE24T.pdf" class="download-file__list-link">Технические данные (PDF, 358КБ)</a>
+                                            <a href="../files/TM241CE40T/Modicon-M241_TM241CE40T.pdf" class="download-file__list-link">Технические данные (PDF, 358КБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE24T/instruction_Modicon-M241_TM241CE24T.pdf" class="download-file__list-link">Инструкция (PDF, 5,2MБ)</a>
+                                            <a href="../files/TM241CE40T/HRB59603_07.pdf" class="download-file__list-link">Инструкция (PDF, 5,2MБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE24T/user_manual_Modicon-M241_TM241CE24T.pdf" class="download-file__list-link">Руководство пользователя (PDF, 28,3MБ)</a>
+                                            <a href="../files/TM241CE40T/M241-UserGuide-EN-EIO0000004267-05.pdf" class="download-file__list-link">Руководство пользователя (PDF, 28,3MБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
@@ -345,7 +338,7 @@ foreach ($data as $item) {
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE24T/Modicon-M241_TM241CE24T_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 3,4MБ)</a>
+                                            <a href="../files/TM241CE40T/MCADID0000736_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 3,4MБ)</a>
                                         </div>
                                     </div>
                                 </div>

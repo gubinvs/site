@@ -11,7 +11,9 @@
 
     <div class="container header__container">
         <div class="header-logo-block header-logo-block_guest">
-            <img src="../img/header_logo_1920.svg" alt="Логотип компании">
+            <a href="https://encomponent.ru">
+                <img src="../img/header_logo_1920.svg" alt="Логотип компании">
+            </a>
         </div>
         <div class="header-navigation-block">
             <div class="header-navigation-block__top header-navigation-block__top_guest">
@@ -43,6 +45,9 @@
                 <ul class="header-navigation__list">
                     <li class="header-navigation__item header-navigation__item_guest">
                         <a href="https://www.iek.ru/products/catalog/tipovye_resheniya_nku">Типовые решения</a>
+                    </li>
+                    <li class="header-navigation__item header-navigation__item_guest">
+                        <a href="https://encomponent.ru/production.php">Производство</a>
                     </li>
                     <li class="header-navigation__item header-navigation__item_guest">
                         <a href="https://shop.encomponent.ru">Интернет-магазин</a>

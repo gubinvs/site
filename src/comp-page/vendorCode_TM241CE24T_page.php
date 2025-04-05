@@ -36,7 +36,7 @@ foreach ($data as $item) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="Страница с описанием товара : TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET">
+    <meta name="description" content="Страница с описанием товара : TM241CE24T,SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric">
     <title>TM241CE24T,SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</title>
 </head>
 <!-- Yandex.Metrika counter -->

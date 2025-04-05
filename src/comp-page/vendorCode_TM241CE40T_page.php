@@ -2,6 +2,7 @@
 include "../php/class/api_Connector.php";
 
 $article = "TM241CE40T"; // Замените на нужный артикул
+$titlePage = "TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
 $options = [
@@ -37,8 +38,8 @@ foreach ($data as $item) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="Страница с описанием товара : TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET">
-    <title>TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET</title>
+    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
+    <title><?php echo $titlePage ?></title>
 </head>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -76,7 +77,7 @@ foreach ($data as $item) {
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title">TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET</h1>
+                <h1 class="discription-product-section__title"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
                         <img class="discription-product__img" src="../img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg" alt="Контроллер M241-40IO транзисторный источник ETHERNET" class="main-section__img">
@@ -105,7 +106,7 @@ foreach ($data as $item) {
                             </div>
                         </div>
                         <!-- // Количество на складе -->
-                        <div class="<?php echo $quantity>0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null'?>">
+                        <div class="<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>">
                             <div class="warehouse-item-quantity__name">В наличии:</div>
                             <div class="warehouse-item-quantity__quantity"><?php echo $quantity ?></div>
                             <div class="warehouse-item-quantity__discr">шт.</div>

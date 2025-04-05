@@ -204,93 +204,73 @@ foreach ($data as $item) {
                                     <div class="specifications-item__tech grey">OEM ПЛК Modicon</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Монтаж на рейку</div>
-                                    <div class="specifications-item__tech">Да</div>
+                                    <div class="specifications-item__name">Тип подключения</div>
+                                    <div class="specifications-item__tech">Винтю соединение</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name  grey">Монтаж на стену/непосредственная установка</div>
-                                    <div class="specifications-item__tech  grey">Да</div>
+                                    <div class="specifications-item__name  grey">Уровень исполнения согл. EN ISO 13849-1</div>
+                                    <div class="specifications-item__tech  grey">Нет (без)</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Тип питающего напряжения</div>
-                                    <div class="specifications-item__tech">DC (постоян.)</div>
+                                    <div class="specifications-item__name">Категория взрывобезопасности по пыли</div>
+                                    <div class="specifications-item__tech">Нет (без)</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name  grey">Напряжение питания постоян. тока (DC)</div>
-                                    <div class="specifications-item__tech  grey">19.2...28.8</div>
+                                    <div class="specifications-item__name  grey">Категория взрывобезопасности по газу</div>
+                                    <div class="specifications-item__tech  grey">Нет (без)</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Поддержка протокола EtherNet/IP</div>
+                                    <div class="specifications-item__name">Напряжение питания постоян. тока (DC)</div>
                                     <div class="specifications-item__tech">Да</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Поддержка протокола MODBUS</div>
-                                    <div class="specifications-item__tech grey">Да</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Поддержка протокола TCP/IP</div>
-                                    <div class="specifications-item__tech">Да</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Количество HW-интерфейсов RS-232</div>
-                                    <div class="specifications-item__tech grey">2</div>
+                                    <div class="specifications-item__tech grey">24</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Количество цифров. выходов</div>
                                     <div class="specifications-item__tech">16</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Количество цифров. входов</div>
-                                    <div class="specifications-item__tech grey">24</div>
+                                    <div class="specifications-item__name grey">Тип выход. напряжения</div>
+                                    <div class="specifications-item__tech grey">AC/DC</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Количество HW-интерфейсов USB</div>
-                                    <div class="specifications-item__tech">1</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Количество HW-интерфейсов RS-485</div>
-                                    <div class="specifications-item__tech grey">2</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Количество HW-интерфейсов Industrial Ethernet</div>
-                                    <div class="specifications-item__tech">1</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Возможность установки дополнительной памяти</div>
-                                    <div class="specifications-item__tech grey">1</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Время обработки (1К, бинарная операция)</div>
-                                    <div class="specifications-item__tech">0.022</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Тип памяти</div>
-                                    <div class="specifications-item__tech grey">NVRAM</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Объем памяти</div>
-                                    <div class="specifications-item__tech">64000</div>
+                                    <div class="specifications-item__name">Тип вход. напряжения</div>
+                                    <div class="specifications-item__tech">AC/DC</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Категория согл. EN 954-1</div>
                                     <div class="specifications-item__tech grey">1</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Вес нетто, кг</div>
-                                    <div class="specifications-item__tech">0.62</div>
+                                    <div class="specifications-item__name">Тип цифров. выхода</div>
+                                    <div class="specifications-item__tech">Транзист.</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Ширина, мм</div>
-                                    <div class="specifications-item__tech grey">190</div>
+                                    <div class="specifications-item__name grey">Возможна защита выходов от короткого замыкания</div>
+                                    <div class="specifications-item__tech grey">1</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Задержка при обмене сигналом</div>
+                                    <div class="specifications-item__tech">0,45</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Вес нетто, кг</div>
+                                    <div class="specifications-item__tech grey">0.245</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Ширина, мм</div>
+                                    <div class="specifications-item__tech">27,4</div>
                                 </div>
 
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Высота, мм</div>
-                                    <div class="specifications-item__tech">90</div>
+                                    <div class="specifications-item__name grey">Высота, мм</div>
+                                    <div class="specifications-item__tech grey">90</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Глубина, мм</div>
-                                    <div class="specifications-item__tech grey">95</div>
+                                    <div class="specifications-item__name">Глубина, мм</div>
+                                    <div class="specifications-item__tech">84,6</div>
                                 </div>
                             </ul>
                         </div>
@@ -314,31 +294,37 @@ foreach ($data as $item) {
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE40T/Modicon-M241_TM241CE40T.pdf" class="download-file__list-link">Технические данные (PDF, 358КБ)</a>
+                                            <a href="../files/TM3DQ16T/Modicon-TM3_TM3DQ16T.pdf" class="download-file__list-link">Технические данные (PDF, 414КБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE40T/HRB59603_07.pdf" class="download-file__list-link">Инструкция (PDF, 5,2MБ)</a>
+                                            <a href="../files/TM3DQ16T/HRB59605_09.pdf" class="download-file__list-link">Инструкция (PDF, 3,9MБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE40T/M241-UserGuide-EN-EIO0000004267-05.pdf" class="download-file__list-link">Руководство пользователя (PDF, 28,3MБ)</a>
+                                            <a href="../files/TM3DQ16T/TM3-Digital-Hardware-Guide-EN-EIO0000003125-05.pdf" class="download-file__list-link">Руководство пользователя (PDF, 8,1MБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE40T/catalog_ModiconM241__October_2023.pdf" class="download-file__list-link">Каталог (PDF, 8,7MБ)</a>
+                                            <a href="../files/TM3DQ16T/EcoStruxure_Automation_Expert_Catalog_English.pdf" class="download-file__list-link">Каталог (PDF, 7,6MБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/TM241CE40T/MCADID0000736_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 3,4MБ)</a>
+                                            <a href="../files/TM3DQ16T/MCADID0000752_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 372,KБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/TM3DQ16T/ЕАЭС_KG417_026.Д.0002615_22.pdf" class="download-file__list-link">Сертификат EAЭС (PDF, 884KБ)</a>
                                         </div>
                                     </div>
                                 </div>

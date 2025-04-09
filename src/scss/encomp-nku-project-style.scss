@@ -89,7 +89,8 @@ a:hover {
 }
 
 .main-section__img {
-  height: 480px;
+  //height: 480px;
+  max-height: 480px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -383,8 +384,8 @@ a:hover {
   position: absolute;
   top: 60px;
   left: 340px;
-  width: 240px;
-  height: 500px;
+  // width: 240px;
+  // height: 500px;
 }
 
 .advantages-section__item {
@@ -419,6 +420,10 @@ a:hover {
 .technical-specifications-list__item {
   display: flex;
   flex-wrap: wrap;
+}
+
+.technical-specifications-list__item_nku {
+  flex-wrap: nowrap !important;
 }
 
 .equipment-section {

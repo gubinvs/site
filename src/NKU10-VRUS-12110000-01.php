@@ -162,7 +162,7 @@ $price = $out;
                 <h2 class="advantages-section__title">Преимущества</h2>
             </div>
             <div class="advantages-section__right-block">
-                <img class="advantages-section__img" src="img/NKU10-VRUS-12110000-01/NKU10-VRUS-12110000-01.avif" alt="изображение Вводно-распределительной панели ВРУ">
+                <img style="width: 240px; height: 500px;" class="advantages-section__img" src="img/NKU10-VRUS-12110000-01/NKU10-VRUS-12110000-01.avif" alt="изображение Вводно-распределительной панели ВРУ">
             </div>
         </section>
         <div class="container advantages-section__container">
@@ -189,7 +189,7 @@ $price = $out;
                             <line x1="9" y1="14.5" x2="15" y2="14.5" stroke="black" />
                         </svg>
                     </div>
-                <div class="attention-section-title__title">Технические характеристики</div>
+                    <div class="attention-section-title__title">Технические характеристики</div>
                 </div>
                 <div class="technical-specifications-section__table">
                     <ul class="technical-specifications-list">

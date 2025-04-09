@@ -4,31 +4,17 @@ include "../php/class/api_Connector.php";
 $article = "NKU10-YAUO-96024174-01"; // Замените на нужный артикул
 $titlePage = "NKU10-YAUO-96024174-01, Ящик управления освещением ЯУО9602-4174 автоматические выключатели 3P 1х160А 1P 1х1А контактор 1х150А фотореле IEK";
 $title = "Ящик управления освещением ЯУО9602-4174 автоматические выключатели 3P 1х160А 1P 1х1А контактор 1х150А фотореле IEK";
+
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
-
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
-
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-
-// if ($response === FALSE) {
-//     die("Ошибка запроса");
-// }
-
-$data = json_decode($response, true);
-
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, $apiServer . '/api/PriceNku/' . $article);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$out = curl_exec($curl);
+curl_close($curl);
+$price = $out;
 
 ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -98,7 +84,7 @@ foreach ($data as $item) {
                         </ul>
                     </div>
                     <div class="characteristics-block__button-block flex">
-                    <a href="#technical" id="button-link"><button class="button-characteristics__all">Посмотреть все характеристики</button></a>
+                        <a href="#technical" id="button-link"><button class="button-characteristics__all">Посмотреть все характеристики</button></a>
                         <a href=<?php echo $shopURL . '/Basket/?vendorCode=NKU10-VRUS-12110000-01' ?>>
                             <button class="button-characteristics__offer" id="button-buy">Купить</button>
                         </a>
@@ -121,11 +107,11 @@ foreach ($data as $item) {
                     </div>
                     <hr class="hr">
                     <div class="attention-section__discription">
-                        <b>Фотореле</b> — это устройство, которое управляет включением или выключением освещения в зависимости от уровня естественного освещенности. 
-                        Оно срабатывает, когда уровень света в помещении или на улице падает ниже заданного порога, автоматически включив освещение, и наоборот, выключает 
+                        <b>Фотореле</b> — это устройство, которое управляет включением или выключением освещения в зависимости от уровня естественного освещенности.
+                        Оно срабатывает, когда уровень света в помещении или на улице падает ниже заданного порога, автоматически включив освещение, и наоборот, выключает
                         его при достаточном уровне освещенности.
                         <br><br>
-                        Таким образом, ЯУО9602-4174 представляет собой достаточно универсальное и надежное решение для управления освещением, которое сочетает в себе функции защиты, 
+                        Таким образом, ЯУО9602-4174 представляет собой достаточно универсальное и надежное решение для управления освещением, которое сочетает в себе функции защиты,
                         автоматизации и энергосбережения.
                     </div>
                 </div>
@@ -151,9 +137,9 @@ foreach ($data as $item) {
                     </div>
                     <hr class="hr">
                     <div class="discription-section__discr">
-                        <b>Ящик управления освещением ЯУО9602-4174 </b> представляет собой электрическое оборудование, предназначенное для автоматического управления освещением 
-                        в различных объектах, таких как административные здания, производственные помещения, торговые центры и т. д. 
-                        Он может использоваться для контроля и защиты освещающих систем, а также для их автоматической активации в зависимости от внешних условий 
+                        <b>Ящик управления освещением ЯУО9602-4174 </b> представляет собой электрическое оборудование, предназначенное для автоматического управления освещением
+                        в различных объектах, таких как административные здания, производственные помещения, торговые центры и т. д.
+                        Он может использоваться для контроля и защиты освещающих систем, а также для их автоматической активации в зависимости от внешних условий
                         (например, освещенности).
                         <br><br>
                     </div>
@@ -181,12 +167,12 @@ foreach ($data as $item) {
                 <h2 class="advantages-section__title">Преимущества</h2>
             </div>
             <div class="advantages-section__right-block">
-                <img class="advantages-section__img" src="../img/NKU10-YAUO-96024174-01/NKU10-YAUO-96024174-01.avif" alt="изображение изделия по артикулу <?php echo $article?>">
+                <img class="advantages-section__img" src="../img/NKU10-YAUO-96024174-01/NKU10-YAUO-96024174-01.avif" alt="изображение изделия по артикулу <?php echo $article ?>">
             </div>
         </section>
         <div class="container advantages-section__container">
             <ul class="advantages-section__list">
-                
+
                 <li class="advantages-section__item">Включение и отключение осветительной установки от сигнала фотодатчика;</li>
                 <li class="advantages-section__item">Отключение и включение осветительной установки в заданные периоды времени по задаваемым программатором режимам;</li>
                 <li class="advantages-section__item">Возможность внесения изменений в любое решение силами технических специалистов ГК IEK</li>
@@ -208,7 +194,7 @@ foreach ($data as $item) {
                             <line x1="9" y1="14.5" x2="15" y2="14.5" stroke="black" />
                         </svg>
                     </div>
-                <div class="attention-section-title__title">Технические характеристики</div>
+                    <div class="attention-section-title__title">Технические характеристики</div>
                 </div>
                 <div class="technical-specifications-section__table">
                     <ul class="technical-specifications-list">
@@ -266,57 +252,57 @@ foreach ($data as $item) {
                 </div>
                 <div class="technical-specifications-section__table mb-40">
                     <ul class="technical-specifications-list">
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article grey title">Артикул</div>
                             <div class="equipment-section-item__name grey title">Наименование</div>
                             <div class="equipment-section-item__quantity grey title">Кол-во</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article">MVA20-1-001-C</div>
                             <div class="equipment-section-item__name">KARAT Авт. выкл. ВА47-29 1P C 1А 4,5кА IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article grey">SVA20-3-0160</div>
                             <div class="equipment-section-item__name grey">Авт. выкл. ВА88-33 3Р 160А 35кА IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article">YZN10-002-K03</div>
                             <div class="equipment-section-item__name">Зажим наборный ЗНИ-2,5мм2 (JXB24А) серый IEK</div>
                             <div class="equipment-section-item__quantity">12</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article grey">BBT40-SB7-K06</div>
                             <div class="equipment-section-item__name grey">Кнопка SВ-7 "Пуск" зеленая 1з+1р d22мм/240В IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article">BBT40-SB7-K04</div>
                             <div class="equipment-section-item__name">BBT40-SB7-K04, Кнопка SВ-7 "Стоп" красная 1з+1р d22мм/240В IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article grey">KKT50-150-230-10</div>
                             <div class="equipment-section-item__name grey">Контактор КТИ-5150 150А 230В/АС3 IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article">YKM40-04-54</div>
                             <div class="equipment-section-item__name">Корпус метал. ЩМП-4-0 (800х650х250) У2 IP54 IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article grey">BLS10-ADDS-230-K04</div>
                             <div class="equipment-section-item__name grey">Лампа AD22DS(LED)матрица d22мм красный 230В IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article">BSW70-BJ-3-K02</div>
                             <div class="equipment-section-item__name">Переключатель LAY5-BJ33 3 полож. "I-0-II" длин. ручка IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item">
+                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
                             <div class="equipment-section-item__article grey">DRT50-0120-0150</div>
                             <div class="equipment-section-item__name grey">Реле РТИ-5375 электротепловое 120-150А IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>

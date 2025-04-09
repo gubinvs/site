@@ -177,14 +177,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 522px;
-  height: 500px;
+  max-height: 500px;
   padding-top: 10px;
   margin-right: 40px;
   border: 1px solid #DFE0E1;
 }
 
 .main-section__img {
-  height: 480px;
+  max-height: 480px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -467,8 +467,6 @@ a:hover {
   position: absolute;
   top: 60px;
   left: 340px;
-  width: 240px;
-  height: 500px;
 }
 
 .advantages-section__item {
@@ -500,6 +498,10 @@ a:hover {
 .technical-specifications-list__item {
   display: flex;
   flex-wrap: wrap;
+}
+
+.technical-specifications-list__item_nku {
+  flex-wrap: nowrap !important;
 }
 
 .equipment-section {

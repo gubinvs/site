@@ -85,7 +85,7 @@ $price = $out;
                     </div>
                     <div class="characteristics-block__button-block flex">
                         <a href="#technical" id="button-link"><button class="button-characteristics__all">Посмотреть все характеристики</button></a>
-                        <a href=<?php echo $shopURL . '/Basket/?vendorCode=NKU10-VRUS-12110000-01' ?>>
+                        <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
                             <button class="button-characteristics__offer" id="button-buy">Купить</button>
                         </a>
                     </div>

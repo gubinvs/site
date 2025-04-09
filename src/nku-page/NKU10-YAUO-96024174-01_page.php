@@ -252,57 +252,57 @@ $price = $out;
                 </div>
                 <div class="technical-specifications-section__table mb-40">
                     <ul class="technical-specifications-list">
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article grey title">Артикул</div>
                             <div class="equipment-section-item__name grey title">Наименование</div>
                             <div class="equipment-section-item__quantity grey title">Кол-во</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article">MVA20-1-001-C</div>
                             <div class="equipment-section-item__name">KARAT Авт. выкл. ВА47-29 1P C 1А 4,5кА IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article grey">SVA20-3-0160</div>
                             <div class="equipment-section-item__name grey">Авт. выкл. ВА88-33 3Р 160А 35кА IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article">YZN10-002-K03</div>
                             <div class="equipment-section-item__name">Зажим наборный ЗНИ-2,5мм2 (JXB24А) серый IEK</div>
                             <div class="equipment-section-item__quantity">12</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article grey">BBT40-SB7-K06</div>
                             <div class="equipment-section-item__name grey">Кнопка SВ-7 "Пуск" зеленая 1з+1р d22мм/240В IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article">BBT40-SB7-K04</div>
                             <div class="equipment-section-item__name">BBT40-SB7-K04, Кнопка SВ-7 "Стоп" красная 1з+1р d22мм/240В IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article grey">KKT50-150-230-10</div>
                             <div class="equipment-section-item__name grey">Контактор КТИ-5150 150А 230В/АС3 IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article">YKM40-04-54</div>
                             <div class="equipment-section-item__name">Корпус метал. ЩМП-4-0 (800х650х250) У2 IP54 IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article grey">BLS10-ADDS-230-K04</div>
                             <div class="equipment-section-item__name grey">Лампа AD22DS(LED)матрица d22мм красный 230В IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article">BSW70-BJ-3-K02</div>
                             <div class="equipment-section-item__name">Переключатель LAY5-BJ33 3 полож. "I-0-II" длин. ручка IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
-                        <div class="technical-specifications-list__item technical-specifications-list__item_nku">
+                        <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article grey">DRT50-0120-0150</div>
                             <div class="equipment-section-item__name grey">Реле РТИ-5375 электротепловое 120-150А IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>

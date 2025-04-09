@@ -500,8 +500,9 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.technical-specifications-list__item_nku {
-  flex-wrap: nowrap !important;
+.technical-specifications-list__item {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .equipment-section {
@@ -520,6 +521,11 @@ a:hover {
   padding-left: 18px;
   font-size: 20px;
   font-weight: 200;
+}
+
+.specifications-item__name,
+.equipment-section-item__article,
+.equipment-section-item__name {
   margin-right: 20px;
 }
 
@@ -554,7 +560,7 @@ a:hover {
 }
 
 .equipment-section-item__article {
-  width: 306px;
+  width: 304px;
 }
 
 .equipment-section-item__name {
@@ -582,7 +588,7 @@ a:hover {
 }
 
 .equipment-section-item {
-  width: 414px;
+  width: 412px;
   font-size: 20px;
   font-weight: 600;
 }

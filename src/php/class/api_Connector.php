@@ -1,12 +1,10 @@
 <?php 
     // Переменная с адресом для запросов на api сервер
-    //$apiServer = "https://api.encomponent.ru";
+    //$apiServer = "https://localhost:8080";
     $apiServer = "https://api.encomponent.ru";
 
-    // Переменная с адресом интернет магазина
-    $shopURL = "http://localhost:8080";
-
-    //$shopURL = "http://localhost:3000";
+    //$shopURL = "http://shop.encomponent.ru";
+    $shopURL = "http://localhost:3000";
 
 
 ?>

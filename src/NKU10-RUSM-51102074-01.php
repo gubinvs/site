@@ -20,7 +20,7 @@ $price = $out;
     <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
     <meta name="description" content="Щит управления РУСМ5110-2074 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 1А IEK">
     <title>NKU10-RUSM-51102074-01, Щит управления РУСМ5110-2074 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 1А IEK</title>
-
+    <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {
             m[i] = m[i] || function() {
@@ -112,9 +112,7 @@ $price = $out;
                         </ul>
                     </div>
                     <div class="characteristics-block__button-block flex">
-                        <div class="button-characteristics__all">
-                            <a href="#technical" id="button-link">Посмотреть все характеристики</a>
-                        </div>
+                        <a href="#technical" id="button-link"><button class="button-characteristics__all">Посмотреть все характеристики</button></a>
                         <a href=<?php echo $shopURL . '/Basket/?vendorCode=NKU10-RUSM-51102074-01' ?>>
                             <button class="button-characteristics__offer" id="button-buy">Купить</button>
                         </a>

@@ -55,7 +55,7 @@
         </div>
         <div class="header-navigation-block__top">
             <div class="header-validation-block header-validation-block__guest">
-                <a href="https://shop.encomponent.ru/Verification">
+                <a href="https://shop.encomponent.ru/Authorization">
                     <button class="button-verification">Вход</button>
                 </a>
                 <a href="https://shop.encomponent.ru/Registration">

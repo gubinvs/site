@@ -27,6 +27,44 @@ $price = $out;
     <meta name="description" content="<?php echo $titlePage ?>">
     <title><?php echo $titlePage ?></title>
 </head>
+<style>
+    .zoom-container {
+        position: relative;
+        /* width: 400px;
+        height: 300px; */
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+
+    .zoom-image {
+        /* width: 100%;
+        height: 100%; */
+        object-fit: cover;
+    }
+
+    .zoom-lens {
+        position: absolute;
+        border: 2px solid #000;
+        width: 100px;
+        height: 100px;
+        opacity: 0.4;
+        background-color: rgba(255, 255, 255, 0.5);
+        pointer-events: none;
+        display: none;
+    }
+
+    .zoom-result {
+        position: absolute;
+        top: 50;
+        left: 420px;
+        width: 400px;
+        height: 300px;
+        border: 1px solid #ccc;
+        background-repeat: no-repeat;
+        background-size: 800px 600px;
+        display: none;
+    }
+</style>
 
 <body>
     <!--Подключение header-->
@@ -37,9 +75,11 @@ $price = $out;
             <h1><?php echo $titlePage ?></h1>
             <section class="main-section flex">
                 <h2 class="h1-min"><?php echo $titlePage ?></h2>
-                <div class="main-section__img-block">
-                    <img src="../img/NKU10-YAUO-96024174-01/NKU10-YAUO-96024174-01.avif" alt="<?php echo $title ?>" class="main-section__img">
+                <div class="main-section__img-block zoom-container" id="zoom-container">
+                    <img src="../img/NKU10-YAUO-96024174-01/NKU10-YAUO-96024174-01.avif" alt="<?php echo $title ?>" class="main-section__img zoom-image" id="image">
+                    <div class="zoom-lens" id="lens"></div>
                 </div>
+                <div class="zoom-result" id="result"></div>
                 <div class="main-section__discription">
                     <div class="article-block flex">
                         <div class="article-title">Артикул:</div>
@@ -365,6 +405,39 @@ $price = $out;
     <?php include "../php/modules/footer.php" ?>
     <!--Подключение скриптов JS-->
     <script src="js/app.js" type="module"></script>
+    <script>
+        const container = document.getElementById('zoom-container');
+        const lens = document.getElementById('lens');
+        const result = document.getElementById('result');
+        const image = document.getElementById('image');
+
+        const zoom = 2;
+
+        container.addEventListener("mousemove", moveLens);
+        container.addEventListener("mouseenter", () => {
+            lens.style.display = "block";
+            result.style.display = "block";
+        });
+        container.addEventListener("mouseleave", () => {
+            lens.style.display = "none";
+            result.style.display = "none";
+        });
+
+        function moveLens(e) {
+            const rect = container.getBoundingClientRect();
+            let x = e.clientX - rect.left - lens.offsetWidth / 2;
+            let y = e.clientY - rect.top - lens.offsetHeight / 2;
+
+            x = Math.max(0, Math.min(x, container.offsetWidth - lens.offsetWidth));
+            y = Math.max(0, Math.min(y, container.offsetHeight - lens.offsetHeight));
+
+            lens.style.left = x + "px";
+            lens.style.top = y + "px";
+
+            result.style.backgroundImage = `url('${image.src}')`;
+            result.style.backgroundPosition = `-${x * zoom}px -${y * zoom}px`;
+        }
+    </script>
 </body>
 
 </html>

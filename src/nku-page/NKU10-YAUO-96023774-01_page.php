@@ -1,9 +1,9 @@
 <?php
 include "../php/class/api_Connector.php";
 
-$article = "NKU10-YAUO-96024174-01"; // Замените на нужный артикул
-$titlePage = "NKU10-YAUO-96024174-01, Ящик управления освещением ЯУО9602-4174 автоматические выключатели 3P 1х160А 1P 1х1А контактор 1х150А фотореле IEK";
-$title = "Ящик управления освещением ЯУО9602-4174 автоматические выключатели 3P 1х160А 1P 1х1А контактор 1х150А фотореле IEK";
+$article = "NKU10-YAUO-96023774-01"; // Замените на нужный артикул
+$titlePage = "NKU10-YAUO-96023774-01, Ящик управления освещением ЯУО9602-3774 автоматические выключатели 3P 1х63А 1P 1х1А контактор 1х50А фотореле IEK";
+$title = "Ящик управления освещением ЯУО9602-3774 IEK";
 
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 $curl = curl_init();
@@ -71,11 +71,11 @@ $price = $out;
                             </li>
                             <li class="characteristics-block__item flex">
                                 <div class="characteristics-item__title">Автоматический выключатель, А</div>
-                                <div class="characteristics-item__discr">160</div>
+                                <div class="characteristics-item__discr">63</div>
                             </li>
                             <li class="characteristics-block__item flex">
                                 <div class="characteristics-item__title">Контактор, А</div>
-                                <div class="characteristics-item__discr">150</div>
+                                <div class="characteristics-item__discr">50</div>
                             </li>
                             <li class="characteristics-block__item flex">
                                 <div class="characteristics-item__title">Количество полюсов</div>
@@ -111,7 +111,7 @@ $price = $out;
                         Оно срабатывает, когда уровень света в помещении или на улице падает ниже заданного порога, автоматически включив освещение, и наоборот, выключает
                         его при достаточном уровне освещенности.
                         <br><br>
-                        Таким образом, ЯУО9602-4174 представляет собой достаточно универсальное и надежное решение для управления освещением, которое сочетает в себе функции защиты,
+                        Таким образом, ЯУО9602-3774 IEK представляет собой достаточно универсальное и надежное решение для управления освещением, которое сочетает в себе функции защиты,
                         автоматизации и энергосбережения.
                     </div>
                 </div>
@@ -137,7 +137,7 @@ $price = $out;
                     </div>
                     <hr class="hr">
                     <div class="discription-section__discr">
-                        <b>Ящик управления освещением ЯУО9602-4174 </b> представляет собой электрическое оборудование, предназначенное для автоматического управления освещением
+                        <b>Ящик управления освещением ЯУО9602-3774 IEK </b> представляет собой электрическое оборудование, предназначенное для автоматического управления освещением
                         в различных объектах, таких как административные здания, производственные помещения, торговые центры и т. д.
                         Он может использоваться для контроля и защиты освещающих систем, а также для их автоматической активации в зависимости от внешних условий
                         (например, освещенности).
@@ -258,13 +258,13 @@ $price = $out;
                             <div class="equipment-section-item__quantity grey title">Кол-во</div>
                         </div>
                         <div class="technical-specifications-list__item">
-                            <div class="equipment-section-item__article">MVA20-1-001-C</div>
-                            <div class="equipment-section-item__name">KARAT Авт. выкл. ВА47-29 1P C 1А 4,5кА IEK</div>
+                            <div class="equipment-section-item__article">MVA40-3-063-C</div>
+                            <div class="equipment-section-item__name">KARAT Авт. выкл. ВА47-100 3P C 63А 10кА IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
                         <div class="technical-specifications-list__item">
-                            <div class="equipment-section-item__article grey">SVA20-3-0160</div>
-                            <div class="equipment-section-item__name grey">Авт. выкл. ВА88-33 3Р 160А 35кА IEK</div>
+                            <div class="equipment-section-item__article grey">MVA20-1-001-C</div>
+                            <div class="equipment-section-item__name grey">MVA20-1-001-C, KARAT Авт. выкл. ВА47-29 1P C 1А 4,5кА IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
                         <div class="technical-specifications-list__item">
@@ -279,17 +279,17 @@ $price = $out;
                         </div>
                         <div class="technical-specifications-list__item">
                             <div class="equipment-section-item__article">BBT40-SB7-K04</div>
-                            <div class="equipment-section-item__name">BBT40-SB7-K04, Кнопка SВ-7 "Стоп" красная 1з+1р d22мм/240В IEK</div>
+                            <div class="equipment-section-item__name">Кнопка SВ-7 "Стоп" красная 1з+1р d22мм/240В IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
                         <div class="technical-specifications-list__item">
-                            <div class="equipment-section-item__article grey">KKT50-150-230-10</div>
-                            <div class="equipment-section-item__name grey">Контактор КТИ-5150 150А 230В/АС3 IEK</div>
+                            <div class="equipment-section-item__article grey">KKM31-050-230-11</div>
+                            <div class="equipment-section-item__name grey">Контактор КМИ-35012 50А 230В/АС3 1NO;1NC IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
                         <div class="technical-specifications-list__item">
-                            <div class="equipment-section-item__article">YKM40-04-54</div>
-                            <div class="equipment-section-item__name">Корпус метал. ЩМП-4-0 (800х650х250) У2 IP54 IEK</div>
+                            <div class="equipment-section-item__article">YKM40-03-54</div>
+                            <div class="equipment-section-item__name">Корпус метал. ЩМП-3-0 (650х500х220) У2 IP54 IEK</div>
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
                         <div class="technical-specifications-list__item">
@@ -303,8 +303,8 @@ $price = $out;
                             <div class="equipment-section-item__quantity">1</div>
                         </div>
                         <div class="technical-specifications-list__item">
-                            <div class="equipment-section-item__article grey">DRT50-0120-0150</div>
-                            <div class="equipment-section-item__name grey">Реле РТИ-5375 электротепловое 120-150А IEK</div>
+                            <div class="equipment-section-item__article grey">DRT30-0037-0050</div>
+                            <div class="equipment-section-item__name grey">Реле РТИ-3357 электротепловое 37-50А IEK</div>
                             <div class="equipment-section-item__quantity grey">1</div>
                         </div>
                     </ul>
@@ -344,7 +344,7 @@ $price = $out;
                                         <p class="download-file__download-icon"></p>
                                     </a>
                                     <div class="download-file__list-icon"></div>
-                                    <a href="../files/NKU10-YAUO-96024174-01/NKU10-YAUO-96024174-01.xlsx" class="download-file__list-link">Спецификация (xlsx, 10КБ)</a>
+                                    <a href="../files/NKU10-YAUO-96023774-01/NKU10-YAUO-96023774-01.xlsx" class="download-file__list-link">Спецификация (xlsx, 10КБ)</a>
                                 </div>
                             </div>
                             <div class="equipment-section-item">

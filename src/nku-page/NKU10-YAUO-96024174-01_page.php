@@ -34,7 +34,7 @@ $price = $out;
     <!--Основная секция страницы-->
     <main>
         <div class="container">
-            <h1><?php echo $title ?></h1>
+            <h1><?php echo $titlePage ?></h1>
             <section class="main-section flex">
                 <h2 class="h1-min"><?php echo $titlePage ?></h2>
                 <div class="main-section__img-block">

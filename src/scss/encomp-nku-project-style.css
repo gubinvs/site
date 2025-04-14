@@ -66,7 +66,8 @@ ol[class] {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 a {
@@ -1902,4 +1903,4 @@ a:hover {
   .footer-logo-block {
     display: none;
   }
-}
+}/*# sourceMappingURL=encomp-nku-project-style.css.map */

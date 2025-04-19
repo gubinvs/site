@@ -279,7 +279,7 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Высота, мм</div>
-                                    <div class="specifications-item__tech">50</div>
+                                    <div class="specifications-item__tech">60</div>
                                 </div>
                             </ul>
                         </div>

@@ -1,35 +1,34 @@
 R5RDPC22
 <?php
-include "../php/class/api_Connector.php";
+    include "../php/class/api_Connector.php";
 
-$article = "R5RDPC22"; // Замените на нужный артикул
-$titlePage = "R5RDPC22, Держатель перфорированного короба, для отверстия 22мм";
-$manufacturer = "Цветлит";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "R5RDPC22"; // Замените на нужный артикул
+    $titlePage = "R5RDPC22, Держатель перфорированного короба, для отверстия 22мм";
+    $manufacturer = "Цветлит";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
+    foreach ($data as $item) {
+        $price = $item["price"];
+        $quantity = $item["quantity"];
 
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
-
+        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+    }
 ?>
 
 <!DOCTYPE html>

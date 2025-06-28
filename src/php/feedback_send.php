@@ -17,7 +17,7 @@ if ($_POST['robot'] == null) {
 
     // Приняли данные из формы и присвоили значения переменным
     if ($_POST['active-form'] == 'massage') {
-        $site = 'Страница контакты';
+        $site = ($_POST['site'] != null? $_POST['site']:'Страница контакты');
         $name = ($_POST['name']);                // Имя пользователя
         $phone = ($_POST['phone']);             // Телефон
         $email = ($_POST['email']);             // Email

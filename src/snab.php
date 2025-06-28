@@ -104,7 +104,7 @@
             <div class="fon-h2-block fon-h2-block_feedback-section"></div>
             <div class="h2-ip-title-block__discr">Задайте вопросы специалисту по снабжению и получите на них развернутые ответы</div>
           </div>
-          <form class="feedback-section__form" action="https://encomponent.ru/php/feedback__send.php" method="POST">
+          <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
             <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
@@ -114,7 +114,8 @@
               </a>
             </div>
             <button class="feedback-section__button" type="submit">Оставить заявку</button>
-            <input type="hidden" name="act" value="order">
+            <input type="hidden" name="site" value="Аутсорсинг снабжения">
+            <input type="hidden" name="active-form" value="massage">
           </form>
         </div>
         <div class="ip-feedback-section-container__icon">
@@ -198,11 +199,11 @@
             <div class="triptych-card__discr-block__discr">Все операции закупочных процедур, перемещения по складам и ячейкам, передача в производство, списание в момент производства и много другое ...</div>
           </div>
         </div>
-        <div class="triptych-card triptych-card_write"> <a class="triptych-card__title triptych-card__title_write-card">Личный кабинет</a>
-          <div class="bordercard bordercard_white">
-            <div class="bordercard bordercard_mini"></div>
+        <div class="triptych-card triptych-card_write">
+          <div class="bordercard triptych-card-write__bordercard_white">
+            <div class=" bordercard_mini"></div>
             <div class="bordercard_bground bordercard_bground-white">
-              <div class="bordercard_bground__discr_text bordercard_bground__discr_text-white bordercard_bground__discr_text-white_triptych-section">Все операции закупок доступны в личном кабинете</div>
+              <div class="triptych-card_write__discr">Все операции закупок доступны в личном кабинете</div>
             </div>
           </div>
         </div>
@@ -226,7 +227,8 @@
               </a>
             </div>
             <button class="feedback-section__button" type="submit">Оставить заявку</button>
-            <input type="hidden" name="act" value="order">
+            <input type="hidden" name="site" value="Аутсорсинг снабжения">
+            <input type="hidden" name="active-form" value="massage">
           </form>
         </div>
         <div class="ip-feedback-section-container__icon">

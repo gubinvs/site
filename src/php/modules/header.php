@@ -53,6 +53,10 @@
                         <a href="https://shop.encomponent.ru">Интернет-магазин</a>
                     </li>
                     <li class="header-navigation__item header-navigation__item_guest">
+                        <a href="https://encomponent.ru/snab.php">Аутсорсинг снабжения</a>
+                    </li>
+                    
+                    <li class="header-navigation__item header-navigation__item_guest">
                         <a href="https://encomponent.ru/about.php">Контакты</a>
                     </li>
                 </ul>

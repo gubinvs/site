@@ -1,37 +1,34 @@
-R5RDPC22
 <?php
-include "../php/class/api_Connector.php";
+    include "../php/class/api_Connector.php";
 
-$article = "R5RDPC22"; // Замените на нужный артикул
-$titlePage = "R5RDPC22, Держатель перфорированного короба, для отверстия 22мм";
-$manufacturer = "Цветлит";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "2903148"; // Замените на нужный артикул
+    $titlePage = "2903148, TRIO-PS-2G/1AC/24DC/5 - Phoenix Contact";
+    $manufacturer ="Phoenix Contact";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
+    foreach ($data as $item) {
+        $price = $item["price"];
+        $quantity = $item["quantity"];
+        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+    }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -83,7 +80,7 @@ foreach ($data as $item) {
                 <h1 class="discription-product-section__title"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/PUGVNG-115BLUEC-200/PUGVNG-115BLUEC-200_img_page.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img class="discription-product__img" src="../img/img-product/2903148/2903148_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -119,31 +116,23 @@ foreach ($data as $item) {
                             <ul class="characteristics-block__list">
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Производитель:</div>
-                                    <div class="characteristics-item__discr"> <?php echo $manufacturer ?></div>
+                                    <div class="characteristics-item__discr"><?php echo $manufacturer ?></div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Тип провода</div>
-                                    <div class="characteristics-item__discr">ПуГВнг(A)-LS</div>
+                                    <div class="characteristics-item__title">Выходное напряжение, В</div>
+                                    <div class="characteristics-item__discr">24</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Сечение провода, мм</div>
-                                    <div class="characteristics-item__discr">1х1,5</div>
+                                    <div class="characteristics-item__title">Выходной ток, А​</div>
+                                    <div class="characteristics-item__discr">5</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Цвет провода</div>
-                                    <div class="characteristics-item__discr">Синий</div>
+                                    <div class="characteristics-item__title">Мощность, Вт</div>
+                                    <div class="characteristics-item__discr">240</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Высота, мм</div>
-                                    <div class="characteristics-item__discr">60</div>
-                                </li>
-                                <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Длина, мм</div>
-                                    <div class="characteristics-item__discr">250</div>
-                                </li>
-                                <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Ширина, мм</div>
-                                    <div class="characteristics-item__discr">250</div>
+                                    <div class="characteristics-item__title">Степень защиты</div>
+                                    <div class="characteristics-item__discr">IP 20</div>
                                 </li>
                             </ul>
                         </div>
@@ -173,21 +162,15 @@ foreach ($data as $item) {
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Кабель ПуГВнг(А)-LS</b> — это один из распространённых типов монтажных проводов, используемых в электроустановках.
-                            Прокладка внутри распределительных щитов, электроустановок и в гофре/трубах. Подключение розеток, выключателей, освещения.
-                            Широко применяется в жилых, общественных и промышленных зданиях.
-                            <br>Расшифруем название и разберёмся в его характеристиках и применении:<br><br>
-                            <b>П</b> — Провод
-                            <br>
-                            <b>у</b> — Установочный (для внутреннего монтажа)
-                            <br>
-                            <b>Г</b> — Гибкий (используется многопроволочная токопроводящая жила)
-                            <br>
-                            <b>В</b> — Виниловая (ПВХ) изоляция
-                            <br>
-                            <b>нг(А)</b> — Не поддерживает горение, класс "А" — наиболее жёсткие требования по пожарной безопасности
-                            <br>
-                            <b>L</b>S — Low Smoke — низкое дымо- и газовыделение при горении
+                            <b>Источники питания QUINT POWER</b> обладают широким набором функций, обеспечивающих высокую эффективность и надежность. 
+                            Технология SFB (Selective Fuse Breaking) позволяет эффективно защищать установки, быстро инициируя магнитное срабатывание 
+                            линейного защитного автомата при 6-кратном номинальном токе.<br><br>
+
+                            Предупредительный контроль помогает обнаруживать критические рабочие состояния, позволяя предпринимать необходимые меры до 
+                            возникновения неисправности и обеспечивая высокую степень готовности оборудования.
+                            <br><br>
+                            Для надежного запуска высоких нагрузок используется статическое резервирование мощности POWER BOOST.
+                            Также предусмотрена возможность настройки напряжения, что позволяет работать в диапазоне от 5 В DC до 56 В DC.
                         </div>
                     </div>
                 </section>
@@ -211,76 +194,44 @@ foreach ($data as $item) {
                         <div class="technical-specifications-section__table">
                             <ul class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Артикул магазина</div>
+                                    <div class="specifications-item__name grey">Артикул производителя</div>
                                     <div class="specifications-item__tech grey"><?php echo $article ?></div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Производитель провода</div>
+                                    <div class="specifications-item__name">Производитель</div>
                                     <div class="specifications-item__tech"><?php echo $manufacturer ?></div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Токоведущих жил</div>
-                                    <div class="specifications-item__tech grey">1</div>
+                                    <div class="specifications-item__name grey">Серия изделий</div>
+                                    <div class="specifications-item__tech grey">QUINT POWER</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Тип токоведущей жилы</div>
-                                    <div class="specifications-item__tech">Гибкая</div>
+                                    <div class="specifications-item__name">Тип напряжения питания</div>
+                                    <div class="specifications-item__tech">AC</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name  grey">Сечение токоведущей жилы, мм²</div>
-                                    <div class="specifications-item__tech  grey">1,5</div>
+                                    <div class="specifications-item__name  grey">Номинальный ток на выходе, A</div>
+                                    <div class="specifications-item__tech  grey">5</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Токопроводящая жила</div>
-                                    <div class="specifications-item__tech">Медная</div>
+                                    <div class="specifications-item__name">Тип монтажа</div>
+                                    <div class="specifications-item__tech">Дин рейка</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Класс гибкости по ГОСТ 22483</div>
-                                    <div class="specifications-item__tech grey">5</div>
+                                    <div class="specifications-item__name grey">Вес нетто, кг</div>
+                                    <div class="specifications-item__tech grey">0,4</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Тип изоляции</div>
-                                    <div class="specifications-item__tech">ПВХ-пластикат</div>
+                                    <div class="specifications-item__name">Ширина, мм</div>
+                                    <div class="specifications-item__tech">35</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Огнестойкость</div>
-                                    <div class="specifications-item__tech grey">Негорючий</div>
+                                    <div class="specifications-item__name grey">Высота, мм</div>
+                                    <div class="specifications-item__tech grey">130</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Цвет изоляции</div>
-                                    <div class="specifications-item__tech">Синий</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Номинальное напряжение, В</div>
-                                    <div class="specifications-item__tech grey">450/750</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Температурный диапазон, °C </div>
-                                    <div class="specifications-item__tech">от -50 до +70</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Тип упаковки</div>
-                                    <div class="specifications-item__tech grey">Коробка</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Длина провода, м</div>
-                                    <div class="specifications-item__tech">200</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Вес, кг</div>
-                                    <div class="specifications-item__tech grey">4</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Длина коробки, мм</div>
-                                    <div class="specifications-item__tech">250</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Ширина коробки, мм</div>
-                                    <div class="specifications-item__tech grey">250</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Высота, мм</div>
-                                    <div class="specifications-item__tech">50</div>
+                                    <div class="specifications-item__name">Глубина, мм</div>
+                                    <div class="specifications-item__tech">115</div>
                                 </div>
                             </ul>
                         </div>
@@ -298,28 +249,53 @@ foreach ($data as $item) {
                             </div>
                             <div class="attention-section-title__title">Документация</div>
                         </div>
-                        <div class="technical-specifications-section__table mb-40">
-                            <ul class="technical-specifications-list">
+                        <!-- <div class="technical-specifications-section__table mb-40">
+                            <div class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/PUGVNG-115BС-200/Zvetlit_2022.pdf" class="download-file__list-link">Каталог (PDF, 2,6MБ)</a>
+                                            <a href="../files/A9V41263/Schneider_Electric_АВ-iC60-Acti9_A9V41263.pdf" class="download-file__list-link">Технические данные (PDF, 256КБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/PUGVNG-115BС-200/pugv-ls-031.pdf" class="download-file__list-link">Сертификат EAЭС (PDF, 817KБ)</a>
+                                            <a href="../files/A9V41263/BBV4097000-02.pdf" class="download-file__list-link">Инструкция (PDF, 2,7MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/CA9UG000E.pdf" class="download-file__list-link">Руководство пользователя (PDF, 1,4MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/catalog_Acti9_MKP-CAT-ACTI9.pdf" class="download-file__list-link">Каталог (PDF, 79,9MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/MCADFD0001497_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 361KБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/ЕАЭС_RU_С-FR.АБ53.В.06040_22.pdf" class="download-file__list-link">Сертификат EAЭС (PDF, 1,9MБ)</a>
                                         </div>
                                     </div>
                                 </div>
-                            </ul>
-                        </div>
+                            </div>
+                        </div> -->
                     </div>
                 </section>
             </div>
     </main>
     <?php include_once 'footer-comp-page.php' ?>
 </body>
+
 </html>

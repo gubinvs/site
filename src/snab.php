@@ -225,10 +225,10 @@
               <input class="check-box__input" type="checkbox" name="chekBox" checked required><a href="https://encomponent.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
-            </div>
-            <button class="feedback-section__button" type="submit">Оставить заявку</button>
-            <input type="hidden" name="site" value="Аутсорсинг снабжения">
+            </div><input type="hidden" name="site" value="Аутсорсинг снабжения">
             <input type="hidden" name="active-form" value="massage">
+            <button class="feedback-section__button" type="submit">Оставить заявку</button>
+            
           </form>
         </div>
         <div class="ip-feedback-section-container__icon">

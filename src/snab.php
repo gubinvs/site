@@ -19,7 +19,7 @@
       <div class="container ip-top-section__container">
         <div class="content-block content-block_ip-title">
           <h1 class="ip-title">Аутсорсинг снабжения - современный и эффективный инструмент</h1>
-          <div class="dark-description-block">от 65 000 рублей в месяц</div>
+          <div class="dark-description-block">от 75 000 рублей в месяц</div>
           <form action="#feedback">
             <button class="button-offer">Получить предложение</button>
           </form>
@@ -392,26 +392,13 @@
       <div class="container ip-info-container">
         <div class="content-block-section">
           <div class="ip-info-discr">
-            Берем на себя полный цикл обеспечения предприятия материалами и комплектующими, проводим анализ цен и условий на рынке, формируем и направляем заявки на закупку поставщикам,
-            отслеживаем сроки и этапы поставок, ведем складской учет, оформляем первичные документы.
+            Берем на себя полный цикл обеспечения предприятий материалами и комплектующими, проводим анализ цен и условий на рынке, 
+            формируем и направляем поставщикам заявки на закупку,
+            отслеживаем сроки поставок, ведем складской учет, оформляем первичные документы.
           </div>
         </div>
-        <div class="content-block-section" style="width: 400px;"></div>
-        <div class="content-block-section">
-          <ul class="cbs__list-contact">
-            <li class="cbs-list-contact__item">
-              <img src="img/snab-page-img/icons_group.svg" class="cbs-lc-item__icon">
-              <div class="cbs-lc-item__discr">ИП ГУБИН ВЛАДИМИР СЕРГЕЕВИЧ</div>
-            </li>
-            <li class="cbs-list-contact__item">
-              <img src="img/snab-page-img/icons_fullcase.svg" class="cbs-lc-item__icon">
-              <div class="cbs-lc-item__discr">OГРНИП 319595800033673</div>
-            </li>
-            <li class="cbs-list-contact__item">
-              <img src="img/snab-page-img/icons_handsfree.svg" class="cbs-lc-item__icon">
-              <div class="cbs-lc-item__discr">+7 (922) 354-00-43</div>
-            </li>
-          </ul>
+        <div class="content-block-section content-block-section_right">
+          <a href="https://shop.encomponent.ru"><img src="img/banner-shop.svg"></a>
         </div>
       </div>
     </section>

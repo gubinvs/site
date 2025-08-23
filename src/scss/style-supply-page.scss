@@ -1000,8 +1000,6 @@ h2 {
 }
 
 .ip-info-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1009,8 +1007,14 @@ h2 {
   width: 50%;
 }
 
+.content-block-section_right {
+  display: flex;
+  justify-content: end;
+
+}
+
 .ip-info-discr {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 200;
   color: #1B1E5B;
 }

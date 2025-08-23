@@ -8,9 +8,8 @@
   <meta name="description" content="Берем на себя обеспечение материалами и комплектующими. Анализируем цены на рынке, формируем и отправляем заявки на закупку поставщикам. Контролируем своевременные поставки, ведем учет.">
   <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
   <link rel="stylesheet" href="css/style-supply-page.css">
-  <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-  <title>Аутсорсинг задач снабжения</title>
-
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Аутсорсинг задач снабжения как средство достижения результата</title>
 </head>
 
 <body>
@@ -20,14 +19,14 @@
       <div class="container ip-top-section__container">
         <div class="content-block content-block_ip-title">
           <h1 class="ip-title">Аутсорсинг снабжения - современный и эффективный инструмент</h1>
-          <div class="dark-description-block">от 35 000 рублей в месяц</div>
+          <div class="dark-description-block">от 65 000 рублей в месяц</div>
           <form action="#feedback">
             <button class="button-offer">Получить предложение</button>
           </form>
           <div class="card-block">
             <div class="bordercard">
               <div class="bordercard_bground">
-                <div class="bordercard_bground__discr_number">10+</div>
+                <div class="bordercard_bground__discr_number">20+</div>
                 <div class="bordercard_bground__discr_text">лет на рынке аутсорсинга</div>
               </div>
             </div>
@@ -56,7 +55,7 @@
             <div class="bordercard_dark__container">
               <div class="bordercard_dark__baner-title">Работаем</div>
               <div class="bordercard_dark__baner-title_disct">с 2013 года</div>
-              <div class="bordercard_dark__disct">Заказчик получает отлаженный и прозрачный процесс закупок.</div>
+              <div class="bordercard_dark__disct">Заказчик получает отлаженный и прозрачный процесс снабжения.</div>
             </div>
           </div>
           <div class="bordercard bordercard_dark bordercard_black" style="border-radius: 20px;">
@@ -72,14 +71,14 @@
     <section class="ip-task-section">
       <div class="container ip-task-secrion-container">
         <div class="h2-ip-title-block">
-          <h2 class="ip-h2-section-title">Передайте задачи обеспечения потребности <br>в материалах и комплектующих профессионалам</h2>
+          <h2 class="ip-h2-section-title">Передайте задачу обеспечения материалами <br> и комплектующими профессионалам</h2>
           <div class="fon-h2-block fon-h2-block_red175"> </div>
           <div class="fon-h2-block fon-h2-block_red180"></div>
         </div>
         <div class="task-card-container">
           <div class="task-section-card">
             <div class="task-section-card__title">Контроль</div>
-            <div class="task-section-card__discr">Отслеживаем процесс и сроки поставок комплектующих</div>
+            <div class="task-section-card__discr">Отслеживаем процесс и сроки поставки комплектующих</div>
           </div>
           <div class="task-section-card">
             <div class="task-section-card__title">Анализ</div>
@@ -90,8 +89,8 @@
             <div class="task-section-card__discr">Ведем складской учет поступивших ТМЦ в 1С УНФ </div>
           </div>
           <div class="task-section-card">
-            <div class="task-section-card__title">Первичку</div>
-            <div class="task-section-card__discr">Формируем счета, УПД, перемещения, оприходования</div>
+            <div class="task-section-card__title">Первичка</div>
+            <div class="task-section-card__discr">УПД, перемещения, оприходования</div>
           </div>
         </div>
       </div>
@@ -104,18 +103,20 @@
             <div class="fon-h2-block fon-h2-block_feedback-section"></div>
             <div class="h2-ip-title-block__discr">Задайте вопросы специалисту по снабжению и получите на них развернутые ответы</div>
           </div>
-          <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
+          <form class="feedback-section__form" action="https://gubinvs.ru/php/feedback_send.php" method="POST">
             <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
             <div class="check-box">
-              <input class="check-box__input" type="checkbox" name="chekBox" checked required><a href="https://encomponent.ru/pp-page.html" target="blank">
+              <input class="check-box__input" type="checkbox" name="chekBox" checked required>
+              <a href="https://gubinvs.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
             </div>
-            <button class="feedback-section__button" type="submit">Оставить заявку</button>
-            <input type="hidden" name="site" value="Аутсорсинг снабжения">
+            <input type="hidden" name="robot_field">
+            <input type="hidden" name="site" value="Аутсорсинг снабжения GVS">
             <input type="hidden" name="active-form" value="massage">
+            <button class="feedback-section__button" type="submit">Оставить заявку</button>
           </form>
         </div>
         <div class="ip-feedback-section-container__icon">
@@ -128,7 +129,7 @@
       <div class="container ip-advantages-section-container">
         <div class="h2-ip-title-block h2-ip-title-block_advantages">
           <div class="ip-h2-section-title">
-            <h2 class="title-h2_write-text">Клиенты выбрали нас и перешли на аутсорсинг </h2>
+            <h2 class="title-h2_write-text">Клиенты выбрали нас и перешли на аутсорсинг</h2>
             <p>по следующим причинам:</p>
           </div>
           <div class="fon-h2-block fon-h2-block_advantages"></div>
@@ -136,11 +137,11 @@
         <div class="advantages-card-block">
           <div class="advantages-card">
             <div class="advantages-card__title">Легкий старт</div>
-            <div class="advantages-card__discription">Для старта не нужны вложения, достаточно заключить договор и зарегистрироваться в личном кабинете</div>
+            <div class="advantages-card__discription">Для старта не нужны вложения, достаточно заключить договор на предлагаемые услуги</div>
           </div>
           <div class="advantages-card">
-            <div class="advantages-card__title">Персональный менеджер</div>
-            <div class="advantages-card__discription">Опытный специалист, обеспечит комфортное обслуживание и постоянную поддержку</div>
+            <div class="advantages-card__title">Опытные специалисты</div>
+            <div class="advantages-card__discription">Опытные специалисты, обеспечивающие комфортное обслуживание и постоянную поддержку</div>
           </div>
           <div class="advantages-card">
             <div class="advantages-card__title">Гарантируем результат</div>
@@ -148,7 +149,7 @@
           </div>
           <div class="advantages-card">
             <div class="advantages-card__title">Прозрачный процесс</div>
-            <div class="advantages-card__discription"> Предоставляем всю необходимую для принятия решений информацию в полной, своевременной и понятной форме.</div>
+            <div class="advantages-card__discription">Предоставляем всю необходимую для принятия решений информацию в полной, своевременной и понятной форме.</div>
           </div>
           <div class="advantages-card">
             <div class="advantages-card__title">Компетентность</div>
@@ -156,7 +157,7 @@
           </div>
           <div class="advantages-card">
             <div class="advantages-card__title">Технологические решения</div>
-            <div class="advantages-card__discription">Мы разрабатываем собственные технологические решения для автоматизации бизнес-процессов</div>
+            <div class="advantages-card__discription">Мы разрабатали собственные технологические решения для автоматизации бизнес-процессов</div>
           </div>
           <div class="advantages-card">
             <div class="advantages-card__title">Готовность к проектам</div>
@@ -203,7 +204,7 @@
           <div class="bordercard triptych-card-write__bordercard_white">
             <div class=" bordercard_mini"></div>
             <div class="bordercard_bground bordercard_bground-white">
-              <div class="triptych-card_write__discr">Все операции закупок доступны в личном кабинете</div>
+              <div class="triptych-card_write__discr">Все операции закупок доступны <br>в информационной системе</div>
             </div>
           </div>
         </div>
@@ -217,18 +218,19 @@
             <div class="fon-h2-block fon-h2-block_feedback-section"></div>
             <div class="h2-ip-title-block__discr">Задайте вопросы специалисту по снабжению и получите на них развернутые ответы</div>
           </div>
-          <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
+          <form class="feedback-section__form" action="https://gubinvs.ru/php/feedback_send.php" method="POST">
             <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
             <div class="check-box">
-              <input class="check-box__input" type="checkbox" name="chekBox" checked required><a href="https://encomponent.ru/pp-page.html" target="blank">
+              <input class="check-box__input" type="checkbox" name="chekBox" checked required><a href="https://gubinvs.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
-            </div><input type="hidden" name="site" value="Аутсорсинг снабжения">
+            </div>
+            <input type="hidden" name="robot_field">
+            <input type="hidden" name="site" value="Аутсорсинг снабжения GVS">
             <input type="hidden" name="active-form" value="massage">
             <button class="feedback-section__button" type="submit">Оставить заявку</button>
-            
           </form>
         </div>
         <div class="ip-feedback-section-container__icon">
@@ -314,10 +316,10 @@
             <div class="square-block__square square-block__square_red"></div>
           </div>
           <div class="getup"></div>
-          <h3 class="ip-advertising__title">Помогаем систематизировать процесс закупок</h3>
+          <h3 class="ip-advertising__title">Помогаем систематизировать процесс снабжения</h3>
           <div class="ip-advertising__discr">Единым инфопространством для всех участников процесса</div>
-          <form action="https://supply.encomponent.ru">
-            <button class="button-offer">Сервис для снабженца</button>
+          <form action="https://supply.gubinvs.ru/">
+            <button class="button-offer">Сервис для снабжения</button>
           </form>
         </div><img class="ip-advertising_img" src="img/snab-page-img/ip-advertising_img_1920.svg" alt="Мужчина и женьщина стоя на складе смтрят в ноутбук">
         <div class="ip-advertising__content-block ip-advertising__content-block_right">
@@ -347,14 +349,14 @@
           <h3 class="accounting-system__mini-title">Вы ставите задачу, мы ее решаем</h3>
           <div class="accounting-system__mini-discr">Получаете отлаженный и прозрачный процесс закупок, оптимизированную транспортную и складскую логистику, надежную систему учета и аналитики.</div>
           <form action="#feedback">
-            <button class="feedback-section__button button-accounting-system" type="submit">Оставить заявку</button>
+            <button class="feedback-section__button button-accounting-system" type="submit">Оформить заявку</button>
           </form>
         </div><img class="accounting-system-img" src="img/snab-page-img/accounting-system_1920.svg" alt="Монитор с открытой 1С">
       </div>
     </section>
     <section class="accounting-system-section__square-block">
       <div class="container">
-        <h4 class="h1__visually">компонент энергии</h4>
+        <h4 class="h1__visually">Сервис для анализа предложений поставщиков</h4>
         <div class="square-block">
           <div class="square-block__square square-block__square_accounting-system"></div>
           <div class="square-block__square square-block__square_accounting-system"></div>
@@ -386,17 +388,30 @@
       </div>
     </section>
     <section class="ip-info-section">
-      <h4 class="h1__visually">приходящий снабженец</h4>
+      <h4 class="h1__visually">Снабженец на аутсорсинге</h4>
       <div class="container ip-info-container">
         <div class="content-block-section">
           <div class="ip-info-discr">
-            Берем на себя рутину обеспечения потребностей в материалах и комплектующих, анализируем цены на рынке, формируем заявки на закупку поставщикам. Отслеживаем процесс и сроки поставок, ведем складской учет, формируем первичные документы.</div>
-        </div>
-        <div class="content-block-section">
-          <div class="ip-info-discr">
-            Общество с ограниченной ответственностью “ПРОМТРАНССЕРВИС” <br> ИНН 5903115410 КПП 590301001 ОГРН 1155958042756
-            <br> Юридический адрес: 614046, г. Пермь, ул. Татьяны Барамзиной, 54 оф. 3.
+            Берем на себя полный цикл обеспечения предприятия материалами и комплектующими, проводим анализ цен и условий на рынке, формируем и направляем заявки на закупку поставщикам,
+            отслеживаем сроки и этапы поставок, ведем складской учет, оформляем первичные документы.
           </div>
+        </div>
+        <div class="content-block-section" style="width: 400px;"></div>
+        <div class="content-block-section">
+          <ul class="cbs__list-contact">
+            <li class="cbs-list-contact__item">
+              <img src="img/snab-page-img/icons_group.svg" class="cbs-lc-item__icon">
+              <div class="cbs-lc-item__discr">ИП ГУБИН ВЛАДИМИР СЕРГЕЕВИЧ</div>
+            </li>
+            <li class="cbs-list-contact__item">
+              <img src="img/snab-page-img/icons_fullcase.svg" class="cbs-lc-item__icon">
+              <div class="cbs-lc-item__discr">OГРНИП 319595800033673</div>
+            </li>
+            <li class="cbs-list-contact__item">
+              <img src="img/snab-page-img/icons_handsfree.svg" class="cbs-lc-item__icon">
+              <div class="cbs-lc-item__discr">+7 (922) 354-00-43</div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

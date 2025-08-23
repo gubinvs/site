@@ -1010,8 +1010,6 @@ footer {
 }
 
 .footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -1021,8 +1019,6 @@ footer {
 }
 
 .footer-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 4px;
 }
@@ -1102,8 +1098,6 @@ footer {
 }
 
 .copyright-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1131,8 +1125,6 @@ footer {
 }
 
 .about-title-section__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -1160,8 +1152,6 @@ footer {
 }
 
 .about-table-block__table {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -1189,8 +1179,6 @@ footer {
 }
 
 .ip-separator-section_block-file {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1229,8 +1217,6 @@ footer {
 }
 
 .square-block__file {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1413,4 +1399,8 @@ footer {
 .cbs-lc-item__icon {
   width: 30px;
   margin-right: 20px;
+}
+
+.footer__copyright {
+  padding: 0px !important;
 }

@@ -114,7 +114,7 @@
               </a>
             </div>
             <input type="hidden" name="robot_field">
-            <input type="hidden" name="site" value="Аутсорсинг снабжения GVS">
+            <input type="hidden" name="site" value="Аутсорсинг снабжения Компоненты энергии">
             <input type="hidden" name="active-form" value="massage">
             <button class="feedback-section__button" type="submit">Оставить заявку</button>
           </form>
@@ -228,7 +228,7 @@
               </a>
             </div>
             <input type="hidden" name="robot_field">
-            <input type="hidden" name="site" value="Аутсорсинг снабжения GVS">
+            <input type="hidden" name="site" value="Аутсорсинг снабжения Компоненты энергии">
             <input type="hidden" name="active-form" value="massage">
             <button class="feedback-section__button" type="submit">Оставить заявку</button>
           </form>

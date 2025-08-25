@@ -103,13 +103,13 @@
             <div class="fon-h2-block fon-h2-block_feedback-section"></div>
             <div class="h2-ip-title-block__discr">Задайте вопросы специалисту по снабжению и получите на них развернутые ответы</div>
           </div>
-          <form class="feedback-section__form" action="https://gubinvs.ru/php/feedback_send.php" method="POST">
+          <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
             <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
             <div class="check-box">
               <input class="check-box__input" type="checkbox" name="chekBox" checked required>
-              <a href="https://gubinvs.ru/pp-page.html" target="blank">
+              <a href="https://encomponent.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
             </div>
@@ -218,12 +218,12 @@
             <div class="fon-h2-block fon-h2-block_feedback-section"></div>
             <div class="h2-ip-title-block__discr">Задайте вопросы специалисту по снабжению и получите на них развернутые ответы</div>
           </div>
-          <form class="feedback-section__form" action="https://gubinvs.ru/php/feedback_send.php" method="POST">
+          <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
             <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
             <div class="check-box">
-              <input class="check-box__input" type="checkbox" name="chekBox" checked required><a href="https://gubinvs.ru/pp-page.html" target="blank">
+              <input class="check-box__input" type="checkbox" name="chekBox" checked required><a href="https://encomponent.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
             </div>
@@ -318,7 +318,7 @@
           <div class="getup"></div>
           <h3 class="ip-advertising__title">Помогаем систематизировать процесс снабжения</h3>
           <div class="ip-advertising__discr">Единым инфопространством для всех участников процесса</div>
-          <form action="https://supply.gubinvs.ru/">
+          <form action="https://supply.encomponent.ru/">
             <button class="button-offer">Сервис для снабжения</button>
           </form>
         </div><img class="ip-advertising_img" src="img/snab-page-img/ip-advertising_img_1920.svg" alt="Мужчина и женьщина стоя на складе смтрят в ноутбук">

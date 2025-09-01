@@ -22,6 +22,7 @@ $data = json_decode($response, true);
 
 foreach ($data as $item) {
     $price = $item["price"];
+    $quantity = $item["quantity"];
     //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
 }
 

@@ -49,11 +49,11 @@ $price = $out;
 
 <body>
     <!--Подключение header-->
-    <?php include "php/modules/header-nku-page.php"; ?>
+    <?php include "php/modules/header.php"; ?>
     <!--Основная секция страницы-->
     <main>
         <div class="container">
-            <h1>
+            <h1 class="NKUPages_h1">
                 <p id="vendor-code">NKU10-VRUS-12110000-01</p>, Панель вводно-распределительная ВРУ1-21-10 УХЛ4 рубильник 1х250А выключатели автоматические 1Р 2х6А плавкие вставки 6х63А 9х100А 3х250А и учет IEK
             </h1>
             <section class="main-section flex">

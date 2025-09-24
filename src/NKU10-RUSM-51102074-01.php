@@ -51,11 +51,11 @@ $price = $out;
 
 <body>
     <!--Подключение header-->
-    <?php include "php/modules/header-nku-page.php"; ?>
+    <?php include "php/modules/header"; ?>
     <!--Основная секция страницы-->
     <main>
         <div class="container">
-            <h1>
+            <h1 class="NKUPages_h1">
                 <p id="vendor-code">NKU10-RUSM-51102074-01</p>, Щит управления РУСМ5110-2074 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 1А IEK
             </h1>
             <section class="main-section flex">

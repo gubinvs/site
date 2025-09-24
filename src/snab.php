@@ -40,8 +40,10 @@
 </head>
 
 <body>
+  <!--Подключение header-->
+  <?php include "php/modules/header.php" ?>
+  <!--Основная секция страницы-->
   <main>
-    <div class="top-block" style="height: 30px; background-color: #ffffff"></div>
     <section class="ip-top-section">
       <div class="container ip-top-section__container">
         <div class="content-block content-block_ip-title">

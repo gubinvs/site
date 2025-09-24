@@ -176,6 +176,18 @@ body {
   margin-right: auto;
 }
 
+.haader__line, .haader__square {
+  background-color: #C1C9F3 !important;
+}
+
+.header-navigation__item a {
+  color: #1B1E5B;
+}
+
+.header-navigation__item:hover a {
+  color: #ca540c;
+}
+
 h2 {
   font-size: 32px;
 }
@@ -222,8 +234,6 @@ h2 {
 }
 
 .ip-top-section__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 

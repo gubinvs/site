@@ -8,15 +8,14 @@
         <div class="header-navigation-block">
             <ul class="header-navigation__list">
                 <li class="header-navigation__item">
-                    <a href="https://www.iek.ru/products/catalog/tipovye_resheniya_nku">Типовые решения</a>
+                    <a href="https://encomponent.ru/production.php">Сборка щитов</a>
                 </li>
                 <li class="header-navigation__item">
-                    <a href="https://encomponent.ru/production.php">Производство</a>
+                    <a href="https://encomponent.ru/snab.php">Аутсорсинг снабжения</a>
                 </li>
-               
                 <li class="header-navigation__item">
-                    <a href="https://encomponent.ru/about.php">Контакты</a>
-                </li> 
+                    <a href="https://supply.encomponent.ru/">Сервис для снабжения</a>
+                </li>
                 <li class="header-navigation__item">
                     <a href="https://shop.encomponent.ru/">
                         <button class="header-navigation-block__button">Интернет-магазин</button>
@@ -26,4 +25,5 @@
         </div>
     </div>
     <div class="haader__line"></div>
+    <div class="haader__square"></div>
 </header>

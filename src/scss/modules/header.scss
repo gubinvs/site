@@ -1,4 +1,6 @@
 @import "../variables.scss";
+
+
 header {
     position: relative;
 }
@@ -27,11 +29,19 @@ header {
 .header-navigation__list {
     display: flex;
     flex-direction: row;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .header-navigation__item:not(:last-of-type) {
     margin-right: 20px;
+}
+
+.header-navigation__item a {
+  color: $palitra_3;
+}
+
+.header-navigation__item:hover a {
+  color: $palitra_2;
 }
 
 .header-navigation-block__button {
@@ -44,13 +54,24 @@ header {
 
 .haader__line {
     position: absolute;
-    right: 0px;
+    right: 12px;
     bottom: 0px;
     width: 78%;
     height: 30px;
     border-top-left-radius: 10px;
     background-color: $palitra_5;
+    transform: skew(-35deg);
 }
+
+.haader__square {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 60px;
+    height: 30px;
+    background-color: $palitra_5;
+}
+
 
 
 

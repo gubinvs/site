@@ -18,7 +18,9 @@
                     <a href="https://encomponent.ru/about.php">Контакты</a>
                 </li> 
                 <li class="header-navigation__item">
+                    <a href="https://encomponent.ru/about.php">
                     <button class="header-navigation-block__button">Интернет-магазин</button>
+                </a>
                 </li>
             </ul>    
         </div>

@@ -1,5 +1,8 @@
-.header__container {
+header {
   position: relative;
+}
+
+.header__container {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -36,6 +39,16 @@
   background-color: #1D252C;
   color: #ffffff;
   cursor: pointer;
+}
+
+.haader__line {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 78%;
+  height: 30px;
+  border-top-left-radius: 10px;
+  background-color: #F7F7F5;
 }
 
 @media only screen and (max-width: 1280px) {

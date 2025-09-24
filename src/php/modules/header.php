@@ -18,11 +18,12 @@
                     <a href="https://encomponent.ru/about.php">Контакты</a>
                 </li> 
                 <li class="header-navigation__item">
-                    <a href="https://encomponent.ru/about.php">
+                    <a href="https://shop.encomponent.ru/">
                         <button class="header-navigation-block__button">Интернет-магазин</button>
                     </a>
                 </li>
             </ul>    
         </div>
     </div>
+    <div class="haader__line"></div>
 </header>

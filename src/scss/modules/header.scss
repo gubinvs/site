@@ -1,7 +1,9 @@
 @import "../variables.scss";
+header {
+    position: relative;
+}
 
 .header__container {
-    position: relative;
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -40,6 +42,15 @@
     cursor: pointer;
 }
 
+.haader__line {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 78%;
+    height: 30px;
+    border-top-left-radius: 10px;
+    background-color: $palitra_5;
+}
 
 
 

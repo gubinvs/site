@@ -1,8 +1,11 @@
 <?php
+/// Страница с описанием товара : A9F79206, Выключатель автоматический двухполюсный 6А С iC60N 6кА
+?>
+<?php
 include "../php/class/api_Connector.php";
 
-$article = "A9V41263"; // Замените на нужный артикул
-$titlePage = "A9V41263, Блок дифференциальной защиты 2P 63A 30mA AC, Schneider Electric";
+$article = "A9F79206"; // Замените на нужный артикул
+$titlePage = "A9F79206, Выключатель автоматический двухполюсный 6А С iC60N 6кА, Schneider Electric";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
 $options = [
@@ -80,7 +83,7 @@ foreach ($data as $item) {
                 <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/A9V41263/A9V41263_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img class="discription-product__img" src="../img/img-product/A9F79206/A9F79206_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -120,19 +123,19 @@ foreach ($data as $item) {
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Серия:</div>
-                                    <div class="characteristics-item__discr">ACTI9</div>
+                                    <div class="characteristics-item__discr">Acti 9</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Номин. ток</div>
-                                    <div class="characteristics-item__discr">63</div>
+                                    <div class="characteristics-item__title">Наименование:</div>
+                                    <div class="characteristics-item__discr">Acti 9 iC60</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Номин. ток утечки</div>
-                                    <div class="characteristics-item__discr">0.03</div>
+                                    <div class="characteristics-item__title">Полюсов:</div>
+                                    <div class="characteristics-item__discr">2</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Вес, кг</div>
-                                    <div class="characteristics-item__discr">0.256</div>
+                                    <div class="characteristics-item__title">Номинальный ток, А:</div>
+                                    <div class="characteristics-item__discr">6</div>
                                 </li>
                             </ul>
                         </div>
@@ -162,25 +165,22 @@ foreach ($data as $item) {
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <h4>Блок дифференциальной защиты Vigi iC60, 2П, 63A, 30мА, тип AC</h4>
-                            <b>Назначение:</b>
-                            Блок Vigi iC60 предназначен для использования совместно с автоматическими выключателями серии iC60 от Schneider Electric. Не является самостоятельным устройством и не может быть установлен с автоматами других серий.
-                            <br>
-                            <b>Основные функции в составе автоматического выключателя iC60:</b><br>
-                            - Защита людей от поражения электрическим током при прямом прикосновении (уставка 30 мА).
-                            <br>
-                            - Защита от косвенного прикосновения при нарушении изоляции (уставка до 100 мА).
-                            <br>
-                            - Противопожарная защита электроустановок от утечек тока (уставка 300–500 мА).
-                            <br>
-                            - Тип утечки AC (чувствительность к синусоидальному переменному току).
-                            <br>
-                            <b>Особенности:</b><br>
-                            Надёжное и быстрое срабатывание при токах утечки.
-                            <br>
-                            Компактное исполнение, удобство монтажа с автоматами iC60.
-                            <br>
-                            Соответствие требованиям стандартов по защите от поражения электротоком и пожарной безопасности.
+                            Этот Acti9 iC60N представляет собой автоматический выключатель низкого напряжения (MCB). Это 2-полюсный 
+                            автоматический выключатель с 2 защищенными полюсами, номинальным током 6A и кривой отключения C. 
+                            Номинальная наибольшая отключающая способность составляет до 20 кА при 220 - 240 В перем. тока в соответствии 
+                            со стандартом EN/IEC 60947-2 и до 6000 А при 400 В перем. тока в соответствии со стандартом EN/IEC 60898-1. 
+                            Он соответствует промышленному стандарту EN/IEC 60898-1 и жилищному стандарту EN/IEC 60947-2. 
+                            Этот автоматический выключатель защищает цепи от короткого замыкания и тока перегрузки. Его уникальный 
+                            индикатор Visitrip сокращает время вмешательства, показывая неисправную цепь. Зеленая пластина Visisafe 
+                            гарантирует физическое размыкание контактов для выполнения технического обслуживания на выходе. 
+                            Быстродействующий механизм замыкания, не зависящий от ручного управления, продлевает срок службы. Он обладает 
+                            электрической износостойкостью, достигающей 10000 циклов, и механической износостойкостью, достигающей 20000 
+                            циклов. Номинальное напряжение изоляции Ui составляет 500 В перем. тока. Его класс токоограничения 3 
+                            (по EN/IEC60898-1) уменьшает стоимость затрат на защиту нижестоящей цепи. Изделие может быть защелкнуто на 
+                            DIN-рейке. Его ширина составляет 4 шага по 9 мм. Степень загрязнения — 3. Категория перенапряжения - IV. 
+                            Цвет продукта белый (RAL9003). Размеры (Ш) 36 мм x (В) 85 мм x (Г) 78,5 мм. Вес - 0,25 кг. Согласно стандарту 
+                            IEC 60529, имеет степень защиты IP20 и IP40 при установке в щите. Температура эксплуатации от -35°C до 70°C. 
+                            Температура хранения составляет от -40°C до 85°C.
                         </div>
                     </div>
                 </section>
@@ -213,7 +213,7 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Серия</div>
-                                    <div class="specifications-item__tech grey">ACTI9</div>
+                                    <div class="specifications-item__tech grey">Acti 9</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Наименование</div>
@@ -221,51 +221,39 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name  grey">Тип продукта</div>
-                                    <div class="specifications-item__tech  grey">УЗО</div>
+                                    <div class="specifications-item__tech  grey">Автоматический выключатель</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Описание полюсов</div>
-                                    <div class="specifications-item__tech">2</div>
+                                    <div class="specifications-item__tech">2P</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Номинальный ток, А</div>
-                                    <div class="specifications-item__tech grey">63</div>
+                                    <div class="specifications-item__tech grey">6</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Чувствительность по току утечки, мА</div>
-                                    <div class="specifications-item__tech">30</div>
+                                    <div class="specifications-item__name">Тип сети, ток</div>
+                                    <div class="specifications-item__tech">Переменный / Постоянный  </div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Задержка срабатывания защиты от тока утечки</div>
-                                    <div class="specifications-item__tech grey">Мгновенный</div>
+                                    <div class="specifications-item__name grey">Частота сети, Гц</div>
+                                    <div class="specifications-item__tech grey">50-60</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Тип дифференциальной защиты</div>
-                                    <div class="specifications-item__tech">АС</div>
+                                    <div class="specifications-item__name">Вес нетто, кг</div>
+                                    <div class="specifications-item__tech">0,25</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Тип сети, ток</div>
-                                    <div class="specifications-item__tech grey">Переменный </div>
+                                    <div class="specifications-item__name grey">Ширина, мм</div>
+                                    <div class="specifications-item__tech grey">36</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Частота сети, Гц</div>
-                                    <div class="specifications-item__tech">50-60</div>
+                                    <div class="specifications-item__name">Высота, мм</div>
+                                    <div class="specifications-item__tech">85</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Вес нетто, кг</div>
-                                    <div class="specifications-item__tech grey">0,165</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Ширина, мм</div>
-                                    <div class="specifications-item__tech">72</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Высота, мм</div>
-                                    <div class="specifications-item__tech grey">91</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Глубина, мм</div>
-                                    <div class="specifications-item__tech">73,5</div>
+                                    <div class="specifications-item__name grey">Глубина, мм</div>
+                                    <div class="specifications-item__tech grey">78,5</div>
                                 </div>
                             </ul>
                         </div>
@@ -283,7 +271,7 @@ foreach ($data as $item) {
                             </div>
                             <div class="attention-section-title__title">Документация</div>
                         </div>
-                        <div class="technical-specifications-section__table mb-40">
+                        <!-- <div class="technical-specifications-section__table mb-40">
                             <div class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
                                     <div class="equipment-section-item">
@@ -324,7 +312,7 @@ foreach ($data as $item) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </section>
             </div>

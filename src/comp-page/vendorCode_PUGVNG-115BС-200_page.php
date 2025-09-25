@@ -73,13 +73,13 @@ foreach ($data as $item) {
 
 <body>
     <?php
-    include_once 'header-comp-page.php';
+    include_once '../php/modules/header.php';
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title"><?php echo $titlePage ?></h1>
+                <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
                         <img class="discription-product__img" src="../img/img-product/PUGVNG-115BС-200/PUGVNG-115BС-200_img_page.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">

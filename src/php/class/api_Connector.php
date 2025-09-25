@@ -3,8 +3,8 @@
     //$apiServer = "https://localhost:8080";
     $apiServer = "https://api.encomponent.ru";
 
-    //$shopURL = "http://shop.encomponent.ru";
-    $shopURL = "http://localhost:3000";
+    $shopURL = "http://shop.encomponent.ru";
+    //$shopURL = "http://localhost:3000";
 
 
 ?>

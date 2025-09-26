@@ -1,8 +1,11 @@
 <?php
+/// Страница с описанием товара : A9F79206, Выключатель автоматический двухполюсный 6А С iC60N 6кА
+?>
+<?php
 include "../php/class/api_Connector.php";
 
-$article = "1SFA898116R7000"; // Замените на нужный артикул
-$titlePage = "1SFA898116R7000, Софтстартер PSTX470-600-70 250кВт 400В 470A (450кВт 400В 814A внутри треугольника) с функцией защиты двигателя";
+$article = "A9F79206"; // Замените на нужный артикул
+$titlePage = "A9F79206, Выключатель автоматический двухполюсный 6А С iC60N 6кА, Schneider Electric";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
 $options = [
@@ -71,16 +74,16 @@ foreach ($data as $item) {
 
 <body>
     <?php
-    include_once 'header-comp-page.php';
+    include_once '../php/modules/header.php';
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title"><?php echo $titlePage ?></h1>
+                <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/1SFA898116R7000/1SFA898116R7000_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img class="discription-product__img" src="../img/img-product/A9F79206/A9F79206_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -116,23 +119,23 @@ foreach ($data as $item) {
                             <ul class="characteristics-block__list">
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Производитель:</div>
-                                    <div class="characteristics-item__discr">ABB</div>
+                                    <div class="characteristics-item__discr">Schneider Electric</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Серия:</div>
-                                    <div class="characteristics-item__discr">PSTX</div>
+                                    <div class="characteristics-item__discr">Acti 9</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Мощьность (кВт):</div>
-                                    <div class="characteristics-item__discr">250</div>
+                                    <div class="characteristics-item__title">Наименование:</div>
+                                    <div class="characteristics-item__discr">Acti 9 iC60</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Напряжение, В:</div>
-                                    <div class="characteristics-item__discr">380</div>
+                                    <div class="characteristics-item__title">Полюсов:</div>
+                                    <div class="characteristics-item__discr">2</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Ток, Iном.:</div>
-                                    <div class="characteristics-item__discr">470</div>
+                                    <div class="characteristics-item__title">Номинальный ток, А:</div>
+                                    <div class="characteristics-item__discr">6</div>
                                 </li>
                             </ul>
                         </div>
@@ -162,14 +165,22 @@ foreach ($data as $item) {
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Плавный пускатель PSTX470-600-70</b> рассчитан на максимальный рабочий ток 470 А при напряжении от 208 до 600 В переменного тока. Управляющее напряжение составляет от 100 до 250
-                            В переменног о тока с частотой 50/60 Гц. Устройство обеспечивает трехфазный плавный пуск и остановку двигателя посредством регулирования напряжения или крутящего момента.
-                            <br><br>
-                            Встроенный байпас упрощает монтаж и снижает энергопотребление. Сигналы ЗАПУСКА, TOR и события передаются через релейные выходы в нормально разомкнутом (NO) состоянии.
-                            <br><br>
-                            Среди функциональных возможностей устройства — ограничение тока, различные режимы пуска, аналоговый выход, контроль конца срока службы (EOL), подогрев двигателя, функция очистки насоса и другие. Для управления и настройки используется съемный полноэкранный графический дисплей с уровнем защиты IP66 и высокой степенью прочности.
-                            <br><br>
-                            Связь с устройством возможна четырьмя способами: через проводные сигналы Start / Stop / Reset неисправностей, а также через три программируемых цифровых входа.
+                            Этот Acti9 iC60N представляет собой автоматический выключатель низкого напряжения (MCB). Это 2-полюсный 
+                            автоматический выключатель с 2 защищенными полюсами, номинальным током 6A и кривой отключения C. 
+                            Номинальная наибольшая отключающая способность составляет до 20 кА при 220 - 240 В перем. тока в соответствии 
+                            со стандартом EN/IEC 60947-2 и до 6000 А при 400 В перем. тока в соответствии со стандартом EN/IEC 60898-1. 
+                            Он соответствует промышленному стандарту EN/IEC 60898-1 и жилищному стандарту EN/IEC 60947-2. 
+                            Этот автоматический выключатель защищает цепи от короткого замыкания и тока перегрузки. Его уникальный 
+                            индикатор Visitrip сокращает время вмешательства, показывая неисправную цепь. Зеленая пластина Visisafe 
+                            гарантирует физическое размыкание контактов для выполнения технического обслуживания на выходе. 
+                            Быстродействующий механизм замыкания, не зависящий от ручного управления, продлевает срок службы. Он обладает 
+                            электрической износостойкостью, достигающей 10000 циклов, и механической износостойкостью, достигающей 20000 
+                            циклов. Номинальное напряжение изоляции Ui составляет 500 В перем. тока. Его класс токоограничения 3 
+                            (по EN/IEC60898-1) уменьшает стоимость затрат на защиту нижестоящей цепи. Изделие может быть защелкнуто на 
+                            DIN-рейке. Его ширина составляет 4 шага по 9 мм. Степень загрязнения — 3. Категория перенапряжения - IV. 
+                            Цвет продукта белый (RAL9003). Размеры (Ш) 36 мм x (В) 85 мм x (Г) 78,5 мм. Вес - 0,25 кг. Согласно стандарту 
+                            IEC 60529, имеет степень защиты IP20 и IP40 при установке в щите. Температура эксплуатации от -35°C до 70°C. 
+                            Температура хранения составляет от -40°C до 85°C.
                         </div>
                     </div>
                 </section>
@@ -198,75 +209,51 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Производитель</div>
-                                    <div class="specifications-item__tech">ABB</div>
+                                    <div class="specifications-item__tech">Schneider Electric</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Серия</div>
-                                    <div class="specifications-item__tech grey">PSTX</div>
+                                    <div class="specifications-item__tech grey">Acti 9</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Тип напряжения управления</div>
-                                    <div class="specifications-item__tech">AC</div>
+                                    <div class="specifications-item__name">Наименование</div>
+                                    <div class="specifications-item__tech">Acti9 Vigi iC60</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name  grey">Номин. напряжение питания цепи управления Us AC 50 Гц</div>
-                                    <div class="specifications-item__tech  grey">100.0...250.0 В</div>
+                                    <div class="specifications-item__name  grey">Тип продукта</div>
+                                    <div class="specifications-item__tech  grey">Автоматический выключатель</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Номин. напряжение питания цепи управления Us постоян. тока DC</div>
-                                    <div class="specifications-item__tech">24 B</div>
+                                    <div class="specifications-item__name">Описание полюсов</div>
+                                    <div class="specifications-item__tech">2P</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Номин. раб. напряжение Ue</div>
-                                    <div class="specifications-item__tech grey">208.0...600.0 В</div>
+                                    <div class="specifications-item__name grey">Номинальный ток, А</div>
+                                    <div class="specifications-item__tech grey">6</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Комплексная защита двигателя от перегрузки</div>
-                                    <div class="specifications-item__tech">Да</div>
+                                    <div class="specifications-item__name">Тип сети, ток</div>
+                                    <div class="specifications-item__tech">Переменный / Постоянный  </div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Способ задания параметров</div>
-                                    <div class="specifications-item__tech grey">ручной</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Наличие интерфейса связи</div>
-                                    <div class="specifications-item__tech">MODBUS RTU</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Наличие рекуперации</div>
-                                    <div class="specifications-item__tech grey">Нет</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Номинальное напряжение, В</div>
-                                    <div class="specifications-item__tech">400</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Количество фаз</div>
-                                    <div class="specifications-item__tech grey">3</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Номинальная мощность электродвигателя, КВт</div>
-                                    <div class="specifications-item__tech">250</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Степень защиты</div>
-                                    <div class="specifications-item__tech grey">IP20</div>
+                                    <div class="specifications-item__name grey">Частота сети, Гц</div>
+                                    <div class="specifications-item__tech grey">50-60</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Вес нетто, кг</div>
-                                    <div class="specifications-item__tech">25</div>
+                                    <div class="specifications-item__tech">0,25</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Ширина, мм</div>
-                                    <div class="specifications-item__tech grey">480</div>
+                                    <div class="specifications-item__tech grey">36</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Высота, мм</div>
-                                    <div class="specifications-item__tech">650</div>
+                                    <div class="specifications-item__tech">85</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Глубина, мм</div>
-                                    <div class="specifications-item__tech grey">380</div>
+                                    <div class="specifications-item__tech grey">78,5</div>
                                 </div>
                             </ul>
                         </div>
@@ -284,18 +271,48 @@ foreach ($data as $item) {
                             </div>
                             <div class="attention-section-title__title">Документация</div>
                         </div>
-                        <div class="technical-specifications-section__table mb-40">
-                            <ul class="technical-specifications-list">
-                                <li class="technical-specifications-list__item">
+                        <!-- <div class="technical-specifications-section__table mb-40">
+                            <div class="technical-specifications-list">
+                                <div class="technical-specifications-list__item">
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/1SFA898116R7000/1SFA898116R7000-pstx470-600-70.pdf" class="download-file__list-link">Технические данные (PDF, 253КБ)</a>
+                                            <a href="../files/A9V41263/Schneider_Electric_АВ-iC60-Acti9_A9V41263.pdf" class="download-file__list-link">Технические данные (PDF, 256КБ)</a>
                                         </div>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/BBV4097000-02.pdf" class="download-file__list-link">Инструкция (PDF, 2,7MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/CA9UG000E.pdf" class="download-file__list-link">Руководство пользователя (PDF, 1,4MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/catalog_Acti9_MKP-CAT-ACTI9.pdf" class="download-file__list-link">Каталог (PDF, 79,9MБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/MCADFD0001497_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 361KБ)</a>
+                                        </div>
+                                    </div>
+                                    <div class="equipment-section-item">
+                                        <div class="discription-section-right-block__download-file flex">
+                                            <div class="download-file__list-icon"></div>
+                                            <a href="../files/A9V41263/ЕАЭС_RU_С-FR.АБ53.В.06040_22.pdf" class="download-file__list-link">Сертификат EAЭС (PDF, 1,9MБ)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </section>
             </div>

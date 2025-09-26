@@ -70,13 +70,13 @@ foreach ($data as $item) {
 
 <body>
     <?php
-    include_once 'header-comp-page.php';
+    include_once '../php/modules/header.php';
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title">TM241CE24T, SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</h1>
+                <h1 class="discription-product-section__title NKUPages_h1">TM241CE24T, SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
                         <img class="discription-product__img" src="../img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg" alt="Контроллер M241-40IO транзисторный источник ETHERNET" class="main-section__img">

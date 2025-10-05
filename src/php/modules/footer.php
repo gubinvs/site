@@ -16,10 +16,10 @@ header("Access-Control-Allow-Headers: Content-Type");
             </div>
             <div class="footer-nav">
                 <ul class="footer-nav__list">
-                    <div class="footer-nav__item"><a href="https://encomponent.ru/production.php" class="footer-nav__link">Производство щитов автоматики</a></div>
+                    <div class="footer-nav__item"><a href="https://encomponent.ru/production.php" class="footer-nav__link">Сборка щитов автоматики</a></div>
                     <div class="footer-nav__item"><a href="https://encomponent.ru/snab.php" class="footer-nav__link">Аутсорсинг рутины снабжения</a></div>
                     <div class="footer-nav__item"><a href="https://shop.encomponent.ru/" class="footer-nav__link">Интернет-магазин комплектующих</a></div>
-                    <div class="footer-nav__item"><a href="https://encomponent.ru/about.php" class="footer-nav__link">Центр раскрытия корпоративной информации</a></div>
+                    <!-- <div class="footer-nav__item"><a href="https://encomponent.ru/about.php" class="footer-nav__link">Центр раскрытия корпоративной информации</a></div> -->
                     <div class="footer-nav__item"><a href="https://encomponent.ru/pp-page.html" class="footer-nav__link">Политика обработки персональных данных</a></div>
                 </ul>
             </div>
@@ -32,7 +32,7 @@ header("Access-Control-Allow-Headers: Content-Type");
                             <circle cx="8" cy="8" r="2.5" fill="#1D252C" stroke="#1D252C" />
                         </svg>
                     </div>
-                    <div class="footer-contact-item__text">Санкт-Перетбург:<br /> 194292, 3-й Верхний переулок, 17Д</div>
+                    <div class="footer-contact-item__text">Санкт-Перетбург</div>
                 </div>
                 <div class="footer-contact__item">
                     <div class="footer-contact-item__icon">

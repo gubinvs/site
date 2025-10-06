@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=https://encomponent.ru/snab.php">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
     <meta name="description" content="Производство автоматизированных систем для реализации проектов в реальных секторах экономики: 
-                                        промышленных производствах, энергетике, машиностроении и других отраслях обеспечивающих материальное производство.">
+                                    промышленных производствах, энергетике, машиностроении и других отраслях обеспечивающих материальное производство.">
     <title>Компоненты энергии - Производство автоматизированных систем, материальное и информационное обеспечение</title>
 </head>
 

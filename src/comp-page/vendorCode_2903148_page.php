@@ -295,7 +295,7 @@
                 </section>
             </div>
     </main>
-    <?php include_once 'footer-comp-page.php' ?>
+   <?php include "../php/modules/footer.php" ?>
 </body>
 
 </html>

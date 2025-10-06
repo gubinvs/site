@@ -7,9 +7,9 @@
         </div>
         <div class="header-navigation-block">
             <ul class="header-navigation__list">
-                <li class="header-navigation__item">
+                <!-- <li class="header-navigation__item">
                     <a href="https://encomponent.ru/production.php">Сборка щитов</a>
-                </li>
+                </li> -->
                 <li class="header-navigation__item">
                     <a href="https://encomponent.ru/snab.php">Аутсорсинг снабжения</a>
                 </li>

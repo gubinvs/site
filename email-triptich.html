@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Рассылка — Снабжение</title>
+    <style>
+        /* Общие reset-стили */
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        img {
+            border: 0;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Контейнер */
+        .email-wrapper {
+            width: 100%;
+            background: #f4f4f6;
+            padding: 20px 0;
+        }
+
+        .email-main {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .pad {
+            padding: 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            background: #ffd400;
+            color: #111;
+            font-weight: 600;
+            border-radius: 24px;
+            text-decoration: none;
+        }
+
+        .headline {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 24px;
+            color: #111;
+            margin: 0 0 12px 0;
+        }
+
+        .muted {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #6b6b6b;
+            margin: 0;
+        }
+
+        .grid {
+            display: flex;
+            gap: 12px;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        .card {
+            background: #f0f0f2;
+            border-radius: 12px;
+            padding: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .spec-cta {
+            background: #2c2a28;
+            color: #fff;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .spec-cta h3 {
+            margin: 0 0 8px 0;
+            color: #ffd400;
+        }
+
+        /* Круги прогресса (эмуляция) */
+        .dots {
+            font-size: 0;
+            margin: 12px 0 18px 0
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .dot.active {
+            background: #ffd400;
+        }
+
+        /* Мобильные правила */
+        @media screen and (max-width:480px) {
+            .pad {
+                padding: 16px;
+            }
+
+            .grid {
+                flex-direction: column;
+            }
+
+            .btn {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+
+            .email-main {
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center class="email-wrapper">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <!-- Основная карточка -->
+                    <table role="presentation" class="email-main" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="padding:18px 18px 6px 18px;">
+                                <!-- Header: логотип + кнопка -->
+                                <table role="presentation" width="100%">
+                                    <tr>
+                                        <td align="left" valign="middle">
+                                            <!-- Замените src логотипа при необходимости -->
+                                            <img src="REPLACE_WITH_LOGO_URL" alt="Компоненты Энергии" width="140"
+                                                style="display:block;">
+                                        </td>
+                                        <td align="right" valign="middle">
+                                            <a href="https://shop.encomponent.ru" class="btn"
+                                                style="background:#ffd400;color:#111;border-radius:20px;padding:10px 14px;font-weight:700;">Переход
+                                                на сайт</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Блок 01 -->
+                        <tr>
+                            <td class="pad" style="padding-top:6px;padding-bottom:6px;">
+                                <div
+                                    style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#111;font-weight:700;display:inline-block;background:#ffffb8;padding:6px 10px;border-radius:14px;">
+                                    01</div>
+                                <div style="height:6px;"></div>
+                                <h2 class="headline">Подбирайте нужные комплектующие в новом интернет-магазине.</h2>
+
+                                <!-- Главное иллюстративное изображение -->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                                    style="margin-top:12px;">
+                                    <tr>
+                                        <td align="center"
+                                            style="border-radius:12px;overflow:hidden;background:#e9e9eb;padding:18px;">
+                                            <!-- Замените URL изображения на ваш хостинг или используйте cid -->
+                                            <img src="REPLACE_WITH_IMAGE_URL"
+                                                alt="shop.encomponent.ru — интернет-магазин комплектующих" width="100%"
+                                                style="max-width:640px;border-radius:10px;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Блок 02: три фото склада -->
+                        <tr>
+                            <td class="pad" style="padding-top:6px;padding-bottom:6px;">
+                                <div style="display:flex;align-items:center;gap:10px;">
+                                    <div
+                                        style="width:34px;height:34px;border-radius:50%;background:#ffd400;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                        02</div>
+                                    <h3 style="margin:0;font-family:Arial,Helvetica,sans-serif;">Передайте задачи
+                                        снабжения на аутсорсинг — современный и эффективный инструмент</h3>
+                                </div>
+
+                                <div style="height:12px;"></div>
+
+                                <!-- Три изображения склада в ряд; на мобилке стекаются -->
+                                <div class="grid" style="margin-top:6px;">
+                                    <div class="col" style="min-width:0;">
+                                        <img src="REPLACE_WITH_WAREHOUSE_IMAGE_1" alt="Склад 1"
+                                            style="border-radius:12px;">
+                                    </div>
+                                    <div class="col" style="min-width:0;">
+                                        <img src="REPLACE_WITH_WAREHOUSE_IMAGE_2" alt="Склад 2"
+                                            style="border-radius:12px;">
+                                    </div>
+                                    <div class="col" style="min-width:0;">
+                                        <img src="REPLACE_WITH_WAREHOUSE_IMAGE_3" alt="Склад 3"
+                                            style="border-radius:12px;">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Блок 03: аналитика и спецификации -->
+                        <tr>
+                            <td class="pad" style="padding-top:6px;padding-bottom:22px;">
+                                <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                                    <div
+                                        style="width:34px;height:34px;border-radius:50%;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                                        03</div>
+                                    <h3 style="margin:0;font-family:Arial,Helvetica,sans-serif;">Анализируйте
+                                        предложения поставщиков и создавайте спецификации в сервисе для снабжения.</h3>
+                                </div>
+
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="12">
+                                    <tr>
+                                        <td valign="top" style="width:50%;padding-right:6px;">
+                                            <div class="card">
+                                                <h4 style="margin:0 0 8px 0;font-size:16px;">Анализируйте предложения
+                                                </h4>
+                                                <p class="muted" style="margin:0;">Сервис помогает сравнивать
+                                                    предложения поставщиков по ценам и срокам поставки.</p>
+                                            </div>
+                                        </td>
+                                        <td valign="top" style="width:50%;padding-left:6px;">
+                                            <div class="spec-cta">
+                                                <h3 style="margin:0 0 6px 0;">СОЗДАВАЙТЕ <span
+                                                        style="color:#ffd400;">СПЕЦИФИКАЦИИ</span></h3>
+                                                <p style="margin:0;font-size:14px;line-height:20px;">Получайте
+                                                    себестоимость готового изделия и возможность оформить заказ.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div style="height:16px;"></div>
+                                <a href="https://shop.encomponent.ru" class="btn"
+                                    style="background:#ffd400;color:#111;border-radius:24px;padding:12px 18px;font-weight:700;">Перейти
+                                    в интернет-магазин</a>
+
+                            </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                            <td style="background:#f7f7f9;padding:18px;border-top:1px solid #eee;">
+                                <table role="presentation" width="100%">
+                                    <tr>
+                                        <td style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#777;">
+                                            ООО "ХЭНДИ-АВТОМЕЙШН"<br>
+                                            <a href="mailto:info@encomponent.ru"
+                                                style="color:#777;text-decoration:underline;">info@encomponent.ru</a> |
+                                            <a href="https://encomponent.ru"
+                                                style="color:#777;text-decoration:underline;">encomponent.ru</a>
+                                        </td>
+                                        <td align="right"
+                                            style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#777;">
+                                            Если вы не хотите получать письма — <a href="#"
+                                                style="color:#777;text-decoration:underline;">отписаться</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

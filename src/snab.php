@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Берем на себя обеспечение материалами и комплектующими. Анализируем цены на рынке, формируем и отправляем заявки на закупку поставщикам. Контролируем своевременные поставки, ведем учет.">
   <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
   <link rel="stylesheet" href="css/style-supply-page.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>Аутсорсинг задач снабжения как средство достижения результата</title>
+  <meta name="description" content="Структурированная помощь в обеспечении материалами и комплектующими. Анализ цен, формирование заявок на закупку поставщикам, контроль поставок, учет поступлений.">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {

@@ -1,0 +1,15 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Если файл или папка существует — отдаём как есть
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Если существует .php-файл — переписываем URL
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
+
+# Пример динамических страниц: /product/123 -> product.php?id=123
+RewriteRule ^product/([0-9]+)/?$ product.php?id=$1 [L,QSA]

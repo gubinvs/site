@@ -77,4 +77,5 @@ header("Access-Control-Allow-Headers: Content-Type");
             <div class="copyright">&copy; 2025 | Компоненты энергии</div>
         </div>
     </div>
+    <?php include 'cookie-banner.php'; ?>
 </footer>

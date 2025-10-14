@@ -1234,6 +1234,85 @@ footer {
   margin-right: 20px;
 }
 
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #222;
+  color: #fff;
+  padding: 16px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+}
+
+.cookie-banner.hidden {
+  display: none;
+}
+
+.cookie-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cookie-inner p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.cookie-inner a {
+  font-size: 14px;
+  color: #E1E1E1;
+}
+
+.cookie-inner:hover a {
+  font-size: 14px;
+  color: #FAC855;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-accept {
+  background: #2b8a3e;
+  color: white;
+}
+
+.btn-decline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cookie-settings {
+  position: fixed;
+  right: 12px;
+  bottom: 84px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .cookie-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 @media only screen and (max-width: 1280px) {
   .container {
     width: 1000px;

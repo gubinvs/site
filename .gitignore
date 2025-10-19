@@ -1,4 +1,5 @@
 node_modules
 gulp
 admin-mailer.html
-src\admin
+add.html
+add_component.html

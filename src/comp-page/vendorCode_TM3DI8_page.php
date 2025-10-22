@@ -128,11 +128,11 @@ foreach ($data as $item) {
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Глубина, мм</div>
-                                    <div class="characteristics-item__discr">84,6</div>
+                                    <div class="characteristics-item__discr">70</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Ширина, мм</div>
-                                    <div class="characteristics-item__discr">27,4</div>
+                                    <div class="characteristics-item__discr">23,6</div>
                                 </li>
                             </ul>
                         </div>

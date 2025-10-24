@@ -33,7 +33,7 @@ header("Access-Control-Allow-Headers: Content-Type");
                             <circle cx="8" cy="8" r="2.5" fill="#1D252C" stroke="#1D252C" />
                         </svg>
                     </div>
-                    <div class="footer-contact-item__text">Санкт-Перетбург</div>
+                    <div class="footer-contact-item__text">Санкт-Петербург</div>
                 </div>
                 <div class="footer-contact__item">
                     <div class="footer-contact-item__icon">

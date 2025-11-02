@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="Информация о компании ООО `ПромТрансСервис`, коммерческое (брендовое) название Компоненты энергии">
-    <title>О компании - компоненты энергии</title>
+    <meta name="description" content="Информация о компании `Компоненты энергии">
+    <title>О компании - Компоненты энергии</title>
 </head>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >

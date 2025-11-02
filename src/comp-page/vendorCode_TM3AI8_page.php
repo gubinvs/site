@@ -38,9 +38,49 @@ foreach ($data as $item) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
+
+    <!-- 🔹 Базовое SEO -->
     <title><?php echo $titlePage ?></title>
+    <meta name="description" content="Купить <?php echo $titlePage ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, <?php echo $titlePage ?>, источник питания, купить, цена, характеристики">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://encomponent.ru/products/<?php echo $article ?>">
+
+    <!-- 🔹 Open Graph для соцсетей -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="<?php echo $titlePage ?>">
+    <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
+    <meta property="og:url" content="https://encomponent.ru/products/<?php echo $article ?>">
+    <meta property="og:site_name" content="Encomponent">
+
+    <!-- 🔹 Schema.org — структурированные данные -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "<?php echo $titlePage ?>",
+            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "sku": "<?php echo $article ?>",
+            "brand": {
+                "@type": "Brand",
+                "name": "<?php echo $manufacturer ?>"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $price ?>",
+                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
+                "url": "https://encomponent.ru/products/<?php echo $article ?>"
+            },
+            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
+        }
+    </script>
+
+    <!-- 🔹 Микроданные для Яндекса -->
+    <meta name="yandex-verification" content="26c39d63e5887901" />
 </head>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
@@ -169,7 +209,7 @@ foreach ($data as $item) {
                             <b>Modicon TM3</b> включают 4 типа шинных соединителей, обеспечивающих возможность создания распределенных "островов" модулей ввода/вывода, управляемых логическим контроллером через Ethernet/IP, Modbus TCP, последовательную линию Modbus или шину CANopen Fieldbus.
                             <br>
                             <b>Система Modicon TM3</b> включает в себя функциональные защитные модули, специально предназначенные для обеспечения встроенной безопасности оборудования. Они управляют аварийными остановами, защитными выключателями, световыми завесами и сенсорными ковриками.
-                            
+
                             <ul>
                                 <li>Цифровые модули ввода/вывода для создания конфигураций с использованием до 264 цифровых вводов/выводов.</li>
                                 <li>Аналоговые модули ввода/вывода для создания конфигураций с использованием до 114 аналоговых вводов/выводов.</li>

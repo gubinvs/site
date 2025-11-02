@@ -1,32 +1,32 @@
 <?php
-    include "../php/class/api_Connector.php";
+include "../php/class/api_Connector.php";
 
-    $article = "2903148"; // Замените на нужный артикул
-    $titlePage = "2903148, TRIO-PS-2G/1AC/24DC/5 - Phoenix Contact";
-    $manufacturer ="Phoenix Contact";
-    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+$article = "2903148"; // Замените на нужный артикул
+$titlePage = "2903148, TRIO-PS-2G/1AC/24DC/5 - Phoenix Contact";
+$manufacturer = "Phoenix Contact";
+$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
+$context = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
 
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
 
-    $data = json_decode($response, true);
+$data = json_decode($response, true);
 
-    foreach ($data as $item) {
-        $price = $item["price"];
-        $quantity = $item["quantity"];
-        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-    }
+foreach ($data as $item) {
+    $price = $item["price"];
+    $quantity = $item["quantity"];
+    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+}
 
 ?>
 <!DOCTYPE html>
@@ -38,8 +38,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
+
+    <!-- 🔹 Базовое SEO -->
     <title><?php echo $titlePage ?></title>
+    <meta name="description" content="Купить <?php echo $titlePage ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, <?php echo $titlePage ?>, источник питания, купить, цена, характеристики">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://encomponent.ru/products/<?php echo $article ?>">
+
+    <!-- 🔹 Open Graph для соцсетей -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="<?php echo $titlePage ?>">
+    <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
+    <meta property="og:url" content="https://encomponent.ru/products/<?php echo $article ?>">
+    <meta property="og:site_name" content="Encomponent">
+
+    <!-- 🔹 Schema.org — структурированные данные -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "<?php echo $titlePage ?>",
+            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "sku": "<?php echo $article ?>",
+            "brand": {
+                "@type": "Brand",
+                "name": "<?php echo $manufacturer ?>"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $price ?>",
+                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
+                "url": "https://encomponent.ru/products/<?php echo $article ?>"
+            },
+            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
+        }
+    </script>
+
+    <!-- 🔹 Микроданные для Яндекса -->
+    <meta name="yandex-verification" content="26c39d63e5887901" />
 </head>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -162,11 +201,11 @@
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Источники питания QUINT POWER</b> обладают широким набором функций, обеспечивающих высокую эффективность и надежность. 
-                            Технология SFB (Selective Fuse Breaking) позволяет эффективно защищать установки, быстро инициируя магнитное срабатывание 
+                            <b>Источники питания QUINT POWER</b> обладают широким набором функций, обеспечивающих высокую эффективность и надежность.
+                            Технология SFB (Selective Fuse Breaking) позволяет эффективно защищать установки, быстро инициируя магнитное срабатывание
                             линейного защитного автомата при 6-кратном номинальном токе.<br><br>
 
-                            Предупредительный контроль помогает обнаруживать критические рабочие состояния, позволяя предпринимать необходимые меры до 
+                            Предупредительный контроль помогает обнаруживать критические рабочие состояния, позволяя предпринимать необходимые меры до
                             возникновения неисправности и обеспечивая высокую степень готовности оборудования.
                             <br><br>
                             Для надежного запуска высоких нагрузок используется статическое резервирование мощности POWER BOOST.
@@ -295,7 +334,7 @@
                 </section>
             </div>
     </main>
-   <?php include "../php/modules/footer.php" ?>
+    <?php include "../php/modules/footer.php" ?>
 </body>
 
 </html>

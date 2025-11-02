@@ -38,11 +38,23 @@ foreach ($data as $item) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
+
+    <!-- SEO: описание и ключевые слова -->
+    <meta name="description" content="<?php echo 'Купить ' . $titlePage . '. Производитель: ' . $manufacturer . '. В наличии: ' . $quantity . ' шт.'; ?>">
+    <meta name="keywords" content="провод, ПуГВнг(А)-LS, <?php echo $article ?>, <?php echo $manufacturer ?>, купить провод, электротехнический кабель">
+
     <title><?php echo $titlePage ?></title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="<?php echo $titlePage ?>">
+    <meta property="og:description" content="<?php echo 'Купить ' . $titlePage . ' по выгодной цене. Производитель: ' . $manufacturer; ?>">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/PUGVNG-115BLUEC-200/PUGVNG-115BLUEC-200_img_page.jpg">
+    <meta property="og:type" content="product">
 </head>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {

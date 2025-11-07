@@ -38,9 +38,44 @@ foreach ($data as $item) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
-    <title><?php echo $titlePage ?></title>
+
+    <title>Schneider Electric TM241CE40T — контроллер M241-40IO Ethernet | Купить в России</title>
+    <meta name="description" content="Контроллер Schneider Electric TM241CE40T (Modicon M241-40IO, транзисторный источник, Ethernet). В наличии, доставка по РФ. Официальная документация, характеристики и цена.">
+    <meta name="keywords" content="TM241CE40T, Schneider Electric TM241CE40T, Modicon M241, контроллер ПЛК, ПЛК Schneider, купить контроллер, Modicon M241 Ethernet">
+
+    <link rel="canonical" href="https://encomponent.ru/product/schneider-electric-tm241ce40t/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Schneider Electric TM241CE40T — контроллер M241-40IO Ethernet">
+    <meta property="og:description" content="Купить Schneider Electric TM241CE40T — базовый контроллер Modicon M241-40IO Ethernet. Технические характеристики, PDF-документация, доставка по России.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://encomponent.ru/product/schneider-electric-tm241ce40t/">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg">
+
+    <!-- JSON-LD микроразметка -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Schneider Electric TM241CE40T",
+      "image": "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
+      "description": "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet. Транзисторный источник питания, компактное исполнение, поддержка Modbus и TCP/IP.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Schneider Electric"
+      },
+      "sku": "TM241CE40T",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "RUB",
+        "price": "<?php echo $price; ?>",
+        "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
+        "url": "https://encomponent.ru/product/schneider-electric-tm241ce40t/"
+      }
+    }
+    </script>
 </head>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
@@ -177,6 +212,15 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
+                <section class="seo-text">
+                    <div class="container">
+                        <h2>Контроллер Schneider Electric TM241CE40T — надежное решение для автоматизации</h2>
+                        <p>Модель <b>TM241CE40T</b> относится к линейке <b>Modicon M241</b> и предназначена для гибкого управления промышленными процессами. Этот контроллер поддерживает <b>Ethernet, Modbus и TCP/IP</b>, что обеспечивает удобную интеграцию с другими устройствами автоматизации.</p>
+                        <p>Благодаря высокой производительности, компактным размерам и простому подключению, <b>Schneider Electric TM241CE40T</b> идеально подходит для насосных станций, систем вентиляции, производственных линий и машиностроительного оборудования.</p>
+                        <p>Вы можете <b>купить TM241CE40T</b> в интернет-магазине Encomponent с быстрой доставкой по России. Мы предоставляем технические консультации, официальную документацию и гарантию производителя.</p>
+                    </div>
+                </section>
+
                 <section class="technical-specifications-section" id="technical">
                     <div class="container">
                         <div class="attention-section__title-block technical-specifications-section__title-block flex">

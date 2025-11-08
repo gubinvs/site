@@ -44,14 +44,14 @@ foreach ($data as $item) {
     <meta name="description" content="Купить <?php echo $titlePage ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
     <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, модуль расширения, источник питания, купить, цена, характеристики">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://encomponent.ru/products/<?php echo $article ?>">
+    <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php">
 
     <!-- 🔹 Open Graph для соцсетей -->
     <meta property="og:type" content="product">
     <meta property="og:title" content="<?php echo $titlePage ?>">
     <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
     <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
-    <meta property="og:url" content="https://encomponent.ru/products/<?php echo $article ?>">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php">
     <meta property="og:site_name" content="Encomponent">
 
     <!-- 🔹 Schema.org — структурированные данные -->
@@ -71,7 +71,7 @@ foreach ($data as $item) {
                 "priceCurrency": "RUB",
                 "price": "<?php echo $price ?>",
                 "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
-                "url": "https://encomponent.ru/products/<?php echo $article ?>"
+                "url": "https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php"
             },
             "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
         }
@@ -319,7 +319,7 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
-                <section class="product-additional-info">
+                <section class="product-additional-info" style="margin-bottom: 40px;">
                     <div class="container">
                         <h2>Описание и преимущества TM3AI8</h2>
                         <p>

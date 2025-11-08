@@ -38,9 +38,49 @@ foreach ($data as $item) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
+
+    <!-- 🔹 Базовое SEO -->
     <title><?php echo $titlePage ?></title>
+    <meta name="description" content="Купить <?php echo $titlePage ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, модуль расширения, источник питания, купить, цена, характеристики">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm3di16-diskretnyy-modul-rasshireniya-manufacture-tm3-16-vkhodov.php">
+
+    <!-- 🔹 Open Graph для соцсетей -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="<?php echo $titlePage ?>">
+    <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm3di16-diskretnyy-modul-rasshireniya-manufacture-tm3-16-vkhodov.php">
+    <meta property="og:site_name" content="Encomponent">
+
+    <!-- 🔹 Schema.org — структурированные данные -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "<?php echo $titlePage ?>",
+            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "sku": "<?php echo $article ?>",
+            "brand": {
+                "@type": "Brand",
+                "name": "<?php echo $manufacturer ?>"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $price ?>",
+                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
+                "url": "https://encomponent.ru/comp-page/schneider-electric-tm3di16-diskretnyy-modul-rasshireniya-manufacture-tm3-16-vkhodov.php"
+            },
+            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
+        }
+    </script>
+
+    <!-- 🔹 Микроданные для Яндекса -->
+    <meta name="yandex-verification" content="26c39d63e5887901" />
 </head>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
@@ -270,6 +310,28 @@ foreach ($data as $item) {
                                 </div>
                             </ul>
                         </div>
+                    </div>
+                </section>
+
+                <section class="product-additional-info" style="margin-bottom: 40px;">
+                    <div class="container">
+                        <h2>Описание и преимущества TM3DI16</h2>
+                        <p>
+                            Модуль расширения TM3DI16 от Schneider Electric предназначен для расширения возможностей логических контроллеров Modicon TM3.
+                            Он обеспечивает до 8 аналоговых входов для подключения датчиков и измерительных приборов, позволяя строить гибкие системы автоматизации.
+                        </p>
+                        <p>
+                            Преимущества TM3DI16:
+                        <ul>
+                            <li>Легкая интеграция с контроллерами Modicon TM3;</li>
+                            <li>Поддержка дистанционного размещения модулей;</li>
+                            <li>Надежность и долговечность от производителя Schneider Electric;</li>
+                            <li>Простая установка и обслуживание благодаря стандартизированным соединителям.</li>
+                        </ul>
+                        </p>
+                        <p>
+                            Этот модуль идеально подходит для промышленных автоматизированных систем, малых и средних производственных линий, где важны точность, надежность и расширяемость.
+                        </p>
                     </div>
                 </section>
                 <section class="documents-section" id="documents">

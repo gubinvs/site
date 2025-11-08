@@ -43,36 +43,36 @@ foreach ($data as $item) {
     <meta name="description" content="Контроллер Schneider Electric TM241CE40T (Modicon M241-40IO, транзисторный источник, Ethernet). В наличии, доставка по РФ. Официальная документация, характеристики и цена.">
     <meta name="keywords" content="TM241CE40T, Schneider Electric TM241CE40T, Modicon M241, контроллер ПЛК, ПЛК Schneider, купить контроллер, Modicon M241 Ethernet">
 
-    <link rel="canonical" href="https://encomponent.ru/product/schneider-electric-tm241ce40t/">
+    <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm241ce40t-bazovyy-blok-m241-40io.php">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Schneider Electric TM241CE40T — контроллер M241-40IO Ethernet">
     <meta property="og:description" content="Купить Schneider Electric TM241CE40T — базовый контроллер Modicon M241-40IO Ethernet. Технические характеристики, PDF-документация, доставка по России.">
     <meta property="og:type" content="product">
-    <meta property="og:url" content="https://encomponent.ru/product/schneider-electric-tm241ce40t/">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm241ce40t-bazovyy-blok-m241-40io.php">
     <meta property="og:image" content="https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg">
 
     <!-- JSON-LD микроразметка -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Schneider Electric TM241CE40T",
-      "image": "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
-      "description": "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet. Транзисторный источник питания, компактное исполнение, поддержка Modbus и TCP/IP.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Schneider Electric"
-      },
-      "sku": "TM241CE40T",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "RUB",
-        "price": "<?php echo $price; ?>",
-        "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
-        "url": "https://encomponent.ru/product/schneider-electric-tm241ce40t/"
-      }
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Schneider Electric TM241CE40T",
+            "image": "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
+            "description": "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet. Транзисторный источник питания, компактное исполнение, поддержка Modbus и TCP/IP.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Schneider Electric"
+            },
+            "sku": "TM241CE40T",
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $price; ?>",
+                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
+                "url": "https://encomponent.ru/comp-page/schneider-electric-tm241ce40t-bazovyy-blok-m241-40io.php"
+            }
+        }
     </script>
 </head>
 
@@ -212,7 +212,7 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
-                <section class="seo-text">
+                <section class="seo-text" style="margin-bottom: 40px;">
                     <div class="container">
                         <h2>Контроллер Schneider Electric TM241CE40T — надежное решение для автоматизации</h2>
                         <p>Модель <b>TM241CE40T</b> относится к линейке <b>Modicon M241</b> и предназначена для гибкого управления промышленными процессами. Этот контроллер поддерживает <b>Ethernet, Modbus и TCP/IP</b>, что обеспечивает удобную интеграцию с другими устройствами автоматизации.</p>

@@ -31,15 +31,53 @@ foreach ($data as $item) {
 <!DOCTYPE html>
 <html lang="ru">
 
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="Страница с описанием товара : TM241CE24T,SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric">
-    <title>TM241CE24T,SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</title>
+
+    <title>TM241CE24T, Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric | Купить в России</title>
+    <meta name="description" content="Контроллер Schneider Electric TM241CE24T (Modicon M241-40IO, транзисторный источник, Ethernet). В наличии, доставка по РФ. Официальная документация, характеристики и цена.">
+    <meta name="keywords" content="TM241CE24T, Schneider Electric TM241CE24T, Modicon M241, контроллер ПЛК, ПЛК Schneider, купить контроллер, Modicon M241 Ethernet">
+
+    <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Schneider Electric TM241CE24T — контроллер M241-40IO Ethernet">
+    <meta property="og:description" content="Купить Schneider Electric TM241CE24T — базовый контроллер Modicon M241-40IO Ethernet. Технические характеристики, PDF-документация, доставка по России.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg">
+
+    <!-- JSON-LD микроразметка -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Schneider Electric TM241CE40T",
+            "image": "https://encomponent.ru/img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg",
+            "description": "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet. Транзисторный источник питания, компактное исполнение, поддержка Modbus и TCP/IP.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Schneider Electric"
+            },
+            "sku": "TM241CE40T",
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $price; ?>",
+                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
+                "url": "https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php"
+            }
+        }
+    </script>
 </head>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
@@ -64,7 +102,7 @@ foreach ($data as $item) {
     });
 </script>
 <noscript>
-    <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="" /></div>
+    <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="@" /></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
 
@@ -181,6 +219,17 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
+
+                <section class="seo-text" style="margin-bottom: 40px;">
+                    <div class="container">
+                        <h2>Контроллер Schneider Electric TM241CE24T — надежное решение для автоматизации</h2>
+                        <p>Модель <b>TM241CE24T</b> относится к линейке <b>Modicon M241</b> и предназначена для гибкого управления промышленными процессами. Этот контроллер поддерживает <b>Ethernet, Modbus и TCP/IP</b>, что обеспечивает удобную интеграцию с другими устройствами автоматизации.</p>
+                        <p>Благодаря высокой производительности, компактным размерам и простому подключению, <b>Schneider Electric TM241CE24T</b> идеально подходит для насосных станций, систем вентиляции, производственных линий и машиностроительного оборудования.</p>
+                        <p>Вы можете <b>купить TM241CE24T</b> в интернет-магазине Encomponent с быстрой доставкой по России. Мы предоставляем технические консультации, официальную документацию и гарантию производителя.</p>
+                    </div>
+                </section>
+
+
                 <section class="technical-specifications-section" id="technical">
                     <div class="container">
                         <div class="attention-section__title-block technical-specifications-section__title-block flex">

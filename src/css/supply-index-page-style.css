@@ -123,7 +123,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .header {
@@ -176,6 +175,7 @@ body {
 
 .card {
   position: relative;
+  width: 50%;
   margin-bottom: 20px;
 }
 
@@ -186,6 +186,13 @@ body {
   border-radius: 20px;
   background-color: #8E9934;
   z-index: 1;
+}
+
+.card__number-block_card-02 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
 }
 
 .c-number-block__triangle {
@@ -217,11 +224,27 @@ body {
   z-index: 0;
 }
 
+.c-number-block__fon_card-02 {
+  position: absolute;
+  top: 0px;
+  left: 423px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 20px;
+  z-index: 1;
+}
+
 .card__discription-fon_01 {
   width: 600px;
   height: 233px;
   border-radius: 0px 0px 0px 20px;
   background-color: #FFFFFF;
+}
+
+.card__discription-fon_01_card-02 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 0px 20px 20px 20px;
 }
 
 .card__discription-fon_02 {
@@ -236,6 +259,13 @@ body {
   z-index: 1;
 }
 
+.card__discription-fon_02_card-02 {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  border-radius: 20px 20px 0px 20px;
+}
+
 .card__icon {
   margin-left: auto;
   margin-right: auto;
@@ -247,11 +277,19 @@ body {
   z-index: 5;
 }
 
+.card__discription_card-02 {
+  padding-top: 104px;
+}
+
 .cdt__icon {
   display: flex;
   align-items: center;
   margin-right: 10px;
   z-index: 6;
+}
+
+.cdt__title {
+  width: 410px;
 }
 
 .card-discription__title {

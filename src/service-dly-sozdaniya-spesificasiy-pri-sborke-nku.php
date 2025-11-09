@@ -101,8 +101,8 @@
                             <path d="M10.8253 15L0 0L21.6506 0L10.8253 15Z" fill="#8E9934" />
                         </svg>
                     </div>
+                    <div class="c-number-block__number">01</div>
                 </div>
-                <div class="c-number-block__number">01</div>
                 <div class="c-number-block__fon"></div>
                 <div class="card__discription-fon_01">
                     <div class="card__discription">
@@ -115,7 +115,7 @@
                                 </svg>
                             </div>
                             <div class="cdt__title">
-                                База номенклатуры
+                                Обширная база номенклатуры
                             </div>
                         </div>
                         <div class="card-discription__discr">
@@ -126,6 +126,38 @@
                 <div class="card__discription-fon_02">
                     <img class="card__icon" src="img/img-supply-page/database_icon_152641.svg" alt="База данных иконка">
                 </div>
+            </div>
+            <div class="card">
+                <div class="card__number-block card__number-block_card-02">
+                    <div class="c-number-block__triangle">
+                        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8253 15L0 0L21.6506 0L10.8253 15Z" fill="#8E9934" />
+                        </svg>
+                    </div>
+                    <div class="c-number-block__number">02</div>
+                </div>
+                <div class="c-number-block__fon c-number-block__fon_card-02"></div>
+                <div class="card__discription-fon_02 card__discription-fon_02_card-02">
+                    <img class="card__icon" src="img/img-supply-page/list__icon.svg" alt="Иконка в виде списка">
+                    <div class="card__discription card__discription_card-02">
+                        <div class="card-discription__title">
+                            <div class="cdt__icon">
+                                <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="15.1216" cy="15" rx="15.1216" ry="15" fill="#8E9934" />
+                                    <line x1="15.1135" y1="9" x2="15.1135" y2="21" stroke="white" stroke-width="2" />
+                                    <line x1="9.07297" y1="15" x2="21.1703" y2="15" stroke="white" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="cdt__title">
+                                Перечень лучших поставщиков
+                            </div>
+                        </div>
+                        <div class="card-discription__discr">
+                            Сервис позволяет формировать список поставщиков и учитывать их предложения по цене и срокам поставки.
+                        </div>
+                    </div>
+                </div>
+                <div class="card__discription-fon_01 card__discription-fon_01_card-02"></div>
             </div>
         </div>
     </main>

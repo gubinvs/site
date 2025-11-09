@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/supply-index-page-style.css" media="all">
+    <title>Сервис для создания спецификаций</title>
 
     <!-- 🔹 Базовое SEO -->
     <title><?php echo $titlePage ?></title>
@@ -80,7 +81,18 @@
 <!-- /Yandex.Metrika counter -->
 
 <body>
-    <main>
+    <header class="header">
+        <div class="container header__container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <ul class="menu-header__list">
+                <li class="menu-header__item">Вход</li>
+                <li class="menu-header__item">Регистрация</li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-section">
         <div class="container">
             <div class="card">
                 <div class="card__number-block">
@@ -89,6 +101,30 @@
                             <path d="M10.8253 15L0 0L21.6506 0L10.8253 15Z" fill="#8E9934" />
                         </svg>
                     </div>
+                </div>
+                <div class="c-number-block__number">01</div>
+                <div class="c-number-block__fon"></div>
+                <div class="card__discription-fon_01">
+                    <div class="card__discription">
+                        <div class="card-discription__title">
+                            <div class="cdt__icon">
+                                <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="15.1216" cy="15" rx="15.1216" ry="15" fill="#8E9934" />
+                                    <line x1="15.1135" y1="9" x2="15.1135" y2="21" stroke="white" stroke-width="2" />
+                                    <line x1="9.07297" y1="15" x2="21.1703" y2="15" stroke="white" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="cdt__title">
+                                База номенклатуры
+                            </div>
+                        </div>
+                        <div class="card-discription__discr">
+                            Сервис содержит обширный перечень номенклатуры, используемой при производстве электрической распределительной аппаратуры.
+                        </div>
+                    </div>
+                </div>
+                <div class="card__discription-fon_02">
+                    <img class="card__icon" src="img/img-supply-page/database_icon_152641.svg" alt="База данных иконка">
                 </div>
             </div>
         </div>

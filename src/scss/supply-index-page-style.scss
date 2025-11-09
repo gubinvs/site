@@ -16,6 +16,10 @@ body {
     background-color: #D5DAE0;
 }
 
+.main-section {
+    padding-top: 35px;
+}
+
 .container {
     width: 1280px;
     margin-right: auto;
@@ -24,8 +28,57 @@ body {
     flex-wrap: wrap;
 }
 
+.header {
+    width: 100%;
+    padding-top: 45px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #8E9934;
+}
+
+.square:not(:last-of-type) {
+    margin-right: 4px;
+}
+
+.square:last-of-type {
+    margin-right: 20px;
+}
+
+.menu-header__list {
+    display: flex;
+    align-items: center;
+}
+
+.menu-header__item {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    border-bottom: 1px solid #8E9934;
+    color: #342F2C;
+    cursor: pointer;
+}
+
+.menu-header__item:hover {
+    border-bottom: 1px solid #F5EA29;
+}
+
+.menu-header__item:not(:last-of-type) {
+    margin-right: 20px;
+}
+
 .card {
     position: relative;
+    margin-bottom: 20px;
 }
 
 .card__number-block {
@@ -34,10 +87,93 @@ body {
     height: 197px;
     border-radius: 20px;
     background-color: #8E9934;
+    z-index: 1;
 }
 
 .c-number-block__triangle {
     position: absolute;
     bottom: -21px;
     left: 87.5px;
+}
+
+.c-number-block__number {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    font-family: "Black Ops One", system-ui;
+    font-size: 64px;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.c-number-block__fon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 217px;
+    height: 217px;
+    border-bottom-right-radius: 20px;
+    background-color: #D5DAE0;
+    z-index: 0;
+}
+
+.card__discription-fon_01 {
+    width: 600px;
+    height: 233px;
+    border-radius: 0px 0px 0px 20px;
+    background-color: #FFFFFF;
+}
+
+.card__discription-fon_02 {
+    position: absolute;
+    bottom: 0px;
+    left: 217px;
+    width: 413px;
+    height: 430px;
+    padding-top: 30px;
+    border-radius: 20px 20px 20px 0px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.card__icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card__discription {
+    padding-top: 60px;
+    padding-left: 60px;
+    z-index: 5;
+}
+
+.cdt__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    z-index: 6;
+}
+
+.card-discription__title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: normal;
+    color: #8E9934;
+    z-index: 6;
+}
+
+.card-discription__discr {
+    position: absolute;
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #342F2C;
+    width: 528px;
+    z-index: 6;
 }

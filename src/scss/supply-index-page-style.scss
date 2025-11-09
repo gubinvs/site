@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import 'normalize.scss';
+
+
+.black-ops-one-regular {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Mulish", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #D5DAE0;
+}
+
+.container {
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+}
+
+.card__number-block {
+    position: relative;
+    width: 197px;
+    height: 197px;
+    border-radius: 20px;
+    background-color: #8E9934;
+}
+
+.c-number-block__triangle {
+    position: absolute;
+    bottom: -21px;
+    left: 87.5px;
+}

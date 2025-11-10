@@ -1,9 +1,9 @@
 <?php
 include "../php/class/api_Connector.php";
 
-$article = "2866763"; // Замените на нужный артикул
-$titlePage = "2866763, QUINT-PS/1AC/24DC/10 - Phoenix Contact";
-$manufacturer ="Phoenix Contact";
+$article = "2904600"; // Замените на нужный артикул
+$titlePage = "2904600, QUINT4-PS/1AC/24DC/5 - Phoenix Contact";
+$manufacturer = "Phoenix Contact";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
 $options = [
@@ -29,7 +29,6 @@ foreach ($data as $item) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -37,11 +36,117 @@ foreach ($data as $item) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 🔹 Favicon и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
-    <title><?php echo $titlePage ?></title>
+
+    <!-- 🔹 Базовое SEO -->
+    <title><?php echo $titlePage ?> | Купить в Санкт-Петербурге и РФ — Компоненты энергии</title>
+    <meta name="description" content="Источник питания <?php echo $titlePage ?> от <?php echo $manufacturer ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Доставка по России. Официальный поставщик Phoenix Contact.">
+    <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, <?php echo $titlePage ?>, источник питания, купить, цена, характеристики, QUINT4 PS 1AC 24DC 5 - Phoenix Contact">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://encomponent.ru/comp-page/istocniki-pitania-quint4-ps-1ac-24dc-5-article-2904600.php">
+    <meta name="lastmod" content="<?php echo date('Y-m-d'); ?>">
+
+    <!-- 🔹 Open Graph / Соцсети -->
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="Компоненты энергии">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="<?php echo $titlePage ?>">
+    <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/PC_2904600/PC_2904600_big_1920.jpg">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/istocniki-pitania-quint4-ps-1ac-24dc-5-article-2904600.php">
+    <meta property="og:updated_time" content="<?php echo date('c'); ?>">
+
+    <!-- 🔹 Hreflang (если будет англ. версия — можно активировать) -->
+    <link rel="alternate" hreflang="ru" href="https://encomponent.ru/comp-page/istocniki-pitania-quint4-ps-1ac-24dc-5-article-2904600.php">
+    <!-- <link rel="alternate" hreflang="en" href="https://encomponent.com/en/phoenix-contact-<?php echo $article ?>/"> -->
+
+    <!-- 🔹 Schema.org Product -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "<?php echo $titlePage ?>",
+            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "sku": "<?php echo $article ?>",
+            "brand": {
+                "@type": "Brand",
+                "name": "<?php echo $manufacturer ?>"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $price ?>",
+                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
+                "url": "https://encomponent.ru/comp-page/istocniki-pitania-quint4-ps-1ac-24dc-5-article-2904600.php"
+            },
+            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
+        }
+    </script>
+
+    <!-- 🔹 Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://encomponent.ru/" },
+                { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://encomponent.ru/comp-page/" },
+                { "@type": "ListItem", "position": 3, "name": "<?php echo $manufacturer ?>", "item": "https://encomponent.ru/catalog/<?php echo strtolower(str_replace(' ', '-', $manufacturer)) ?>/" },
+                { "@type": "ListItem", "position": 4, "name": "<?php echo $titlePage ?>", "item": "https://encomponent.ru/comp-page/istocniki-pitania-quint4-ps-1ac-24dc-5-article-2904600.php" }
+            ]
+        }
+    </script>
+
+    <!-- 🔹 FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Можно ли подключить <?php echo $titlePage ?> к промышленной сети?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да, источник питания <?php echo $titlePage ?> поддерживает подключение к однофазной сети 230 В AC и предназначен для промышленных шкафов."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Есть ли защита от короткого замыкания?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да, технология SFB (Selective Fuse Breaking) обеспечивает селективное срабатывание предохранителей при коротком замыкании и защищает оборудование."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- 🔹 Организация (для Google и Яндекс) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ООО «Компоненты энергии»",
+            "url": "https://encomponent.ru",
+            "logo": "https://encomponent.ru/favicon.svg",
+            "contactPoint": [{
+                "@type": "ContactPoint",
+                "telephone": "+7-800-000-00-00",
+                "contactType": "Customer Service",
+                "areaServed": "RU"
+            }]
+        }
+    </script>
+
+    <!-- 🔹 Верификация -->
+    <meta name="yandex-verification" content="26c39d63e5887901" />
 </head>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
@@ -81,7 +186,7 @@ foreach ($data as $item) {
                 <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/2866763/2866763_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img class="discription-product__img" src="../img/img-product/PC_2904600/PC_2904600_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -125,15 +230,15 @@ foreach ($data as $item) {
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Выходной ток, А​</div>
-                                    <div class="characteristics-item__discr">10</div>
+                                    <div class="characteristics-item__discr">5</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
                                     <div class="characteristics-item__title">Мощность, Вт</div>
                                     <div class="characteristics-item__discr">240</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Вес, кг</div>
-                                    <div class="characteristics-item__discr">0.75</div>
+                                    <div class="characteristics-item__title">Степень защиты</div>
+                                    <div class="characteristics-item__discr">IP 20</div>
                                 </li>
                             </ul>
                         </div>
@@ -163,11 +268,12 @@ foreach ($data as $item) {
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Источники питания QUINT POWER</b> обладают широким набором функций, обеспечивающих высокую эффективность и надежность. 
-                            Технология SFB (Selective Fuse Breaking) позволяет эффективно защищать установки, быстро инициируя магнитное срабатывание 
+                            <b>Источник питания QUINT POWER </b>с регулированием в первичной цепи, с регулируемыми выходными характеристиками, технологией SFB (Selective Fuse Breaking) 
+                            и интерфейсом NFC, вход: 1-фазный, выход: 24 В пост. тока / 5 A обладают широким набором функций, обеспечивающих высокую эффективность и надежность.
+                            Технология SFB (Selective Fuse Breaking) позволяет эффективно защищать установки, быстро инициируя магнитное срабатывание
                             линейного защитного автомата при 6-кратном номинальном токе.<br><br>
 
-                            Предупредительный контроль помогает обнаруживать критические рабочие состояния, позволяя предпринимать необходимые меры до 
+                            Предупредительный контроль помогает обнаруживать критические рабочие состояния, позволяя предпринимать необходимые меры до
                             возникновения неисправности и обеспечивая высокую степень готовности оборудования.
                             <br><br>
                             Для надежного запуска высоких нагрузок используется статическое резервирование мощности POWER BOOST.
@@ -175,6 +281,11 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
+                <p class="product-intro" style="margin-bottom: 40px">
+                    Четвертое поколение высокопроизводительных источников питания QUINT POWER обеспечивает максимальную готовность оборудования при помощи новых функций. 
+                    Пороговые значения сигнализации и характеристики можно индивидуально корректировать при помощи интерфейса NFC.
+                    Уникальная технология SFB и превентивный функциональный контроль блока питания QUINT POWER повышают степень готовности системы.
+                </p>
                 <section class="technical-specifications-section" id="technical">
                     <div class="container">
                         <div class="attention-section__title-block technical-specifications-section__title-block flex">
@@ -212,30 +323,19 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name  grey">Номинальный ток на выходе, A</div>
-                                    <div class="specifications-item__tech  grey">10</div>
+                                    <div class="specifications-item__tech  grey">5</div>
                                 </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Описание полюсов</div>
-                                    <div class="specifications-item__tech">2</div>
-                                </div>
-                                <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Номинальный ток, А</div>
-                                    <div class="specifications-item__tech grey">63</div>
-                                </div>
-                      
-               
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Тип монтажа</div>
                                     <div class="specifications-item__tech">Дин рейка</div>
                                 </div>
-                    
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Вес нетто, кг</div>
-                                    <div class="specifications-item__tech grey">0,165</div>
+                                    <div class="specifications-item__tech grey">0,4</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Ширина, мм</div>
-                                    <div class="specifications-item__tech">60</div>
+                                    <div class="specifications-item__tech">35</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Высота, мм</div>
@@ -243,7 +343,7 @@ foreach ($data as $item) {
                                 </div>
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Глубина, мм</div>
-                                    <div class="specifications-item__tech">125</div>
+                                    <div class="specifications-item__tech">115</div>
                                 </div>
                             </ul>
                         </div>
@@ -261,7 +361,7 @@ foreach ($data as $item) {
                             </div>
                             <div class="attention-section-title__title">Документация</div>
                         </div>
-                        <div class="technical-specifications-section__table mb-40">
+                        <!-- <div class="technical-specifications-section__table mb-40">
                             <div class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
                                     <div class="equipment-section-item">
@@ -302,9 +402,13 @@ foreach ($data as $item) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </section>
+                <!-- <section class="related-products">
+                    <h2>Похожие товары <?php echo $manufacturer ?></h2>
+                    <?php include '../php/modules/related-products.php'; ?> 
+                </section> -->
             </div>
     </main>
     <?php include "../php/modules/footer.php" ?>

@@ -261,7 +261,7 @@ foreach ($data as $item) {
                             </div>
                             <div class="attention-section-title__title">Документация</div>
                         </div>
-                        <div class="technical-specifications-section__table mb-40">
+                        <!-- <div class="technical-specifications-section__table mb-40">
                             <div class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
                                     <div class="equipment-section-item">
@@ -304,7 +304,7 @@ foreach ($data as $item) {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
             </div>
     </main>
     <?php include "../php/modules/footer.php" ?>

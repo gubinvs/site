@@ -280,6 +280,11 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
+                <p class="product-intro" style="margin-bottom: 40px">
+                    Источник питания <b><?php echo $titlePage ?></b> от компании <b><?php echo $manufacturer ?></b> —
+                    надежное решение для промышленных систем. Номинальное напряжение 24 В, ток 5 А, мощность 240 Вт.
+                    Быстрая доставка по России. Гарантия качества.
+                </p>
                 <section class="technical-specifications-section" id="technical">
                     <div class="container">
                         <div class="attention-section__title-block technical-specifications-section__title-block flex">
@@ -399,6 +404,10 @@ foreach ($data as $item) {
                         </div> -->
                     </div>
                 </section>
+                <!-- <section class="related-products">
+                    <h2>Похожие товары <?php echo $manufacturer ?></h2>
+                    <?php include '../php/modules/related-products.php'; ?> 
+                </section> -->
             </div>
     </main>
     <?php include "../php/modules/footer.php" ?>

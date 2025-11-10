@@ -66,8 +66,7 @@ ol[class] {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 a {
@@ -592,11 +591,20 @@ a:hover {
   color: #ffffff;
 }
 
+.benefits-section {
+  margin-bottom: 50px;
+}
+
 .benefits__title {
   margin-bottom: 20px;
 }
 
 .benefits__item {
+  font-size: 20px;
+  padding-left: 40px;
+  background-image: url(../img/plus.svg);
+  background-repeat: no-repeat;
+  background-position: left;
   margin-bottom: 10px;
 }
 
@@ -1392,4 +1400,4 @@ header {
   .footer-logo-block {
     display: none;
   }
-}/*# sourceMappingURL=encomp-nku-project-style.css.map */
+}

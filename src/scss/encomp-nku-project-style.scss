@@ -519,12 +519,23 @@ a:hover {
 
 // =============== benefits-section ============
 
+
+.benefits-section {
+  margin-bottom: 50px;
+}
+
 .benefits__title {
   margin-bottom: 20px;
 }
 .benefits__item {
+  font-size: 20px;
+  padding-left: 40px;
+  background-image: url(../img/plus.svg);
+  background-repeat: no-repeat;
+  background-position: left;
   margin-bottom: 10px;
 }
+
 
 
 

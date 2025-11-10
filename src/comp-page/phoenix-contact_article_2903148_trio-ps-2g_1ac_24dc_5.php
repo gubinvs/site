@@ -386,48 +386,48 @@ foreach ($data as $item) {
                             </div>
                             <div class="attention-section-title__title">Документация</div>
                         </div>
-                        <!-- <div class="technical-specifications-section__table mb-40">
+                        <div class="technical-specifications-section__table mb-40">
                             <div class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/Schneider_Electric_АВ-iC60-Acti9_A9V41263.pdf" class="download-file__list-link">Технические данные (PDF, 256КБ)</a>
+                                            <a href="../files/PC_2903148/pxc_2903148_07_01_TRIO-PS-2G-1AC-24DC-5_2D.pdf" class="download-file__list-link">Технический чертеж (PDF, 115КБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/BBV4097000-02.pdf" class="download-file__list-link">Инструкция (PDF, 2,7MБ)</a>
+                                            <a href="../files/PC_2903148/db_ru_trio_ps_2g_1ac_24dc_5_105900_ru_01.pdf" class="download-file__list-link">Техническое описание (рус) (PDF, 693КБ)</a>
                                         </div>
                                     </div>
                                     <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/CA9UG000E.pdf" class="download-file__list-link">Руководство пользователя (PDF, 1,4MБ)</a>
+                                            <a href="../files/PC_2903148/pxc_2903148_07_02_TRIO-PS-2G-1AC-24DC-5_3D.stp" class="download-file__list-link">Вид 3D и загрузка CAD (stp, 913KБ)</a>
                                         </div>
                                     </div>
-                                    <div class="equipment-section-item">
+                                    <!-- <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
                                             <a href="../files/A9V41263/catalog_Acti9_MKP-CAT-ACTI9.pdf" class="download-file__list-link">Каталог (PDF, 79,9MБ)</a>
                                         </div>
-                                    </div>
-                                    <div class="equipment-section-item">
+                                    </div> -->
+                                    <!-- <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
                                             <a href="../files/A9V41263/MCADFD0001497_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 361KБ)</a>
                                         </div>
-                                    </div>
-                                    <div class="equipment-section-item">
+                                    </div> -->
+                                    <!-- <div class="equipment-section-item">
                                         <div class="discription-section-right-block__download-file flex">
                                             <div class="download-file__list-icon"></div>
                                             <a href="../files/A9V41263/ЕАЭС_RU_С-FR.АБ53.В.06040_22.pdf" class="download-file__list-link">Сертификат EAЭС (PDF, 1,9MБ)</a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </section>
                 <!-- <section class="related-products">

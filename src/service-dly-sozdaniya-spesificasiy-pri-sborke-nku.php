@@ -87,8 +87,8 @@
             <div class="square"></div>
             <div class="square"></div>
             <ul class="menu-header__list">
-                <li class="menu-header__item">Вход</li>
-                <li class="menu-header__item">Регистрация</li>
+                <li class="menu-header__item"><a href="https://supply.encomponent.ru/AuthorizationForm">Вход</a></li>
+                <li class="menu-header__item"><a href="https://supply.encomponent.ru/Registration"> Регистрация</a></li>
             </ul>
         </div>
     </header>
@@ -158,6 +158,73 @@
                     </div>
                 </div>
                 <div class="card__discription-fon_01 card__discription-fon_01_card-02"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card__number-block card__number-block_card-03">
+                    <div class="c-number-block__triangle c-number-block__triangle_top">
+                        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8253 15L0 0L21.6506 0L10.8253 15Z" fill="#8E9934" />
+                        </svg>
+                    </div>
+                    <div class="c-number-block__number">03</div>
+                </div>
+                <div class="c-number-block__fon c-number-block__fon_bottom"></div>
+                <div class="card__discription-fon_01">
+                    <div class="card__discription">
+                        <div class="card-discription__title">
+                            <div class="cdt__icon">
+                                <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="15.1216" cy="15" rx="15.1216" ry="15" fill="#8E9934" />
+                                    <line x1="15.1135" y1="9" x2="15.1135" y2="21" stroke="white" stroke-width="2" />
+                                    <line x1="9.07297" y1="15" x2="21.1703" y2="15" stroke="white" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="cdt__title">
+                                Анализирует данные
+                            </div>
+                        </div>
+                        <div class="card-discription__discr">
+                            Система автоматически подбирает лучшие предложения, оценивая цену и сроки поставки каждого артикула.
+                        </div>
+                    </div>
+                </div>
+                <div class="card__discription-fon_02">
+                    <img class="card__icon card__icon_bottom " src="img/img-supply-page/scales.svg" alt="База данных иконка">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__number-block card__number-block_card-04">
+                    <div class="c-number-block__triangle c-number-block__triangle_top">
+                        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8253 15L0 0L21.6506 0L10.8253 15Z" fill="#8E9934" />
+                        </svg>
+                    </div>
+                    <div class="c-number-block__number">04</div>
+                </div>
+                <div class="c-number-block__fon c-number-block__fon_bottom_card-02"></div>
+                <div class="card__discription-fon_02 card__discription-fon_02_card-02">
+                    <img class="card__icon card__icon_bottom" src="img/img-supply-page/exchange.svg" alt="Иконка в виде списка">
+                    <div class="card__discription card__discription_bottom_card-02">
+                        <div class="card-discription__title">
+                            <div class="cdt__icon">
+                                <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="15.1216" cy="15" rx="15.1216" ry="15" fill="#8E9934" />
+                                    <line x1="15.1135" y1="9" x2="15.1135" y2="21" stroke="white" stroke-width="2" />
+                                    <line x1="9.07297" y1="15" x2="21.1703" y2="15" stroke="white" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="cdt__title">
+                                Формирует спецификации
+                            </div>
+                        </div>
+                        <div class="card-discription__discr">
+                            Система формирует спецификации и заказы для отправки поставщикам, автоматически учитывая выбранные позиции.
+                        </div>
+                    </div>
+                </div>
+                <div class="card__discription-fon_01 card__discription-fon_01_bottom_card-02"></div>
             </div>
         </div>
     </main>

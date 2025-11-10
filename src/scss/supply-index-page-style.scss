@@ -16,6 +16,14 @@ body {
     background-color: #D5DAE0;
 }
 
+a {
+    color: #342F2C;
+}
+
+a:hover {
+    color: #342F2C;
+}
+
 .main-section {
     padding-top: 35px;
 }
@@ -78,6 +86,7 @@ body {
 .card {
     position: relative;
     width: 50%;
+    height: 430px;
     margin-bottom: 20px;
 }
 
@@ -96,13 +105,32 @@ body {
     right: 0px;
     z-index: 2;
 }
+.card__number-block_card-03 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.card__number-block_card-04 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 2;
+}
 
 .c-number-block__triangle {
     position: absolute;
-    bottom: -21px;
+    bottom: -22px;
     left: 87.5px;
 }
 
+.c-number-block__triangle_top {
+    position: absolute;
+    bottom: 195px;
+    left: 87.5px;
+    transform: rotate(180deg);
+}
 
 .c-number-block__number {
     position: absolute;
@@ -136,6 +164,24 @@ body {
     z-index: 1;
 }
 
+.c-number-block__fon_bottom {
+    position: absolute;
+    top: 213px;
+    left: 0px;
+    border-radius: 0px 20px 0px 20px;
+}
+
+.c-number-block__fon_bottom_card-02 {
+    position: absolute;
+    top: 213px;
+    left: 423px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-radius: 20px 0px 0px 0px;
+    z-index: 1;
+}
+
+
 .card__discription-fon_01 {
     width: 600px;
     height: 233px;
@@ -146,6 +192,13 @@ body {
 .card__discription-fon_01_card-02 {
     position: absolute;
     bottom: 0px;
+    right: 0px;
+    border-radius: 0px 20px 20px 20px;
+}
+
+.card__discription-fon_01_bottom_card-02 {
+    position: absolute;
+    bottom: 197px;
     right: 0px;
     border-radius: 0px 20px 20px 20px;
 }
@@ -174,6 +227,12 @@ body {
     margin-right: auto;
 }
 
+.card__icon_bottom {
+    position: absolute;
+    bottom: 60px;
+    left: 140px;
+}
+
 .card__discription {
     padding-top: 60px;
     padding-left: 60px;
@@ -184,6 +243,11 @@ body {
     padding-top: 104px;
 }
 
+.card__discription_bottom_card-02 {
+    position: absolute;
+    bottom: 370px;
+}
+
 
 .cdt__icon {
     display: flex;
@@ -191,6 +255,7 @@ body {
     margin-right: 10px;
     z-index: 6;
 }
+
 
 .cdt__title {
     width: 410px;

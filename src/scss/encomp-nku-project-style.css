@@ -66,7 +66,8 @@ ol[class] {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 a {
@@ -591,6 +592,14 @@ a:hover {
   color: #ffffff;
 }
 
+.benefits__title {
+  margin-bottom: 20px;
+}
+
+.benefits__item {
+  margin-bottom: 10px;
+}
+
 .equipment-section-item {
   width: 412px;
   font-size: 20px;
@@ -837,107 +846,6 @@ header {
   .msip-block-content__discr {
     width: 395px;
     font-size: 14px;
-  }
-}
-.index_solve-problems_section {
-  margin-bottom: 120px;
-}
-
-.isps__title_min {
-  font-size: 32px;
-  line-height: 32px;
-  color: #F3DE09;
-}
-
-.isps__title {
-  font-size: 48px;
-  line-height: 48px;
-  color: #1D252C;
-  margin-bottom: 40px;
-}
-
-.isps-content-block {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.info-block {
-  padding: 40px 20px 40px 20px;
-  background-color: #F7F7F5;
-  margin-bottom: 20px;
-}
-
-.info-block:nth-child(2n+1) {
-  margin-right: 20px;
-}
-
-.info-block__1,
-.info-block__4 {
-  width: 522px;
-}
-
-.info-block__2,
-.info-block__3 {
-  width: 737px;
-}
-
-.info-block__title_min {
-  font-size: 22px;
-  line-height: 24px;
-  color: #F3DE09;
-  margin-bottom: 10px;
-}
-
-.info-block__title {
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 30px;
-}
-
-.info-block__discr {
-  color: #6F7172;
-}
-
-@media only screen and (max-width: 1280px) {
-  .info-block__1,
-  .info-block__4 {
-    width: 405px;
-  }
-  .info-block__2,
-  .info-block__3 {
-    width: 575px;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .index_solve-problems_section {
-    margin-bottom: 100px;
-  }
-  .info-block {
-    margin-bottom: 10px;
-  }
-  .info-block:nth-child(2n+1) {
-    margin-right: 10px;
-  }
-  .info-block__1,
-  .info-block__4 {
-    width: 394px;
-  }
-  .info-block__2,
-  .info-block__3 {
-    width: 556px;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .info-block {
-    margin-bottom: 10px;
-  }
-  .info-block__1,
-  .info-block__4 {
-    width: 328px;
-  }
-  .info-block__2,
-  .info-block__3 {
-    width: 462px;
   }
 }
 .cases-section__container {
@@ -1484,4 +1392,4 @@ header {
   .footer-logo-block {
     display: none;
   }
-}
+}/*# sourceMappingURL=encomp-nku-project-style.css.map */

@@ -348,19 +348,19 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
-                <section class="advantages-section">
-                    <h3 class="advantages__title">Преимущества для вас</h3>
-                    <ul class="advantages__list">
-                        <li class="advantages__item">
+                <section class="benefits-section">
+                    <h2 class="benefits__title">Преимущества для вас</h2>
+                    <ul class="benefits__list">
+                        <li class="benefits__item">
                             Экономия времени и издержек благодаря зажиму Push-in и узкой конструкции
                         </li>
-                        <li class="advantages__item">
+                        <li class="benefits__item">
                             Повышение степени готовности оборудования с динамическим резервом мощности в 150 % номинального тока на 5 секунд
                         </li>
-                        <li class="advantages__item">
+                        <li class="benefits__item">
                             Максимальная гибкость благодаря широкому диапазону температур от -25 °C до +70 °C и запуску устройства при -40 °C
                         </li>
-                        <li class="advantages__item">
+                        <li class="benefits__item">
                             Прочная конструкция
                         </li>
                      

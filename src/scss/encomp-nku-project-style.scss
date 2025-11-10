@@ -509,8 +509,21 @@ a:hover {
   cursor: pointer;
 }
 
+
 .button-equipment:hover {
   color: #ffffff;
+}
+
+
+
+
+// =============== benefits-section ============
+
+.benefits__title {
+  margin-bottom: 20px;
+}
+.benefits__item {
+  margin-bottom: 10px;
 }
 
 
@@ -567,57 +580,12 @@ a:hover {
 
 @import "modules/header.scss";
 @import "modules/main-index-page.scss";
-@import "modules/index_solve-problems_section.scss";
+// @import "modules/index_solve-problems_section.scss";
 @import "modules/index-case-section.scss";
 @import "modules/about-main-section.scss";
 @import "modules/feedback-section.scss";
 @import 'modules/egrul-table-section.scss';
 @import 'modules/production-main-section.scss';
 @import 'modules/portfolio-section.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @import "modules/footer.scss";

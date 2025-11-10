@@ -36,25 +36,34 @@ foreach ($data as $item) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 🔹 Favicon и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
 
     <!-- 🔹 Базовое SEO -->
-    <title><?php echo $titlePage ?></title>
-    <meta name="description" content="Купить <?php echo $titlePage ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
-    <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, <?php echo $titlePage ?>, источник питания, купить, цена, характеристики">
+    <title><?php echo $titlePage ?> | Купить в Москве и РФ — Компоненты энергии</title>
+    <meta name="description" content="Источник питания <?php echo $titlePage ?> от <?php echo $manufacturer ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Доставка по России. Официальный поставщик Phoenix Contact.">
+    <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, <?php echo $titlePage ?>, источник питания, купить, цена, характеристики, QUINT POWER, 24В, 5А">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://encomponent.ru/products/<?php echo $article ?>">
+    <link rel="canonical" href="https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php">
+    <meta name="lastmod" content="<?php echo date('Y-m-d'); ?>">
 
-    <!-- 🔹 Open Graph для соцсетей -->
+    <!-- 🔹 Open Graph / Соцсети -->
     <meta property="og:type" content="product">
+    <meta property="og:site_name" content="Компоненты энергии">
+    <meta property="og:locale" content="ru_RU">
     <meta property="og:title" content="<?php echo $titlePage ?>">
     <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
     <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
-    <meta property="og:url" content="https://encomponent.ru/products/<?php echo $article ?>">
-    <meta property="og:site_name" content="Encomponent">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php">
+    <meta property="og:updated_time" content="<?php echo date('c'); ?>">
 
-    <!-- 🔹 Schema.org — структурированные данные -->
+    <!-- 🔹 Hreflang (если будет англ. версия — можно активировать) -->
+    <link rel="alternate" hreflang="ru" href="https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php">
+    <!-- <link rel="alternate" hreflang="en" href="https://encomponent.com/en/phoenix-contact-<?php echo $article ?>/"> -->
+
+    <!-- 🔹 Schema.org Product -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
@@ -71,15 +80,73 @@ foreach ($data as $item) {
                 "priceCurrency": "RUB",
                 "price": "<?php echo $price ?>",
                 "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
-                "url": "https://encomponent.ru/products/<?php echo $article ?>"
+                "url": "https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php"
             },
             "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
         }
     </script>
 
-    <!-- 🔹 Микроданные для Яндекса -->
+    <!-- 🔹 Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://encomponent.ru/" },
+                { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://encomponent.ru/catalog/" },
+                { "@type": "ListItem", "position": 3, "name": "<?php echo $manufacturer ?>", "item": "https://encomponent.ru/catalog/<?php echo strtolower(str_replace(' ', '-', $manufacturer)) ?>/" },
+                { "@type": "ListItem", "position": 4, "name": "<?php echo $titlePage ?>", "item": "https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php" }
+            ]
+        }
+    </script>
+
+    <!-- 🔹 FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Можно ли подключить <?php echo $titlePage ?> к промышленной сети?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да, источник питания <?php echo $titlePage ?> поддерживает подключение к однофазной сети 230 В AC и предназначен для промышленных шкафов."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Есть ли защита от короткого замыкания?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да, технология SFB (Selective Fuse Breaking) обеспечивает селективное срабатывание предохранителей при коротком замыкании и защищает оборудование."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- 🔹 Организация (для Google и Яндекс) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ООО «Компоненты энергии»",
+            "url": "https://encomponent.ru",
+            "logo": "https://encomponent.ru/favicon.svg",
+            "contactPoint": [{
+                "@type": "ContactPoint",
+                "telephone": "+7-800-000-00-00",
+                "contactType": "Customer Service",
+                "areaServed": "RU"
+            }]
+        }
+    </script>
+
+    <!-- 🔹 Верификация -->
     <meta name="yandex-verification" content="26c39d63e5887901" />
 </head>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {

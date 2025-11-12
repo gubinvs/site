@@ -248,7 +248,6 @@ a:hover {
     bottom: 370px;
 }
 
-
 .cdt__icon {
     display: flex;
     align-items: center;
@@ -256,11 +255,9 @@ a:hover {
     z-index: 6;
 }
 
-
 .cdt__title {
     width: 410px;
 }
-
 
 .card-discription__title {
     position: absolute;
@@ -282,4 +279,19 @@ a:hover {
     color: #342F2C;
     width: 528px;
     z-index: 6;
+}
+
+.entrance-block {
+    position: absolute;
+    top: 474px;
+    left: 765px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #D5DAE0;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
 }

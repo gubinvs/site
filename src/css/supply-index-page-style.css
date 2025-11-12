@@ -378,3 +378,18 @@ a:hover {
   width: 528px;
   z-index: 6;
 }
+
+.entrance-block {
+  position: absolute;
+  top: 474px;
+  left: 765px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-color: #D5DAE0;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+}

@@ -227,6 +227,11 @@
                 <div class="card__discription-fon_01 card__discription-fon_01_bottom_card-02"></div>
             </div>
         </div>
+        <a href="https://supply.encomponent.ru/AuthorizationForm">
+            <div class="entrance-block">
+                <img src="img/img-supply-page/entrance.svg" alt="#">
+            </div>
+        </a>
     </main>
 </body>
 

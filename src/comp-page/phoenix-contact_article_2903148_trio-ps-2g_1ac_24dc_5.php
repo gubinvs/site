@@ -91,11 +91,30 @@ foreach ($data as $item) {
         {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://encomponent.ru/" },
-                { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://encomponent.ru/comp-page/" },
-                { "@type": "ListItem", "position": 3, "name": "<?php echo $manufacturer ?>", "item": "https://encomponent.ru/catalog/<?php echo strtolower(str_replace(' ', '-', $manufacturer)) ?>/" },
-                { "@type": "ListItem", "position": 4, "name": "<?php echo $titlePage ?>", "item": "https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php" }
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Главная",
+                    "item": "https://encomponent.ru/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Каталог",
+                    "item": "https://encomponent.ru/comp-page/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "<?php echo $manufacturer ?>",
+                    "item": "https://encomponent.ru/catalog/<?php echo strtolower(str_replace(' ', '-', $manufacturer)) ?>/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "<?php echo $titlePage ?>",
+                    "item": "https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php"
+                }
             ]
         }
     </script>
@@ -105,8 +124,7 @@ foreach ($data as $item) {
         {
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-                {
+            "mainEntity": [{
                     "@type": "Question",
                     "name": "Можно ли подключить <?php echo $titlePage ?> к промышленной сети?",
                     "acceptedAnswer": {
@@ -285,6 +303,16 @@ foreach ($data as $item) {
                     надежное решение для промышленных систем. Номинальное напряжение 24 В, ток 5 А, мощность 240 Вт.
                     Быстрая доставка по России. Гарантия качества.
                 </p>
+                <section class="seo-text" style="margin-bottom: 40px; font-size: 20px">
+                    <h2>Описание и применение Phoenix Contact TRIO-PS-2G/1AC/24DC/5</h2>
+                    <p>Источник питания Phoenix Contact TRIO-PS-2G/1AC/24DC/5 (артикул 2903148) используется в шкафах управления и автоматизации.
+                        Он обеспечивает стабильное напряжение 24 В постоянного тока при нагрузке до 5 А.
+                        Благодаря защите от перегрузки и короткого замыкания, подходит для промышленных и коммерческих объектов.</p>
+
+                    <p>Купить источник питания Phoenix Contact можно с доставкой по Москве, Санкт-Петербургу, Екатеринбургу и другим регионам РФ.
+                        Мы являемся официальным поставщиком оборудования Phoenix Contact в России.</p>
+                </section>
+
                 <section class="technical-specifications-section" id="technical">
                     <div class="container">
                         <div class="attention-section__title-block technical-specifications-section__title-block flex">
@@ -363,7 +391,7 @@ foreach ($data as $item) {
                         <li class="benefits__item">
                             Прочная конструкция
                         </li>
-                     
+
                     </ul>
                 </section>
                 <section class="documents-section" id="documents">

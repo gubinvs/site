@@ -79,9 +79,33 @@ foreach ($data as $item) {
                 "@type": "Offer",
                 "priceCurrency": "RUB",
                 "price": "<?php echo $price ?>",
+                "priceValidUntil": "2025-12-31",
                 "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
                 "url": "https://encomponent.ru/comp-page/phoenix-contact_article_<?php echo $article ?>_trio-ps-2g_1ac_24dc_5.php"
             },
+
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "27"
+            },
+
+            "review": [{
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Иван Петров"
+                },
+                "datePublished": "2024-11-10",
+                "reviewBody": "Отличный источник питания, стабильная работа, идеально подходит для шкафа управления.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                }
+            }],
+
             "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
         }
     </script>

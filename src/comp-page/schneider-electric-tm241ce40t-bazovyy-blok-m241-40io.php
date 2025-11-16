@@ -1,32 +1,90 @@
 <?php
-include "../php/class/api_Connector.php";
+// schneider-tm241ce40t-fixed.php — итоговая собранная версия
+// Полностью объединённый финальный вариант страницы
 
-$article = "TM241CE40T"; // Замените на нужный артикул
-$titlePage = "TM241CE40T, Контроллер M241-40IO транзисторный источник ETHERNET";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
+include "../php/class/api_Connector.php"; // должны быть заданы $apiServer и $shopURL
+
+
+// --- Параметры товара ---
+$article = "TM241CE40T";
+$titleBase = "Schneider Electric TM241CE40T";
+$titlePage = $titleBase . " — контроллер M241-40IO Ethernet";
+
+
+// --- Канонический URL ---
+$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST'] ?? 'encomponent.ru';
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$canonical = $scheme . '://' . $host . $path;
+
+
+// --- API ---
+$url = rtrim($apiServer, '/') . '/api/SearchArticle/' . urlencode($article);
 $options = [
     "http" => [
         "method" => "GET",
-        "header" => "Content-Type: application/json"
+        "header" => "Content-Type: application/json
+",
+        "timeout" => 10
     ]
 ];
-
 $context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+$response = @file_get_contents($url, false, $context);
+
 
 if ($response === FALSE) {
-    die("Ошибка запроса");
+    error_log("[TM241CE40T] Ошибка API: " . $url);
+    $data = [];
+} else {
+    $data = json_decode($response, true);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        error_log("[TM241CE40T] JSON ошибка: " . json_last_error_msg());
+        $data = [];
+    }
 }
 
-$data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+$offers = [];
+$quantity = 0;
+$lowPrice = null;
+$highPrice = null;
+$offerCount = 0;
+$price = 0;
+
+
+if (is_array($data)) {
+    foreach ($data as $item) {
+        $p = isset($item['price']) && is_numeric($item['price']) ? floatval($item['price']) : null;
+        if ($p === null) continue;
+        $q = isset($item['quantity']) && is_numeric($item['quantity']) ? intval($item['quantity']) : 0;
+        $urlOffer = $item['url'] ?? ($shopURL . '/Basket/?vendorCode=' . urlencode($article));
+
+
+        $offers[] = [
+            'price' => $p,
+            'quantity' => $q,
+            'vendor' => $item['vendor'] ?? null,
+            'url' => $urlOffer
+        ];
+    }
 }
 
+
+if (count($offers)) {
+    usort($offers, fn($a, $b) => $a['price'] <=> $b['price']);
+    $lowPrice = $offers[0]['price'];
+    $highPrice = $offers[count($offers) - 1]['price'];
+    $offerCount = count($offers);
+    $price = $lowPrice;
+    $quantity = array_sum(array_column($offers, 'quantity'));
+}
+
+
+function e($s)
+{
+    return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,45 +92,62 @@ foreach ($data as $item) {
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= e($titlePage) ?> | Купить в России</title>
+    <meta name="description" content="Купить Schneider Electric TM241CE40T — контроллер Modicon M241-40IO с Ethernet. Документация, доставка по РФ.">
+    <link rel="canonical" href="<?= e($canonical) ?>">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
+    <link rel="stylesheet" href="../css/encomp-nku-project-style.css">
 
-    <title>Schneider Electric TM241CE40T — контроллер M241-40IO Ethernet | Купить в России</title>
-    <meta name="description" content="Контроллер Schneider Electric TM241CE40T (Modicon M241-40IO, транзисторный источник, Ethernet). В наличии, доставка по РФ. Официальная документация, характеристики и цена.">
-    <meta name="keywords" content="TM241CE40T, Schneider Electric TM241CE40T, Modicon M241, контроллер ПЛК, ПЛК Schneider, купить контроллер, Modicon M241 Ethernet">
 
-    <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm241ce40t-bazovyy-blok-m241-40io.php">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Schneider Electric TM241CE40T — контроллер M241-40IO Ethernet">
-    <meta property="og:description" content="Купить Schneider Electric TM241CE40T — базовый контроллер Modicon M241-40IO Ethernet. Технические характеристики, PDF-документация, доставка по России.">
+    <meta property="og:title" content="<?= e($titlePage) ?>">
+    <meta property="og:description" content="Контроллер M241-40IO TM241CE40T. Технические характеристики и наличие.">
     <meta property="og:type" content="product">
-    <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm241ce40t-bazovyy-blok-m241-40io.php">
+    <meta property="og:url" content="<?= e($canonical) ?>">
     <meta property="og:image" content="https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg">
 
-    <!-- JSON-LD микроразметка -->
+
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Schneider Electric TM241CE40T",
-            "image": "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
-            "description": "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet. Транзисторный источник питания, компактное исполнение, поддержка Modbus и TCP/IP.",
-            "brand": {
-                "@type": "Brand",
-                "name": "Schneider Electric"
-            },
-            "sku": "TM241CE40T",
-            "offers": {
-                "@type": "Offer",
-                "priceCurrency": "RUB",
-                "price": "<?php echo $price; ?>",
-                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
-                "url": "https://encomponent.ru/comp-page/schneider-electric-tm241ce40t-bazovyy-blok-m241-40io.php"
-            }
+        <?php
+        $product = [
+            "@context" => "https://schema.org",
+            "@type" => "Product",
+            "name" => $titleBase,
+            "image" => "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
+            "description" => "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet.",
+            "brand" => ["@type" => "Brand", "name" => "Schneider Electric"],
+            "sku" => $article
+        ];
+
+
+        if ($offerCount > 1) {
+            $product['offers'] = [
+                "@type" => "AggregateOffer",
+                "lowPrice" => $lowPrice,
+                "highPrice" => $highPrice,
+                "priceCurrency" => "RUB",
+                "offerCount" => $offerCount,
+                "offers" => array_map(fn($o) => [
+                    "@type" => "Offer",
+                    "price" => $o['price'],
+                    "priceCurrency" => "RUB",
+                    "availability" => ($o['quantity'] > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"),
+                    "url" => $o['url']
+                ], $offers)
+            ];
+        } else {
+            $product['offers'] = [
+                "@type" => "Offer",
+                "price" => $price,
+                "priceCurrency" => "RUB",
+                "availability" => ($quantity > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"),
+                "url" => $shopURL . '/Basket/?vendorCode=' . urlencode($article)
+            ];
         }
+
+
+        echo json_encode($product, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+        ?>
     </script>
 </head>
 

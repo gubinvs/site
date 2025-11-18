@@ -192,7 +192,7 @@ $article = "100179";
                                     <div class='article-title'>Артикул:</div>
                                         <div class='article-name'>100179</div>
                                 </div>
-                                <hr class='hr'>
+                                <hr>
                                 <div class='main-section-price-block'>
                                     <div class='main-section-price__price'>
                                         <?php echo number_format($price, 0, ',', ' '); ?>

@@ -2,7 +2,7 @@
     <div class="container header__container">
         <div class="header-logo-block">
             <a href="https://encomponent.ru">
-                <img src="../img/header_logo_1920.svg" class="header-logo-block__img" alt="Логотип компании">
+                <img src="https://encomponent.ru/img/header_logo_1920.svg" class="header-logo-block__img" alt="Логотип компании">
             </a>
         </div>
         <div class="header-navigation-block">

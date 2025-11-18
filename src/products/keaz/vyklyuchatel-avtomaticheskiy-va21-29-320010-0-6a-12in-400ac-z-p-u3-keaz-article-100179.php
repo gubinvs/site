@@ -26,19 +26,52 @@ $article = "100179";
                                     $price = $item["price"];
                                     $quantity = $item["quantity"];
                                 }
+                        
+
+                                $urlBestsellers = $apiServer . "/api/Bestsellers/";
+
+                                $options = [
+                                    "http" => [
+                                        "method" => "GET",
+                                        "header" => "Content-Type: application/json"
+                                    ]
+                                ];
+
+                                $context = stream_context_create($options);
+                                $response = file_get_contents($urlBestsellers, false, $context);
+
+                                if ($response === FALSE) {
+                                    die("Ошибка запроса");
+                                }
+
+                                $data = json_decode($response, true);
+
+                                foreach ($data as $item) {
+                                    $id = $item["id"];
+                                    $imgLinkIconCard = $item["imgLinkIconCard"];
+                                    $vendorCodeBestseller = $item["vendorCode"];
+                                    $nameComponent = $item["nameComponent"];
+                                    $quantityBestseller = $item["quantity"];
+                                    $linkPage = $item["linkPage"];
+                                    $priceBestseller = $item["price"];
+                                    $basketImgPath = $item["basketImgPath"];
+                                    $guidId = $item["guid"];
+                                    $manufacturer = $item["manufacturer"];
+                                }
                             ?>
                         
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
 <meta charset='UTF-8'>
-<title>Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179</title>
+<title>100179, Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179 </title>
 <meta name='description' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ (100179). КЭАЗ. 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А. Силовой 3 полюсный автоматический выключатель переменного тока в литом корпусе на номинальный ток 0.6 А.. Продается по цене: <?php echo $price ?> RUB.'/>
 <meta name='keywords' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ, КЭАЗ, 100179, 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А, купить, цена, KEAZ, электрооборудование'/>
 <meta name='robots' content='index, follow'/>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link rel='stylesheet' href='https://encomponent.ru/css/encomp-nku-project-style.css'>
 <link rel='canonical' href='https://encomponent.ru/products/keaz/vyklyuchatel-avtomaticheskiy-va21-29-320010-0-6a-12in-400ac-z-p-u3-keaz-article-100179.php'/>
 <!--Open Graph-->
 <meta property='og:title' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179 — купить по цене <?php echo $price ?> ₽'>
@@ -113,52 +146,134 @@ $article = "100179";
                             }
                             </script>
                         
-</head>
-<body class='bg-light'>
 
-                        <header>
-                            <div class='container d-flex justify-content-between align-items-center py-3'>
-                                <div class='d-flex align-items-center'>
-                                    <a href='https://encomponent.ru'>
-                                        <img src='https://encomponent.ru/img/header_logo_1920.svg' alt='Логотип компании' style='height:60px;'>
-                                    </a>
+                            <!-- Yandex.Metrika counter -->
+                            <script type='text/javascript'>
+                                (function(m,e,t,r,i,k,a){
+                                    m[i]=m[i]||function(){ (m[i].a=m[i].a||[]).push(arguments) };
+                                    m[i].l=1*new Date();
+                                    for (var j=0;j<document.scripts.length;j++){
+                                        if (document.scripts[j].src === r) { return; }
+                                    }
+                                    k=e.createElement(t); a=e.getElementsByTagName(t)[0];
+                                    k.async=1; k.src=r; a.parentNode.insertBefore(k,a)
+                                })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+                                ym(98501628, 'init', {
+                                    clickmap:true,
+                                    trackLinks:true,
+                                    accurateTrackBounce:true,
+                                    webvisor:true
+                                });
+                            </script>
+
+                            <noscript>
+                                <div>
+                                    <img src='https://mc.yandex.ru/watch/98501628' style='position:absolute; left:-9999px;' alt='' />
                                 </div>
-                                <nav>
-                                    <ul class='nav'>
-                                        <li class='nav-item'>
-                                            <a class='nav-link text-dark fw-bold' href='https://encomponent.ru/snab.php'>Аутсорсинг снабжения</a>
-                                        </li>
-                                        <li class='nav-item'>
-                                            <a class='nav-link text-dark fw-bold' href='https://supply.encomponent.ru/'>Сервис для снабжения</a>
-                                        </li>
-                                        <li class='nav-item'>
-                                            <a class='btn btn-dark text-warning fw-bold ms-3' href='https://shop.encomponent.ru/' target='_blank'>
-                                                Интернет-магазин
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </header>
-                        
-<div class='container card shadow-sm p-4 mb-4'>
-<h1 class='mb-3'>Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ</h1>
-<p><strong>Артикул:</strong> 100179</p>
-<p><strong>Бренд:</strong> КЭАЗ</p>
-<p><strong>Категория:</strong> 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А</p>
-<p><strong>Описание:</strong> Силовой 3 полюсный автоматический выключатель переменного тока в литом корпусе на номинальный ток 0.6 А.</p>
-<p class="h2"><strong>Цена:</strong> <?php echo $price ?> RUB </p>
-
-                        <a class='btn btn-primary' href='https://shop.encomponent.ru/SearchResults?vendorCode=100179' target='_blank'>
-                            Перейти в магазин
-                        </a>
-                    
-<div class='mt-4 d-flex flex-wrap gap-3'>
-<img src='https://files.keaz.ru/f/7654/102262-va21-29-340010-16a-12in-400ac-u3.png' alt='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ' class='img-thumbnail' style='max-height:200px;'>
+                            </noscript>
+                            <!-- /Yandex.Metrika counter -->
+                            
+</head>
+<body>
+<?php include_once '../../php/modules/header.php';?>
+ 
+                        <main>
+                            <div class='discription-product-section'>
+                                <div class='container'>
+<h1 class='discription-product-section__title NKUPages_h1'>Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ</h1>
+                                    <section class='main-section flex'>
+                                            <div class='main-section__img-block'>
+<img src='https://files.keaz.ru/f/7654/102262-va21-29-340010-16a-12in-400ac-u3.png' alt='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ' class='discription-product__img main-section__img'>
 </div>
-<br><br>
-<h3>Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179</h3><br><br>
-Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ (100179). КЭАЗ. 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А. Силовой 3 полюсный автоматический выключатель переменного тока в литом корпусе на номинальный ток 0.6 А. <br> 
+      
+                            <div class='main-section__discription'>
+                                <div class='article-block flex'>
+                                    <div class='article-title'>Артикул:</div>
+                                        <div class='article-name'>100179</div>
+                                </div>
+                                <hr class='hr'>
+                                <div class='main-section-price-block'>
+                                    <div class='main-section-price__price'>
+                                        <?php echo number_format($price, 0, ',', ' '); ?>
+                                    </div>
+                                    <div class='main-section-price__icon'>
+                                        <svg width='20' height='34' viewBox='0 0 38 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                            <g clip-path='url(#clip0_49_84)'>
+                                                <path d='M23.375 31.25C31.6875 31.25 37.5 25.4436 37.5 17.0968C37.5 8.75 31.6875 3.125 23.375 3.125H7.42188C6.77471 3.125 6.25 3.64971 6.25 4.29688V24.4758H1.17188C0.524707 24.4758 0 25.0005 0 25.6477V30.0781C0 30.7253 0.524707 31.25 1.17188 31.25H6.25V34.375H1.17188C0.524707 34.375 0 34.8997 0 35.5469V39.4531C0 40.1003 0.524707 40.625 1.17188 40.625H6.25V45.7031C6.25 46.3503 6.77471 46.875 7.42188 46.875H13.1406C13.7878 46.875 14.3125 46.3503 14.3125 45.7031V40.625H30.0781C30.7253 40.625 31.25 40.1003 31.25 39.4531V35.5469C31.25 34.8997 30.7253 34.375 30.0781 34.375H14.3125V31.25H23.375ZM14.3125 9.83867H22C26.5625 9.83867 29.3125 12.6814 29.3125 17.0968C29.3125 21.5726 26.5625 24.4758 21.875 24.4758H14.3125V9.83867Z' fill='#1D252C'/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id='clip0_49_84'>
+                                                    <rect width='37.5' height='50' fill='white'/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <!-- // Количество на складе -->
+                                    <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
+                                        <div class='warehouse-item-quantity__name'>В наличии:</div>
+                                            <div class='warehouse-item-quantity__quantity'><?php echo $quantity?></div>
+                                            <div class='warehouse-item-quantity__discr'>шт.</div>
+                                        </div>
+                                        <div class='characteristics-block'>
+                                            <div class='characteristics-block__title'>Основные характеристики:</div>
+                                                <ul class='characteristics-block__list'>
+                                                    <li class='characteristics-block__item flex'>
+                                                        <div class='characteristics-item__title'>Производитель:</div>
+                                                        <div class='characteristics-item__discr'>КЭАЗ</div>
+                                                    </li>
+                                                    <li class='characteristics-block__item flex'>
+                                                        <div class='characteristics-item__title'>Высота, мм</div>
+                                                        <div class='characteristics-item__discr'>100</div>
+                                                    </li>
+                                                    <li class='characteristics-block__item flex'>
+                                                        <div class='characteristics-item__title'>Глубина, мм</div>
+                                                        <div class='characteristics-item__discr'>150</div>
+                                                    </li>
+                                                    <li class='characteristics-block__item flex'>
+                                                        <div class='characteristics-item__title'>Ширина, мм</div>
+                                                        <div class='characteristics-item__discr'>150</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class='characteristics-block__button-block flex'>
+                                                <a href='#technical' id='button-link'>
+                                                    <button class='button-characteristics__all'>Посмотреть все характеристики</button>
+                                                </a>
+                                                <a href='https://shop.encomponent.ru/Basket/?vendorCode=100179'>
+                                                    <button class='button-characteristics__offer' id='button-buy'>Купить</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </section>
+                    
+
+                                    <section class='attention-section'>
+                                        <h2 class='h1-min'>Важная информация</h2>
+                                            <div class='container attention-container'>
+                                                <div class='attention-section__title-block flex'>
+                                                    <div class='attention-section-title-icon'>
+                                                        <svg width='24' height='24' viewBox='0 0 33 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                                            <circle cx='15' cy='15' r='14.5' fill='#F3DE09' stroke='#1D252C'/>
+                                                                <line x1='8' y1='14.5' x2='23' y2='14.5' stroke='black'/>
+                                                                <line x1='15.5' y1='23' x2='15.5' y2='7' stroke='black'/>
+                                                                <line x1='25.3536' y1='25.6464' x2='32.4246' y2='32.7175' stroke='black'/>
+                                                        </svg>
+                                                    </div>
+                                            <div class='attention-section-title__title'>ОБРАТИТЕ ВНИМАНИЕ</div>
+                                        </div>
+                                        <hr class='hr'>
+                                        <div class='attention-section__discription'>
+                                        Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179<br> Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ (100179). КЭАЗ. 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А. Силовой 3 полюсный автоматический выключатель переменного тока в литом корпусе на номинальный ток 0.6 А.
+                                        </div>
+                                    </div>
+                                </section>
+                        
+ 
+                            </div></div>
+                        </main>
+<div class='container' id='technical'>
 <h3 class='mt-5'>Технические характеристики</h3>
 <table class='table table-bordered table-striped mt-3'>
 <thead class='table-secondary'><tr><th>Параметр</th><th>Значение</th></tr></thead>
@@ -227,25 +342,25 @@ $article = "100179";
 <tr><td>ТНВЭД код</td><td>8536201007</td></tr>
 </tbody></table>
 <h3 class='mt-4'>Файлы и документы</h3><ul>
-<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Руководство по эксплуатации ВА21-29 — <a href='https://files.keaz.ru/f/577/rucovod-info-va21.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Референция МРСК Сибири - АлтайЭнерго — <a href='https://files.keaz.ru/f/3951/refer-altayenergo.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Сертификат ТР ТС ВА21 — <a href='https://files.keaz.ru/f/2234/sert-trts-va21.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Сертификат пожарной безопасности  — <a href='https://files.keaz.ru/f/987/sert-a63-ae20-ak50b-va13-va21-va53-va55-va57-va51-35-va04-36-ak50kb.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Декларация ТР ТС 001-2011 ВА21-29, OptiDin ВМ63 — <a href='https://files.keaz.ru/f/12443/ds-tr-ts-001-2011-va21-29-optidin-vm63.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>ДС ТР ТС 001 ВА21 — <a href='https://files.keaz.ru/f/47869/ds-tr-ts-001-va21.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>ДС ТР ЕАЭС 037 ВА21 — <a href='https://files.keaz.ru/f/16766/ds-tr-eaes-037-va21.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>3D-модель ВА21-29-3 — <a href='https://files.keaz.ru/f/2453/va21-29-3pol.zip' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Чертеж ВА21-29 3-х полюсный — <a href='https://files.keaz.ru/f/14971/chertej-va21-29-3-h-polusniy.dwg.zip' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Заключение Минпромторга О подтверждении КЭАЗ по 719 — <a href='https://files.keaz.ru/f/16921/zakluchenie-minpromtorga-o-podtverjdenii-keaz-po-719.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Выписки из Реестров отечественной продукции  и производителей отечественной продукции — <a href='https://files.keaz.ru/f/17340/vipiski-iz-reestrov-otechestvennoy-produkcii-i-proizvoditeley-otechestvennoy-produkcii.xlsx' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Выписка из Акта экспертизы КТПП (2022) — <a href='https://files.keaz.ru/f/16920/vipiska-iz-akta-ekspertizi-ktpp-2019.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>База данных для EPLAN Electric P8 ВА21 — <a href='https://files.keaz.ru/f/8042/va21.zip' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Лицензия на изготовление оборудования для ядерных установок — <a href='https://files.keaz.ru/f/13287/licenziya-na-izgotovlenie-oborudovaniya-dlya-yadernih-ustanovok.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
-<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'>Скачать</a></li>
+<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Руководство по эксплуатации ВА21-29 — <a href='https://files.keaz.ru/f/577/rucovod-info-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Референция МРСК Сибири - АлтайЭнерго — <a href='https://files.keaz.ru/f/3951/refer-altayenergo.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Сертификат ТР ТС ВА21 — <a href='https://files.keaz.ru/f/2234/sert-trts-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Сертификат пожарной безопасности  — <a href='https://files.keaz.ru/f/987/sert-a63-ae20-ak50b-va13-va21-va53-va55-va57-va51-35-va04-36-ak50kb.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Декларация ТР ТС 001-2011 ВА21-29, OptiDin ВМ63 — <a href='https://files.keaz.ru/f/12443/ds-tr-ts-001-2011-va21-29-optidin-vm63.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>ДС ТР ТС 001 ВА21 — <a href='https://files.keaz.ru/f/47869/ds-tr-ts-001-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>ДС ТР ЕАЭС 037 ВА21 — <a href='https://files.keaz.ru/f/16766/ds-tr-eaes-037-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>3D-модель ВА21-29-3 — <a href='https://files.keaz.ru/f/2453/va21-29-3pol.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Чертеж ВА21-29 3-х полюсный — <a href='https://files.keaz.ru/f/14971/chertej-va21-29-3-h-polusniy.dwg.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Заключение Минпромторга О подтверждении КЭАЗ по 719 — <a href='https://files.keaz.ru/f/16921/zakluchenie-minpromtorga-o-podtverjdenii-keaz-po-719.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Выписки из Реестров отечественной продукции  и производителей отечественной продукции — <a href='https://files.keaz.ru/f/17340/vipiski-iz-reestrov-otechestvennoy-produkcii-i-proizvoditeley-otechestvennoy-produkcii.xlsx' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Выписка из Акта экспертизы КТПП (2022) — <a href='https://files.keaz.ru/f/16920/vipiska-iz-akta-ekspertizi-ktpp-2019.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>База данных для EPLAN Electric P8 ВА21 — <a href='https://files.keaz.ru/f/8042/va21.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Лицензия на изготовление оборудования для ядерных установок — <a href='https://files.keaz.ru/f/13287/licenziya-na-izgotovlenie-oborudovaniya-dlya-yadernih-ustanovok.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
 </ul>
-<hr>
-<footer class='text-muted'>© КОМПОНЕНТЫ ЭНЕРГИИ — официальный партнёр KEAZ.</footer>
 </div></div>
+</div>
+<?php include '../../php/modules/footer.php' ?>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
 </body></html>

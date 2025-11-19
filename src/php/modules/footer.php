@@ -9,20 +9,18 @@ header("Access-Control-Allow-Headers: Content-Type");
             <div class="header-logo-block footer-logo-block">
                 <div class="footer-logo-block__logo flex">
                     <div class="logo-icon">
-                        <img class="foter-logo-icon" src="https://encomponent.ru/img/footer_logo_1920.svg" alt="Логотип компании в желто-черных красках с изображением кнопки и названия на английском языке энерджи копмонентс" />
+                        <img class="foter-logo-icon" src="https://encomponent.ru/img/footer_logo_1920.svg" alt="Логотип компании в желто-черных красках с изображением кнопки и названия на английском языке энерджи копмонентс">
                     </div>
                     <div class="logo-title"></div>
                 </div>
             </div>
             <div class="footer-nav">
-                <ul class="footer-nav__list">
-                    <!-- <div class="footer-nav__item"><a href="https://encomponent.ru/production.php" class="footer-nav__link">Сборка щитов автоматики</a></div> -->
+                <div class="footer-nav__list">
                     <div class="footer-nav__item"><a href="https://encomponent.ru/snab.php" class="footer-nav__link">Аутсорсинг рутины снабжения</a></div>
                     <div class="footer-nav__item"><a href="https://shop.encomponent.ru/" class="footer-nav__link">Интернет-магазин комплектующих</a></div>
                     <div class="footer-nav__item"><a href="https://supply.encomponent.ru/" class="footer-nav__link">Сервис для снабженца</a></div>
-                    <!-- <div class="footer-nav__item"><a href="https://encomponent.ru/about.php" class="footer-nav__link">Центр раскрытия корпоративной информации</a></div> -->
                     <div class="footer-nav__item"><a href="https://encomponent.ru/pp-page.html" class="footer-nav__link">Политика обработки персональных данных</a></div>
-                </ul>
+                </div>
             </div>
             <div class="footer-contact">
                 <div class="footer-contact__item">

@@ -66,7 +66,8 @@ ol[class] {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 a {
@@ -623,6 +624,24 @@ a:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.please-note-section {
+  margin-bottom: 100px;
+}
+
+.please-note-section__title {
+  margin-bottom: 40px;
+}
+
+.please-note-section__card-product {
+  display: flex;
+}
+
+.card-product {
+  width: 200px;
+  height: 400px;
+  border: 1px solid #32C120;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -1400,4 +1419,4 @@ header {
   .footer-logo-block {
     display: none;
   }
-}
+}/*# sourceMappingURL=encomp-nku-project-style.css.map */

@@ -29,6 +29,7 @@ h1 {
   line-height: 0.1px;
 }
 
+
 a {
   color: $palitra_2;
 }
@@ -560,6 +561,42 @@ a:hover {
   justify-content: center;
   height: 100vh;
 }
+
+/// ----------------------------- please-note-section ------------------
+/// 
+
+.please-note-section {
+  margin-bottom: 100px;
+}
+
+.please-note-section__title {
+  margin-bottom: 40px;
+}
+
+.please-note-section__card-product  {
+  display: flex;
+}
+
+.card-product {
+  width: 200px;
+  height: 400px;
+  border: 1px solid #32C120;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

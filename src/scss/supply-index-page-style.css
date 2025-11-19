@@ -66,7 +66,8 @@ ol[class] {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 a {
@@ -392,4 +393,4 @@ a:hover {
   border-radius: 50%;
   z-index: 10;
   cursor: pointer;
-}
+}/*# sourceMappingURL=supply-index-page-style.css.map */

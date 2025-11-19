@@ -2,7 +2,7 @@
                             <?php
                                 include "../../php/class/api_Connector.php"; 
                         
-$article = "100179";
+                                $article = "100179";
 
                                 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
@@ -274,93 +274,103 @@ $article = "100179";
                             </div></div>
                         </main>
 <div class='container' id='technical'>
-<h3 class='mt-5'>Технические характеристики</h3>
-<table class='table table-bordered table-striped mt-3'>
-<thead class='table-secondary'><tr><th>Параметр</th><th>Значение</th></tr></thead>
-<tbody>
-<tr><td>Гарантийный срок (лет)</td><td>5</td></tr>
-<tr><td>Раздел</td><td>0,6А</td></tr>
-<tr><td>Серия</td><td>ВА21</td></tr>
-<tr><td>Номинальное напряжение сети</td><td>380/220;660/380</td></tr>
-<tr><td>Наличие теплового расцепителя</td><td>false</td></tr>
-<tr><td>Наличие электромагнитного расцепителя</td><td>true</td></tr>
-<tr><td>Наличие электронного расцепителя</td><td>false</td></tr>
-<tr><td>Наличие дифференциального расцепителя</td><td>false</td></tr>
-<tr><td>Электродинамическая стойкость при 380/220В Icm</td><td>17</td></tr>
-<tr><td>Предельная коммутационная способность при 660/380В Ics</td><td>7.5</td></tr>
-<tr><td>Электродинамическая стойкость при 660/380В Icm</td><td>0</td></tr>
-<tr><td>Токи уставки расцепителя в зоне перегрузки Ir, А</td><td>0,6</td></tr>
-<tr><td>Кратность тока для времени tr, о.е.</td><td>6</td></tr>
-<tr><td>Кратность нижней границы, о.е.</td><td>0</td></tr>
-<tr><td>Кратность верхней границы, о.е.</td><td>0</td></tr>
-<tr><td>Коэффициент гарантированного несрабатывания, о.е.</td><td>1</td></tr>
-<tr><td>Коэффициент гарантированного срабатывания, о.е.</td><td>1</td></tr>
-<tr><td>Время срабатывания расцепителя в зоне КЗ tm</td><td>0.1</td></tr>
-<tr><td>Кратности уставки мгновенного расцепителя Ki, о.е.</td><td>0</td></tr>
-<tr><td>Время срабатывания мгновенного расцепителя ti</td><td>0.05</td></tr>
-<tr><td>Токи уставок I∆, мА</td><td>0</td></tr>
-<tr><td>Активное сопротивление полюса R, мОм</td><td>0</td></tr>
-<tr><td>Реактивное сопротивление полюса X, мОм</td><td>0</td></tr>
-<tr><td>Высота</td><td>220</td></tr>
-<tr><td>Ширина</td><td>88</td></tr>
-<tr><td>Глубина</td><td>122</td></tr>
-<tr><td>Масса</td><td>1.6</td></tr>
-<tr><td>Тип монтажной рейки</td><td>35х7.5; 35х15</td></tr>
-<tr><td>Крепление</td><td>Монтажная рейка</td></tr>
-<tr><td>Климатическое исполнение</td><td>У3</td></tr>
-<tr><td>Время срабатывания в зоне перегрузки tr, c</td><td>12</td></tr>
-<tr><td>Способ задания уставки расцепителя</td><td>По кратности (Km)</td></tr>
-<tr><td>Кратности уставки расцепителя Кm, о.е</td><td>12</td></tr>
-<tr><td>Способ задания уставки мгновенного расцепителя</td><td>По току (Ii)</td></tr>
-<tr><td>Тип характеристики срабатывания расцепителя Tm</td><td>B</td></tr>
-<tr><td>Нормативный документ</td><td>ГОСТ Р 50030.2, ТУ16-90 ИКЖШ.641211.002ТУ</td></tr>
-<tr><td>Количество модулей</td><td>0</td></tr>
-<tr><td>Токи уставки мгновенного расцепителя Ii, о.е.</td><td>Нет (без)</td></tr>
-<tr><td>Максимальное сечение проводника, мм^2</td><td>25</td></tr>
-<tr><td>Токи уставки расцепителя Im, А</td><td>Нет (без)</td></tr>
-<tr><td>Номинальный продолжительный ток Iu</td><td>0.6</td></tr>
-<tr><td>Количество полюсов</td><td>3</td></tr>
-<tr><td>Тип элемента управления</td><td>Рычажковый (перекидной рычаг)</td></tr>
-<tr><td>Степень защиты (IP)</td><td>IP20</td></tr>
-<tr><td>Тип подключения силовой электрической цепи</td><td>Винтовое соединение</td></tr>
-<tr><td>Количество вспомогательных нормально замкнутых (НЗ) контактов</td><td>0</td></tr>
-<tr><td>Количество вспомогательных нормально разомкнутых (НО) контактов</td><td>0</td></tr>
-<tr><td>Тип изделия/компонента</td><td>Выключатель автоматический в литом корпусе</td></tr>
-<tr><td>Конструкция прибора</td><td>Встраиваемое устройство фиксированной установки (стационарный)</td></tr>
-<tr><td>Диапазон регулировки теплового расцепителя</td><td>0.6...0.6</td></tr>
-<tr><td>Номинальное напряжение</td><td>400...400</td></tr>
-<tr><td>С расцепителем минимального напряжения</td><td>false</td></tr>
-<tr><td>Моторный привод опционально</td><td>false</td></tr>
-<tr><td>Встроенная защита от замыканий на землю</td><td>false</td></tr>
-<tr><td>Подходит для монтажа на DIN-рейку (Ω-типа)</td><td>false</td></tr>
-<tr><td>Номинальная отключающая способность Icu при 400 В, 50 Гц</td><td>10</td></tr>
-<tr><td>Возможность установки индикатора отключения</td><td>false</td></tr>
-<tr><td>Моторный привод встроенный</td><td>false</td></tr>
-<tr><td>Вид подключения главной электрической цепи</td><td>Подключение спереди</td></tr>
-<tr><td>Количество вспомогательных переключающих контактов</td><td>0</td></tr>
-<tr><td>Страна производитель</td><td>Россия</td></tr>
-<tr><td>ТНВЭД код</td><td>8536201007</td></tr>
-</tbody></table>
-<h3 class='mt-4'>Файлы и документы</h3><ul>
-<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Руководство по эксплуатации ВА21-29 — <a href='https://files.keaz.ru/f/577/rucovod-info-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Референция МРСК Сибири - АлтайЭнерго — <a href='https://files.keaz.ru/f/3951/refer-altayenergo.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Сертификат ТР ТС ВА21 — <a href='https://files.keaz.ru/f/2234/sert-trts-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Сертификат пожарной безопасности  — <a href='https://files.keaz.ru/f/987/sert-a63-ae20-ak50b-va13-va21-va53-va55-va57-va51-35-va04-36-ak50kb.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Декларация ТР ТС 001-2011 ВА21-29, OptiDin ВМ63 — <a href='https://files.keaz.ru/f/12443/ds-tr-ts-001-2011-va21-29-optidin-vm63.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>ДС ТР ТС 001 ВА21 — <a href='https://files.keaz.ru/f/47869/ds-tr-ts-001-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>ДС ТР ЕАЭС 037 ВА21 — <a href='https://files.keaz.ru/f/16766/ds-tr-eaes-037-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>3D-модель ВА21-29-3 — <a href='https://files.keaz.ru/f/2453/va21-29-3pol.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Чертеж ВА21-29 3-х полюсный — <a href='https://files.keaz.ru/f/14971/chertej-va21-29-3-h-polusniy.dwg.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Заключение Минпромторга О подтверждении КЭАЗ по 719 — <a href='https://files.keaz.ru/f/16921/zakluchenie-minpromtorga-o-podtverjdenii-keaz-po-719.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Выписки из Реестров отечественной продукции  и производителей отечественной продукции — <a href='https://files.keaz.ru/f/17340/vipiski-iz-reestrov-otechestvennoy-produkcii-i-proizvoditeley-otechestvennoy-produkcii.xlsx' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Выписка из Акта экспертизы КТПП (2022) — <a href='https://files.keaz.ru/f/16920/vipiska-iz-akta-ekspertizi-ktpp-2019.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>База данных для EPLAN Electric P8 ВА21 — <a href='https://files.keaz.ru/f/8042/va21.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Лицензия на изготовление оборудования для ядерных установок — <a href='https://files.keaz.ru/f/13287/licenziya-na-izgotovlenie-oborudovaniya-dlya-yadernih-ustanovok.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-</ul>
-</div></div>
+    <h3 class='mt-5'>Технические характеристики</h3>
+    <table class='table table-bordered table-striped mt-3'>
+    <thead class='table-secondary'><tr><th>Параметр</th><th>Значение</th></tr></thead>
+    <tbody>
+    <tr><td>Гарантийный срок (лет)</td><td>5</td></tr>
+    <tr><td>Раздел</td><td>0,6А</td></tr>
+    <tr><td>Серия</td><td>ВА21</td></tr>
+    <tr><td>Номинальное напряжение сети</td><td>380/220;660/380</td></tr>
+    <tr><td>Наличие теплового расцепителя</td><td>false</td></tr>
+    <tr><td>Наличие электромагнитного расцепителя</td><td>true</td></tr>
+    <tr><td>Наличие электронного расцепителя</td><td>false</td></tr>
+    <tr><td>Наличие дифференциального расцепителя</td><td>false</td></tr>
+    <tr><td>Электродинамическая стойкость при 380/220В Icm</td><td>17</td></tr>
+    <tr><td>Предельная коммутационная способность при 660/380В Ics</td><td>7.5</td></tr>
+    <tr><td>Электродинамическая стойкость при 660/380В Icm</td><td>0</td></tr>
+    <tr><td>Токи уставки расцепителя в зоне перегрузки Ir, А</td><td>0,6</td></tr>
+    <tr><td>Кратность тока для времени tr, о.е.</td><td>6</td></tr>
+    <tr><td>Кратность нижней границы, о.е.</td><td>0</td></tr>
+    <tr><td>Кратность верхней границы, о.е.</td><td>0</td></tr>
+    <tr><td>Коэффициент гарантированного несрабатывания, о.е.</td><td>1</td></tr>
+    <tr><td>Коэффициент гарантированного срабатывания, о.е.</td><td>1</td></tr>
+    <tr><td>Время срабатывания расцепителя в зоне КЗ tm</td><td>0.1</td></tr>
+    <tr><td>Кратности уставки мгновенного расцепителя Ki, о.е.</td><td>0</td></tr>
+    <tr><td>Время срабатывания мгновенного расцепителя ti</td><td>0.05</td></tr>
+    <tr><td>Токи уставок I∆, мА</td><td>0</td></tr>
+    <tr><td>Активное сопротивление полюса R, мОм</td><td>0</td></tr>
+    <tr><td>Реактивное сопротивление полюса X, мОм</td><td>0</td></tr>
+    <tr><td>Высота</td><td>220</td></tr>
+    <tr><td>Ширина</td><td>88</td></tr>
+    <tr><td>Глубина</td><td>122</td></tr>
+    <tr><td>Масса</td><td>1.6</td></tr>
+    <tr><td>Тип монтажной рейки</td><td>35х7.5; 35х15</td></tr>
+    <tr><td>Крепление</td><td>Монтажная рейка</td></tr>
+    <tr><td>Климатическое исполнение</td><td>У3</td></tr>
+    <tr><td>Время срабатывания в зоне перегрузки tr, c</td><td>12</td></tr>
+    <tr><td>Способ задания уставки расцепителя</td><td>По кратности (Km)</td></tr>
+    <tr><td>Кратности уставки расцепителя Кm, о.е</td><td>12</td></tr>
+    <tr><td>Способ задания уставки мгновенного расцепителя</td><td>По току (Ii)</td></tr>
+    <tr><td>Тип характеристики срабатывания расцепителя Tm</td><td>B</td></tr>
+    <tr><td>Нормативный документ</td><td>ГОСТ Р 50030.2, ТУ16-90 ИКЖШ.641211.002ТУ</td></tr>
+    <tr><td>Количество модулей</td><td>0</td></tr>
+    <tr><td>Токи уставки мгновенного расцепителя Ii, о.е.</td><td>Нет (без)</td></tr>
+    <tr><td>Максимальное сечение проводника, мм^2</td><td>25</td></tr>
+    <tr><td>Токи уставки расцепителя Im, А</td><td>Нет (без)</td></tr>
+    <tr><td>Номинальный продолжительный ток Iu</td><td>0.6</td></tr>
+    <tr><td>Количество полюсов</td><td>3</td></tr>
+    <tr><td>Тип элемента управления</td><td>Рычажковый (перекидной рычаг)</td></tr>
+    <tr><td>Степень защиты (IP)</td><td>IP20</td></tr>
+    <tr><td>Тип подключения силовой электрической цепи</td><td>Винтовое соединение</td></tr>
+    <tr><td>Количество вспомогательных нормально замкнутых (НЗ) контактов</td><td>0</td></tr>
+    <tr><td>Количество вспомогательных нормально разомкнутых (НО) контактов</td><td>0</td></tr>
+    <tr><td>Тип изделия/компонента</td><td>Выключатель автоматический в литом корпусе</td></tr>
+    <tr><td>Конструкция прибора</td><td>Встраиваемое устройство фиксированной установки (стационарный)</td></tr>
+    <tr><td>Диапазон регулировки теплового расцепителя</td><td>0.6...0.6</td></tr>
+    <tr><td>Номинальное напряжение</td><td>400...400</td></tr>
+    <tr><td>С расцепителем минимального напряжения</td><td>false</td></tr>
+    <tr><td>Моторный привод опционально</td><td>false</td></tr>
+    <tr><td>Встроенная защита от замыканий на землю</td><td>false</td></tr>
+    <tr><td>Подходит для монтажа на DIN-рейку (Ω-типа)</td><td>false</td></tr>
+    <tr><td>Номинальная отключающая способность Icu при 400 В, 50 Гц</td><td>10</td></tr>
+    <tr><td>Возможность установки индикатора отключения</td><td>false</td></tr>
+    <tr><td>Моторный привод встроенный</td><td>false</td></tr>
+    <tr><td>Вид подключения главной электрической цепи</td><td>Подключение спереди</td></tr>
+    <tr><td>Количество вспомогательных переключающих контактов</td><td>0</td></tr>
+    <tr><td>Страна производитель</td><td>Россия</td></tr>
+    <tr><td>ТНВЭД код</td><td>8536201007</td></tr>
+    </tbody></table>
+    <h3 class='mt-4'>Файлы и документы</h3><ul>
+        <li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Руководство по эксплуатации ВА21-29 — <a href='https://files.keaz.ru/f/577/rucovod-info-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Референция МРСК Сибири - АлтайЭнерго — <a href='https://files.keaz.ru/f/3951/refer-altayenergo.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Сертификат ТР ТС ВА21 — <a href='https://files.keaz.ru/f/2234/sert-trts-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Сертификат пожарной безопасности  — <a href='https://files.keaz.ru/f/987/sert-a63-ae20-ak50b-va13-va21-va53-va55-va57-va51-35-va04-36-ak50kb.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Декларация ТР ТС 001-2011 ВА21-29, OptiDin ВМ63 — <a href='https://files.keaz.ru/f/12443/ds-tr-ts-001-2011-va21-29-optidin-vm63.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>ДС ТР ТС 001 ВА21 — <a href='https://files.keaz.ru/f/47869/ds-tr-ts-001-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>ДС ТР ЕАЭС 037 ВА21 — <a href='https://files.keaz.ru/f/16766/ds-tr-eaes-037-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>3D-модель ВА21-29-3 — <a href='https://files.keaz.ru/f/2453/va21-29-3pol.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Чертеж ВА21-29 3-х полюсный — <a href='https://files.keaz.ru/f/14971/chertej-va21-29-3-h-polusniy.dwg.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Заключение Минпромторга О подтверждении КЭАЗ по 719 — <a href='https://files.keaz.ru/f/16921/zakluchenie-minpromtorga-o-podtverjdenii-keaz-po-719.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Выписки из Реестров отечественной продукции  и производителей отечественной продукции — <a href='https://files.keaz.ru/f/17340/vipiski-iz-reestrov-otechestvennoy-produkcii-i-proizvoditeley-otechestvennoy-produkcii.xlsx' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Выписка из Акта экспертизы КТПП (2022) — <a href='https://files.keaz.ru/f/16920/vipiska-iz-akta-ekspertizi-ktpp-2019.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>База данных для EPLAN Electric P8 ВА21 — <a href='https://files.keaz.ru/f/8042/va21.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Лицензия на изготовление оборудования для ядерных установок — <a href='https://files.keaz.ru/f/13287/licenziya-na-izgotovlenie-oborudovaniya-dlya-yadernih-ustanovok.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        </ul>
+    </div>
 </div>
+    <section class="please-note-section">
+        <div class="container please-note-section__container">
+            <h3 class="please-note-section__title">Пользователи выбирают:</h3>
+            <div class="please-note-section__card-product">
+                <div class="card-product">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 <?php include '../../php/modules/footer.php' ?>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
 </body></html>

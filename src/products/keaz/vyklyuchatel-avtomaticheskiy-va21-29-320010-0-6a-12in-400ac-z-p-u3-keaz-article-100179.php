@@ -65,14 +65,14 @@ $article = "100179";
 <head>
 <meta charset='UTF-8'>
 <title>100179, Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179 </title>
-<meta name='description' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ (100179). КЭАЗ. 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А. Силовой 3 полюсный автоматический выключатель переменного тока в литом корпусе на номинальный ток 0.6 А.. Продается по цене: <?php echo $price ?> RUB.'/>
-<meta name='keywords' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ, КЭАЗ, 100179, 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А, купить, цена, KEAZ, электрооборудование'/>
-<meta name='robots' content='index, follow'/>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+<meta name='description' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ (100179). КЭАЗ. 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А. Силовой 3 полюсный автоматический выключатель переменного тока в литом корпусе на номинальный ток 0.6 А.. Продается по цене: <?php echo $price ?> RUB.'>
+<meta name='keywords' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ, КЭАЗ, 100179, 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А, купить, цена, KEAZ, электрооборудование'>
+<meta name='robots' content='index, follow'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
-<link rel='stylesheet' href='https://encomponent.ru/css/encomp-nku-project-style.css'>
-<link rel='canonical' href='https://encomponent.ru/products/keaz/vyklyuchatel-avtomaticheskiy-va21-29-320010-0-6a-12in-400ac-z-p-u3-keaz-article-100179.php'/>
+<link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
+<link rel='canonical' href='https://encomponent.ru/products/keaz/vyklyuchatel-avtomaticheskiy-va21-29-320010-0-6a-12in-400ac-z-p-u3-keaz-article-100179.php'>
 <!--Open Graph-->
 <meta property='og:title' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179 — купить по цене <?php echo $price ?> ₽'>
 <meta property='og:description' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ (100179). КЭАЗ. 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А. Силовой 3 полюсный автоматический выключатель переменного тока в литом корпусе на номинальный ток 0.6 А.'>
@@ -148,7 +148,7 @@ $article = "100179";
                         
 
                             <!-- Yandex.Metrika counter -->
-                            <script type='text/javascript'>
+                            <script>
                                 (function(m,e,t,r,i,k,a){
                                     m[i]=m[i]||function(){ (m[i].a=m[i].a||[]).push(arguments) };
                                     m[i].l=1*new Date();
@@ -167,15 +167,18 @@ $article = "100179";
                                 });
                             </script>
 
-                            <noscript>
-                                <div>
-                                    <img src='https://mc.yandex.ru/watch/98501628' style='position:absolute; left:-9999px;' alt='' />
-                                </div>
-                            </noscript>
-                            <!-- /Yandex.Metrika counter -->
                             
 </head>
 <body>
+
+                            <!--Yandex.Metrika counter-->                            
+                                <noscript>
+                                    <div>
+                                        <img src='https://mc.yandex.ru/watch/98501628' style='position:absolute; left:-9999px;' alt='Яндекс метрика'>
+                                    </div>
+                                </noscript>
+                            <!--/Yandex.Metrika counter-->
+                        
 <?php include_once '../../php/modules/header.php';?>
  
                         <main>
@@ -183,14 +186,14 @@ $article = "100179";
                                 <div class='container'>
 <h1 class='discription-product-section__title NKUPages_h1'>Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ</h1>
                                     <section class='main-section flex'>
-                                            <div class='main-section__img-block'>
+                                        <div class='main-section__img-block'>
 <img src='https://files.keaz.ru/f/7654/102262-va21-29-340010-16a-12in-400ac-u3.png' alt='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ' class='discription-product__img main-section__img'>
 </div>
       
                             <div class='main-section__discription'>
                                 <div class='article-block flex'>
                                     <div class='article-title'>Артикул:</div>
-                                        <div class='article-name'>100179</div>
+                                        <h6 class='article-name'>100179</h6>
                                 </div>
                                 <hr>
                                 <div class='main-section-price-block'>
@@ -210,7 +213,7 @@ $article = "100179";
                                         </svg>
                                     </div>
                                 </div>
-                                <!-- // Количество на складе -->
+                                <!--Количество на складе-->
                                     <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
                                         <div class='warehouse-item-quantity__name'>В наличии:</div>
                                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity?></div>
@@ -239,10 +242,10 @@ $article = "100179";
                                             </div>
                                             <div class='characteristics-block__button-block flex'>
                                                 <a href='#technical' id='button-link'>
-                                                    <button class='button-characteristics__all'>Посмотреть все характеристики</button>
+                                                    <div class='button-characteristics__all'>Посмотреть все характеристики</div>
                                                 </a>
                                                 <a href='https://shop.encomponent.ru/Basket/?vendorCode=100179'>
-                                                    <button class='button-characteristics__offer' id='button-buy'>Купить</button>
+                                                    <div class='button-characteristics__offer' id='button-buy'>Купить</div>
                                                 </a>
                                             </div>
                                         </div>
@@ -341,7 +344,7 @@ $article = "100179";
 <tr><td>Страна производитель</td><td>Россия</td></tr>
 <tr><td>ТНВЭД код</td><td>8536201007</td></tr>
 </tbody></table>
-<h3 class='mt-4'>Файлы и документы</h3><ul>
+<h3 class='files-and-documents-section__title'>Файлы и документы</h3><ul>
 <li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
 <li>Руководство по эксплуатации ВА21-29 — <a href='https://files.keaz.ru/f/577/rucovod-info-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
 <li>Референция МРСК Сибири - АлтайЭнерго — <a href='https://files.keaz.ru/f/3951/refer-altayenergo.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
@@ -359,7 +362,6 @@ $article = "100179";
 <li>Лицензия на изготовление оборудования для ядерных установок — <a href='https://files.keaz.ru/f/13287/licenziya-na-izgotovlenie-oborudovaniya-dlya-yadernih-ustanovok.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
 <li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
 </ul>
-</div></div>
 </div>
 
                         <section class="please-note-section">
@@ -378,7 +380,7 @@ $article = "100179";
                                         $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
                                         return $fmt->formatCurrency($price, 'RUB');
                                     }
-                                    
+
                                 $noImage = '../../img/free-icon-no-photo-4054617.png';
                                 $count = 0;
 
@@ -410,7 +412,7 @@ $article = "100179";
                                                     <img src="{$img}" class="card-component__img" alt="Фото {$name}">
                                                     <div class="card-component__vendor">Артикул: {$vendor}</div>
                                                     <div class="card-component__name">
-                                                        <a href="{$link}" target="_blank">{$name}</a>
+                                                        <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
                                                     </div>
                                                 </div>
 
@@ -437,7 +439,6 @@ $article = "100179";
                         </div>
                         </section>
                         
-<?php include '../../php/modules/footer.php' ?>
 <?php include '../../php/modules/footer.php' ?>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
 </body></html>

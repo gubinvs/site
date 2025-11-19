@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow: /forum/
+Disallow: /index.php
+Disallow: /production.php
+Disallow: /closed.php
+Disallow: /about.php
+Disallow: /about2.php
+Disallow: /cgi-bin/
+Allow: /nku-page/
+Allow: /products/
+Allow: /products/keaz/
+Sitemap: https://encomponent.ru/sitemap.xml
+Host: encomponent.ru

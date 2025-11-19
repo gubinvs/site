@@ -378,7 +378,15 @@
         <div class="container please-note-section__container">
             <h3 class="please-note-section__title">Пользователи выбирают:</h3>
             <div class="please-note-section__card-product">
-            <?php foreach ($data as $item) {
+            <?php
+            
+                    function formatRub($price) {
+                        $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
+                        $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
+                        return $fmt->formatCurrency($price, 'RUB');
+                    }
+            
+                foreach ($data as $item) {
                 echo "<div class='card-component'>";
                     echo "<div class='card-component__top'>";
                         echo "<img src='"; echo $item["imgLinkIconCard"] . "'";  echo "class='card-component__img'"; echo "alt='"; echo "Фото " . $item["nameComponent"]. "'";
@@ -390,20 +398,28 @@
                     echo "</div>";
                 echo  "</div>";
 
-                echo "<div className='card-component__bottom'>";
-                    echo "<div className='cc-basket-block__delivry-block'>";
-                        echo "<div class='" . $item["quantity"] . "> 0" . "? 'delivry-block__quantity delivry-block__quantity_0' : 'delivry-block__quantity'}>";
-                            $item['quantity'] > 0 ? echo "Под заказ" : echo "Наличие:" . $item['quantity'] . шт.";
-                                
+                echo "<div class='card-component__bottom'>";
+                    echo "<div class='cc-basket-block__delivry-block'>";
+                        echo "<div class='"; 
+                                            if ($item["quantity"] == 0)
+                                                {
+                                                    echo "delivry-block__quantity delivry-block__quantity_0'>";
+                                                } else {
+                                                    echo "delivry-block__quantity'>";
+                                                };
+                            if ($item["quantity"] == 0) { 
+                                echo "Под заказ"; 
+                            } else {
+                                echo "Наличие: " . $item['quantity'] . " шт.";
+                            };
                         echo "</div>";
                     echo "</div>";
-
-                //         <div className="card-component__price-block">
-                //             <div className="card-component__price">
-                //                 {new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB", minimumFractionDigits: 0 }).format(element.price)}
-                //             </div>
-                //             <div className="card-component__price-nalog">в т.ч. НДС</div>
-                //         </div>
+                        echo "<div class='card-component__price-block'>";
+                        echo    "<div class='card-component__price'>" .
+                                    formatRub($item["price"]) .
+                                "</div>";
+                        echo    "<div class='card-component__price-nalog'>в т.ч. НДС</div>";
+                        echo "</div>";
 
                 //         <div className="card-component__basket-block">
                 //             <div className="basket-block__quantity-item">

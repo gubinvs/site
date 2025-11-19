@@ -393,7 +393,8 @@
                 echo "<div className='card-component__bottom'>";
                     echo "<div className='cc-basket-block__delivry-block'>";
                         echo "<div class='" . $item["quantity"] . "> 0" . "? 'delivry-block__quantity delivry-block__quantity_0' : 'delivry-block__quantity'}>";
-                            echo  $item['quantity'] . "> 0 ? 'Под заказ' : 'Наличие:'" . $item['quantity'] . "шт.'";
+                            $item['quantity'] > 0 ? echo "Под заказ" : echo "Наличие:" . $item['quantity'] . шт.";
+                                
                         echo "</div>";
                     echo "</div>";
 

@@ -46,18 +46,18 @@
 
                                 $data = json_decode($response, true);
 
-                                foreach ($data as $item) {
-                                    $id = $item["id"];
-                                    $imgLinkIconCard = $item["imgLinkIconCard"];
-                                    $vendorCodeBestseller = $item["vendorCode"];
-                                    $nameComponent = $item["nameComponent"];
-                                    $quantityBestseller = $item["quantity"];
-                                    $linkPage = $item["linkPage"];
-                                    $priceBestseller = $item["price"];
-                                    $basketImgPath = $item["basketImgPath"];
-                                    $guidId = $item["guid"];
-                                    $manufacturer = $item["manufacturer"];
-                                }
+                                // foreach ($data as $item) {
+                                //     $id = $item["id"];
+                                //     $imgLinkIconCard = $item["imgLinkIconCard"];
+                                //     $vendorCodeBestseller = $item["vendorCode"];
+                                //     $nameComponent = $item["nameComponent"];
+                                //     $quantityBestseller = $item["quantity"];
+                                //     $linkPage = $item["linkPage"];
+                                //     $priceBestseller = $item["price"];
+                                //     $basketImgPath = $item["basketImgPath"];
+                                //     $guidId = $item["guid"];
+                                //     $manufacturer = $item["manufacturer"];
+                                // }
                             ?>
                         
 <!DOCTYPE html>
@@ -71,7 +71,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
-<link rel='stylesheet' href='https://encomponent.ru/css/encomp-nku-project-style.css'>
+<link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
 <link rel='canonical' href='https://encomponent.ru/products/keaz/vyklyuchatel-avtomaticheskiy-va21-29-320010-0-6a-12in-400ac-z-p-u3-keaz-article-100179.php'/>
 <!--Open Graph-->
 <meta property='og:title' content='Выключатель автоматический ВА21-29-320010-0,6А-12Iн-400AC-З/П-У3-КЭАЗ — купить КЭАЗ 2950ВА21 Автоматические выключатели в литом корпусе на токи от 0,6А до 100А по артикулу 100179 — купить по цене <?php echo $price ?> ₽'>
@@ -361,16 +361,71 @@
         </ul>
     </div>
 </div>
+
+
+                               <!-- $id = $item["id"];
+                                    $imgLinkIconCard = $item["imgLinkIconCard"];
+                                    $vendorCodeBestseller = $item["vendorCode"];
+                                    $nameComponent = $item["nameComponent"];
+                                    $quantityBestseller = $item["quantity"];
+                                    $linkPage = $item["linkPage"];
+                                    $priceBestseller = $item["price"];
+                                    $basketImgPath = $item["basketImgPath"];
+                                    $guidId = $item["guid"];
+                                    $manufacturer = $item["manufacturer"]; -->
+
     <section class="please-note-section">
         <div class="container please-note-section__container">
             <h3 class="please-note-section__title">Пользователи выбирают:</h3>
             <div class="please-note-section__card-product">
-                <div class="card-product">
-                    
-                </div>
+            <?php foreach ($data as $item) {
+                echo "<div class='card-component'>";
+                    echo "<div class='card-component__top'>";
+                        echo "<img src='"; echo $item["imgLinkIconCard"] . "'";  echo "class='card-component__img'"; echo "alt='"; echo "Фото " . $item["nameComponent"]. "'";
+                                echo "<div class='card-component__vendor'>" . $item["vendorCode"] ."</div>";
+                                echo "<div class='card-component__name'>";
+                                    echo "<a href='". $item["linkPage"] ."' class='' target='_blank'>"; 
+                                        echo $item["nameComponent"];
+                                    echo "</a>";
+                    echo "</div>";
+                echo  "</div>";
+
+                echo "<div className='card-component__bottom'>";
+                    echo "<div className='cc-basket-block__delivry-block'>";
+                        echo "<div class='" . $item["quantity"] . "> 0" . "? 'delivry-block__quantity delivry-block__quantity_0' : 'delivry-block__quantity'}>";
+                            echo  $item['quantity'] . "> 0 ? 'Под заказ' : 'Наличие:'" . $item['quantity'] . "шт.'";
+                        echo "</div>";
+                    echo "</div>";
+
+                //         <div className="card-component__price-block">
+                //             <div className="card-component__price">
+                //                 {new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB", minimumFractionDigits: 0 }).format(element.price)}
+                //             </div>
+                //             <div className="card-component__price-nalog">в т.ч. НДС</div>
+                //         </div>
+
+                //         <div className="card-component__basket-block">
+                //             <div className="basket-block__quantity-item">
+                //                 <div className="quantity-item__minus" onClick={() => handleDecrement(globalIndex)}>−</div>
+                //                 <div className="quantity-item__input">{quantities[globalIndex]}</div>
+                //                 <div className="quantity-item__plus" onClick={() => handleIncrement(globalIndex)}>+</div>
+                //             </div>
+                //             <button
+                //                 className={`basket-block__button ${isInBasket(globalIndex) ? "added" : ""} ${quantities[globalIndex] === 0 ? "disabled" : ""}`}
+                //                 disabled={quantities[globalIndex] === 0}
+                //                 onClick={() => handleAddToBasket(globalIndex)}
+                //             >
+                //                 {isInBasket(globalIndex) ? "В корзине" : "В корзину"}
+                //             </button>
+                //         </div>
+                //     </div>
+                // </div> 
+            }?>
             </div>
         </div>
     </section>
-<?php include '../../php/modules/footer.php' ?>
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
-</body></html>
+    
+    <?php include '../../php/modules/footer.php' ?>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>

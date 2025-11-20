@@ -20,6 +20,7 @@ header("Access-Control-Allow-Headers: Content-Type");
                     <div class="footer-nav__item"><a href="https://shop.encomponent.ru/" class="footer-nav__link">Интернет-магазин комплектующих</a></div>
                     <div class="footer-nav__item"><a href="https://supply.encomponent.ru/" class="footer-nav__link">Сервис для снабженца</a></div>
                     <div class="footer-nav__item"><a href="https://encomponent.ru/pp-page.html" class="footer-nav__link">Политика обработки персональных данных</a></div>
+                    <div class="footer-nav__item"><a href="https://encomponent.ru/about.php" class="footer-nav__link">Страница контактов</a></div>
                 </div>
             </div>
             <div class="footer-contact">

@@ -33,7 +33,7 @@
     <?php include "php/modules/header.php" ?>
     <!--Основная секция страницы-->
     <main>
-        <?php include "php/modules/about-main-section.php" ?>
+        <!-- <?php include "php/modules/about-main-section.php" ?> -->
         <?php include "php/modules/egrul-table-section.php" ?>
         <?php include "php/modules/feedback-section.php" ?>
     </main>

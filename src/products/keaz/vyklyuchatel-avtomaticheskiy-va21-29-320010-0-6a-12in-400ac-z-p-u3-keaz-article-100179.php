@@ -344,24 +344,25 @@ $article = "100179";
 <tr><td>Страна производитель</td><td>Россия</td></tr>
 <tr><td>ТНВЭД код</td><td>8536201007</td></tr>
 </tbody></table>
-<h3 class='files-and-documents-section__title'>Файлы и документы</h3><ul>
-<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Руководство по эксплуатации ВА21-29 — <a href='https://files.keaz.ru/f/577/rucovod-info-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Референция МРСК Сибири - АлтайЭнерго — <a href='https://files.keaz.ru/f/3951/refer-altayenergo.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Сертификат ТР ТС ВА21 — <a href='https://files.keaz.ru/f/2234/sert-trts-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Сертификат пожарной безопасности  — <a href='https://files.keaz.ru/f/987/sert-a63-ae20-ak50b-va13-va21-va53-va55-va57-va51-35-va04-36-ak50kb.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Декларация ТР ТС 001-2011 ВА21-29, OptiDin ВМ63 — <a href='https://files.keaz.ru/f/12443/ds-tr-ts-001-2011-va21-29-optidin-vm63.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>ДС ТР ТС 001 ВА21 — <a href='https://files.keaz.ru/f/47869/ds-tr-ts-001-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>ДС ТР ЕАЭС 037 ВА21 — <a href='https://files.keaz.ru/f/16766/ds-tr-eaes-037-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>3D-модель ВА21-29-3 — <a href='https://files.keaz.ru/f/2453/va21-29-3pol.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Чертеж ВА21-29 3-х полюсный — <a href='https://files.keaz.ru/f/14971/chertej-va21-29-3-h-polusniy.dwg.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Заключение Минпромторга О подтверждении КЭАЗ по 719 — <a href='https://files.keaz.ru/f/16921/zakluchenie-minpromtorga-o-podtverjdenii-keaz-po-719.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Выписки из Реестров отечественной продукции  и производителей отечественной продукции — <a href='https://files.keaz.ru/f/17340/vipiski-iz-reestrov-otechestvennoy-produkcii-i-proizvoditeley-otechestvennoy-produkcii.xlsx' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Выписка из Акта экспертизы КТПП (2022) — <a href='https://files.keaz.ru/f/16920/vipiska-iz-akta-ekspertizi-ktpp-2019.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>База данных для EPLAN Electric P8 ВА21 — <a href='https://files.keaz.ru/f/8042/va21.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Лицензия на изготовление оборудования для ядерных установок — <a href='https://files.keaz.ru/f/13287/licenziya-na-izgotovlenie-oborudovaniya-dlya-yadernih-ustanovok.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li>Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-</ul>
+<h3 class='files-and-documents-section__title'>Файлы и документы</h3>
+    <ul class="files-and-documents-section__list">
+        <li class="files-and-documents-section__item">Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Руководство по эксплуатации ВА21-29 — <a href='https://files.keaz.ru/f/577/rucovod-info-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Референция МРСК Сибири - АлтайЭнерго — <a href='https://files.keaz.ru/f/3951/refer-altayenergo.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Сертификат ТР ТС ВА21 — <a href='https://files.keaz.ru/f/2234/sert-trts-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Сертификат пожарной безопасности  — <a href='https://files.keaz.ru/f/987/sert-a63-ae20-ak50b-va13-va21-va53-va55-va57-va51-35-va04-36-ak50kb.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Декларация ТР ТС 001-2011 ВА21-29, OptiDin ВМ63 — <a href='https://files.keaz.ru/f/12443/ds-tr-ts-001-2011-va21-29-optidin-vm63.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">ДС ТР ТС 001 ВА21 — <a href='https://files.keaz.ru/f/47869/ds-tr-ts-001-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">ДС ТР ЕАЭС 037 ВА21 — <a href='https://files.keaz.ru/f/16766/ds-tr-eaes-037-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">3D-модель ВА21-29-3 — <a href='https://files.keaz.ru/f/2453/va21-29-3pol.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Чертеж ВА21-29 3-х полюсный — <a href='https://files.keaz.ru/f/14971/chertej-va21-29-3-h-polusniy.dwg.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Заключение Минпромторга О подтверждении КЭАЗ по 719 — <a href='https://files.keaz.ru/f/16921/zakluchenie-minpromtorga-o-podtverjdenii-keaz-po-719.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Выписки из Реестров отечественной продукции  и производителей отечественной продукции — <a href='https://files.keaz.ru/f/17340/vipiski-iz-reestrov-otechestvennoy-produkcii-i-proizvoditeley-otechestvennoy-produkcii.xlsx' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Выписка из Акта экспертизы КТПП (2022) — <a href='https://files.keaz.ru/f/16920/vipiska-iz-akta-ekspertizi-ktpp-2019.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">База данных для EPLAN Electric P8 ВА21 — <a href='https://files.keaz.ru/f/8042/va21.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Лицензия на изготовление оборудования для ядерных установок — <a href='https://files.keaz.ru/f/13287/licenziya-na-izgotovlenie-oborudovaniya-dlya-yadernih-ustanovok.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+        <li class="files-and-documents-section__item">Каталог ВА21 — <a href='https://files.keaz.ru/f/192/catalog-va21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
+    </ul>
 </div>
 
                         <section class="please-note-section">

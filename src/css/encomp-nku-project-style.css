@@ -635,8 +635,33 @@ a:hover {
   margin-bottom: 100px;
 }
 
-.please-note-section__title,
+.table-bordered {
+  margin-bottom: 50px !important;
+}
+
 .files-and-documents-section__title {
+  margin-bottom: 20px;
+}
+
+#technical {
+  margin-bottom: 50px;
+}
+
+.files-and-documents-section__item {
+  padding-left: 30px;
+  font-size: 18px;
+  background-image: url(../img/arrow_yellow.svg);
+  background-repeat: no-repeat;
+}
+
+.files-and-documents-section__item:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+
+
+
+.please-note-section__title {
   margin-bottom: 10px;
 }
 

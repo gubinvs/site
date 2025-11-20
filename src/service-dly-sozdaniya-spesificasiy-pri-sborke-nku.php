@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/supply-index-page-style.css" media="all">
+    <link rel="stylesheet" href="css/supply-index-page-style.css" media="all">
     <title>Сервис для создания спецификаций</title>
 
     <!-- 🔹 Базовое SEO -->

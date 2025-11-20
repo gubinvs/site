@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://encomponent.ru/css/encomp-nku-project-style.css" media="all">
+    <meta http-equiv="refresh" content="0;url=https://encomponent.ru/snab.php">
 </head>
 
 <style>

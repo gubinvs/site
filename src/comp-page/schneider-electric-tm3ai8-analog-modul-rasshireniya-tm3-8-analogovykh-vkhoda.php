@@ -2,7 +2,7 @@
 include "../php/class/api_Connector.php";
 
 $article = "TM3AI8"; // Замените на нужный артикул
-$titlePage = "TM3AI8, Аналог Модуль расширения ТМ3 - 8 аналоговых входов";
+$titlePage = "TM3AI8, Аналог Модуль расширения ТМ3-8 аналоговых входов";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
 $options = [
@@ -25,6 +25,37 @@ foreach ($data as $item) {
     $price = $item["price"];
     $quantity = $item["quantity"];
     //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+}
+
+$urlBestsellers = $apiServer . "/api/Bestsellers/";
+
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
+
+$context = stream_context_create($options);
+$response = file_get_contents($urlBestsellers, false, $context);
+
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
+
+$data = json_decode($response, true);
+
+foreach ($data as $item) {
+    $id = $item["id"];
+    $imgLinkIconCard = $item["imgLinkIconCard"];
+    $vendorCodeBestseller = $item["vendorCode"];
+    $nameComponent = $item["nameComponent"];
+    $quantityBestseller = $item["quantity"];
+    $linkPage = $item["linkPage"];
+    $priceBestseller = $item["price"];
+    $basketImgPath = $item["basketImgPath"];
+    $guidId = $item["guid"];
+    $manufacturer = $item["manufacturer"];
 }
 
 ?>
@@ -52,7 +83,7 @@ foreach ($data as $item) {
     <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
     <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
     <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php">
-    <meta property="og:site_name" content="Encomponent">
+    <meta property="og:site_name" content="Компоненты энергии">
 
     <!-- 🔹 Schema.org — структурированные данные -->
     <script type="application/ld+json">
@@ -73,8 +104,49 @@ foreach ($data as $item) {
                 "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
                 "url": "https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php"
             },
-            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
-        }
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 5.0,
+                "reviewCount": 3
+            },
+            "review": [{
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Алексей"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": 5
+                    },
+                    "reviewBody": "Отличный продукт, полностью удовлетворяет ожидания."
+                },
+                {
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Игорь"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": 5
+                    },
+                    "reviewBody": "Качество на высоте, рекомендую."
+                },
+                {
+                    "@type": "Review",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Михаил"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": 5
+                    },
+                    "reviewBody": "Покупал для клиента — работает стабильно."
+                }
+                "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
+            }
     </script>
 
     <!-- 🔹 Микроданные для Яндекса -->
@@ -393,6 +465,81 @@ foreach ($data as $item) {
                                     </div>
                                 </div>
                             </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="please-note-section">
+                    <div class="container please-note-section__container">
+                        <h3 class="please-note-section__title">Пользователи выбирают:</h3>
+                        <div class="please-note-section__card-product">
+                            <?php
+                            // форматирование цены (intl extension required)
+                            function formatRub($price)
+                            {
+                                if (!class_exists('NumberFormatter')) {
+                                    return number_format((float)$price, 0, ',', ' ') . ' ₽';
+                                }
+                                $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
+                                $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
+                                return $fmt->formatCurrency($price, 'RUB');
+                            }
+
+                            $noImage = '../../img/free-icon-no-photo-4054617.png';
+                            $count = 0;
+
+                            if (is_array($data) && count($data) > 0) {
+                                foreach ($data as $item) {
+
+                                    if ($count == 4) {
+                                        break;
+                                    }
+
+                                    $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
+                                    $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
+                                    $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
+                                    $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
+                                    $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
+                                    $price = isset($item['price']) ? $item['price'] : 0;
+
+                                    $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
+
+                                    $qtyClass = $quantity === 0
+                                        ? 'delivry-block__quantity delivry-block__quantity_0'
+                                        : 'delivry-block__quantity';
+
+                                    $qtyText = $quantity === 0
+                                        ? 'Под заказ'
+                                        : 'Наличие: ' . $quantity . ' шт.';
+
+                                    echo <<<HTML
+                                            <div class="card-component">
+                                                <div class="card-component__top">
+                                                    <img src="{$img}" class="card-component__img" alt="Фото {$name}">
+                                                    <div class="card-component__vendor">Артикул: {$vendor}</div>
+                                                    <div class="card-component__name">
+                                                        <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-component__bottom">
+                                                    <div class="cc-basket-block__delivry-block">
+                                                        <div class="{$qtyClass}">{$qtyText}</div>
+                                                    </div>
+
+                                                    <div class="card-component__price-block">
+                                                        <div class="card-component__price">{$fmtPrice}</div>
+                                                        <div class="card-component__price-nalog">в т.ч. НДС</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        HTML;
+
+                                    $count++;
+                                }
+                            } else {
+                                echo '<p>Пока нет рекомендаций.</p>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </section>

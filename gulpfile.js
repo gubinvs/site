@@ -24,28 +24,33 @@ import { reset } from "./gulp/tasks/reset.js";
 // import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { phpServer } from "./gulp/tasks/phpServer.js";
-import { scss } from "./gulp/tasks/scss.js";
+// import { scss } from "./gulp/tasks/scss.js";
 // import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";        // преобразование шрифтов gulp.fonts
 
 // Наблюдатель за файлами
-function watcher() {
-  gulp.watch(path.watch.scss, scss)
-}
+// function watcher() {
+//   gulp.watch(path.watch.scss, scss)
+// }
+
 
 
 
 // Методы объеденены в одне переменную, которые выполняются параллельно
 //const mainTasks = gulp.parallel(copy_fonts, copy, copy_php, copy_page, copy_js, copy_admin, copy_pagecomponent, scss, images);
 // Методы объеденены в одне переменную, которые выполняются параллельно - это для PHP приложения
-const mainTasks = gulp.parallel(scss);
+// const mainTasks = gulp.parallel(scss);
 
 // Методы запуска основных плагинов
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server, phpServer));
+// const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server, phpServer));
+// const dev = gulp.series(reset, gulp.parallel(watcher, server, phpServer));
+const dev = gulp.series(reset, gulp.parallel(server, phpServer));
+
 
 // метод переключения режимов разработка\продакшен
-const build = gulp.series(reset, mainTasks);
+// const build = gulp.series(reset, mainTasks);
+const build = gulp.series(reset);
 
 export { dev }
 export { build }

@@ -13,7 +13,7 @@ export const path = {
         page: `${buildFolder}/`,              // файлы php
         php: `${buildFolder}/php/`,           // классы и структуры, обработчики
         // css: `${buildFolder}/css/`,          // файл стилей style.css
-        css: `${srcFolder}/css/`,          // файл стилей style.css
+        // css: `${srcFolder}/css/`,          // файл стилей style.css
         js: `${buildFolder}/js/`,            // файлы js
         images: `${buildFolder}/img/`,       // файлы img
         files: `${buildFolder}/files/`,      // остальные файлы
@@ -25,7 +25,7 @@ export const path = {
     src: {   // какие файлы следует переносить при сборке проекта и куда
         page: `${srcFolder}/*.php`,             // для работы без препроцессора pug
         php: `${srcFolder}/php/**/*.php`,
-        scss: `${srcFolder}/scss/*.css`,
+        // scss: `${srcFolder}/scss/*.css`,
         js: `${srcFolder}/js/**/*.js`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `${srcFolder}/img/**/*.svg`,

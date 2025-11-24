@@ -20,10 +20,6 @@
                 <td class="egrul-table-section__td">Компоненты энергии</td>
             </tr>
             <tr>
-                <td class="egrul-table-section__td">Почновый адрес</td>
-                <td class="egrul-table-section__td">197371, г. Санкт-Петербург, ул. Парашютная, д. 34, стр. 1, кв. 851</td>
-            </tr>
-            <tr>
                 <td class="egrul-table-section__td">ИНН</td>
                 <td class="egrul-table-section__td">590302376610</td>
             </tr>

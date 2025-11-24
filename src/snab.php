@@ -20,7 +20,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Аутсорсинг снабжения — оптимизация закупок и логистики">
   <meta property="og:description" content="Передайте задачи снабжения профессионалам. Контроль, учет, закупки, логистика.">
-  <meta property="og:url" content="https://encomponent.ru/supply-outsourcing.html">
+  <meta property="og:url" content="https://encomponent.ru/snab.php">
   <meta property="og:image" content="https://encomponent.ru/img/snab-page-img/topblock-img_1920.jpg">
 
   <!-- 🔹 Favicon и стили -->
@@ -32,13 +32,13 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Аутсорсинг снабжения",
-      "description": "Передача функций снабжения на аутсорсинг: анализ, закупка, логистика и учет в 1С.",
+      "@type": "WebSite",
+      "name": "Компоненты энергии",
+      "description": "Аутсорсинг функций снабжения - анализ, закупка, логистика и учет в 1С.",
       "provider": {
         "@type": "Organization",
         "name": "Компоненты энергии",
-        "url": "https://encomponent.ru",
+        "url": "https://encomponent.ru/snab.php",
         "logo": "https://encomponent.ru/favicon.svg"
       },
       "areaServed": "Россия",

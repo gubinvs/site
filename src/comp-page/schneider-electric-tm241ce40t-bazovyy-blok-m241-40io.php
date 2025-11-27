@@ -517,6 +517,10 @@ function e($s)
                 </section>
             </div>
     </main>
+    <div class='container link-next-page'>
+        <div class='link-next-page__text'>Рекомендуем заглянуть на эту страницу товара:</div>
+        <div class='prev-page-link'><a href='https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php'>https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php</a></div>
+    </div>
     <?php include "../php/modules/footer.php" ?>
 </body>
 

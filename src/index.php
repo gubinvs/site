@@ -8,9 +8,48 @@
     <!-- <meta http-equiv="refresh" content="0;url=https://encomponent.ru/snab.php"> -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://encomponent.ru/css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="Производство автоматизированных систем для реализации проектов в реальных секторах экономики: 
-                                    промышленных производствах, энергетике, машиностроении и других отраслях обеспечивающих материальное производство.">
+    <meta name="description" content=" ">
     <title>Компоненты энергии - Производство автоматизированных систем, материальное и информационное обеспечение</title>
+    <!-- 🔹 Заголовок страницы (до 60 символов) -->
+    <title>Аутсорсинг снабжения — оптимизация закупок и логистики | Компоненты Энергии</title>
+
+    <!-- 🔹 Метатеги -->
+    <meta name="description" content="Профессиональный аутсорсинг снабжения: анализ цен, закупка комплектующих, учет и логистика. Оптимизируем процесс обеспечения материалами под ключ.">
+    <meta name="keywords" content="аутсорсинг снабжения, закупка комплектующих, снабжение предприятий, оптимизация закупок, логистика, 1С УНФ, управление поставками">
+
+    <!-- 🔹 Канонический адрес -->
+    <link rel="canonical" href="https://encomponent.ru/index.php">
+
+    <!-- 🔹 Open Graph для соцсетей -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Компоненты энергии">
+    <meta property="og:description" content=" ">
+    <meta property="og:url" content="https://encomponent.ru/index.php">
+    <meta property="og:image" content="https://encomponent.ru/img/logo_encomponent_main.png">
+
+    <!-- 🔹 Favicon и стили -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/encomp-nku-project-style.css" media="all">
+    <link rel="stylesheet" href="/css/style-supply-page.css">
+
+    <!-- 🔹 Структурированные данные (Schema.org) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Компоненты энергии",
+            "description": "    ",
+            "provider": {
+                "@type": "Organization",
+                "name": "Компоненты энергии",
+                "url": "https://encomponent.ru/index.php",
+                "logo": "https://encomponent.ru/img/logo_encomponent_main.png"
+            },
+            "areaServed": "Россия",
+            "serviceType": "Аутсорсинг снабжения"
+        }
+    </script>
+
 </head>
 
 <body>

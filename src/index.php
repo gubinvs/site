@@ -87,11 +87,11 @@
 
 <body>
     <!--Подключение header-->
-    <?php include "php/modules/header.php" ?>
+    <!-- <?php include "php/modules/header.php" ?> -->
     <!--Основная секция страницы-->
     <main>
-        <?php include "php/modules/home-main-section.php" ?>
-         <?php include "php/modules/please-note-section.php" ?>
+        <!-- <?php include "php/modules/home-main-section.php" ?> -->
+        <?php include "php/modules/please-note-section.php" ?>
     </main>
     <!--Подключение header-->
     <?php include "php/modules/footer.php" ?>

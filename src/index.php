@@ -1,5 +1,5 @@
 <?php
-    include "../class/api_Connector.php"; 
+    include "php/class/api_Connector.php"; 
     // Цвет полосы в header
     $color_line_header = "#F3DE09";
                         

@@ -21,6 +21,6 @@
             </ul>    
         </div>
     </div>
-    <div class="haader__line"></div>
-    <div class="haader__square"></div>
+    <div class="haader__line"<?= $color_line_header ? "style='background-color: {$color_line_header} !important;'" : "" ?>></div>
+    <div class="haader__square" <?= $color_line_header ? "style='background-color: {$color_line_header} !important;'" : "" ?>></div>
 </header>

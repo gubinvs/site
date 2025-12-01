@@ -1,6 +1,39 @@
 <?php
+    include "../class/api_Connector.php"; 
     // Цвет полосы в header
     $color_line_header = "#F3DE09";
+                        
+    // Запрос в базу данных для получения рандомных 8-ми товаров
+    $urlBestsellers = $apiServer . "/api/Bestsellers/";
+
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
+
+    $context = stream_context_create($options);
+    $response = file_get_contents($urlBestsellers, false, $context);
+
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
+
+    $data = json_decode($response, true);
+
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +45,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 🔹 Favicon и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/index-page-encomponent-style.css" media="all">
+    <link rel="stylesheet" href="../css/encomponent_style.css" media="all">
     <meta name="description" content="Компоненты энергии">
 
     <!-- 🔹 Заголовок страницы (до 60 символов) -->
-    <title>Аутсорсинг снабжения — оптимизация закупок и логистики | Компоненты Энергии</title>
+    <title>Компоненты энергии - Интернет-магазин комплект Аутсорсинг снабжения — оптимизация закупок и логистики | Компоненты Энергии</title>
 
     <!-- 🔹 Метатеги -->
     <meta name="description" content=" ">
@@ -58,6 +91,7 @@
     <!--Основная секция страницы-->
     <main>
         <?php include "php/modules/home-main-section.php" ?>
+         <?php include "php/modules/please-note-section.php" ?>
     </main>
     <!--Подключение header-->
     <?php include "php/modules/footer.php" ?>

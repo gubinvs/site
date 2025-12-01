@@ -402,9 +402,8 @@ header {
   display: flex;
   align-items: flex-end;
   padding-bottom: 40px;
+  color: #FFFFFF;
 }
-
-
 
 
 @media only screen and (max-width: 1280px) {

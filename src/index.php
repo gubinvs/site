@@ -13,14 +13,14 @@
     <!-- 🔹 Favicon и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/index-page-encomponent-style.css" media="all">
-    <meta name="description" content=" ">
-    <title>Компоненты энергии - Производство автоматизированных систем, материальное и информационное обеспечение</title>
+    <meta name="description" content="Компоненты энергии">
+
     <!-- 🔹 Заголовок страницы (до 60 символов) -->
     <title>Аутсорсинг снабжения — оптимизация закупок и логистики | Компоненты Энергии</title>
 
     <!-- 🔹 Метатеги -->
-    <meta name="description" content="Профессиональный аутсорсинг снабжения: анализ цен, закупка комплектующих, учет и логистика. Оптимизируем процесс обеспечения материалами под ключ.">
-    <meta name="keywords" content="аутсорсинг снабжения, закупка комплектующих, снабжение предприятий, оптимизация закупок, логистика, 1С УНФ, управление поставками">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
 
     <!-- 🔹 Канонический адрес -->
     <link rel="canonical" href="https://encomponent.ru/index.php">
@@ -28,7 +28,7 @@
     <!-- 🔹 Open Graph для соцсетей -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Компоненты энергии">
-    <meta property="og:description" content=" ">
+    <meta property="og:description" content="               ">
     <meta property="og:url" content="https://encomponent.ru/index.php">
     <meta property="og:image" content="https://encomponent.ru/img/logo_encomponent_main.png">
 
@@ -46,7 +46,7 @@
                 "logo": "https://encomponent.ru/img/logo_encomponent_main.png"
             },
             "areaServed": "Россия",
-            "serviceType": "Аутсорсинг снабжения"
+            "serviceType": "Аутсорсинг снабжения, поставка комплектующих для сборки НКУ и средств автоматизации"
         }
     </script>
 

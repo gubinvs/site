@@ -10,9 +10,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="refresh" content="0;url=https://encomponent.ru/snab.php"> -->
+    <!-- 🔹 Favicon и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
+    <link rel="stylesheet" href="../css/index-page-encomponent-style.css" media="all">
     <meta name="description" content=" ">
     <title>Компоненты энергии - Производство автоматизированных систем, материальное и информационное обеспечение</title>
     <!-- 🔹 Заголовок страницы (до 60 символов) -->
@@ -31,11 +31,6 @@
     <meta property="og:description" content=" ">
     <meta property="og:url" content="https://encomponent.ru/index.php">
     <meta property="og:image" content="https://encomponent.ru/img/logo_encomponent_main.png">
-
-    <!-- 🔹 Favicon и стили -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/css/encomp-nku-project-style.css" media="all">
-    <link rel="stylesheet" href="/css/style-supply-page.css">
 
     <!-- 🔹 Структурированные данные (Schema.org) -->
     <script type="application/ld+json">

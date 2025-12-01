@@ -1,6 +1,6 @@
 <?php
     // Цвет полосы в header
-    $color_line_header = "#DFE0E1";
+    $color_line_header = "#F3DE09";
 ?>
 
 <!DOCTYPE html>

@@ -1,26 +1,26 @@
-<section className="home-main-section home-main-section__top">
-    <div className="container home-main-section__container__top">
-        <div className="top-bord"></div>
+<section class="home-main-section home-main-section__top">
+    <div class="container home-main-section__container__top">
+        <div class="top-bord"></div>
         
-        <div className="top-shape"></div>
-        <div className="home-main-section__title-block">
-            <h1 className="home-main-section__title">Компоненты Энергии</h1>
-            <div className="hms-title__fon"></div>
-            <div className="hms-title__discr">
+        <div class="top-shape"></div>
+        <div class="home-main-section__title-block">
+            <h1 class="home-main-section__title">Компоненты Энергии</h1>
+            <div class="hms-title__fon"></div>
+            <div class="hms-title__discr">
                 <strong>Доставляем любые бренды!</strong><br /> Мы обеспечиваем доступ к широкому ассортименту товаров, поставляя их через альтернативные каналы 
                 в полном соответствии с законодательством. Вам нужен бренд — организуем поставку быстро, надежно и эффективно.
             </div>
         </div>
     </div>
 </section>
-<section className="home-main-section home-main-section__bottom">
+<section class="home-main-section home-main-section__bottom">
     
-    <div className="container home-main-section__container__bottom">
-        <div className="bottom-bord"></div>
-        <div className="bottom-shape"></div>
-        <div className="home-main-section__title-block_big">
-            <h2 className="home-main-section__title_big">Включаемся в проекты</h2>
-            <div className="hms-title__logo">
+    <div class="container home-main-section__container__bottom">
+        <div class="bottom-bord"></div>
+        <div class="bottom-shape"></div>
+        <div class="home-main-section__title-block_big">
+            <h2 class="home-main-section__title_big">Включаемся в проекты</h2>
+            <div class="hms-title__logo">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="43.8694" y="13.9563" width="11.6985" height="33.7285" rx="1" fill="#1D252C"/>
                     <mask id="path-2-inside-1_135_129" fill="white">
@@ -49,7 +49,7 @@
                     <path d="M79.4519 30.0359C79.9142 29.7339 80.0432 29.1142 79.7258 28.6617C77.3548 25.2805 74.4225 22.3248 71.0545 19.9212C70.6048 19.6004 69.9823 19.7199 69.6726 20.1747L64.3773 27.9499C64.0665 28.4062 64.1889 29.0265 64.636 29.3542C66.7572 30.9089 68.6191 32.7859 70.1531 34.9163C70.4759 35.3646 71.0955 35.4947 71.5576 35.1928L79.4519 30.0359Z" fill="#F7FAFB" stroke="#F7FAFB" stroke-width="100" mask="url(#path-7-inside-6_135_129)"/>
                 </svg>
             </div>
-            <img className="hms-bottom__img" src="../images/home-main-section_img__1920.png" alt="Приветливый сотрудник - женьщина" />
+            <img class="hms-bottom__img" src="../../img/home-main-section_img__1920.png" alt="Приветливый сотрудник - женьщина" />
         </div>
     </div>
 </section>

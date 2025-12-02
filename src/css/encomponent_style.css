@@ -297,7 +297,7 @@ header {
 .top-bord {
     position: absolute;
     width: 700px;
-    height: 320px;
+    height: 355px;
     top: -50px;
     left: 0px;
     background: #F3DE09;
@@ -315,7 +315,7 @@ header {
 .top-shape {
     position: absolute;
     width: 350px;
-    height: 320px;
+    height: 355px;
     background: #F3DE09;
     bottom: 0;
     left: 700px;

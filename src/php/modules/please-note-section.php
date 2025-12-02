@@ -1,13 +1,17 @@
 <section class="please-note-section">
     <div class="container please-note-section__container">
-        <h2 class="please-note-section__title">Пользователи выбирают:</h2>
+        <h2 class="please-note-section__title"><span class="yellow-diamond"></span> Популярные товары:</h2>
+        <div class="please-note-section__discription">
+            Наши клиенты чаще всего выбирают проверенные решения для автоматизации, электромонтажа и промышленной энергетики.
+            В каталоге вы найдете оборудование для автоматических линий, щитов, безопасности, коммутации, управления и 
+            распределения питания.
+        </div>
         <div class="please-note-section__card-product">
             <?php
             // форматирование цены (intl extension required)
             function formatRub($price)
             {
-                if (!class_exists('NumberFormatter'))
-                {
+                if (!class_exists('NumberFormatter')) {
                     return number_format((float)$price, 0, ',', ' ') . ' ₽';
                 }
                 $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
@@ -20,6 +24,8 @@
 
             if (is_array($data) && count($data) > 0) {
                 foreach ($data as $item) {
+
+                    // if($count == 4) {break;};
 
                     $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
                     $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
@@ -66,6 +72,6 @@
             } else {
                 echo '<p>Пока нет рекомендаций.</p>';
             }
-        ?>
-    </div>
+            ?>
+        </div>
 </section>

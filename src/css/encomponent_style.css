@@ -334,6 +334,49 @@ header {
     transform: rotateY(180deg) rotateX(180deg);
 }
 
+.home-main-section__discription {
+    margin-bottom: 80px;
+}
+
+.yellow-diamond {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #F3DE09;
+    transform: rotate(45deg);
+    margin-right: 6px;
+}
+
+.yellow-diamond__list {
+     width: 8px;
+    height: 8px;
+}
+
+.hms-discription__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hms-discription__discr {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+}   
+
+.hms-discription__item {
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 2px;
+}
+
+.hms-discription__item:last-of-type {
+    margin-bottom: 20px;
+}
 
 /* --------------------- please-note-section  --------------------- */
 
@@ -344,7 +387,15 @@ header {
 .please-note-section__title {
     font-size: 32px;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+}
+
+.please-note-section__discription {
+    width: 60%;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
 }
 
 .please-note-section__card-product  {
@@ -482,6 +533,35 @@ header {
     font-size: 12px;
 }
 
+
+/* --------------  index-page-seo-block ----------------- */
+
+.index-page-seo-block {
+    margin-bottom: 100px;
+}
+
+.index-page-seo-block__title {
+    margin-bottom: 10px;
+}
+
+.index-page-seo-block__discription {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.index-page-seo-block__item {
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 2px;
+}
+
+.index-page-seo-block__item:last-of-type {
+    margin-bottom: 20px;
+}
 
 
 /* ------------------- Footer --------------------  */

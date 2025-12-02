@@ -1,39 +1,39 @@
 <?php
-    include "php/class/api_Connector.php"; 
-    // Цвет полосы в header
-    $color_line_header = "#F3DE09";
-                        
-    // Запрос в базу данных для получения рандомных 8-ми товаров
-    $urlBestsellers = $apiServer . "/api/Bestsellers/";
+include "php/class/api_Connector.php";
+// Цвет полосы в header
+$color_line_header = "#FFFFFF";
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
+// Запрос в базу данных для получения рандомных 8-ми товаров
+$urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($urlBestsellers, false, $context);
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
 
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+$context = stream_context_create($options);
+$response = file_get_contents($urlBestsellers, false, $context);
 
-    $data = json_decode($response, true);
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
 
-    foreach ($data as $item) {
-        $id = $item["id"];
-        $imgLinkIconCard = $item["imgLinkIconCard"];
-        $vendorCodeBestseller = $item["vendorCode"];
-        $nameComponent = $item["nameComponent"];
-        $quantityBestseller = $item["quantity"];
-        $linkPage = $item["linkPage"];
-        $priceBestseller = $item["price"];
-        $basketImgPath = $item["basketImgPath"];
-        $guidId = $item["guid"];
-        $manufacturer = $item["manufacturer"];
-    }
+$data = json_decode($response, true);
+
+foreach ($data as $item) {
+    $id = $item["id"];
+    $imgLinkIconCard = $item["imgLinkIconCard"];
+    $vendorCodeBestseller = $item["vendorCode"];
+    $nameComponent = $item["nameComponent"];
+    $quantityBestseller = $item["quantity"];
+    $linkPage = $item["linkPage"];
+    $priceBestseller = $item["price"];
+    $basketImgPath = $item["basketImgPath"];
+    $guidId = $item["guid"];
+    $manufacturer = $item["manufacturer"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +45,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 🔹 Favicon и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
     <link rel="stylesheet" href="../css/encomponent_style.css" media="all">
 
     <!-- 🔹 Заголовок страницы (до 60 символов) -->
@@ -91,6 +92,8 @@
     <main>
         <?php include "php/modules/home-main-section.php" ?>
         <?php include "php/modules/please-note-section.php" ?>
+        <?php include "php/modules/index-page-seo-block.php" ?>
+        <?php include "php/modules/feedback-section.php" ?>
     </main>
     <!--Подключение header-->
     <?php include "php/modules/footer.php" ?>

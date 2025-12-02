@@ -28,24 +28,6 @@
   <link rel="stylesheet" href="/css/encomp-nku-project-style.css" media="all">
   <link rel="stylesheet" href="/css/style-supply-page.css">
 
-  <!-- 🔹 Структурированные данные (Schema.org) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Компоненты энергии",
-      "description": "Аутсорсинг функций снабжения - анализ, закупка, логистика и учет в 1С.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Компоненты энергии",
-        "url": "https://encomponent.ru/snab.php",
-        "logo": "https://encomponent.ru/favicon.svg"
-      },
-      "areaServed": "Россия",
-      "serviceType": "Аутсорсинг снабжения"
-    }
-  </script>
-
   <!-- 🔹 Yandex.Metrika -->
   <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {

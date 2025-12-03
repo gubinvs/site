@@ -61,7 +61,7 @@ foreach ($data as $item) {
     <!-- 🔹 Open Graph для соцсетей -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Компоненты энергии">
-    <meta property="og:description" content="               ">
+    <meta property="og:description" content="Купить в интернет магазине или заказать из каталога с доставкой по России шнайдер, кэаз, феникс контакт можно по телефону +7 (812) 921-59-71 или через интернет магазин.">
     <meta property="og:url" content="https://encomponent.ru/index.php">
     <meta property="og:image" content="https://encomponent.ru/img/logo_encomponent_main.png">
 
@@ -85,23 +85,23 @@ foreach ($data as $item) {
     <!-- 🔹 Yandex.Metrika -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {
-        m[i] = m[i] || function() {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-            if (document.scripts[j].src === r) {
-            return;
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
             }
-        }
-        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
         })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
         ym(98501628, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
         });
     </script>
     <noscript>

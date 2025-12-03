@@ -1,0 +1,15 @@
+.kontrollery-main-section {
+    max-width: 1920px;
+    height: 400px;
+    background-color: #F3DE09;
+}
+
+.kontrollery-main-section__container {
+    position: relative;
+}
+
+.kontrollery-main-section__main-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

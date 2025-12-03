@@ -1,5 +1,5 @@
 <section class="index-page-seo-block">
-    <div class="container">
+    <div class="container index-page-seo-block__container">
         <h2 class="index-page-seo-block__title">
             <span class="yellow-diamond"></span>
             Интернет-магазин электротехнического оборудования

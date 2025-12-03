@@ -55,7 +55,7 @@
     </div>
 </section>
 <section class="home-main-section__discription">
-    <div class="container">
+    <div class="container hms-discription__container">
         <h3 class="hms-discription__title"><span class="yellow-diamond"></span> Участвуем в проектах любой сложности</h3>
         <div class="hms-discription__discr">
             Мы сопровождаем проекты от этапа спецификации до поставки оборудования «под ключ».

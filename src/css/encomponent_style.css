@@ -322,7 +322,6 @@ header {
     clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
-
 .bottom-shape {
     position: absolute;
     width: 350px;
@@ -348,8 +347,14 @@ header {
 }
 
 .yellow-diamond__list {
-     width: 8px;
+    width: 8px;
     height: 8px;
+}
+
+.hms-discription__container {
+    padding: 40px 40px 40px 60px;
+    border: 1px solid #F3DE09;
+    border-radius: 20px;
 }
 
 .hms-discription__title {
@@ -540,6 +545,13 @@ header {
     margin-bottom: 100px;
 }
 
+.index-page-seo-block__container {
+    padding: 40px 40px 40px 60px;
+    border: 1px solid #F3DE09;
+    border-radius: 20px;
+
+}
+
 .index-page-seo-block__title {
     margin-bottom: 10px;
 }
@@ -561,6 +573,13 @@ header {
 
 .index-page-seo-block__item:last-of-type {
     margin-bottom: 20px;
+}
+
+.feedback-section__title {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 40px;
 }
 
 

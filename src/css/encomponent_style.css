@@ -383,6 +383,98 @@ header {
     margin-bottom: 20px;
 }
 
+
+@media only screen and (max-width: 1280px) {
+    .top-bord {
+        height: 355px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .top-bord {
+        height: 318px !important;
+    }
+
+    .top-shape {
+        height: 318px !important;
+    }
+    
+    .bottom-bord {
+        width: 454px !important;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .bottom-shape {
+        left: 57px !important;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .home-main-section__top {
+        margin-bottom: 40px;
+        margin-right: 0px;
+    }
+
+    .home-main-section__bottom {
+        display: none;
+    }
+
+    .top-shape {
+        left: 424px !important;
+    }
+     .top-bord {
+        width: 424px !important;
+    }
+
+    .hms-title__discr {
+        width: 500px !important;
+    }
+
+    .home-main-section__title {
+        font-size: 36px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .hms-title__fon {
+        top: 34px !important;
+        width: 380px !important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .top-shape {
+        left: 270px !important;
+    }
+
+    .top-bord {
+        width: 270px !important;
+    }
+
+
+    .hms-title__discr {
+        width: 468px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------------- please-note-section  --------------------- */
 
 .please-note-section {
@@ -835,8 +927,17 @@ header {
     width: 640px;
     }
 
-    .home-main-section {
-    display: none;
+    .header-navigation__list li:not(:last-of-type) {
+        display: none;
+    }
+
+    .haader__line,
+    .haader__square {
+        display: none;
+    }
+
+    .header__container {
+        flex-direction: row !important;
     }
 
     .card-component {

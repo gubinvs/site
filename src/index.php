@@ -116,17 +116,17 @@ foreach ($data as $item) {
     <!--Основная секция страницы-->
     <main>
         <?php include "php/modules/home-main-section.php" ?>
-        <?php include "php/modules/please-note-section.php" ?>
-        <?php include "php/modules/index-page-seo-block.php" ?>
-        <div class="container">
+        <!-- <?php include "php/modules/please-note-section.php" ?> -->
+        <!-- <?php include "php/modules/index-page-seo-block.php" ?> -->
+        <!-- <div class="container">
             <h2 class="feedback-section__title"><span class="yellow-diamond"></span> Обсудить условия заказа или получить консультацию</h2>
-        </div>
-        <?php include "php/modules/feedback-section.php" ?>
+        </div> -->
+        <!-- <?php include "php/modules/feedback-section.php" ?> -->
     </main>
     <!--Подключение header-->
-    <?php include "php/modules/footer.php" ?>
+    <!-- <?php include "php/modules/footer.php" ?> -->
     <!--Подключение скриптов JS-->
-    <script src="js/app.js" type="module"></script>
+    <!-- <script src="js/app.js" type="module"></script> -->
 </body>
 
 </html>

@@ -18,7 +18,7 @@
             <textarea class="feedback-section__input feedback-section__input_textarea" placeholder="Ваш вопрос" name="text" required></textarea>
             <button class="feedback-section__button" type="submit">Отправить сообщение</button>
             <div class="check-box">
-                <input type="checkbox" name="chekBox" checked required>
+                <input type="checkbox" name="chekBox" required>
                 <a class="check-box__input check-box__pp-page" href="https://encomponent.ru/pp-page.html">
                     Даю согласие на обработку персональных данных
                 </a>

@@ -659,7 +659,7 @@ a:hover {
 }
 
 .please-note-section__title {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .please-note-section__card-product {
@@ -1398,6 +1398,32 @@ header {
 
 .dg-filter-block__img-prod {
     height: 30px;
+}
+
+.link-next-page__text {
+  font-size: 28px;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 4px;
+}
+
+.prev-page-link {
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.yellow-diamond {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #F3DE09;
+    transform: rotate(45deg);
+    margin-right: 6px;
+}
+
+.link-next-page {
+  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 1280px) {

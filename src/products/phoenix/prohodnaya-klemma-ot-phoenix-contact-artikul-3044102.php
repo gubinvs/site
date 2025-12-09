@@ -64,7 +64,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
         <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
-        <link rel='stylesheet' href='https://encomponent.ru/css/encomp-nku-project-style.css'>
+        <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
         <link rel='canonical' href='https://encomponent.ru/products/keaz/adapter-na-din-reyku-optimat-e100-om4-reg-article-273912.php'>
         <!--Open Graph-->
         <meta property='og:title' content='3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact продается на сайте компоненты энергии, ее артикул 273912 — купить можно по цене <?php echo $price ?> ₽'>
@@ -221,19 +221,31 @@
                                 <ul class='characteristics-block__list'>
                                     <li class='characteristics-block__item flex'>
                                         <div class='characteristics-item__title'>Производитель:</div>
-                                        <div class='characteristics-item__discr'>KEAZ Optima</div>
+                                        <div class='characteristics-item__discr'>Phoenix Contact</div>
                                     </li>
                                     <li class='characteristics-block__item flex'>
-                                        <div class='characteristics-item__title'>Высота, мм</div>
-                                        <div class='characteristics-item__discr'>115</div>
+                                        <div class='characteristics-item__title'>Номинальный ток, А:</div>
+                                        <div class='characteristics-item__discr'>32</div>
                                     </li>
                                     <li class='characteristics-block__item flex'>
-                                        <div class='characteristics-item__title'>Глубина, мм</div>
-                                        <div class='characteristics-item__discr'>20</div>
+                                        <div class='characteristics-item__title'>Расчетное напряжение, В:</div>
+                                        <div class='characteristics-item__discr'>до 1000</div>
+                                    </li>
+                                    <li class='characteristics-block__item flex'>
+                                        <div class='characteristics-item__title'>Длина, мм</div>
+                                        <div class='characteristics-item__discr'>47,7</div>
                                     </li>
                                     <li class='characteristics-block__item flex'>
                                         <div class='characteristics-item__title'>Ширина, мм</div>
-                                        <div class='characteristics-item__discr'>185</div>
+                                        <div class='characteristics-item__discr'>6,2</div>
+                                    </li>
+                                    <li class='characteristics-block__item flex'>
+                                        <div class='characteristics-item__title'>Высота, мм</div>
+                                        <div class='characteristics-item__discr'>46,9</div>
+                                    </li>
+                                        <li class='characteristics-block__item flex'>
+                                        <div class='characteristics-item__title'>Вес без упаковки, г</div>
+                                        <div class='characteristics-item__discr'>8,9</div>
                                     </li>
                                 </ul>
                             </div>
@@ -241,7 +253,7 @@
                                 <a href='#technical' id='button-link'>
                                     <div class='button-characteristics__all'>Посмотреть все характеристики</div>
                                 </a>
-                                <a href='https://shop.encomponent.ru/Basket/?vendorCode=273912'>
+                                <a href='https://shop.encomponent.ru/Basket/?vendorCode=3044102'>
                                     <div class='button-characteristics__offer' id='button-buy'>Купить</div>
                                 </a>
                             </div>
@@ -263,162 +275,144 @@
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                            У нас можно купить или заказать: Адаптер на DIN-рейку OptiMat E100-ОМ4-РЕГ — купить KEAZ Optima 233680OptiMat E РЕГ Аксессуары для автоматических выключателей в литом корпусе по артикулу 273912 <br> Адаптер на DIN-рейку OptiMat E100-ОМ4-РЕГ (273912). KEAZ Optima. 233680OptiMat E РЕГ Аксессуары для автоматических выключателей в литом корпусе. Адаптер на DIN-рейку OptiMat E100-ОМ4-РЕГ дополнительная сборочная единица подходит для применения с выключателями типа  OptiMat E100РЕГ для размещения в силовых шкафах и для крепления аппарата на DIN-рейку. 
+                            <b>Phoenix Contact 3044102 — проходная DIN-клемма (UT 4)</b><br>
+                            Проходная клемма модели 3044102 предназначена для надёжного соединения проводов в распределительных щитах и электрошкафах. Эта DIN-клемма имеет две точки подключения, обеспечивает номинальный ток 32 A и рассчитана на напряжение до 1000 В. Диапазон допустимого сечения проводов — от 0,14 до 6 мм² (AWG 26–10), что делает её универсальным решением для подключения как тонких, так и более толстых кабелей.
+                            <br><br>
+                            Конструкция оснащена винтовыми зажимами и монтажом на DIN-рейку (NS 35/7,5 или NS 35/15), что обеспечивает компактность и удобство установки даже в ограниченном пространстве. Камера соединения имеет достаточный запас простора, позволяя подключать проводники без наконечников, а встроенный «кабельный воронкообразный ввод» упрощает ввод проводов — даже с пластиковыми гильзами.
+                            <br><br>
+                            Благодаря прочному полимерному корпусу и проверенной винтовой технологии, клемма 3044102 устойчива к вибрациям и обеспечивает стабильный контакт без обслуживания. Это делает её подходящей для ответственных установок, в том числе — для промышленных и железнодорожных систем.
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-    </main>
-<div class='container' id='technical'>
-<h3 class='mt-5'>Технические характеристики</h3>
-<table class='table table-bordered table-striped mt-3'>
-<thead class='table-secondary'><tr><th>Параметр</th><th>Значение</th></tr></thead>
-<tbody>
-<tr><td>Гарантийный срок (лет)</td><td>5</td></tr>
-<tr><td>Тип крепления</td><td>DIN-рейка (с Ω-профилем) 35 мм</td></tr>
-<tr><td>Материал</td><td>Металл</td></tr>
-<tr><td>Тип адаптера на DIN-рейку</td><td>Прямолинейный</td></tr>
-<tr><td>Страна производитель</td><td>Россия</td></tr>
-<tr><td>ТНВЭД код</td><td>8538909908</td></tr>
-</tbody></table>
-<h3 class='files-and-documents-section__title'>Файлы и документы</h3><ul class='files-and-documents-section__list'>
-<li class='files-and-documents-section__item'>Каталог OptiMat E — <a href='https://files.keaz.ru/f/119/catalog-optimat.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Catalog OptiMat E (En) — <a href='https://files.keaz.ru/f/11772/optimat-e-en.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Инструкция по установке аксессуаров автоматических выключателей OptiMat E — <a href='https://files.keaz.ru/f/6901/instrukciya-po-ustanovke-aksessuarov-vikluchateley-avtomaticheskih-tipa-optimat-e-gjik-641353.065iu.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Инструкция по входному контролю покупателя для автоматических выключателей в литом корпусе серий OptiMat E, ВА04, ВА51, ВА57, АЕ, АП с электромагнитными и тепловыми расцепителями — <a href='https://files.keaz.ru/f/16911/instrukciya-po-vhodnomu-kontrolu-pokupatelya-avt.-vikl.-optimat-e-va-ae-ap-el.-magn.-i-teplovoy-rasc..pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Референция ООО "Электрон" — <a href='https://files.keaz.ru/f/8771/ooo-elektron-optimat-e.jpg' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Референция АО Сетевая компания КЭС — <a href='https://files.keaz.ru/f/34507/referenciya-ao-setevaya-kompaniya-kes.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Отзыв от Россети Юг — <a href='https://files.keaz.ru/f/34607/otziv-ot-rosseti-ug.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Референция Управляющая Компания ЭФКО — <a href='https://files.keaz.ru/f/21824/referenciya-upravlyauschaya-kompaniya-efko.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Электрощит-Сервис — <a href='https://files.keaz.ru/f/36445/elektroschit-servis.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Завод электротехнического оборудования и трансформаторных подстанций — <a href='https://files.keaz.ru/f/36446/zavod-elektrotehnicheskogo-oborudovaniya-i-transformatornih-podstanciy.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Референция ООО "ШНЭЛ" — <a href='https://files.keaz.ru/f/4884/shnel.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Референция МРСК — <a href='https://files.keaz.ru/f/9499/mrsk-otziv-optimat.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>СС ТР ТС 004 OptiMat E — <a href='https://files.keaz.ru/f/14038/optimat-e-d-va57-va51-ak50b-ba21.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Сертификат ИНТЕРГАЗСЕРТ OptiMat Е и аксессуары — <a href='https://files.keaz.ru/f/25506/sertifikat-intergazsert-optimat-e-i-aksessuari.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Свидетельство о типовом одобрении РКО OptiMat E — <a href='https://files.keaz.ru/f/5705/svidetelstvo-ob-odobrenii-tipa-optimat-e.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Свидетельство о типовом одобрении РМРС OptiMat E — <a href='https://files.keaz.ru/f/4029/svidetelstvo-o-tipovom-odobrenii-optimat-e.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Патент 80756 - МССВ OptiMat E — <a href='https://files.keaz.ru/f/1739/photo-patent-80756-MCCB-va04-31-optimat-E.jpg' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Патент 80757 - Optimat E — <a href='https://files.keaz.ru/f/2201/photo-patent-80757-optimat-e.jpg' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 перегородки верхние — <a href='https://files.keaz.ru/f/50245/optimat-e250-peregorodki-verhnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>3D-модель Привод двигательный OptiMat D100, D160, D250-У3 — <a href='https://files.keaz.ru/f/13109/3d-model-privod-dvigatelniy-optimat-d100-250.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 — <a href='https://files.keaz.ru/f/50219/optimat-e100.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 устройство блокировки положения (отключено) — <a href='https://files.keaz.ru/f/50222/optimat-e100-ustroystvo-blokirovki-polojeniya-otklucheno.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 с клеммными крышками нижняя — <a href='https://files.keaz.ru/f/50223/optimat-e100-s-klemmnimi-krishkami-nijnyaya.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 с клеммными крышками верхняя — <a href='https://files.keaz.ru/f/50224/optimat-e100-s-klemmnimi-krishkami-verhnyaya.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 рукоятка поворотная выносная — <a href='https://files.keaz.ru/f/50225/optimat-e100-rukoyatka-povorotnaya-vinosnaya.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 расширители полюсов 63...100 нижние.STEP — <a href='https://files.keaz.ru/f/50226/optimat-e100-rasshiriteli-polusov-63-100-nijnie.step.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 расширители полюсов 63...100 верхние.STEP — <a href='https://files.keaz.ru/f/50227/optimat-e100-rasshiriteli-polusov-63-100-verhnie.step.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 расширители полюсов 16...50 нижние.STEP — <a href='https://files.keaz.ru/f/50228/optimat-e100-rasshiriteli-polusov-16-50-nijnie.step.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 расширители полюсов 16...50 верхние.STEP — <a href='https://files.keaz.ru/f/50229/optimat-e100-rasshiriteli-polusov-16-50-verhnie.step.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 перегородки нижние — <a href='https://files.keaz.ru/f/50230/optimat-e100-peregorodki-nijnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 перегородки верхние — <a href='https://files.keaz.ru/f/50231/optimat-e100-peregorodki-verhnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 колодки 63-100 нижние — <a href='https://files.keaz.ru/f/50232/optimat-e100-kolodki-63-100-nijnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 колодки 63-100 верхние — <a href='https://files.keaz.ru/f/50233/optimat-e100-kolodki-63-100-verhnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 колодки 16-50 нижние — <a href='https://files.keaz.ru/f/50234/optimat-e100-kolodki-16-50-nijnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 колодки 16-50 верхние — <a href='https://files.keaz.ru/f/50235/optimat-e100-kolodki-16-50-verhnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E100 адаптер крепления на дин-рейку — <a href='https://files.keaz.ru/f/50236/optimat-e100-adapter-krepleniya-na-din-reyku.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 — <a href='https://files.keaz.ru/f/50237/optimat-e250.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 устройство блокировки положения (отключено) — <a href='https://files.keaz.ru/f/50238/optimat-e250-ustroystvo-blokirovki-polojeniya-otklucheno.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 с рукояткой поворотной выносной — <a href='https://files.keaz.ru/f/50239/optimat-e250-s-rukoyatkoy-povorotnoy-vinosnoy.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 с клеммными крышками нижняя — <a href='https://files.keaz.ru/f/50240/optimat-e250-s-klemmnimi-krishkami-nijnyaya.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 с клеммными крышками верхняя — <a href='https://files.keaz.ru/f/50241/optimat-e250-s-klemmnimi-krishkami-verhnyaya.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 расширители полюсов нижние — <a href='https://files.keaz.ru/f/50242/optimat-e250-rasshiriteli-polusov-nijnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 расширители полюсов верхние — <a href='https://files.keaz.ru/f/50243/optimat-e250-rasshiriteli-polusov-verhnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 перегородки нижние — <a href='https://files.keaz.ru/f/50244/optimat-e250-peregorodki-nijnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 колодки нижние — <a href='https://files.keaz.ru/f/50246/optimat-e250-kolodki-nijnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 колодки верхние — <a href='https://files.keaz.ru/f/50247/optimat-e250-kolodki-verhnie.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>OptiMat E250 адаптер крепления на дин-рейку — <a href='https://files.keaz.ru/f/50248/optimat-e250-adapter-krepleniya-na-din-reyku.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Адаптер на DIN-рейку OptiMat E100-УХЛ3 — <a href='https://files.keaz.ru/f/32791/adapter-na-din-reyku-optimat-e100-uhl3.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Заключение Минпромторга О подтверждении КЭАЗ по 719 — <a href='https://files.keaz.ru/f/16921/zakluchenie-minpromtorga-o-podtverjdenii-keaz-po-719.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Выписка из Акта экспертизы КТПП (2022) — <a href='https://files.keaz.ru/f/16920/vipiska-iz-akta-ekspertizi-ktpp-2019.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Выписки из Реестров отечественной продукции  и производителей отечественной продукции — <a href='https://files.keaz.ru/f/17340/vipiski-iz-reestrov-otechestvennoy-produkcii-i-proizvoditeley-otechestvennoy-produkcii.xlsx' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>База данных для EPLAN Electric P8 OptiMat E — <a href='https://files.keaz.ru/f/8027/optimat-e.zip' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Каталог OptiMat E — <a href='https://files.keaz.ru/f/119/catalog-optimat.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-<li class='files-and-documents-section__item'>Catalog OptiMat E (En) — <a href='https://files.keaz.ru/f/11772/optimat-e-en.pdf' target='_blank' rel='nofollow'><b>Скачать</b></a></li>
-</ul>
-</div>
+        <div class='container' id='technical'>
+            <h3 class='mt-5'>Технические характеристики</h3>
+            <table class='table table-bordered table-striped mt-3'>
+                <thead class='table-secondary'>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Номинальное напряжение, U<sub>n</sub></td><td>1000 В</td></tr>
+                    <tr><td>Номинальный ток</td><td>32 А (при 4 мм²)</td></tr>
+                    <tr><td>Диапазон сечения проводов</td><td>0.14 – 6 мм²</td></tr>
+                    <tr><td>Количество контактов</td><td>2</td></tr>
+                    <tr><td>Тип подключения</td><td>Винтовой (screw connection)</td></tr>
+                    <tr><td>Тип крепления</td><td>DIN-рейка NS 35/7,5 или NS 35/15</td></tr>
+                    <tr><td>Габариты (Д × Ш × В)</td><td>47.7 мм × 6.2 мм × 46.9 мм</td></tr>
+                    <tr><td>Материал корпуса</td><td>Полиамид (PA)</td></tr>
+                    <tr><td>Максимальный рабочий ток (для 6 мм²)</td><td>41 А</td></tr>
+                    <tr><td>Цвет</td><td>Серый (RAL 7042)</td></tr>
+                    <tr><td>Степень защиты / пожаро-воспламеняемость</td><td>UL 94 V-0</td></tr>
+                    <tr><td>Рабочая температура</td><td>—60 °C … +105 °C</td></tr>
+                </tbody>
+            </table>
+            <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
+            <ul class='files-and-documents-section__list'>
+                <li class='files-and-documents-section__item'>
+                    Технический чертеж — 
+                    <a href='https://encomponent.ru/files/3044102/pxc_3044102_23_03_UT-4_2D.pdf' target='_blank' rel='nofollow'>
+                        <b>Открыть</b>
+                    </a>
+                </li>
+                <li class='files-and-documents-section__item'>
+                    Общий PDF-каталог клемм UT (на русском) — 
+                    <a href='https://encomponent.ru/files/3044102/klemma_ut.pdf' target='_blank' rel='nofollow'>
+                        <b>Открыть</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section class="please-note-section">
+            <div class="container please-note-section__container">
+                <h3 class="please-note-section__title">Пользователи выбирают:</h3>
+                <div class="please-note-section__card-product">
+                    <?php
+                    // форматирование цены (intl extension required)
+                    function formatRub($price)
+                    {
+                        if (!class_exists('NumberFormatter'))
+                        {
+                            return number_format((float)$price, 0, ',', ' ') . ' ₽';
+                        }
+                        $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
+                        $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
+                        return $fmt->formatCurrency($price, 'RUB');
+                    }
 
-                        <section class="please-note-section">
-                            <div class="container please-note-section__container">
-                                <h3 class="please-note-section__title">Пользователи выбирают:</h3>
-                                <div class="please-note-section__card-product">
-                                    <?php
-                                    // форматирование цены (intl extension required)
-                                    function formatRub($price)
-                                    {
-                                        if (!class_exists('NumberFormatter'))
-                                        {
-                                            return number_format((float)$price, 0, ',', ' ') . ' ₽';
-                                        }
-                                        $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
-                                        $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
-                                        return $fmt->formatCurrency($price, 'RUB');
-                                    }
+                $noImage = '../../img/free-icon-no-photo-4054617.png';
+                $count = 0;
 
-                                $noImage = '../../img/free-icon-no-photo-4054617.png';
-                                $count = 0;
+                if (is_array($data) && count($data) > 0) {
+                    foreach ($data as $item) {
 
-                                if (is_array($data) && count($data) > 0) {
-                                    foreach ($data as $item) {
+                        if ($count == 4) { break; }
 
-                                        if ($count == 4) { break; }
+                        $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
+                        $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
+                        $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
+                        $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
+                        $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
+                        $price = isset($item['price']) ? $item['price'] : 0;
 
-                                        $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
-                                        $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
-                                        $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
-                                        $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
-                                        $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
-                                        $price = isset($item['price']) ? $item['price'] : 0;
+                        $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
 
-                                        $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
+                        $qtyClass = $quantity === 0
+                            ? 'delivry-block__quantity delivry-block__quantity_0'
+                            : 'delivry-block__quantity';
 
-                                        $qtyClass = $quantity === 0
-                                            ? 'delivry-block__quantity delivry-block__quantity_0'
-                                            : 'delivry-block__quantity';
+                        $qtyText = $quantity === 0
+                            ? 'Под заказ'
+                            : 'Наличие: ' . $quantity . ' шт.';
 
-                                        $qtyText = $quantity === 0
-                                            ? 'Под заказ'
-                                            : 'Наличие: ' . $quantity . ' шт.';
+                        echo <<<HTML
+                            <div class="card-component">
+                                <div class="card-component__top">
+                                    <img src="{$img}" class="card-component__img" alt="Фото {$name}">
+                                    <div class="card-component__vendor">Артикул: {$vendor}</div>
+                                    <div class="card-component__name">
+                                        <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
+                                    </div>
+                                </div>
 
-                                        echo <<<HTML
-                                            <div class="card-component">
-                                                <div class="card-component__top">
-                                                    <img src="{$img}" class="card-component__img" alt="Фото {$name}">
-                                                    <div class="card-component__vendor">Артикул: {$vendor}</div>
-                                                    <div class="card-component__name">
-                                                        <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
-                                                    </div>
-                                                </div>
+                                <div class="card-component__bottom">
+                                    <div class="cc-basket-block__delivry-block">
+                                        <div class="{$qtyClass}">{$qtyText}</div>
+                                    </div>
 
-                                                <div class="card-component__bottom">
-                                                    <div class="cc-basket-block__delivry-block">
-                                                        <div class="{$qtyClass}">{$qtyText}</div>
-                                                    </div>
-
-                                                    <div class="card-component__price-block">
-                                                        <div class="card-component__price">{$fmtPrice}</div>
-                                                        <div class="card-component__price-nalog">в т.ч. НДС</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        HTML;
-
-                                        $count++;
-                                    }
-                                } else {
-                                    echo '<p>Пока нет рекомендаций.</p>';
-                                }
-                                ?>
+                                    <div class="card-component__price-block">
+                                        <div class="card-component__price">{$fmtPrice}</div>
+                                        <div class="card-component__price-nalog">в т.ч. НДС</div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        </section>
-                        
-<div class='container link-next-page'>
-<div class='link-next-page__text'>Рекомендуем заглянуть на эту страницу товара:</div>
-<div class='prev-page-link'><a href='https://encomponent.ru/products/keaz/vyklyuchatel-avtomaticheskiy-optimat-e100n100-uhl3-reg-article-273911.php'>https://encomponent.ru/products/keaz/vyklyuchatel-avtomaticheskiy-optimat-e100n100-uhl3-reg-article-273911.php</a></div>
-</div>
-<?php include '../../php/modules/footer.php' ?>
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
-</body></html>
+                        HTML;
+
+                        $count++;
+                    }
+                } else {
+                    echo '<p>Пока нет рекомендаций.</p>';
+                }
+                ?>
+            </div>
+        </div>
+        </section>                   
+        <div class='container link-next-page'>
+            <div class='link-next-page__text'>
+                <span class="yellow-diamond"></span>   
+                Рекомендуем заглянуть на следующую страницу товара:
+            </div>
+            <div class='prev-page-link'>
+                <a href='https://encomponent.ru/products/phoenix/klemma-ut-4-pe-phoenix-contact-3044128.php'>
+                    Здесь предоставлена информация о заземляющей клемме UT 4-PE артикул которой 3044128. 
+                </a>
+            </div>
+        </div>
+    </main> 
+    <?php include '../../php/modules/footer.php' ?>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>

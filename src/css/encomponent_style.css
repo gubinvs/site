@@ -215,6 +215,21 @@ header {
 
 
 /* -------------- Main section ----------------*/
+
+.main-section-index-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  background-color: #F7F7F5;
+  margin-bottom: 180px;
+}
+
+.main-section-index-page__container {
+  position: relative;
+  display: flex;
+}
+
 .home-main-section__top {
     padding-top: 50px;
     background: linear-gradient(to right, #F3DE09 50%, #FFFFFF 50%);
@@ -810,6 +825,10 @@ header {
         width: 1000px;
     }
 
+    .main-section-index-page {
+        height: 300px;
+    }
+
     .home-main-section__title_big {
         width: 680px;
         font-size: 92px;
@@ -872,6 +891,10 @@ header {
 @media only screen and (max-width: 1024px) {
     .container {
         width: 960px;
+    }
+
+    .main-section-index-page {
+        margin-bottom: 100px;
     }
 
     .home-main-section__top {
@@ -937,6 +960,11 @@ header {
     .container {
         width: 800px;
     }
+
+    .main-section-index-page {
+        height: 250px;
+    }
+
     .hms-title__logo {
         left: 344px;
         bottom: 63px;
@@ -957,7 +985,7 @@ header {
         height: 284px;
     }
 
-        .card-component {
+    .card-component {
         width: 260px;
         height: 380px;
     }
@@ -986,7 +1014,7 @@ header {
 
 @media only screen and (max-width: 800px) {
     .container {
-    width: 640px;
+        width: 640px;
     }
 
     .header-navigation__list li:not(:last-of-type) {

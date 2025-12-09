@@ -173,6 +173,8 @@ a:hover {
   display: inline;
 }
 
+
+/*-------------- main-section -----------------------*/
 .main-section {
   margin-bottom: 80px;
 }
@@ -300,6 +302,50 @@ a:hover {
 .button-characteristics__offer:hover {
   font-weight: 800;
 }
+
+
+
+
+
+
+
+@media only screen and (max-width: 1280px) {
+    .main-section__discription {
+      width: 60%;
+    }
+
+    .button-characteristics__all {
+      width: 320px;
+    }
+
+    .button-characteristics__offer {
+      width: 245px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-section__img {
+    max-height: 280px;
+  }
+
+  .main-section__img-block {
+    height: 400px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------ attention-section --------------------- */
 
 .attention-section {
   margin-bottom: 80px;
@@ -743,20 +789,6 @@ header {
   width: 60px;
   height: 30px;
   background-color: #F7F7F5;
-}
-
-.main-section-index-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 400px;
-  background-color: #F7F7F5;
-  margin-bottom: 180px;
-}
-
-.main-section-index-page__container {
-  position: relative;
-  display: flex;
 }
 
 .msip-block-content {
@@ -1430,13 +1462,9 @@ header {
   .container {
     width: 1000px;
   }
-
+  
   .header-logo-block {
     margin-right: 17px;
-  }
-
-    .main-section-index-page {
-    height: 300px;
   }
 
   .msip-block-content {
@@ -1552,10 +1580,6 @@ header {
     width: 960px;
   }
 
-  .main-section-index-page {
-    margin-bottom: 100px;
-  }
-
   .msip-block-content {
     width: 460px;
   }
@@ -1618,10 +1642,6 @@ header {
 @media only screen and (max-width: 960px) {
   .container {
     width: 800px;
-  }
-
-  .main-section-index-page {
-    height: 250px;
   }
 
   .msip-block-content {
@@ -1751,6 +1771,23 @@ header {
 @media only screen and (max-width: 800px) {
   .container {
     width: 640px;
+  }
+
+  .header-navigation__list li:not(:last-of-type) {
+        display: none;
+  }
+
+  .haader__line,
+  .haader__square {
+        display: none;
+  }
+
+  .header__container {
+        flex-direction: row !important;
+  }
+
+  .header-logo-block {
+    margin-right: 17px;
   }
 
   .footer-logo-block {

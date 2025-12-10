@@ -65,7 +65,7 @@
         <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
         <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
         <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
-        <link rel='canonical' href='https://encomponent.ru/products/keaz/adapter-na-din-reyku-optimat-e100-om4-reg-article-273912.php'>
+        <link rel='canonical' href='https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php'>
         <!--Open Graph-->
         <meta property='og:title' content='3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact продается на сайте компоненты энергии, ее артикул 273912 — купить можно по цене <?php echo $price ?> ₽'>
         <meta property='og:description' content='Клемма 3044102 UT 4 серая от производителя Phoenix Contact можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>

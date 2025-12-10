@@ -73,82 +73,63 @@
         <meta property='og:type' content='product'>
         <meta property='og:url' content='https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php'>
         <!-- JSON-LD Product schema -->
-        <script type='application/ld+json'>
-            {
-                "@context": "https://schema.org",
-                "@type": "Product",
-                "name": "3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact",
-                "image": "https://encomponent.ru/img/img-product/3044102/phoenix_contact-3044102-image.jpg",
-                "description": "Проходная клемма модели 3044102 предназначена для надёжного соединения проводов в распределительных щитах и электрошкафах. Эта DIN-клемма имеет две точки подключения, обеспечивает номинальный ток 32 A и рассчитана на напряжение до 1000 В. Диапазон допустимого сечения проводов — от 0,14 до 6 мм² (AWG 26–10), что делает её универсальным решением для подключения как тонких, так и более толстых кабелей.",
-                "sku": "3044102",
-                "brand": {
-                    "@type": "Brand",
-                    "name": "Phoenix Contact"
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact",
+            "image": "https://encomponent.ru/img/img-product/3044102/phoenix_contact-3044102-image.jpg",
+            "description": "Проходная клемма модели 3044102 UT 4 серая от производителя Phoenix Contact предлагается по цене: <?php echo $price; ?> RUB. В наличии: <?php echo $quantityBestseller; ?> шт.",
+            "sku": "3044102",
+            "brand": {
+                "@type": "Brand",
+                "name": "Phoenix Contact"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": <?php echo number_format($price, 2, '.', ''); ?>,
+                "priceCurrency": "RUB",
+                "availability": "<?php echo ($quantityBestseller > 0) ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"; ?>",
+                "url": "https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php",
+                "inventoryLevel": {
+                    "@type": "QuantitativeValue",
+                    "value": <?php echo $quantityBestseller; ?>
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.7,
+                "reviewCount": 4
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Алексей"},
+                    "reviewRating": {"@type": "Rating", "ratingValue": 5},
+                    "reviewBody": "Отличный продукт, полностью удовлетворяет ожидания."
                 },
-                "offers": {
-                    "@type": "Offer",
-                    "price": <?php echo number_format($price, 2, '.', ''); ?>,
-                    "priceCurrency": "RUB",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php"
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Игорь"},
+                    "reviewRating": {"@type": "Rating", "ratingValue": 5},
+                    "reviewBody": "Качество на высоте, рекомендую."
                 },
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": 4.7,
-                    "reviewCount": 4
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Петр Петрович"},
+                    "reviewRating": {"@type": "Rating", "ratingValue": 4},
+                    "reviewBody": "Покупал для клиента — работает стабильно."
                 },
-                "review": [
-                    {
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": "Алексей"
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": 5
-                        },
-                        "reviewBody": "Отличный продукт, полностью удовлетворяет ожидания."
-                    },
-                    {
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": "Игорь"
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": 5
-                        },
-                        "reviewBody": "Качество на высоте, рекомендую."
-                    },
-                    {
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": "Петр Петрович"
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": 4
-                        },
-                        "reviewBody": "Покупал для клиента — работает стабильно."
-                    },
-                        {
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": "Михаил Иванович"
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": 4
-                        },
-                        "reviewBody": "работает стабильно."
-                    }
-                ]
-            }
-            </script>
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Михаил Иванович"},
+                    "reviewRating": {"@type": "Rating", "ratingValue": 4},
+                    "reviewBody": "работает стабильно."
+                }
+            ]
+        }
+        </script>
+
         
         <!-- Yandex.Metrika counter -->
         <script>

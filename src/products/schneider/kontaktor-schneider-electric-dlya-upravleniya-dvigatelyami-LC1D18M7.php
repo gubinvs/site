@@ -1,5 +1,6 @@
 <?php
 include "../../php/class/api_Connector.php";
+
 $article = "LC1D18M7";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 $options = [
@@ -179,7 +180,10 @@ foreach ($data as $item) {
         </div>
     </noscript>
     <!--/Yandex.Metrika counter-->
-    <?php include_once '../../php/modules/header.php'; ?>
+    <?php 
+        $color_line_header = $color_line_header ?? null;
+        include_once '../../php/modules/header.php';
+    ?>
     <main>
         <div class='discription-product-section'>
             <div class='container'>

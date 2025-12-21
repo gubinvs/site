@@ -277,7 +277,7 @@ foreach ($data as $item) {
                 </section>
                 <section class='attention-section'>
                     <h2 class='h1-min'>Важная информация</h2>
-                    <div class='container attention-container'>
+                    <div class='attention-container'>
                         <div class='attention-section__title-block flex'>
                             <div class='attention-section-title-icon'>
                                 <svg width='24' height='24' viewBox='0 0 33 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -465,7 +465,7 @@ foreach ($data as $item) {
             </div>
         </div>
     </main>
-    <?php include '../../php/modules/footer.php' ?>
+    <!-- <?php include '../../php/modules/footer.php' ?> -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
 </body>
 

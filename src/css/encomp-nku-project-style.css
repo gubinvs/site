@@ -304,150 +304,6 @@ a:hover {
 }
 
 
-
-
-
-
-
-@media only screen and (max-width: 1280px) {
-    .main-section__discription {
-      width: 60%;
-    }
-
-    .button-characteristics__all {
-      width: 320px;
-    }
-
-    .button-characteristics__offer {
-      width: 245px;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-  .container {
-    width: 960px;
-  }
-  .main-section__img {
-    max-height: 280px;
-  }
-
-  .main-section__img-block {
-    height: 400px;
-  }
-
-  .button-characteristics__all {
-    width: 300px;
-  }
-
-  .button-characteristics__offer {
-    width: 240px;
-  }
-
-  .please-note-section__card-product {
-    flex-wrap: wrap;
-  }
-}
-
-@media only screen and (max-width: 960px) {
-  
-  .button-characteristics__all {
-    width: 260px;
-  }
-
-  .button-characteristics__offer {
-    width: 184px;
-  }
-
-  .please-note-section__card-product {
-    flex-wrap: wrap;
-  }
-
-  .attention-container {
-    min-width: 780px !important;
-    padding-right: 10px !important;
-    padding-left: 10px !important;
-  }
-
-}
-
-@media only screen and (max-width: 800px) {
-  .main-section {
-    flex-direction: column;
-  }
-
-  .NKUPages_h1 {
-    padding-top: 20px;
-    font-size: 24px;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-
-  .main-section__img-block {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
-
-  .main-section__discription {
-    width: 100%;
-  }
-
-  .main-section__discription hr {
-    display: none;
-  }
-
-  .article-block {
-    margin-bottom: 0px;
-  }
-
-  .article-name,
-  .article-title {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    height: 40px;
-    margin-bottom: 0px;
-  }
-
-  .button-characteristics__all {
-      width: 400px;
-  }
-
-  .button-characteristics__offer {
-      width: 195px;
-  }
-
-  .attention-container {
-    min-width: 620px !important;
-  }
-
-  .attention-section-title__title {
-    font-size: 47px !important;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------------ attention-section --------------------- */
 
 .attention-section {
@@ -1675,9 +1531,42 @@ header {
   .basket-block__button {
       height: 30px;
   }
+
+  .main-section__discription {
+    width: 60%;
+  }
+
+  .button-characteristics__all {
+    width: 320px;
+  }
+
+  .button-characteristics__offer {
+    width: 245px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
+ 
+  .main-section__img {
+    max-height: 280px;
+  }
+
+  .main-section__img-block {
+    height: 400px;
+  }
+
+  .button-characteristics__all {
+    width: 300px;
+  }
+
+  .button-characteristics__offer {
+    width: 240px;
+  }
+
+  .please-note-section__card-product {
+    flex-wrap: wrap;
+  }
+
   .container {
     width: 960px;
     min-width: 960px;
@@ -1743,6 +1632,23 @@ header {
 }
 
 @media only screen and (max-width: 960px) {
+  .button-characteristics__all {
+    width: 260px;
+  }
+
+  .button-characteristics__offer {
+    width: 184px;
+  }
+
+  .please-note-section__card-product {
+    flex-wrap: wrap;
+  }
+
+  .attention-container {
+    min-width: 780px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
   .container {
     min-width: 800px;
     width: 800px;
@@ -1941,6 +1847,59 @@ header {
   .basket-block__button {
     width: 78px;
     font-size: 12px;
+  }
+    .main-section {
+    flex-direction: column;
+  }
+
+  .NKUPages_h1 {
+    padding-top: 20px;
+    font-size: 24px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main-section__img-block {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .main-section__discription {
+    width: 100%;
+  }
+
+  .main-section__discription hr {
+    display: none;
+  }
+
+  .article-block {
+    margin-bottom: 0px;
+  }
+
+  .article-name,
+  .article-title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    height: 40px;
+    margin-bottom: 0px;
+  }
+
+  .button-characteristics__all {
+      width: 400px;
+  }
+
+  .button-characteristics__offer {
+      width: 195px;
+  }
+
+  .attention-container {
+    min-width: 620px !important;
+  }
+
+  .attention-section-title__title {
+    font-size: 47px !important;
   }
 }
 

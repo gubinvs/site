@@ -2111,4 +2111,92 @@ header {
     padding-left: 10px;
   }
 
+  .NKUPages_h1 {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  .main-section__img-block {
+    width: 480px;
+  }
+
+  .header-navigation-block__button {
+    width: 480px;
+  }
+
+  .button-characteristics__all,
+  .button-characteristics__offer {
+    width: 480px;
+  }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 380px;
+    min-width: 380px;
+  }
+  .main-section__img-block {
+    width: 380px;
+  }
+
+  .header-navigation-block__button {
+    width: 380px;
+  }
+
+  .attention-container {
+    min-width: 380px !important;
+  }
+
+  .attention-section-title__title {
+    font-size: 28px !important;
+  }
+
+  .hr {
+    display: none;
+  }
+
+  .attention-section__discription {
+    padding-top: 10px;
+  }
+
+  .button-characteristics__all,
+  .button-characteristics__offer {
+    width: 380px;
+  }
+
+  .specifications-item__tech {
+    width: 120px;
+    height: 40px;
+    font-size: 12px;  
+  } 
+
+  .specifications-item__name {
+    width: 252px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 12px;
+  }
+
+    
+  .card-component {
+      width: 180px;
+  }
+
+  .footer {
+    width: 380px;
+    height: 300px;
+  }
+
+  .footer-nav {
+    width: 170px;
+    padding-left: 6px;
+  }
+
+  .footer-contact {
+    padding-left: 0px;
+  }
 }

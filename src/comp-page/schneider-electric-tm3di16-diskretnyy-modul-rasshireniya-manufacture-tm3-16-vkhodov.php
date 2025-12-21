@@ -111,8 +111,9 @@ foreach ($data as $item) {
 
 <body>
     <?php
-    include_once '../php/modules/header.php';
-    error_reporting(0); // Отключение информации об ошибках на странице
+        $color_line_header = $color_line_header ?? null;
+        include_once '../php/modules/header.php';
+        error_reporting(0); // Отключение информации об ошибках на странице
     ?>
     <main>
         <div class="discription-product-section">
@@ -188,7 +189,7 @@ foreach ($data as $item) {
                 </section>
                 <section class="attention-section">
                     <h2 class="h1-min">Важная информация</h2>
-                    <div class="container attention-container">
+                    <div class="attention-container">
                         <div class="attention-section__title-block flex">
                             <div class="attention-section-title-icon">
                                 <svg width="24" height="24" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">

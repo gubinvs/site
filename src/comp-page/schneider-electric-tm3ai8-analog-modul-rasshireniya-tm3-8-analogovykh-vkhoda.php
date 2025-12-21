@@ -183,6 +183,7 @@ foreach ($data as $item) {
 
 <body>
     <?php
+    $color_line_header = $color_line_header ?? null;
     include_once '../php/modules/header.php';
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
@@ -260,7 +261,7 @@ foreach ($data as $item) {
                 </section>
                 <section class="attention-section">
                     <h2 class="h1-min">Важная информация</h2>
-                    <div class="container attention-container">
+                    <div class="attention-container">
                         <div class="attention-section__title-block flex">
                             <div class="attention-section-title-icon">
                                 <svg width="24" height="24" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -409,7 +410,7 @@ foreach ($data as $item) {
                         </p>
                         <p>
                             Этот модуль идеально подходит для промышленных автоматизированных систем, малых и средних производственных линий, где важны точность, надежность и расширяемость.
-                            И самая полезная информация на этой странице, бузусловно та, что купить модуль расширения TM3AI8 можно перейдя <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>по ссылке ... </a>
+                            И самая полезная информация на этой странице, бузусловно та, что купить модуль расширения TM3AI8 можно перейдя <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>><b>по ссылке ...</b> </a>
                         </p>
                     </div>
                 </section>
@@ -544,9 +545,10 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
+                <?php include "../php/modules/footer.php" ?>
             </div>
     </main>
-    <?php include "../php/modules/footer.php" ?>
+    
 </body>
 
 </html>

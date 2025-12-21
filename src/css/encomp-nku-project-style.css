@@ -1950,6 +1950,37 @@ header {
     width: 480px;
   }
 
+  .main-section {
+    margin-bottom: 20px;
+  } 
+
+  .attention-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: 420px !important;
+  }
+
+  .attention-section-title-icon {
+    border-radius: 8px;
+  }
+
+  .attention-section {
+    margin-bottom: 20px;
+  }
+
+  .hr {
+    margin-top: 0px;
+  }
+
+  .attention-section-title__title {
+    font-size: 36px !important;
+  }
+
+  .attention-section__discription {
+    font-size: 14px;
+    font-weight: 200;
+  }
+
   .header__container {
     margin-bottom: 0px;
   }
@@ -1965,6 +1996,17 @@ header {
 
   .footer-logo-block {
     display: none;
+  }
+
+  .please-note-section__title {
+    margin-bottom: 20px;
+  }
+
+  .card-component {
+      width: 224px;
+      height: 341px;
+      border-radius: 4px;
+      padding-bottom: 0px;
   }
 
   .card-component:nth-child(2) {
@@ -1988,8 +2030,52 @@ header {
     font-size: 14px;
   }
 
+  .characteristics-block {
+    margin-bottom: 40px;
+  }
+
+  .characteristics-block__button-block {
+    flex-direction: column;
+  }
+
+  .button-characteristics__all {
+      width: 456px;
+      border-radius: 8px;
+      margin-right: 0px;
+      margin-bottom: 10px;
+      
+  }
+
+  .button-characteristics__offer,
+  .header-navigation-block__button,
+  .main-section__img-block {
+    width: 456px;
+    border-radius: 8px;
+  }
+
+  .link-next-page__text {
+    font-size: 18px;
+  }
+
+  .please-note-section {
+    margin-bottom: 20px;
+  }
+
+  .prev-page-link {
+    font-size: 14px;
+  }
+
+  .footer {
+    width: 480px;
+    height: 300px;
+  }
+
   .footer__container {
     width: 480px;
+  }
+
+  .footer-nav {
+    width: 218px;
   }
 
   .footer-contact {

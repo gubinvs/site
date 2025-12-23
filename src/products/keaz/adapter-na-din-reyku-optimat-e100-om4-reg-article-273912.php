@@ -71,7 +71,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
-<link rel='stylesheet' href='https://encomponent.ru/css/encomp-nku-project-style.css'>
+<link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
 <link rel='canonical' href='https://encomponent.ru/products/keaz/adapter-na-din-reyku-optimat-e100-om4-reg-article-273912.php'>
 <!--Open Graph-->
 <meta property='og:title' content='Адаптер на DIN-рейку OptiMat E100-ОМ4-РЕГ — купить KEAZ Optima 233680OptiMat E РЕГ Аксессуары для автоматических выключателей в литом корпусе по артикулу 273912 — купить по цене <?php echo $price ?> ₽'>

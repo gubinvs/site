@@ -486,8 +486,8 @@ foreach ($data as $item) {
                 Рекомендуем заглянуть на следующую страницу товара:
             </div>
             <div class='prev-page-link'>
-                <a href='https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php'>
-                    Здесь предоставлена информация о модуле расширения tm3ai8.
+                <a href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php'>
+                    Здесь предоставлена информация о контакторе LC1D25M7.
                 </a>
             </div>
         </div>

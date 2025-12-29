@@ -187,15 +187,15 @@ foreach ($data as $item) {
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D18M7, Электромеханический контактор - Schneider Electric</h1>
+                <h1 class='discription-product-section__title NKUPages_h1'>LC1D25M7, Электромеханический контактор - Schneider Electric</h1>
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
-                        <img src='https://encomponent.ru/img/img-product/LC1D18M7/LC1D18M7_Image_1500_2.jpg' alt='Изображен Электромеханический контактор Schneider Electric ' class='discription-product__img main-section__img'>
+                        <img src='https://encomponent.ru/img/img-product/LC1D25M7/LC1D25M7_Image.jpg' alt='Изображен Электромеханический контактор Schneider Electric ' class='discription-product__img main-section__img'>
                     </div>
                     <div class='main-section__discription'>
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D18M7</h6>
+                            <h6 class='article-name'>LC1D25M7</h6>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
@@ -222,51 +222,51 @@ foreach ($data as $item) {
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
                         <div class='characteristics-block'>
-                            <div class='characteristics-block__title'>Основные характеристики:</div>
+                            <div class='characteristics-block__title'>Основные характеристики</div>
                             <ul class='characteristics-block__list'>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Производитель:</div>
+                                    <div class='characteristics-item__title'>Производитель</div>
                                     <div class='characteristics-item__discr'>Schneider Electric</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Серия:</div>
+                                    <div class='characteristics-item__title'>Серия</div>
                                     <div class='characteristics-item__discr'>TeSys D (LC1D)</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Номинальный ток, А:</div>
-                                    <div class='characteristics-item__discr'>18</div>
+                                    <div class='characteristics-item__title'>Номинальный ток</div>
+                                    <div class='characteristics-item__discr'>25 А</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Катушка управления:</div>
-                                    <div class='characteristics-item__discr'>220 В AC 50/60 Гц</div>
+                                    <div class='characteristics-item__title'>Напряжение катушки управления</div>
+                                    <div class='characteristics-item__discr'>220–240 В AC, 50/60 Гц (M7)</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Рабочее напряжение, В:</div>
+                                    <div class='characteristics-item__title'>Номинальное рабочее напряжение</div>
                                     <div class='characteristics-item__discr'>до 690 В AC</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Количество полюсов:</div>
-                                    <div class='characteristics-item__discr'>3 NO (3 нормально разомкнутых)</div>
+                                    <div class='characteristics-item__title'>Количество силовых полюсов</div>
+                                    <div class='characteristics-item__discr'>3 NO (нормально разомкнутые)</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Вспомогательные контакты:</div>
+                                    <div class='characteristics-item__title'>Вспомогательные контакты</div>
                                     <div class='characteristics-item__discr'>1 NO + 1 NC</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Длина, мм</div>
-                                    <div class='characteristics-item__discr'>86</div>
+                                    <div class='characteristics-item__title'>Длина</div>
+                                    <div class='characteristics-item__discr'>86 мм</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Ширина, мм</div>
-                                    <div class='characteristics-item__discr'>45</div>
+                                    <div class='characteristics-item__title'>Ширина</div>
+                                    <div class='characteristics-item__discr'>45 мм</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Высота, мм</div>
-                                    <div class='characteristics-item__discr'>77</div>
+                                    <div class='characteristics-item__title'>Высота</div>
+                                    <div class='characteristics-item__discr'>77 мм</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
-                                    <div class='characteristics-item__title'>Вес без упаковки, г</div>
-                                    <div class='characteristics-item__discr'>330</div>
+                                    <div class='characteristics-item__title'>Вес (без упаковки)</div>
+                                    <div class='characteristics-item__discr'>330 г</div>
                                 </li>
                             </ul>
                         </div>
@@ -274,7 +274,7 @@ foreach ($data as $item) {
                             <a href='#technical' id='button-link'>
                                 <div class='button-characteristics__all'>Посмотреть все характеристики</div>
                             </a>
-                            <a href='https://shop.encomponent.ru/Basket/?vendorCode=LC1D18M7'>
+                            <a href='https://shop.encomponent.ru/Basket/?vendorCode=LC1D25M7'>
                                 <div class='button-characteristics__offer' id='button-buy'>Купить</div>
                             </a>
                         </div>
@@ -296,19 +296,17 @@ foreach ($data as $item) {
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                            <b>LC1D18M7</b> — это высококачественный силовой контактор Schneider Electric из серии TeSys D, предназначенный для управления электродвигателями и
-                            другими промышленными нагрузками. Контактор рассчитан на номинальный ток 18 А и оснащён катушкой управления 220 В AC 50/60 Гц, что обеспечивает
-                            удобное дистанционное включение и выключение силовых цепей.
+                            <b>LC1D25M7</b> — силовой контактор Schneider Electric серии TeSys D,
+                            предназначенный для управления трёхфазными электродвигателями и
+                            промышленными нагрузками. Рассчитан на номинальный ток 25 А и оснащён
+                            катушкой управления 220–240 В AC, 50/60 Гц (M7).
                             <br><br>
-                            Благодаря трёхполюсной конструкции (3 NO) и встроенным вспомогательным контактам (1 NO + 1 NC) LC1D18M7 подходит для реализации сложных схем
-                            автоматизации и управления, включая пуск двигателей, защиту от перегрузок и интеграцию в промышленные панели управления.
-                            <br><br>
-                            Контактор поддерживает рабочее напряжение до 690 В AC и соответствует международным стандартам безопасности, что гарантирует надёжную и долговечную
-                            работу даже в условиях интенсивной эксплуатации.
-                            <br><br>
-                            С компактными размерами (77 × 45 × 86 мм) и весом около 330 г LC1D18M7 легко устанавливается на DIN-рейку или в электрощит, что упрощает монтаж и
-                            обслуживание.
+                            Контактор имеет 3 силовых нормально разомкнутых контакта (3 NO) и
+                            встроенные вспомогательные контакты 1 NO + 1 NC, поддерживает рабочее
+                            напряжение до 690 В AC и подходит для установки в шкафы и панели
+                            управления. Монтаж — на DIN-рейку или панель.
                         </div>
+
                     </div>
                 </section>
             </div>
@@ -329,63 +327,63 @@ foreach ($data as $item) {
                     </tr>
                     <tr>
                         <td>Серия / Модель</td>
-                        <td>TeSys D / LC1D18M7</td>
+                        <td>TeSys D / LC1D25M7</td>
                     </tr>
                     <tr>
                         <td>Тип устройства</td>
-                        <td>Силовой контактор для электродвигателя и промышленных нагрузок</td>
+                        <td>Силовой контактор для управления электродвигателями и промышленными нагрузками</td>
                     </tr>
                     <tr>
                         <td>Номинальный ток</td>
-                        <td>18 А (AC-3, управление двигателем)</td>
+                        <td>25 А (категория применения AC-3)</td>
                     </tr>
                     <tr>
                         <td>Напряжение катушки управления</td>
-                        <td>220 В AC 50/60 Гц</td>
+                        <td>220–240 В AC, 50/60 Гц (код M7)</td>
                     </tr>
                     <tr>
-                        <td>Рабочее напряжение силовой цепи</td>
+                        <td>Номинальное рабочее напряжение силовой цепи</td>
                         <td>до 690 В AC</td>
                     </tr>
                     <tr>
-                        <td>Количество полюсов</td>
+                        <td>Количество силовых полюсов</td>
                         <td>3 NO (3 нормально разомкнутых контакта)</td>
                     </tr>
                     <tr>
                         <td>Вспомогательные контакты</td>
-                        <td>1 NO + 1 NC для схем управления и сигнализации</td>
+                        <td>1 NO + 1 NC (для цепей управления и сигнализации)</td>
                     </tr>
                     <tr>
                         <td>Тип подключения</td>
-                        <td>Винтовой (Screw Clamp) – надёжное подключение проводов</td>
+                        <td>Винтовые зажимы (Screw Clamp)</td>
                     </tr>
                     <tr>
                         <td>Тип крепления</td>
-                        <td>DIN-рейка NS 35 или винтовой монтаж в щит</td>
+                        <td>DIN-рейка NS 35 или винтовой монтаж на панель</td>
                     </tr>
                     <tr>
-                        <td>Габариты (Д × Ш × В)</td>
-                        <td>86 × 45 × 77 мм — компактный размер для щита управления</td>
+                        <td>Габаритные размеры (Д × Ш × В)</td>
+                        <td>86 × 45 × 77 мм</td>
                     </tr>
                     <tr>
-                        <td>Вес без упаковки</td>
-                        <td>330 г — лёгкий и удобный монтаж</td>
+                        <td>Вес (без упаковки)</td>
+                        <td>330 г</td>
                     </tr>
                     <tr>
                         <td>Степень защиты</td>
-                        <td>IP20 — защита от прикосновения и безопасная эксплуатация</td>
+                        <td>IP20</td>
                     </tr>
                     <tr>
-                        <td>Рабочая температура</td>
-                        <td>-5 °C … +60 °C — подходит для промышленных условий</td>
+                        <td>Диапазон рабочих температур</td>
+                        <td>-5…+60 °C</td>
                     </tr>
                     <tr>
-                        <td>Применение</td>
-                        <td>Пуск и остановка трёхфазных электродвигателей, управление насосами, вентиляторами, промышленными механизмами</td>
+                        <td>Область применения</td>
+                        <td>Пуск и остановка трёхфазных электродвигателей, управление насосами, вентиляторами, компрессорами и промышленными механизмами</td>
                     </tr>
                     <tr>
                         <td>Особенности</td>
-                        <td>Компактный, надёжный, сертифицирован по международным стандартам IEC и UL, подходит для автоматизации и промышленных щитов</td>
+                        <td>Компактная конструкция, высокая надёжность, совместимость с тепловыми реле серии TeSys D, соответствие стандартам IEC и UL</td>
                     </tr>
                 </tbody>
             </table>
@@ -398,7 +396,7 @@ foreach ($data as $item) {
                     </a>
                 </li>
                 <li class='files-and-documents-section__item'>
-                    Электрическая схема подключения LC1D18M7 —
+                    Электрическая схема подключения LC1D25M7 —
                     <a href='../../files/LC1D18M7/schneider_electric_tesys-deca-contactors_LC1D18M7.pdf' target='_blank' rel='nofollow'>
                         <b>Открыть</b>
                     </a>

@@ -1,7 +1,7 @@
 <?php
 include "../../php/class/api_Connector.php";
 
-$article = "LC1D18M7";
+$article = "LC1D25M7";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 $options = [
     "http" => [
@@ -59,30 +59,30 @@ foreach ($data as $item) {
 
 <head>
     <meta charset='UTF-8'>
-    <title>LC1D18M7, Электромеханический контактор - Schneider Electric | Компоненты энергии</title>
-    <meta name='description' content='LC1D18M7 — это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D, который можно купить на сайте Компоненты энергии. Продлагаем его по цене:  <?php echo $price ?> RUB.'>
-    <meta name='keywords' content='LC1D18M7 — контактор Schneider Electric для управления двигателями'>
+    <title>LC1D25M7, Электромеханический контактор - Schneider Electric | Компоненты энергии</title>
+    <meta name='description' content='LC1D25M7 — это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D, который можно купить на сайте Компоненты энергии. Продлагаем его по цене:  <?php echo $price ?> RUB.'>
+    <meta name='keywords' content='LC1D25M7 — контактор Schneider Electric для управления двигателями'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
-    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7.php'>
+    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php'>
     <!--Open Graph-->
     <meta property='og:title' content='LC1D18M7, Электромеханический контактор Schneider Electric продается на сайте компоненты энергии, его артикул LC1D18M7 — купить можно по цене <?php echo $price ?> ₽'>
     <meta property='og:description' content='LC1D18M7 это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>
-    <meta property='og:image' content='https://encomponent.ru/img/img-product/LC1D18M7/LC1D18M7_Image_1500_2.jpg'>
+    <meta property='og:image' content='https://encomponent.ru/img/img-product/LC1D25M7/LC1D25M7_Image_1500_2.jpg'>
     <meta property='og:type' content='product'>
-    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7.php'>
+    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php'>
     <!-- JSON-LD Product schema -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "LC1D18M7, Электромеханический контактор - Schneider Electric",
-            "image": "https://encomponent.ru/img/img-product/LC1D18M7/LC1D18M7_Image_1500_2.jpg",
-            "description": "LC1D18M7 это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.",
-            "sku": "LC1D18M7",
+            "name": "LC1D25M7, Электромеханический контактор - Schneider Electric",
+            "image": "https://encomponent.ru/img/img-product/LC1D25M7/LC1D25M7_Image_1500_2.jpg",
+            "description": "LC1D25M7 это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.",
+            "sku": "LC1D25M7",
             "brand": {
                 "@type": "Brand",
                 "name": "Schneider Electric"
@@ -92,7 +92,7 @@ foreach ($data as $item) {
                 "price": <?php echo number_format($price, 2, '.', ''); ?>,
                 "priceCurrency": "RUB",
                 "availability": "<?php echo ($quantityBestseller > 0) ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"; ?>",
-                "url": "https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7.php",
+                "url": "https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php",
                 "inventoryLevel": {
                     "@type": "QuantitativeValue",
                     "value": <?php echo $quantityBestseller; ?>

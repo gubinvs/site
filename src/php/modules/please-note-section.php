@@ -3,8 +3,6 @@
         <h2 class="please-note-section__title"><span class="yellow-diamond"></span> Популярные товары:</h2>
         <div class="please-note-section__discription">
             Наши клиенты чаще всего выбирают проверенные решения для автоматизации, электромонтажа и промышленной энергетики.
-            В каталоге вы найдете оборудование для автоматических линий, щитов, безопасности, коммутации, управления и 
-            распределения питания.
         </div>
         <div class="please-note-section__card-product">
             <?php

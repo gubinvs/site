@@ -1,39 +1,39 @@
 <?php
-include "php/class/api_Connector.php";
-// Цвет полосы в header
-$color_line_header = "#FFFFFF";
+    include "php/class/api_Connector.php";
+    // Цвет полосы в header
+    $color_line_header = "#FFFFFF";
 
-// Запрос в базу данных для получения рандомных 8-ми товаров
-$urlBestsellers = $apiServer . "/api/Bestsellers/";
+    // Запрос в базу данных для получения рандомных 8-ми товаров
+    $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($urlBestsellers, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($urlBestsellers, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $id = $item["id"];
-    $imgLinkIconCard = $item["imgLinkIconCard"];
-    $vendorCodeBestseller = $item["vendorCode"];
-    $nameComponent = $item["nameComponent"];
-    $quantityBestseller = $item["quantity"];
-    $linkPage = $item["linkPage"];
-    $priceBestseller = $item["price"];
-    $basketImgPath = $item["basketImgPath"];
-    $guidId = $item["guid"];
-    $manufacturer = $item["manufacturer"];
-}
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -116,15 +116,17 @@ foreach ($data as $item) {
     <!--Основная секция страницы-->
     <main>
         <?php include "php/modules/home-main-section.php" ?>
-        <!-- <?php include "php/modules/please-note-section.php" ?> -->
-        <!-- <?php include "php/modules/index-page-seo-block.php" ?> -->
-        <!-- <div class="container">
-            <h2 class="feedback-section__title"><span class="yellow-diamond"></span> Обсудить условия заказа или получить консультацию</h2>
-        </div> -->
-        <!-- <?php include "php/modules/feedback-section.php" ?> -->
+        <?php include "php/modules/please-note-section.php" ?>
+        <?php include "php/modules/index-page-seo-block.php" ?>
+        <div class="container">
+            <?php include "php/modules/directory-groups-index-page.php"?>
+            <h2 class="feedback-section__title">
+                <span class="yellow-diamond"></span> Обсудить условия заказа или получить консультацию</h2>
+        </div>
+        <?php include "php/modules/feedback-section.php" ?>
     </main>
     <!--Подключение header-->
-    <!-- <?php include "php/modules/footer.php" ?> -->
+    <?php include "php/modules/footer.php" ?>
     <!--Подключение скриптов JS-->
     <!-- <script src="js/app.js" type="module"></script> -->
 </body>

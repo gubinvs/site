@@ -43,10 +43,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- 🔹 Favicon и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <link rel="stylesheet" href="../css/encomponent_style.css" media="all">
+    <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
+    <link rel="stylesheet" href="css/encomponent_style.css" media="all">
 
     <!-- 🔹 Заголовок страницы (до 60 символов) -->
     <title>Интернет магазин - официальный сайт каталог для комплексной автоматизации с недорогой доставкой по России | Компоненты Энергии</title>

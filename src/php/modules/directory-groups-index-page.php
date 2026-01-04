@@ -2,7 +2,7 @@
     <h2 className="directory-groups__title"> <span class="yellow-diamond"></span> Категории интернет-магазина</h2>
     <div className="dg-card-section">
         <div className="dg-card dg-card1 hvr-grow-shadow">
-            <div className="dg-card__title wwwwww">Модульное оборудование</div>
+            <div className="dg-card__title">Модульное оборудование</div>
         </div>
         <div className="dg-card__groop">
             <div className="dg-card dg-card2 hvr-grow-shadow">

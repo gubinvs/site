@@ -121,7 +121,9 @@
         <div class="container">
             <?php include "php/modules/directory-groups-index-page.php"?>
             <h2 class="feedback-section__title">
-                <span class="yellow-diamond"></span> Обсудить условия заказа или получить консультацию</h2>
+                <span class="yellow-diamond"></span> 
+                Обсудить условия заказа или получить консультацию
+            </h2>
         </div>
         <?php include "php/modules/feedback-section.php" ?>
     </main>

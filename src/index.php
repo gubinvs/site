@@ -128,7 +128,7 @@
     <!--Подключение header-->
     <?php include "php/modules/footer.php" ?>
     <!--Подключение скриптов JS-->
-    <!-- <script src="js/app.js" type="module"></script> -->
+    <script src="js/app.js" type="module"></script>
 </body>
 
 </html>

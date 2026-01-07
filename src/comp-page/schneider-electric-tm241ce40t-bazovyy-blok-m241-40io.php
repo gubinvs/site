@@ -92,44 +92,54 @@ function e($s)
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= e($titlePage) ?> | Купить в России</title>
-    <meta name="description" content="Купить Schneider Electric TM241CE40T — контроллер Modicon M241-40IO с Ethernet. Документация, доставка по РФ.">
-    <link rel="canonical" href="<?= e($canonical) ?>">
+
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/encomp-nku-project-style.css">
+    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
 
+    <!-- 🔹 Базовое SEO -->
+    <title><?php echo $titlePage ?> | Купить в России</title>
+    <meta name="description" content="Купить <?php echo $titlePage ?> — контроллер Schneider Electric. Цена: <?php echo number_format($lowPrice, 0, ',', ' ') ?> ₽. В наличии: <?php echo $bestQuantity ?> шт.">
+    <meta name="keywords" content="<?php echo $article ?>, Schneider Electric, контроллер, Modicon M241, купить, цена, характеристики">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo e($canonical) ?>">
 
-    <meta property="og:title" content="<?= e($titlePage) ?>">
-    <meta property="og:description" content="Контроллер M241-40IO TM241CE40T. Технические характеристики и наличие.">
+    <!-- 🔹 Open Graph -->
     <meta property="og:type" content="product">
-    <meta property="og:url" content="<?= e($canonical) ?>">
-    <meta property="og:image" content="https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg">
+    <meta property="og:title" content="<?php echo $titlePage ?>">
+    <meta property="og:description" content="Контроллер <?php echo $article ?>. Цена: <?php echo number_format($lowPrice, 0, ',', ' ') ?> ₽. В наличии: <?php echo $bestQuantity ?> шт.">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
+    <meta property="og:url" content="<?php echo e($canonical) ?>">
+    <meta property="og:site_name" content="Компоненты энергии">
 
+    <!-- 🔹 Schema.org — структурированные данные -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "<?php echo $titleBase ?>",
+            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "description": "Контроллер Schneider Electric <?php echo $article ?> — базовый блок Modicon M241 с Ethernet.",
+            "sku": "<?php echo $article ?>",
+            "brand": {
+                "@type": "Brand",
+                "name": "Schneider Electric"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "<?php echo $bestOfferUrl ?>",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $lowPrice ?>",
+                "availability": "<?php echo $bestQuantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
+                "priceValidUntil": "<?php echo date('Y-m-d', strtotime('+90 days')) ?>",
+                "itemCondition": "https://schema.org/NewCondition"
+            }
+        }
+    </script>
 
-    $product = [
-        "@context" => "https://schema.org",
-        "@type" => "Product",
-        "name" => $titleBase,
-        "image" => "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
-        "description" => "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet.",
-        "sku" => $article,
-        "brand" => [
-        "@type" => "Brand",
-        "name" => "Schneider Electric"
-    ],
-    "offers" => [
-        "@type" => "Offer",
-        "price" => $lowPrice,
-        "priceCurrency" => "RUB",
-        "availability" => ($bestQuantity > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"),
-        "url" => $bestOfferUrl,
-        "priceValidUntil" => date('Y-m-d', strtotime('+90 days')),
-        "itemCondition" => "https://schema.org/NewCondition"
-    ]
-    ];
-
-
+    <!-- 🔹 Яндекс -->
+    <meta name="yandex-verification" content="26c39d63e5887901">
 </head>
 
 <!-- Yandex.Metrika counter -->
@@ -168,7 +178,7 @@ function e($s)
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
+                <h1 class="discription-product-section__title NKUPages_h1"><?php echo $article ?>, Блок базовый Schneider Electric — контроллер Modicon M241 </h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
                         <img class="discription-product__img" src="../img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg" alt="Контроллер M241-40IO транзисторный источник ETHERNET" class="main-section__img">

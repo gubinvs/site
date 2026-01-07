@@ -107,92 +107,28 @@ function e($s)
     <meta property="og:image" content="https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg">
 
 
-    <script type="application/ld+json">
-        <?php
+    $product = [
+        "@context" => "https://schema.org",
+        "@type" => "Product",
+        "name" => $titleBase,
+        "image" => "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
+        "description" => "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet.",
+        "sku" => $article,
+        "brand" => [
+        "@type" => "Brand",
+        "name" => "Schneider Electric"
+    ],
+    "offers" => [
+        "@type" => "Offer",
+        "price" => $lowPrice,
+        "priceCurrency" => "RUB",
+        "availability" => ($bestQuantity > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"),
+        "url" => $bestOfferUrl,
+        "priceValidUntil" => date('Y-m-d', strtotime('+90 days')),
+        "itemCondition" => "https://schema.org/NewCondition"
+    ]
+    ];
 
-        $product = [
-            "@context" => "https://schema.org",
-            "@type" => "Product",
-            "name" => $titleBase,
-            "image" => "https://encomponent.ru/img/img-product/TM241CE40T/TM241CE40T_big_1920.jpg",
-            "description" => "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet.",
-            "brand" => ["@type" => "Brand", "name" => "Schneider Electric"],
-            "sku" => $article
-        ];
-
-        /* === OFFERS === */
-        if ($offerCount > 1) {
-            $product['offers'] = [
-                "@type" => "AggregateOffer",
-                "lowPrice" => $lowPrice,
-                "highPrice" => $highPrice,
-                "priceCurrency" => "RUB",
-                "offerCount" => $offerCount,
-                "offers" => array_map(fn($o) => [
-                    "@type" => "Offer",
-                    "price" => $o['price'],
-                    "priceCurrency" => "RUB",
-                    "availability" => ($o['quantity'] > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"),
-                    "url" => $o['url'],
-                    "priceValidUntil" => date('Y-m-d', strtotime('+90 days'))
-                ], $offers)
-            ];
-        } else {
-            $product['offers'] = [
-                "@type" => "Offer",
-                "price" => $price,
-                "priceCurrency" => "RUB",
-                "availability" => ($quantity > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"),
-                "url" => 'https://encomponent.ru/comp-page/schneider-electric-tm241ce40t-bazovyy-blok-m241-40io.php',
-                "priceValidUntil" => date('Y-m-d', strtotime('+90 days'))
-            ];
-        }
-
-        /* === AGGREGATE RATING === */
-        $product['aggregateRating'] = [
-            "@type" => "AggregateRating",
-            "ratingValue" => 4.8,
-            "ratingCount" => 27
-        ];
-
-        /* === REVIEWS === */
-        $reviews = [
-            [
-                "author" => "Алексей",
-                "rating" => 5,
-                "text" => "Контроллер работает стабильно. Используем в шкафах автоматизации, нареканий нет."
-            ],
-            [
-                "author" => "Игорь",
-                "rating" => 4,
-                "text" => "Хорошее качество сборки. Поддержка Modbus и Ethernet — то, что нужно."
-            ],
-            [
-                "author" => "Михаил",
-                "rating" => 5,
-                "text" => "Устанавливаем клиентам регулярно. Надёжная серия M241."
-            ]
-        ];
-
-        $product["review"] = array_map(function ($r) {
-            return [
-                "@type" => "Review",
-                "reviewRating" => [
-                    "@type" => "Rating",
-                    "ratingValue" => $r["rating"]
-                ],
-                "author" => [
-                    "@type" => "Person",
-                    "name" => $r["author"]
-                ],
-                "reviewBody" => $r["text"]
-            ];
-        }, $reviews);
-
-        echo json_encode($product, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-
-        ?>
-    </script>
 
 </head>
 

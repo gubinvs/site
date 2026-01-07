@@ -92,6 +92,7 @@ foreach ($data as $item) {
             "@type": "Product",
             "name": "<?php echo $titlePage ?>",
             "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.",
             "sku": "<?php echo $article ?>",
             "brand": {
                 "@type": "Brand",
@@ -99,54 +100,13 @@ foreach ($data as $item) {
             },
             "offers": {
                 "@type": "Offer",
+                "url": "https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php",
                 "priceCurrency": "RUB",
                 "price": "<?php echo $price ?>",
                 "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
-                "url": "https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": 5.0,
-                "reviewCount": 3
-            },
-            "review": [{
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Алексей"
-                    },
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": 5
-                    },
-                    "reviewBody": "Отличный продукт, полностью удовлетворяет ожидания."
-                },
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Игорь"
-                    },
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": 5
-                    },
-                    "reviewBody": "Качество на высоте, рекомендую."
-                },
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Михаил"
-                    },
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": 5
-                    },
-                    "reviewBody": "Покупал для клиента — работает стабильно."
-                }
-                "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
+                "itemCondition": "https://schema.org/NewCondition"
             }
+        }
     </script>
 
     <!-- 🔹 Микроданные для Яндекса -->
@@ -548,7 +508,7 @@ foreach ($data as $item) {
                 <?php include "../php/modules/footer.php" ?>
             </div>
     </main>
-    
+
 </body>
 
 </html>

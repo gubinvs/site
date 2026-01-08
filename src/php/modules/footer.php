@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="footer__copyright">
-            <div class="copyright">&copy; 2025 | Компоненты энергии</div>
+            <div class="copyright">&copy; 2026 | Компоненты энергии</div>
         </div>
     </div>
 </footer>

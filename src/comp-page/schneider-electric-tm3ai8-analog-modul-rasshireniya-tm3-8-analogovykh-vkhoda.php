@@ -505,10 +505,10 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
-                <?php include "../php/modules/footer.php" ?>
+                
             </div>
     </main>
-
+<?php include "../php/modules/footer.php" ?>
 </body>
 
 </html>

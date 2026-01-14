@@ -278,8 +278,8 @@ a:hover {
 
 .button-characteristics__all {
   width: 413px;
-  height: 34px;
-  padding-top: 4px;
+  height: 50px;
+  padding-top: 0px;
   text-align: center;
   background-color: #DFE0E1;
   color: #1D252C;
@@ -290,11 +290,11 @@ a:hover {
 
 .button-characteristics__offer {
   width: 305px;
-  height: 34px;
-  padding-top: px;
+  height: 50px;
+  padding-top: 0px;
   text-align: center;
-  border: 0px;
-  background-color: #F3DE09;
+  border: 1px solid #1D252C;
+  /* background-color: #1D252C; */
   color: #1D252C;
   cursor: pointer;
 }
@@ -306,7 +306,7 @@ a:hover {
 
 .button-characteristics__offer:hover,
 .button-characteristics__ozon:hover {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 

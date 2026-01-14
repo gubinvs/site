@@ -285,11 +285,11 @@ foreach ($data as $item) {
                             </ul>
                         </div>
                         <div class="characteristics-block__button-block flex">
-                            <a href="#technical" id="button-link">
-                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
+                            <a href="https://www.ozon.ru/product/2903148-istochnik-pitaniya-feniks-kontakt-5a-3173258980/?at=lRt6N8WKyuyMZMygcZZQRKpIymRyk5fN3zDgAu17vVxn" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНe</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
                     </div>

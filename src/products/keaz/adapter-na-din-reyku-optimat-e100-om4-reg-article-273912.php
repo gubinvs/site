@@ -244,7 +244,7 @@
                                                 <a href='#technical' id='button-link'>
                                                     <div class='button-characteristics__all'>Посмотреть все характеристики</div>
                                                 </a>
-                                                <a href='https://shop.encomponent.ru/Basket/?vendorCode=273912'>
+                                                <a href='https://shop.encomponent.ru/Bask/?vendorCode=273912'>
                                                     <div class='button-characteristics__offer' id='button-buy'>Купить</div>
                                                 </a>
                                             </div>

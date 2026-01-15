@@ -209,6 +209,7 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
+                        <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
                             <a href="https://www.ozon.ru/product/tm3ai8-modul-rasshireniya-tm3-8-analogovyh-vhodov-3142772672/?at=pZtp3WgLGc3Do0Y4sOqqDEnu0jj6BPuRDlJvlsRLg9N2" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
@@ -217,6 +218,7 @@ foreach ($data as $item) {
                                 <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
+                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
                 <section class="attention-section">

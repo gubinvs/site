@@ -273,14 +273,16 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
-                        <div class='characteristics-block__button-block flex'>
-                            <a href='#technical' id='button-link'>
-                                <div class='button-characteristics__all'>Посмотреть все характеристики</div>
-                            </a>
-                            <a href='https://shop.encomponent.ru/Basket/?vendorCode=3044128'>
-                                <div class='button-characteristics__offer' id='button-buy'>Купить</div>
-                            </a>
-                        </div>
+                        <!--Кнопки купить в магазинах-->
+                            <div class="characteristics-block__button-block flex">
+                                <a href="https://www.ozon.ru/product/3044128-ut4-pe-klemma-prohodnaya-zhelto-zelenaya-feniks-kontakt-1-sht-3385021717/?_bctx=CAQQi6TdAQ&hs=1" id="button-link">
+                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                                </a>
+                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                                </a>
+                            </div>
+                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
                 <section class='attention-section'>

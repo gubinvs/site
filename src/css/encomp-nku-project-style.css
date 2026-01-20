@@ -277,6 +277,9 @@ a:hover {
 }
 
 .button-characteristics__all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 413px;
   height: 50px;
   padding-top: 0px;
@@ -289,6 +292,9 @@ a:hover {
 }
 
 .button-characteristics__offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 305px;
   height: 50px;
   padding-top: 0px;

@@ -35,12 +35,55 @@ foreach ($data as $item) {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TM3DQ8T, Дискретный модуль расширения TM3 8 транзисторных выходов — Schneider Electric</title>
+
+    <!-- SEO -->
+    <meta name="description" content="TM3DQ8T — дискретный модуль расширения TM3 с 8 транзисторными выходами от Schneider Electric. Купить на сайте Компоненты энергии по цене <?php echo $price; ?> RUB.">
+    <meta name="keywords" content="TM3DQ8T, Schneider Electric, дискретный модуль TM3, модуль расширения PLC">
+    <meta name="robots" content="index, follow">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
-    <title><?php echo $titlePage ?></title>
-</head>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://encomponent.ru/comp-page/vendorCode_TM3DQ8T_page.php">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TM3DQ8T — Дискретный модуль расширения Schneider Electric, цена <?php echo $price; ?> ₽">
+    <meta property="og:description" content="TM3DQ8T — модуль расширения TM3 с 8 транзисторными выходами от Schneider Electric. В наличии на сайте Компоненты энергии. Цена: <?php echo $price; ?> RUB.">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/TM3DQ8T/TM3DQ8T_big_1920.jpg">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/vendorCode_TM3DQ8T_page.php">
+
+    <!-- JSON-LD Product schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "TM3DQ8T, Дискретный модуль расширения TM3 8 выходов",
+        "image": "https://encomponent.ru/img/img-product/TM3DQ8T/TM3DQ8T_big_1920.jpg",
+        "description": "TM3DQ8T — дискретный модуль расширения TM3 с 8 транзисторными выходами от Schneider Electric. Предназначен для систем автоматизации.",
+        "sku": "TM3DQ8T",
+        "brand": {
+            "@type": "Brand",
+            "name": "Schneider Electric"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "<?php echo number_format($price, 2, '.', ''); ?>",
+            "priceCurrency": "RUB",
+            "availability": "<?php echo ($quantity > 0) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
+            "url": "https://encomponent.ru/comp-page/vendorCode_TM3DQ8T_page.php",
+            "inventoryLevel": {
+                "@type": "QuantitativeValue",
+                "value": <?php echo (int)$quantity; ?>
+            }
+        }
+    }
+    </script>
+
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
@@ -68,7 +111,7 @@ foreach ($data as $item) {
     <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="s" /></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
-
+</head>
 <body>
     <?php
     include_once '../php/modules/header.php';
@@ -136,14 +179,16 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
-                        <div class="characteristics-block__button-block flex">
-                            <a href="#technical" id="button-link">
-                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
-                            </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
-                            </a>
-                        </div>
+                        <!--Кнопки купить в магазинах-->
+                            <div class="characteristics-block__button-block flex">
+                                <a href="https://www.ozon.ru/product/tm3dq8t-diskretnyy-modul-rasshireniya-tm3-8-vyhodov-schneider-electric-3112339033/?at=vQtrzQ1O8uY9xDNkFk6Qqr9h4JOkJjF5rBEOYtlkkGqO" id="button-link">
+                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                                </a>
+                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                                </a>
+                            </div>
+                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
                 <section class="attention-section">

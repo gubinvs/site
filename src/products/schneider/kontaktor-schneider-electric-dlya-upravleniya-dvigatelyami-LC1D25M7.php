@@ -1,57 +1,58 @@
 <?php
-include "../../php/class/api_Connector.php";
+    include "../../php/class/api_Connector.php";
 
-$article = "LC1D25M7";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    $article = "LC1D25M7";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-}
+    foreach ($data as $item) {
+        $price = $item["price"];
+        $quantity = $item["quantity"];
+    }
 
-$urlBestsellers = $apiServer . "/api/Bestsellers/";
+    // Загружаем только свои товары
+    $urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($urlBestsellers, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($urlBestsellers, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $id = $item["id"];
-    $imgLinkIconCard = $item["imgLinkIconCard"];
-    $vendorCodeBestseller = $item["vendorCode"];
-    $nameComponent = $item["nameComponent"];
-    $quantityBestseller = $item["quantity"];
-    $linkPage = $item["linkPage"];
-    $priceBestseller = $item["price"];
-    $basketImgPath = $item["basketImgPath"];
-    $guidId = $item["guid"];
-    $manufacturer = $item["manufacturer"];
-}
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
 ?>
 
 <!DOCTYPE html>

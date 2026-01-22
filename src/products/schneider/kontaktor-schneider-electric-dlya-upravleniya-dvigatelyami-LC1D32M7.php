@@ -1,7 +1,7 @@
 <?php
     include "../../php/class/api_Connector.php";
 
-    $article = "LC1D09M7";
+    $article = "LC1D32M7";
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
     $options = [
@@ -61,19 +61,21 @@
 
 <head>
     <meta charset='UTF-8'>
-    <title>LC1D09M7 — контактор Schneider Electric 9А | Купить TeSys D</title>
-    <meta name='description' content='LC1D09M7 — электромеханический контактор Schneider Electric серии TeSys D на 9 А с катушкой 220 В AC. Применяется для пуска электродвигателей, насосов и вентиляции. Цена: <?php echo $price ?> ₽.'>
-    <meta name='keywords' content='LC1D09M7, контактор 9А, контактор Schneider Electric, LC1D09, контактор 220В, контактор для двигателя, силовой контактор TeSys D'>
+    <title>LC1D32M7 — контактор Schneider Electric 32А | Купить TeSys D</title>
+    <meta name='description' content='LC1D32M7 — электромеханический контактор Schneider Electric серии TeSys D на 32 А с катушкой 220 В AC. 
+        Применяется для пуска электродвигателей, насосов и вентиляции. Цена: <?php echo $price ?> ₽.'>
+    <meta name='keywords' content='LC1D32M7, контактор 32А, контактор Schneider Electric, LC1D32, контактор 220В, контактор для двигателя, 
+        силовой контактор TeSys D'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D09M7.php'>
+    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D32M7.php'>
 
     <!-- Open Graph -->
-    <meta property='og:title' content='LC1D09M7 — контактор Schneider Electric 9А | TeSys D'>
-    <meta property='og:description' content='Контактор LC1D09M7 9 А, 220 В AC для управления электродвигателями и промышленными нагрузками.'>
+    <meta property='og:title' content='LC1D32M7 — контактор Schneider Electric 32А | TeSys D'>
+    <meta property='og:description' content='Контактор LC1D32M7 32 А, 220 В AC для управления электродвигателями и промышленными нагрузками.'>
     <meta property='og:image' content='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png'>
     <meta property='og:type' content='product'>
-    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D09M7.php'>
+    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D32M7.php'>
 
     <!-- JSON-LD -->
     <script type="application/ld+json">
@@ -81,9 +83,9 @@
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "LC1D09M7 Контактор Schneider Electric",
-        "image": "https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png",
-        "description": "Силовой контактор LC1D09M7 Schneider Electric серии TeSys D. Номинальный ток 9 А, катушка управления 220 В AC.",
-        "sku": "LC1D09M7",
+        "image": "https://encomponent.ru/img/img-product/LC1D32M7/LC1D32M7_site.png",
+        "description": "Силовой контактор LC1D32M7 Schneider Electric серии TeSys D. Номинальный ток 32 А, катушка управления 220 В AC.",
+        "sku": "LC1D32M7",
         "brand": {
             "@type": "Brand",
             "name": "Schneider Electric"
@@ -143,17 +145,17 @@
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D09M7 (LC1D09M7C) — Электромеханический контактор Schneider Electric</h1>
+                <h1 class='discription-product-section__title NKUPages_h1'>LC1D32M7 (LC1D32M7C) — Электромеханический контактор Schneider Electric</h1>
 
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
-                        <img src='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png' alt='Контактор Schneider Electric LC1D09M7' class='discription-product__img main-section__img'>
+                        <img src='https://encomponent.ru/img/img-product/LC1D32M7/LC1D32M7_site.png' alt='Контактор Schneider Electric LC1D09M7' class='discription-product__img main-section__img'>
                     </div>
                     <div class='main-section__discription'>
 
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D09M7 (LC1D09M7C)</h6>
+                            <h6 class='article-name'>LC1D32M7 (LC1D32M7C)</h6>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
@@ -166,8 +168,8 @@
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
-                        <div class='characteristics-block'>
-                            <div class='characteristics-block__title'>Основные характеристики:</div>
+                    <div class='characteristics-block'>
+                        <div class='characteristics-block__title'>Основные характеристики:</div>
                             <ul class='characteristics-block__list'>
                                 <li class='characteristics-block__item flex'>
                                     <div class='characteristics-item__title'>Производитель:</div>
@@ -179,11 +181,11 @@
                                 </li>
                                 <li class='characteristics-block__item flex'>
                                     <div class='characteristics-item__title'>Номинальный ток:</div>
-                                    <div class='characteristics-item__discr'>9 А (AC-3)</div>
+                                    <div class='characteristics-item__discr'>32 А (AC-3)</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
                                     <div class='characteristics-item__title'>Катушка управления:</div>
-                                    <div class='characteristics-item__discr'>220 В AC 50/60 Гц</div>
+                                    <div class='characteristics-item__discr'>220 В AC, 50/60 Гц</div>
                                 </li>
                                 <li class='characteristics-block__item flex'>
                                     <div class='characteristics-item__title'>Количество полюсов:</div>
@@ -195,15 +197,15 @@
                                 </li>
                             </ul>
                         </div>
-                           <!--Кнопки купить в магазинах-->
-                            <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-3424066591/?from_sku=3424066591&oos_search=false" id="button-link">
-                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
-                                </a>
-                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
-                                </a>
-                            </div>
+                        <!--Кнопки купить в магазинах-->
+                        <div class="characteristics-block__button-block flex">
+                            <a href="https://www.ozon.ru/product/lc1d32m7-kontaktor-schneider-electric-3430344861/?oos_search=false" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                            </a>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                            </a>
+                        </div>
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
@@ -223,31 +225,30 @@
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                            <b>Контактор LC1D09M7 (LC1D09M7C) Schneider Electric</b> из серии <b>TeSys D</b> предназначен
-                            для управления маломощными трёхфазными электродвигателями и промышленными нагрузками.
+                            <b>Контактор LC1D32M7 (LC1D32M7C) Schneider Electric</b> — это надёжный силовой контактор серии
+                            <b>TeSys D</b>, предназначенный для управления трёхфазными электродвигателями
+                            и промышленными силовыми нагрузками.
 
                             <br><br>
-                            Номинальный ток устройства — <b>9 А</b> (AC-3), катушка управления <b>220 В AC</b>, 50/60 Гц.
-                            Это обеспечивает надёжное дистанционное включение и отключение силовых цепей.
+                            Контактор рассчитан на <b>номинальный ток 32 А</b> (категория AC-3) и оснащён катушкой управления
+                            <b>220 В AC</b>, что позволяет использовать его в стандартных шкафах автоматики,
+                            НКУ и распределительных щитах без дополнительного оборудования.
 
                             <br><br>
-                            Контактор имеет 3 нормально разомкнутых силовых контакта и встроенные
-                            вспомогательные контакты <b>1 NO + 1 NC</b>, подходящие для схем пуска,
-                            сигнализации и автоматизации.
+                            Обозначение <b>«C» в конце артикула (LC1D32M7C)</b> указывает на версию изделия,
+                            предназначенную для <b>китайского рынка</b>. Электрические и эксплуатационные
+                            характеристики контактора полностью соответствуют базовой модели LC1D32M7,
+                            различия касаются маркировки и набора международных сертификатов.
 
                             <br><br>
-                            Суффикс <b>«C»</b> обозначает версию для <b>китайского рынка</b>. Характеристики
-                            LC1D09M7C полностью совпадают с базовой моделью, различается только маркировка
-                            и набор сертификатов.
-
-                            <br><br>
-                            Рабочее напряжение до <b>690 В AC</b>, монтаж возможен на DIN-рейку или панель.
+                            LC1D32M7 применяется для пуска и остановки насосов, вентиляторов,
+                            компрессоров, конвейеров и другого промышленного оборудования,
+                            где требуется стабильная и долговечная коммутация цепей переменного тока.
                         </div>
                     </div>
                 </section>
                 <div class='container' id='technical'>
                     <h3 class='mt-5'>Технические характеристики</h3>
-
                     <table class='table table-bordered table-striped mt-3'>
                         <thead class='table-secondary'>
                             <tr>
@@ -262,7 +263,7 @@
                             </tr>
                             <tr>
                                 <td>Серия / Модель</td>
-                                <td>TeSys D / LC1D09M7</td>
+                                <td>TeSys D / LC1D32M7</td>
                             </tr>
                             <tr>
                                 <td>Тип устройства</td>
@@ -270,7 +271,7 @@
                             </tr>
                             <tr>
                                 <td>Номинальный ток</td>
-                                <td>9 А (категория применения AC-3)</td>
+                                <td>32 А (категория применения AC-3)</td>
                             </tr>
                             <tr>
                                 <td>Напряжение катушки управления</td>
@@ -302,7 +303,7 @@
                             </tr>
                             <tr>
                                 <td>Вес (без упаковки)</td>
-                                <td>≈ 330 г</td>
+                                <td>≈ 360 г</td>
                             </tr>
                             <tr>
                                 <td>Степень защиты</td>
@@ -315,17 +316,17 @@
                             <tr>
                                 <td>Область применения</td>
                                 <td>
-                                    Пуск и остановка трёхфазных электродвигателей малой мощности,
-                                    управление насосами, вентиляторами, компрессорами и
-                                    промышленными механизмами
+                                    Пуск и остановка трёхфазных электродвигателей средней мощности,
+                                    управление насосами, вентиляторами, компрессорами,
+                                    конвейерами и другим промышленным оборудованием
                                 </td>
                             </tr>
                             <tr>
                                 <td>Особенности</td>
                                 <td>
-                                    Компактная конструкция, высокая надёжность,
+                                    Компактная конструкция, высокая коммутационная износостойкость,
                                     совместимость с тепловыми реле серии TeSys D,
-                                    соответствие стандартам IEC и UL
+                                    соответствие стандартам IEC, UL и CSA
                                 </td>
                             </tr>
                         </tbody>
@@ -335,14 +336,26 @@
                 <ul class='files-and-documents-section__list'>
                     <li class='files-and-documents-section__item'>
                         Общий каталог контакторов TeSys D (PDF) —
-                        <a href='../../files/LC1D09M7/schneider-Electric_TeSys-Deca-contactors_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                        <a href='../../files/LC1D32M7/catalog__LC1D32M7.pdf' target='_blank' rel='nofollow'>
                             <b>Открыть</b>
                         </a>
                     </li>
                     <li class='files-and-documents-section__item'>
-                        Инструкция для подключения LC1D09M7 —
-                        <a href='../../files/LC1D09M7/Catalog_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                        Инструкция для подключения LC1D32M7 —
+                        <a href='../../files/LC1D32M7/instruction__LC1D32M7.pdf' target='_blank' rel='nofollow'>
                             <b>Открыть</b>
+                        </a>
+                    </li>
+                    <li class='files-and-documents-section__item'>
+                        CAD (.zip) —
+                        <a href='../../files/LC1D32M7/MCADPP0003728_3D-CAD.zip' target='_blank' rel='nofollow'>
+                            <b>Скачать</b>
+                        </a>
+                    </li>
+                    <li class='files-and-documents-section__item'>
+                        Технические характеристики —
+                        <a href='../../files/LC1D32M7/schneider-electric_teSys-Deca-contactors_LC1D32M7.pdf' target='_blank' rel='nofollow'>
+                            <b>Скачать</b>
                         </a>
                     </li>
                 </ul>
@@ -425,11 +438,11 @@
             </div>
         </div>
     </div>
-        <!-- LSI -->
-        <p style="font-size:0;line-height:0">
-            LC1D09M7 контактор 9А 220В купить Schneider Electric TeSys D
-            контактор для электродвигателя цена характеристики
-        </p>
+    <!-- LSI -->
+    <p style="font-size:0;line-height:0">
+        LC1D32M7 контактор 32А 220В купить Schneider Electric TeSys D
+        контактор для электродвигателя цена характеристики
+    </p>
     </main>
     <?php include '../../php/modules/footer.php'; ?>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>

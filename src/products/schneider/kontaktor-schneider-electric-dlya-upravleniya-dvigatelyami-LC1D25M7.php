@@ -188,7 +188,7 @@
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D25M7, Электромеханический контактор - Schneider Electric</h1>
+                <h1 class='discription-product-section__title NKUPages_h1'>LC1D25M7 (LC1D25M7C), Электромеханический контактор - Schneider Electric</h1>
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
                         <img src='https://encomponent.ru/img/img-product/LC1D25M7/LC1D25M7_Image.jpg' alt='Изображен Электромеханический контактор Schneider Electric ' class='discription-product__img main-section__img'>
@@ -196,7 +196,7 @@
                     <div class='main-section__discription'>
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D25M7</h6>
+                            <h6 class='article-name'>LC1D25M7 (LC1D25M7C)</h6>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
@@ -299,17 +299,24 @@
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                            <b>LC1D25M7</b> — силовой контактор Schneider Electric серии TeSys D,
-                            предназначенный для управления трёхфазными электродвигателями и
-                            промышленными нагрузками. Рассчитан на номинальный ток 25 А и оснащён
-                            катушкой управления 220–240 В AC, 50/60 Гц (M7).
-                            <br><br>
-                            Контактор имеет 3 силовых нормально разомкнутых контакта (3 NO) и
-                            встроенные вспомогательные контакты 1 NO + 1 NC, поддерживает рабочее
-                            напряжение до 690 В AC и подходит для установки в шкафы и панели
-                            управления. Монтаж — на DIN-рейку или панель.
-                        </div>
+                            <b>Контактор LC1D25M7 (LC1D25M7C) Schneider Electric</b> из серии <b>TeSys D</b> предназначен
+                            для управления электродвигателями и промышленными нагрузками средней мощности.
 
+                            <br><br>
+                            Номинальный ток — <b>25 А</b> (AC-3), катушка управления <b>220–240 В AC</b>, 50/60 Гц.
+
+                            <br><br>
+                            Имеет 3 нормально разомкнутых силовых контакта и встроенные
+                            вспомогательные контакты <b>1 NO + 1 NC</b>, подходит для пуска двигателей,
+                            сигнализации и автоматизации.
+
+                            <br><br>
+                            Суффикс <b>«C»</b> обозначает версию для <b>китайского рынка</b>, при этом
+                            электрические характеристики совпадают с базовой моделью.
+
+                            <br><br>
+                            Поддерживает рабочее напряжение до <b>690 В AC</b>, монтаж на DIN-рейку или панель.
+                        </div>
                     </div>
                 </section>
             </div>

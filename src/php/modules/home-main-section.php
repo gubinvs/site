@@ -4,7 +4,7 @@
 
         <div class="top-shape"></div>
         <div class="home-main-section__title-block">
-            <h1 class="home-main-section__title">Компоненты Энергии</h1>
+            <h1 class="home-main-section__title">Компоненты энергии</h1>
             <div class="hms-title__fon"></div>
             <div class="hms-title__discr">
                 <h3>Интернет-магазин с доставкой по России!</h3>

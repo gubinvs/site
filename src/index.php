@@ -68,21 +68,28 @@
 
     <!-- 🔹 Структурированные данные (Schema.org) -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Компоненты энергии",
-            "description": "Купить в интернет магазине или заказать из каталога с доставкой по России шнайдер, кэаз, феникс контакт можно по телефону +7 (812) 921-59-71 или через интернет магазин.",
-            "provider": {
-                "@type": "Organization",
-                "name": "Компоненты энергии",
-                "url": "https://encomponent.ru/index.php",
-                "logo": "https://encomponent.ru/img/logo_encomponent_main.png"
-            },
-            "areaServed": "Россия",
-            "serviceType": "Электротехническое оборудование"
-        }
+    {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Компоненты энергии",
+    "url": "https://encomponent.ru/",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://encomponent.ru/index.php?route=product/search&search={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+    }
     </script>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Компоненты энергии",
+    "url": "https://encomponent.ru/",
+    "logo": "https://encomponent.ru/img/logo_encomponent_main.png"
+    }
+    </script>
+
     <!-- 🔹 Yandex.Metrika -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {

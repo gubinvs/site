@@ -38,35 +38,38 @@ foreach ($data as $item) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
 
-    <title>TM241CE24T, Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric | Купить в России</title>
-    <meta name="description" content="Контроллер Schneider Electric TM241CE24T (Modicon M241-40IO, транзисторный источник, Ethernet). В наличии, доставка по РФ. Официальная документация, характеристики и цена.">
-    <meta name="keywords" content="TM241CE24T, Schneider Electric TM241CE24T, Modicon M241, контроллер ПЛК, ПЛК Schneider, купить контроллер, Modicon M241 Ethernet">
+    <title>ПЛК Schneider Electric TM241CE24T Modicon M241 Ethernet — купить</title>
+
+    <meta name="description" content="ПЛК Schneider Electric TM241CE24T Modicon M241 с Ethernet. 24 IO, транзисторные выходы. Купить с доставкой по России. Документация, характеристики, гарантия.">
+
+    <meta name="keywords" content="TM241CE24T, Schneider Electric TM241CE24T, Modicon M241, ПЛК Schneider, PLC Ethernet, промышленный контроллер">
 
     <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php">
 
+    <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Schneider Electric TM241CE24T — контроллер M241-40IO Ethernet">
-    <meta property="og:description" content="Купить Schneider Electric TM241CE24T — базовый контроллер Modicon M241-40IO Ethernet. Технические характеристики, PDF-документация, доставка по России.">
     <meta property="og:type" content="product">
+    <meta property="og:title" content="ПЛК Schneider Electric TM241CE24T Modicon M241 Ethernet">
+    <meta property="og:description" content="Купить ПЛК Schneider Electric TM241CE24T — 24 IO, Ethernet, Modicon M241. PDF-документация и доставка по РФ.">
     <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php">
     <meta property="og:image" content="https://encomponent.ru/img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg">
 
-    <!-- JSON-LD микроразметка -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "Schneider Electric TM241CE40T",
+            "name": "Schneider Electric TM241CE24T",
             "image": "https://encomponent.ru/img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg",
-            "description": "Контроллер Schneider Electric TM241CE40T — базовый блок Modicon M241-40IO с Ethernet. Транзисторный источник питания, компактное исполнение, поддержка Modbus и TCP/IP.",
+            "description": "ПЛК Schneider Electric TM241CE24T — базовый контроллер Modicon M241 с 24 IO и Ethernet для систем промышленной автоматизации.",
             "brand": {
                 "@type": "Brand",
                 "name": "Schneider Electric"
             },
-            "sku": "TM241CE40T",
+            "sku": "TM241CE24T",
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "RUB",
@@ -108,16 +111,17 @@ foreach ($data as $item) {
 
 <body>
     <?php
+    $color_line_header = $color_line_header ?? null;
     include_once '../php/modules/header.php';
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title NKUPages_h1">TM241CE24T, SE M238 Modicon Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</h1>
+                <h1 class="discription-product-section__title NKUPages_h1">TM241CE24T, Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg" alt="Контроллер M241-40IO транзисторный источник ETHERNET" class="main-section__img">
+                        <img class="discription-product__img main-section__img" src="../img/img-product/TM241CE24T/TM241CE24T_big_1920.jpg" alt="Контроллер M241-40IO транзисторный источник ETHERNET">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -178,14 +182,16 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
+                        <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
-                            <a href="#technical" id="button-link">
-                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
+                            <a href="https://www.ozon.ru/product/tm241ce24t-blok-bazovyy-m241-24io-tranzist-istochnik-ethernet-schneider-electric-3442839311/" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
+                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
                 <section class="attention-section">

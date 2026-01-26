@@ -99,7 +99,7 @@
     "seller": {
         "@type": "Organization",
         "name": "Компоненты энергии"
-    }
+        }
     }
     </script>
 

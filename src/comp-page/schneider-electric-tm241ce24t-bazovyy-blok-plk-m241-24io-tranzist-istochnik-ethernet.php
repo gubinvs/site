@@ -1,30 +1,32 @@
 <?php
-include "../php/class/api_Connector.php";
+    include "../php/class/api_Connector.php";
 
-$article = "TM241CE24T"; // Замените на нужный артикул
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "TM241CE24T"; // Замените на нужный артикул
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
+    foreach ($data as $item) {
+        $price = $item["price"];
+        $quantity = $item["quantity"];
+        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+    }
+
+    $hasPrice = is_numeric($price) && $price > 0;
 
 ?>
 
@@ -38,15 +40,10 @@ foreach ($data as $item) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ПЛК Schneider Electric TM241CE24T Modicon M241 Ethernet — купить</title>
-
-    <meta name="description" content="ПЛК Schneider Electric TM241CE24T Modicon M241 с Ethernet. 24 IO, транзисторные выходы. Купить с доставкой по России. Документация, характеристики, гарантия.">
-
+    <title>ПЛК Schneider Electric TM241CE24T Modicon M241 Ethernet — купить <?php if ($hasPrice) echo " по цене $price RUB"; ?></title>
+    <meta name="description" content="ПЛК Schneider Electric TM241CE24T Modicon M241 с Ethernet. 24 IO, транзисторные выходы. Купить с доставкой по России <?php if ($hasPrice) echo " по цене $price RUB"; ?>. Документация, характеристики, гарантия.">
     <meta name="keywords" content="TM241CE24T, Schneider Electric TM241CE24T, Modicon M241, ПЛК Schneider, PLC Ethernet, промышленный контроллер">
-
     <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php">
-
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
 
@@ -69,13 +66,17 @@ foreach ($data as $item) {
                 "@type": "Brand",
                 "name": "Schneider Electric"
             },
-            "sku": "TM241CE24T",
+            "sku": "TM241CE24T" <?php if ($hasPrice): ?>,,
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "RUB",
                 "price": "<?php echo $price; ?>",
                 "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
                 "url": "https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php"
+            }<?php endif; ?>,
+            "seller": {
+                "@type": "Organization",
+                "name": "Компоненты энергии"
             }
         }
     </script>

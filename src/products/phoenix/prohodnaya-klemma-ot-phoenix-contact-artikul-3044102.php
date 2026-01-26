@@ -1,56 +1,58 @@
 <?php
-include "../../php/class/api_Connector.php";
-$article = "3044102";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+        include "../../php/class/api_Connector.php";
+        $article = "3044102";
+        $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+        $options = [
+            "http" => [
+                "method" => "GET",
+                "header" => "Content-Type: application/json"
+            ]
+        ];
+        $context = stream_context_create($options);
+        $response = file_get_contents($url, false, $context);
+        if ($response === FALSE) {
+            die("Ошибка запроса");
+        }
 
-$data = json_decode($response, true);
+        $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-}
+        foreach ($data as $item) {
+            $price = $item["price"];
+            $quantity = $item["quantity"];
+        }
 
-$urlBestsellers = $apiServer . "/api/Bestsellers/";
+        $hasPrice = is_numeric($price) && $price > 0;
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+        $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-$context = stream_context_create($options);
-$response = file_get_contents($urlBestsellers, false, $context);
+        $options = [
+            "http" => [
+                "method" => "GET",
+                "header" => "Content-Type: application/json"
+            ]
+        ];
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+        $context = stream_context_create($options);
+        $response = file_get_contents($urlBestsellers, false, $context);
 
-$data = json_decode($response, true);
+        if ($response === FALSE) {
+            die("Ошибка запроса");
+        }
 
-foreach ($data as $item) {
-    $id = $item["id"];
-    $imgLinkIconCard = $item["imgLinkIconCard"];
-    $vendorCodeBestseller = $item["vendorCode"];
-    $nameComponent = $item["nameComponent"];
-    $quantityBestseller = $item["quantity"];
-    $linkPage = $item["linkPage"];
-    $priceBestseller = $item["price"];
-    $basketImgPath = $item["basketImgPath"];
-    $guidId = $item["guid"];
-    $manufacturer = $item["manufacturer"];
-}
+        $data = json_decode($response, true);
+
+        foreach ($data as $item) {
+            $id = $item["id"];
+            $imgLinkIconCard = $item["imgLinkIconCard"];
+            $vendorCodeBestseller = $item["vendorCode"];
+            $nameComponent = $item["nameComponent"];
+            $quantityBestseller = $item["quantity"];
+            $linkPage = $item["linkPage"];
+            $priceBestseller = $item["price"];
+            $basketImgPath = $item["basketImgPath"];
+            $guidId = $item["guid"];
+            $manufacturer = $item["manufacturer"];
+        }
 ?>
 
 <!DOCTYPE html>
@@ -59,8 +61,8 @@ foreach ($data as $item) {
 <head>
     <meta charset='UTF-8'>
     <title>3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact | Компоненты энергии</title>
-    <meta name='description' content='Клемма 3044102 UT 4 серая от производителя Phoenix Contact можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>
-    <meta name='keywords' content='Клемма проходная UT 4 серая - артикул 3044102'>
+    <meta name='description' content='Клемма 3044102 UT 4 серая от производителя Phoenix Contact можно купить на сайте Компоненты энергии. Продлагаем ее по цене: <?php if ($hasPrice) echo " по цене $price RUB"; ?>'>
+    <meta name='keywords' content='Phoenix Contact UT 4, 3044102, проходная клемма'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
@@ -68,91 +70,39 @@ foreach ($data as $item) {
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
     <link rel='canonical' href='https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php'>
     <!--Open Graph-->
-    <meta property='og:title' content='3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact продается на сайте компоненты энергии, ее артикул 273912 — купить можно по цене <?php echo $price ?> ₽'>
-    <meta property='og:description' content='Клемма 3044102 UT 4 серая от производителя Phoenix Contact можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>
+    <meta property='og:title' content='3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact продается на сайте компоненты энергии, ее артикул 3044102 — купить можно по цене <?php echo $price ?> ₽'>
+    <meta property='og:description' content='Клемма 3044102 UT 4 серая от производителя Phoenix Contact можно купить на сайте Компоненты энергии. Продлагаем ее по цене: <?php if ($hasPrice) echo " по цене $price RUB"; ?>'>
     <meta property='og:image' content='https://encomponent.ru/img/img-product/3044102/phoenix_contact-3044102-image.jpg'>
     <meta property='og:type' content='product'>
     <meta property='og:url' content='https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php'>
+    
     <!-- JSON-LD Product schema -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact",
-            "image": "https://encomponent.ru/img/img-product/3044102/phoenix_contact-3044102-image.jpg",
-            "description": "Проходная клемма модели 3044102 UT 4 серая от производителя Phoenix Contact предлагается по цене: <?php echo $price; ?> RUB. В наличии: <?php echo $quantityBestseller; ?> шт.",
-            "sku": "3044102",
-            "brand": {
-                "@type": "Brand",
-                "name": "Phoenix Contact"
-            },
-            "offers": {
-                "@type": "Offer",
-                "price": <?php echo number_format($price, 2, '.', ''); ?>,
-                "priceCurrency": "RUB",
-                "availability": "<?php echo ($quantityBestseller > 0) ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"; ?>",
-                "url": "https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php",
-                "inventoryLevel": {
-                    "@type": "QuantitativeValue",
-                    "value": <?php echo $quantityBestseller; ?>
-                }
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": 4.7,
-                "reviewCount": 4
-            },
-            "review": [{
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Алексей"
-                    },
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": 5
-                    },
-                    "reviewBody": "Отличный продукт, полностью удовлетворяет ожидания."
-                },
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Игорь"
-                    },
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": 5
-                    },
-                    "reviewBody": "Качество на высоте, рекомендую."
-                },
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Петр Петрович"
-                    },
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": 4
-                    },
-                    "reviewBody": "Покупал для клиента — работает стабильно."
-                },
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Михаил Иванович"
-                    },
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": 4
-                    },
-                    "reviewBody": "работает стабильно."
-                }
-            ]
-        }
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "3044102, Проходная DIN-клемма (UT 4) серая - Phoenix Contact",
+    "image": "https://encomponent.ru/img/img-product/3044102/phoenix_contact-3044102-image.jpg",
+    "description": "Проходная клемма модели 3044102 UT 4 серая от производителя Phoenix Contact предлагается<?php if ($hasPrice) echo ' по цене ' . number_format($price, 0, '.', '') . ' RUB'; ?>. В наличии: <?php echo (int)$quantityBestseller; ?> шт.",
+    "sku": "3044102",
+    "brand": {
+        "@type": "Brand",
+        "name": "Phoenix Contact"
+    }<?php if ($hasPrice): ?>,
+    "offers": {
+        "@type": "Offer",
+        "price": <?php echo number_format($price, 2, '.', ''); ?>,
+        "priceCurrency": "RUB",
+        "availability": "<?php echo ($quantityBestseller > 0) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
+        "url": "https://encomponent.ru/products/phoenix/prohodnaya-klemma-ot-phoenix-contact-artikul-3044102.php"
+    }<?php endif; ?>,
+    "seller": {
+        "@type": "Organization",
+        "name": "Компоненты энергии"
+    }
+    }
     </script>
+
 
 
     <!-- Yandex.Metrika counter -->

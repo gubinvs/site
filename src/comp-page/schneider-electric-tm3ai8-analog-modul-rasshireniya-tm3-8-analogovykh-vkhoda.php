@@ -1,64 +1,64 @@
 <?php
-include "../php/class/api_Connector.php";
+    include "../php/class/api_Connector.php";
 
-$article = "TM3AI8"; // Замените на нужный артикул
-$titlePage = "TM3AI8, Аналог Модуль расширения ТМ3-8 аналоговых входов";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "TM3AI8"; // Замените на нужный артикул
+    $titlePage = "TM3AI8, Аналог Модуль расширения ТМ3-8 аналоговых входов";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
+    foreach ($data as $item) {
+        $price = $item["price"];
+        $quantity = $item["quantity"];
+        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+    }
 
-$urlBestsellers = $apiServer . "/api/Bestsellers/";
+    $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($urlBestsellers, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($urlBestsellers, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $id = $item["id"];
-    $imgLinkIconCard = $item["imgLinkIconCard"];
-    $vendorCodeBestseller = $item["vendorCode"];
-    $nameComponent = $item["nameComponent"];
-    $quantityBestseller = $item["quantity"];
-    $linkPage = $item["linkPage"];
-    $priceBestseller = $item["price"];
-    $basketImgPath = $item["basketImgPath"];
-    $guidId = $item["guid"];
-    $manufacturer = $item["manufacturer"];
-}
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
 
-?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -153,7 +153,7 @@ foreach ($data as $item) {
                 <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/TM3DI16/TM3DI16_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img class="discription-product__img" src="../img/img-product/TM3AI8/TM3AI8_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">

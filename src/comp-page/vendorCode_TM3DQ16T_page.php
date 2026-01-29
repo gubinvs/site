@@ -1,30 +1,32 @@
 <?php
-include "../php/class/api_Connector.php";
+    include "../php/class/api_Connector.php";
 
-$article = "TM3DQ16T"; // Замените на нужный артикул
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "TM3DQ16T"; // Замените на нужный артикул
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
+    foreach ($data as $item) {
+        $price = $item["price"];
+        $quantity = $item["quantity"];
+        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+    }
+
+    $hasPrice = is_numeric($price) && $price > 0;
 
 ?>
 
@@ -35,38 +37,83 @@ foreach ($data as $item) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TM3DQ16T Schneider Electric — дискретный модуль расширения 16 DO <?php if ($hasPrice) echo "по цене $price RUB"; ?></title>
+
+    <meta name="description" content="TM3DQ16T Schneider Electric — дискретный модуль расширения TM3, 16 транзисторных выходов (источник). Купить с доставкой по России <?php if ($hasPrice) echo "по цене $price RUB"; ?>. Характеристики, документация, гарантия.">
+
+    <meta name="keywords" content="TM3DQ16T, Schneider Electric TM3DQ16T, TM3, модуль расширения PLC, дискретные выходы, транзисторный модуль, Modicon M241">
+
+    <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm3dq16t-diskretnyy-modul-rasshireniya-16do.php">
+
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="Страница с описанием товара : TM3DQ16T, SE Дискретный модуль расширения ТМ3 16 выходов транзисторный источник, Schneider Electric">
-    <title>TM3DQ16T, SE Дискретный модуль расширения ТМ3 16 выходов транзисторный источник, Schneider Electric</title>
-</head>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m, e, t, r, i, k, a) {
-        m[i] = m[i] || function() {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-            if (document.scripts[j].src === r) {
-                return;
-            }
-        }
-        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    ym(98501628, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true
-    });
-</script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="" /></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="TM3DQ16T Schneider Electric — модуль расширения 16 DO">
+    <meta property="og:description" content="Купить TM3DQ16T Schneider Electric — дискретный модуль TM3, 16 транзисторных выходов (источник). Доставка по РФ.">
+    <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm3dq16t-diskretnyy-modul-rasshireniya-16do.php">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/TM3DQ16T/TM3DQ16T_big_1920.jpg">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Schneider Electric TM3DQ16T",
+        "image": "https://encomponent.ru/img/img-product/TM3DQ16T/TM3DQ16T_big_1920.jpg",
+        "description": "TM3DQ16T Schneider Electric — дискретный модуль расширения TM3 с 16 транзисторными выходами (источник) для систем промышленной автоматизации.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Schneider Electric"
+        },
+        "sku": "TM3DQ16T",
+        <?php if ($hasPrice): ?>
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "RUB",
+            "price": "<?php echo $price; ?>",
+            "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'; ?>",
+            "url": "https://encomponent.ru/comp-page/schneider-electric-tm3dq16t-diskretnyy-modul-rasshireniya-16do.php"
+        },
+        <?php endif; ?>
+        "seller": {
+            "@type": "Organization",
+            "name": "Компоненты энергии"
+        }
+    }
+    </script>
+</head>
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(98501628, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="@" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
 <body>
     <?php
@@ -76,8 +123,11 @@ foreach ($data as $item) {
     <main>
         <div class="discription-product-section">
             <div class="container">
-                <h1 class="discription-product-section__title NKUPages_h1">TM3DQ16T, SE Дискретный модуль расширения ТМ3 16 выходов транзисторный источник, Schneider Electric</h1>
-                <section class="main-section flex">
+            <h1 class="discription-product-section__title NKUPages_h1">
+                TM3DQ16T Schneider Electric — дискретный модуль расширения TM3, 16 транзисторных выходов (источник)
+            </h1>
+    
+            <section class="main-section flex">
                     <div class="main-section__img-block">
                         <img class="discription-product__img" src="../img/img-product/TM3DQ16T/TM3DQ16T_big_1920.jpg" alt="TM3DQ16T, SE Дискретный модуль расширения ТМ3 16 выходов транзисторный источник, Schneider Electric" class="main-section__img">
                     </div>
@@ -135,16 +185,20 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
-                        <div class="characteristics-block__button-block flex">
-                            <a href="#technical" id="button-link">
-                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
-                            </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
-                            </a>
-                        </div>
+                        <!--Кнопки купить в магазинах-->
+                            <div class="characteristics-block__button-block flex">
+                                <a href="https://www.ozon.ru/product/tm3dq16t-diskretnyy-modul-rasshireniya-tm3-16-diskretnyh-vyhodov-schneider-electric-3264551672/?at=jYtZmRLqKTzowjLWC5R4Bj4C3xoZV3FNr2QxqiPp68X8" id="button-link">
+                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                                </a>
+                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                                </a>
+                            </div>
+                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
+
+                
                 <section class="attention-section">
                     <h2 class="h1-min">Важная информация</h2>
                     <div class="container attention-container">
@@ -161,14 +215,14 @@ foreach ($data as $item) {
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Модули расширения Modicon TM3</b> оснащены удобным механизмом соединения, который упрощает сборку и интеграцию с логическими контроллерами.
-                            Специальный шинный соединитель обеспечивает надёжную передачу данных и питание, обеспечивая бесшовную работу всей системы автоматизации.
+                            <b>Модули расширения Modicon TM3</b> предназначены для быстрого наращивания дискретных и аналоговых каналов в системах автоматизации на базе ПЛК Schneider Electric.
+                            Конструкция модулей предусматривает прямое шинное соединение без дополнительной проводки, что сокращает время монтажа и снижает риск ошибок при установке.
                             <br><br>
                             <b>Преимущества:</b><br>
-                            Повышайте прибыльность и энергоэффективность за счёт масштабируемого управления автоматикой с решениями Modicon. Интуитивно понятное программное обеспечение для оборудования ускоряет внедрение новых технологий и способствует технологическому прогрессу.
+                            Масштабируемая архитектура TM3 позволяет адаптировать систему под конкретную задачу без замены контроллера. Поддержка единой среды программирования упрощает конфигурирование, диагностику и ввод оборудования в эксплуатацию.
                             <br><br>
                             <b>Применение:</b>
-                            Системы человеко-машинного интерфейса (HMI), управление насосным оборудованием и другие задачи автоматизации.
+                            Автоматизация насосных станций, шкафы управления, HMI-системы, а также другие промышленные объекты с распределённой логикой управления.
                         </div>
                     </div>
                 </section>

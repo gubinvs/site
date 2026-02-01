@@ -58,7 +58,6 @@
         $priceBestseller = $item["price"];
         $basketImgPath = $item["basketImgPath"];
         $guidId = $item["guid"];
-        $manufacturer = $item["manufacturer"];
     }
 
 ?>

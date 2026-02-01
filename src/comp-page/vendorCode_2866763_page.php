@@ -1,32 +1,34 @@
 <?php
-include "../php/class/api_Connector.php";
+    include "../php/class/api_Connector.php";
 
-$article = "2866763"; // Замените на нужный артикул
-$titlePage = "2866763, QUINT-PS/1AC/24DC/10 - Phoenix Contact";
-$manufacturer ="Phoenix Contact";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "2866763"; // Замените на нужный артикул
+    $titlePage = "2866763, QUINT-PS/1AC/24DC/10 - Phoenix Contact";
+    $manufacturer = "Phoenix Contact";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
+    foreach ($data as $item) {
+        $price = $item["price"];
+        $quantity = $item["quantity"];
+        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+    }
+
+    $canonicalUrl = 'https://encomponent.ru/comp-page/2866763.php';
 
 ?>
 
@@ -37,41 +39,97 @@ foreach ($data as $item) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="product:price:amount" content="<?php echo $price ?>">
+    <meta property="product:price:currency" content="RUB">
+
+    <!-- 🔹 Иконка и стили -->
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
-    <meta name="description" content="<?php echo 'Страница с описанием товара: ' . $titlePage ?>">
-    <title><?php echo $titlePage ?></title>
-</head>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m, e, t, r, i, k, a) {
-        m[i] = m[i] || function() {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-            if (document.scripts[j].src === r) {
-                return;
-            }
-        }
-        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    ym(98501628, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true
-    });
-</script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="s" /></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+    <!-- 🔹 Базовое SEO -->
+    <title><?php echo $titlePage ?></title>
+    <meta name="description"
+        content="Купить <?php echo $titlePage ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta name="keywords"
+        content="<?php echo $article ?>, <?php echo $manufacturer ?>, промышленное оборудование, источник питания, купить, цена, характеристики">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo $canonicalUrl ?>">
+
+    <!-- 🔹 Open Graph -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="<?php echo $titlePage ?>">
+    <meta property="og:description"
+        content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
+    <meta property="og:image"
+        content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
+    <meta property="og:url" content="<?php echo $canonicalUrl ?>">
+    <meta property="og:site_name" content="Компоненты энергии">
+
+    <!-- 🔹 Schema.org Product -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "<?php echo $titlePage ?>",
+            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт.",
+            "sku": "<?php echo $article ?>",
+            "brand": {
+                "@type": "Brand",
+                "name": "<?php echo $manufacturer ?>"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "<?php echo $canonicalUrl ?>",
+                "priceCurrency": "RUB",
+                "price": "<?php echo $price ?>",
+                "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
+                "itemCondition": "https://schema.org/NewCondition"
+            },
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "Phoenix Contact"
+            },
+            "mpn": "2866763",
+            "category": "Industrial Power Supply"
+        }
+    </script>
+
+    <!-- 🔹 Яндекс -->
+    <meta name="yandex-verification" content="26c39d63e5887901">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(98501628, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/98501628" style="position:absolute; left:-9999px;" alt="s" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
 
 <body>
     <?php
+    $color_line_header = $color_line_header ?? null;
     include_once '../php/modules/header.php';
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
@@ -81,7 +139,10 @@ foreach ($data as $item) {
                 <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/2866763/2866763_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img
+                            class="discription-product__img main-section__img"
+                            src="../img/img-product/2866763/2866763_big_1920.jpg"
+                            alt="<?php echo 'Фото товара: ' . $titlePage ?>">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -137,14 +198,53 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
+                        <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
-                            <a href="#technical" id="button-link">
-                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
+                            <a href="https://www.ozon.ru/product/2866763-istochnik-pitaniya-quint-ps-1ac-24dc-10-3482911481/" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
+                        <!--/ Кнопки купить в магазинах-->
+                    </div>
+                </section>
+                <section class="feedback-section" id="feedback">
+                    <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
+                    <div class="container feedback-section__container invoice-request-section__container">
+                        <div class="feedback-section__title-block">
+                            <h2 class="title-block__title">
+                                Запросите счет у менеджера<br> по работе с клиентами</h2>
+                            <div class="title-fon-text invoice-request-section__title-fon-text"></div>
+                            <div class="title-block__discr">
+                                Для этого необходимо заполнить форму, а специалист свяжется с вами,
+                                оформит счет и согласует удобный способ доставки!
+                            </div>
+                        </div>
+                        <form class="feedback-section__form" action="../php/invoice-request.php" method="POST">
+                            <input
+                                class="feedback-section__input feedback-section__input_name"
+                                type="hidden"
+                                name="vendorCode"
+                                value="<?php echo htmlspecialchars($article); ?>"
+                                required>
+                            <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
+                            <input type="hidden" name="site" value="Карточка товара">
+                            <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
+                            <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
+                            <input class="feedback-section__input feedback-section__input_email" type="text" placeholder="ИНН(ОГРН) или ОГРНИП" name="inn" required>
+                            <input type="text" name="robot" style="display: none" class="feedback-section__input_none">
+                            <textarea class="feedback-section__input feedback-section__input_textarea" placeholder="Дополнительная информация" name="text" required></textarea>
+                            <button class="feedback-section__button" type="submit">Запросить счет</button>
+                            <div class="check-box">
+                                <input type="checkbox" name="chekBox" required>
+                                <a class="check-box__input check-box__pp-page" href="https://encomponent.ru/pp-page.html">
+                                    Даю согласие на обработку персональных данных
+                                </a>
+                                <input type="hidden" name="active-form" value="massage">
+                            </div>
+                        </form>
                     </div>
                 </section>
                 <section class="attention-section">
@@ -163,11 +263,11 @@ foreach ($data as $item) {
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Источники питания QUINT POWER</b> обладают широким набором функций, обеспечивающих высокую эффективность и надежность. 
-                            Технология SFB (Selective Fuse Breaking) позволяет эффективно защищать установки, быстро инициируя магнитное срабатывание 
+                            <b>Источники питания QUINT POWER</b> обладают широким набором функций, обеспечивающих высокую эффективность и надежность.
+                            Технология SFB (Selective Fuse Breaking) позволяет эффективно защищать установки, быстро инициируя магнитное срабатывание
                             линейного защитного автомата при 6-кратном номинальном токе.<br><br>
 
-                            Предупредительный контроль помогает обнаруживать критические рабочие состояния, позволяя предпринимать необходимые меры до 
+                            Предупредительный контроль помогает обнаруживать критические рабочие состояния, позволяя предпринимать необходимые меры до
                             возникновения неисправности и обеспечивая высокую степень готовности оборудования.
                             <br><br>
                             Для надежного запуска высоких нагрузок используется статическое резервирование мощности POWER BOOST.
@@ -222,13 +322,12 @@ foreach ($data as $item) {
                                     <div class="specifications-item__name grey">Номинальный ток, А</div>
                                     <div class="specifications-item__tech grey">63</div>
                                 </div>
-                      
-               
+
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name">Тип монтажа</div>
                                     <div class="specifications-item__tech">Дин рейка</div>
                                 </div>
-                    
+
                                 <div class="technical-specifications-list__item">
                                     <div class="specifications-item__name grey">Вес нетто, кг</div>
                                     <div class="specifications-item__tech grey">0,165</div>
@@ -249,63 +348,46 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
-                <section class="documents-section" id="documents">
+                <section class="product-additional-info" style="margin-bottom: 40px;">
                     <div class="container">
-                        <div class="attention-section__title-block technical-specifications-section__title-block flex">
-                            <div class="attention-section-title-icon">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" fill="#F3DE09" stroke="#1D252C" />
-                                    <line x1="9" y1="12" x2="23" y2="12" stroke="black" stroke-width="2" />
-                                    <line x1="11" y1="18" x2="21" y2="18" stroke="black" stroke-width="2" />
-                                </svg>
-                            </div>
-                            <div class="attention-section-title__title">Документация</div>
-                        </div>
-                        <!-- <div class="technical-specifications-section__table mb-40">
-                            <div class="technical-specifications-list">
-                                <div class="technical-specifications-list__item">
-                                    <div class="equipment-section-item">
-                                        <div class="discription-section-right-block__download-file flex">
-                                            <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/Schneider_Electric_АВ-iC60-Acti9_A9V41263.pdf" class="download-file__list-link">Технические данные (PDF, 256КБ)</a>
-                                        </div>
-                                    </div>
-                                    <div class="equipment-section-item">
-                                        <div class="discription-section-right-block__download-file flex">
-                                            <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/BBV4097000-02.pdf" class="download-file__list-link">Инструкция (PDF, 2,7MБ)</a>
-                                        </div>
-                                    </div>
-                                    <div class="equipment-section-item">
-                                        <div class="discription-section-right-block__download-file flex">
-                                            <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/CA9UG000E.pdf" class="download-file__list-link">Руководство пользователя (PDF, 1,4MБ)</a>
-                                        </div>
-                                    </div>
-                                    <div class="equipment-section-item">
-                                        <div class="discription-section-right-block__download-file flex">
-                                            <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/catalog_Acti9_MKP-CAT-ACTI9.pdf" class="download-file__list-link">Каталог (PDF, 79,9MБ)</a>
-                                        </div>
-                                    </div>
-                                    <div class="equipment-section-item">
-                                        <div class="discription-section-right-block__download-file flex">
-                                            <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/MCADFD0001497_3D-CAD.zip" class="download-file__list-link">CAD файлы (ZIP, 361KБ)</a>
-                                        </div>
-                                    </div>
-                                    <div class="equipment-section-item">
-                                        <div class="discription-section-right-block__download-file flex">
-                                            <div class="download-file__list-icon"></div>
-                                            <a href="../files/A9V41263/ЕАЭС_RU_С-FR.АБ53.В.06040_22.pdf" class="download-file__list-link">Сертификат EAЭС (PDF, 1,9MБ)</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h2>Описание и преимущества 2866763 QUINT-PS/1AC/24DC/10 Phoenix Contact</h2>
+
+                        <p>
+                            Источник питания <strong>2866763 QUINT-PS/1AC/24DC/10 Phoenix Contact</strong>
+                            относится к промышленной серии <strong>QUINT POWER</strong> и предназначен
+                            для надежного электропитания систем автоматизации, шкафов управления,
+                            контроллеров, датчиков и исполнительных механизмов.
+                            Устройство рассчитано на монтаж на <strong>DIN-рейку</strong> и
+                            обеспечивает стабилизированное выходное напряжение <strong>24 В DC</strong>
+                            при токе до <strong>10 А</strong>.
+                        </p>
+
+                        <p>
+                            Источник питания поддерживает широкий диапазон входных напряжений
+                            <strong>85–264 В AC</strong>, что позволяет использовать его
+                            в различных промышленных сетях без дополнительной настройки.
+                            Номинальная выходная мощность составляет <strong>240 Вт</strong>,
+                            что делает модель оптимальной для питания оборудования с высокими
+                            пусковыми токами.
+                        </p>
+
+                        <p>
+                            Ключевым преимуществом модели является технология
+                            <strong>SFB (Selective Fuse Breaking)</strong>, обеспечивающая
+                            быстрое и селективное отключение неисправных цепей.
+                            Дополнительно реализована функция <strong>POWER BOOST</strong>,
+                            позволяющая кратковременно увеличивать выходную мощность
+                            для надежного запуска нагрузок.
+                        </p>
+
+                        <p>
+                            Источник питания <strong>2866763 Phoenix Contact</strong>
+                            отличается высокой эффективностью, устойчивостью к перегрузкам
+                            и длительным сроком службы, что делает его отличным выбором
+                            для ответственных промышленных применений.
+                        </p>
                     </div>
-                </section> -->
-            </div>
+                </section>
     </main>
     <?php include "../php/modules/footer.php" ?>
 </body>

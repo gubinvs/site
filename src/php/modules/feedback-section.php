@@ -1,5 +1,5 @@
 <section class="feedback-section" id="feedback">
-    <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c ООО "ПромТрансСервис" </h2>
+    <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
     <div class="container feedback-section__container">
         <div class="feedback-section__title-block">
             <h2 class="title-block__title">

@@ -1,64 +1,64 @@
 <?php
-    include "../php/class/api_Connector.php";
+        include "../php/class/api_Connector.php";
 
-    $article = "TM3AI8"; // Замените на нужный артикул
-    $titlePage = "TM3AI8, Аналог Модуль расширения ТМ3-8 аналоговых входов";
-    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+        $article = "TM3AI8"; // Замените на нужный артикул
+        $titlePage = "TM3AI8, Аналог Модуль расширения ТМ3-8 аналоговых входов";
+        $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
+        $options = [
+            "http" => [
+                "method" => "GET",
+                "header" => "Content-Type: application/json"
+            ]
+        ];
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
+        $context = stream_context_create($options);
+        $response = file_get_contents($url, false, $context);
 
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+        if ($response === FALSE) {
+            die("Ошибка запроса");
+        }
 
-    $data = json_decode($response, true);
+        $data = json_decode($response, true);
 
-    foreach ($data as $item) {
-        $price = $item["price"];
-        $quantity = $item["quantity"];
-        //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-    }
+        foreach ($data as $item) {
+            $price = $item["price"];
+            $quantity = $item["quantity"];
+            //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
+        }
 
-    $urlBestsellers = $apiServer . "/api/Bestsellers/";
+        $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
+        $options = [
+            "http" => [
+                "method" => "GET",
+                "header" => "Content-Type: application/json"
+            ]
+        ];
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($urlBestsellers, false, $context);
+        $context = stream_context_create($options);
+        $response = file_get_contents($urlBestsellers, false, $context);
 
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+        if ($response === FALSE) {
+            die("Ошибка запроса");
+        }
 
-    $data = json_decode($response, true);
+        $data = json_decode($response, true);
 
-    foreach ($data as $item) {
-        $id = $item["id"];
-        $imgLinkIconCard = $item["imgLinkIconCard"];
-        $vendorCodeBestseller = $item["vendorCode"];
-        $nameComponent = $item["nameComponent"];
-        $quantityBestseller = $item["quantity"];
-        $linkPage = $item["linkPage"];
-        $priceBestseller = $item["price"];
-        $basketImgPath = $item["basketImgPath"];
-        $guidId = $item["guid"];
-        $manufacturer = $item["manufacturer"];
-    }
+        foreach ($data as $item) {
+            $id = $item["id"];
+            $imgLinkIconCard = $item["imgLinkIconCard"];
+            $vendorCodeBestseller = $item["vendorCode"];
+            $nameComponent = $item["nameComponent"];
+            $quantityBestseller = $item["quantity"];
+            $linkPage = $item["linkPage"];
+            $priceBestseller = $item["price"];
+            $basketImgPath = $item["basketImgPath"];
+            $guidId = $item["guid"];
+            $manufacturer = $item["manufacturer"];
+        }
 
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -153,7 +153,7 @@
                 <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="../img/img-product/TM3AI8/TM3AI8_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img class="discription-product__img" src="https://encomponent.ru/img/img-product/TM3AI8/TM3AI8_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -219,6 +219,43 @@
                             </a>
                         </div>
                         <!--/ Кнопки купить в магазинах-->
+                    </div>
+                </section>
+                <section class="feedback-section" id="feedback">
+                    <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
+                    <div class="container feedback-section__container invoice-request-section__container">
+                        <div class="feedback-section__title-block">
+                            <h2 class="title-block__title">
+                                Запросите счет у менеджера<br> по работе с клиентами</h2>
+                            <div class="title-fon-text invoice-request-section__title-fon-text"></div>
+                            <div class="title-block__discr">
+                                Для этого необходимо заполнить форму, а специалист свяжется с вами,
+                                оформит счет и согласует удобный способ доставки!
+                            </div>
+                        </div>
+                        <form class="feedback-section__form" action="../php/invoice-request.php" method="POST">
+                            <input
+                                class="feedback-section__input feedback-section__input_name"
+                                type="hidden"
+                                name="vendorCode"
+                                value="<?php echo htmlspecialchars($article); ?>"
+                                required>
+                            <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
+                            <input type="hidden" name="site" value="Карточка товара">
+                            <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
+                            <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
+                            <input class="feedback-section__input feedback-section__input_email" type="text" placeholder="ИНН(ОГРН) или ОГРНИП" name="inn" required>
+                            <input type="text" name="robot" style="display: none" class="feedback-section__input_none">
+                            <textarea class="feedback-section__input feedback-section__input_textarea" placeholder="Дополнительная информация" name="text" required></textarea>
+                            <button class="feedback-section__button" type="submit">Запросить счет</button>
+                            <div class="check-box">
+                                <input type="checkbox" name="chekBox" required>
+                                <a class="check-box__input check-box__pp-page" href="https://encomponent.ru/pp-page.html">
+                                    Даю согласие на обработку персональных данных
+                                </a>
+                                <input type="hidden" name="active-form" value="massage">
+                            </div>
+                        </form>
                     </div>
                 </section>
                 <section class="attention-section">
@@ -507,10 +544,10 @@
                         </div>
                     </div>
                 </section>
-                
+
             </div>
     </main>
-<?php include "../php/modules/footer.php" ?>
+    <?php include "../php/modules/footer.php" ?>
 </body>
 
 </html>

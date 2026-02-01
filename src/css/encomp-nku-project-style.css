@@ -904,6 +904,10 @@ header {
   align-items: flex-end;
 }
 
+.invoice-request-section__container {
+  align-items: flex-start;
+}
+
 .title-block__title {
   font-size: 32px;
   line-height: 38px;
@@ -919,6 +923,12 @@ header {
   height: 40px;
   background-color: #F3DE09;
   z-index: -1;
+}
+
+.invoice-request-section__title-fon-text {
+  top: 2px;
+  left: 0px;
+  width: 475px;
 }
 
 .title-block__discr {
@@ -1432,6 +1442,14 @@ header {
   .container {
     width: 1000px;
   }
+
+  .feedback-section__title-block {
+    width: 490px;
+  }
+
+  .title-block__discr {
+    width: 482px;
+  }
   
   .header-logo-block {
     margin-right: 17px;
@@ -1476,7 +1494,7 @@ header {
   }
 
   .title-fon-text {
-    top: 155px;
+    top: 0px;
   }
 
   .production-main-section__title-block {
@@ -1566,9 +1584,17 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
- 
+  .container {
+    width: 960px;
+    min-width: 960px;
+  }
+
   .main-section__img {
     max-height: 280px;
+  }
+
+  .feedback-section__title-block {
+    width: 540px;
   }
 
   .main-section__img-block {
@@ -1585,11 +1611,6 @@ header {
 
   .please-note-section__card-product {
     flex-wrap: wrap;
-  }
-
-  .container {
-    width: 960px;
-    min-width: 960px;
   }
 
   .msip-block-content {
@@ -1660,6 +1681,16 @@ header {
 }
 
 @media only screen and (max-width: 960px) {
+
+  .feedback-section__container {
+    flex-direction: column;
+  }
+
+  .title-block__discr {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
   .button-characteristics__all {
     width: 260px;
   }
@@ -1723,7 +1754,7 @@ header {
   }
 
   .feedback-section__title-block {
-    width: 504px;
+    width: 100%;
   }
 
   .title-block__title {
@@ -1731,17 +1762,12 @@ header {
     line-height: 34px;
   }
 
-  .title-block__discr {
-    width: 482px;
-    font-size: 16px;
-  }
-
   .feedback-section__form {
-    width: 296px;
+    width: 100%;
   }
 
   .title-fon-text {
-    top: 232px;
+    top: 0px;
   }
 
   .production-main-section__title-block {
@@ -2151,6 +2177,15 @@ header {
     width: 380px;
     min-width: 380px;
   }
+
+  .feedback-section {
+    margin-bottom: 30px;
+  }
+
+  .NKUPages_h1 {
+    font-size: 19px;
+  }
+
   .main-section__img-block {
     width: 380px;
   }
@@ -2164,7 +2199,7 @@ header {
   }
 
   .attention-section-title__title {
-    font-size: 28px !important;
+    font-size: 24px !important;
   }
 
   .hr {
@@ -2193,14 +2228,8 @@ header {
     font-size: 12px;
   }
 
-    
   .card-component {
     width: 174px;
-  }
-
-  .footer {
-    width: 380px;
-    height: 300px;
   }
 
   .footer-nav {
@@ -2211,4 +2240,29 @@ header {
   .footer-contact {
     padding-left: 0px;
   }
+
+  .invoice-request-section__title-fon-text {
+      top: 2px;
+      left: 0px;
+      width: 329px;
+      height: 34px;
+  }
+
+  .title-block__title {
+      font-size: 22px;
+      margin-bottom: 10px;
+  }
+
+  .title-block__discr {
+      font-size: 14px;
+  }
+
+  .download-file__list-icon {
+    margin-right: 10px;
+  }
+
+  .discription-section-right-block__download-file {
+    margin-bottom: 10px;
+  }
+
 }

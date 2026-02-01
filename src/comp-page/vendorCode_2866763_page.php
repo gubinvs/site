@@ -28,7 +28,38 @@
         //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
     }
 
-    $canonicalUrl = 'https://encomponent.ru/comp-page/2866763.php';
+    $canonicalUrl = 'https://encomponent.ru/comp-page/vendorCode_2866763_page.php';
+
+    $urlBestsellers = $apiServer . "/api/Bestsellers/";
+
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
+
+    $context = stream_context_create($options);
+    $response = file_get_contents($urlBestsellers, false, $context);
+
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
+
+    $data = json_decode($response, true);
+
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
 
 ?>
 
@@ -350,9 +381,9 @@
                 </section>
                 <section class="product-additional-info" style="margin-bottom: 40px;">
                     <div class="container">
-                        <h2>Описание и преимущества 2866763 QUINT-PS/1AC/24DC/10 Phoenix Contact</h2>
+                        <h2 style="margin-bottom: 20px;">Описание и преимущества 2866763 QUINT-PS/1AC/24DC/10 Phoenix Contact</h2>
 
-                        <p>
+                        <p style="margin-bottom: 10px;">
                             Источник питания <strong>2866763 QUINT-PS/1AC/24DC/10 Phoenix Contact</strong>
                             относится к промышленной серии <strong>QUINT POWER</strong> и предназначен
                             для надежного электропитания систем автоматизации, шкафов управления,
@@ -362,7 +393,7 @@
                             при токе до <strong>10 А</strong>.
                         </p>
 
-                        <p>
+                        <p style="margin-bottom: 10px;">
                             Источник питания поддерживает широкий диапазон входных напряжений
                             <strong>85–264 В AC</strong>, что позволяет использовать его
                             в различных промышленных сетях без дополнительной настройки.
@@ -371,7 +402,7 @@
                             пусковыми токами.
                         </p>
 
-                        <p>
+                        <p style="margin-bottom: 10px;">
                             Ключевым преимуществом модели является технология
                             <strong>SFB (Selective Fuse Breaking)</strong>, обеспечивающая
                             быстрое и селективное отключение неисправных цепей.
@@ -380,12 +411,87 @@
                             для надежного запуска нагрузок.
                         </p>
 
-                        <p>
+                        <p style="margin-bottom: 10px;">
                             Источник питания <strong>2866763 Phoenix Contact</strong>
                             отличается высокой эффективностью, устойчивостью к перегрузкам
                             и длительным сроком службы, что делает его отличным выбором
                             для ответственных промышленных применений.
                         </p>
+                    </div>
+                </section>
+                <section class="please-note-section">
+                    <div class="container please-note-section__container">
+                        <h3 class="please-note-section__title">Пользователи выбирают:</h3>
+                        <div class="please-note-section__card-product">
+                            <?php
+                            // форматирование цены (intl extension required)
+                            function formatRub($price)
+                            {
+                                if (!class_exists('NumberFormatter')) {
+                                    return number_format((float)$price, 0, ',', ' ') . ' ₽';
+                                }
+                                $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
+                                $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
+                                return $fmt->formatCurrency($price, 'RUB');
+                            }
+
+                            $noImage = '../../img/free-icon-no-photo-4054617.png';
+                            $count = 0;
+
+                            if (is_array($data) && count($data) > 0) {
+                                foreach ($data as $item) {
+
+                                    if ($count == 4) {
+                                        break;
+                                    }
+
+                                    $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
+                                    $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
+                                    $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
+                                    $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
+                                    $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
+                                    $price = isset($item['price']) ? $item['price'] : 0;
+
+                                    $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
+
+                                    $qtyClass = $quantity === 0
+                                        ? 'delivry-block__quantity delivry-block__quantity_0'
+                                        : 'delivry-block__quantity';
+
+                                    $qtyText = $quantity === 0
+                                        ? 'Под заказ'
+                                        : 'Наличие: ' . $quantity . ' шт.';
+
+                                    echo <<<HTML
+                                            <div class="card-component">
+                                                <div class="card-component__top">
+                                                    <img src="{$img}" class="card-component__img" alt="Фото {$name}">
+                                                    <div class="card-component__vendor">Артикул: {$vendor}</div>
+                                                    <div class="card-component__name">
+                                                        <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-component__bottom">
+                                                    <div class="cc-basket-block__delivry-block">
+                                                        <div class="{$qtyClass}">{$qtyText}</div>
+                                                    </div>
+
+                                                    <div class="card-component__price-block">
+                                                        <div class="card-component__price">{$fmtPrice}</div>
+                                                        <div class="card-component__price-nalog">в т.ч. НДС</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        HTML;
+
+                                    $count++;
+                                }
+                            } else {
+                                echo '<p>Пока нет рекомендаций.</p>';
+                            }
+                            ?>
+                        </div>
                     </div>
                 </section>
     </main>

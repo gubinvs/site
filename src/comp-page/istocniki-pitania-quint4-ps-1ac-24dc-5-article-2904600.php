@@ -131,10 +131,10 @@ foreach ($data as $item) {
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Компоненты энергии",
+            "name": Компоненты энергии»,
             "url": "https://encomponent.ru",
             "logo": "https://encomponent.ru/favicon.svg"
-            
+           
         }
     </script>
 
@@ -237,16 +237,14 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
-                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
-                            <a href="" id="button-link">
-                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                            <a href="#technical" id="button-link">
+                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
                             </a>
                         </div>
-                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
                 <!--Форма заказа счета со страницы товара-->

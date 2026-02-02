@@ -241,16 +241,57 @@ function e($s)
                                 </li>
                             </ul>
                         </div>
+                        <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
-                            <a href="#technical" id="button-link">
-                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
+                            <a href=" " id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
+                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
+                <!--Форма заказа счета со страницы товара-->
+                <section class="feedback-section" id="feedback">
+                    <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
+                    <div class="container feedback-section__container invoice-request-section__container">
+                        <div class="feedback-section__title-block">
+                            <h2 class="title-block__title">
+                                Запросите счет у менеджера<br> по работе с клиентами</h2>
+                            <div class="title-fon-text invoice-request-section__title-fon-text"></div>
+                            <div class="title-block__discr">
+                                Для этого необходимо заполнить форму, а специалист свяжется с вами,
+                                оформит счет и согласует удобный способ доставки!
+                            </div>
+                        </div>
+                        <form class="feedback-section__form" action="../php/invoice-request.php" method="POST">
+                            <input
+                                class="feedback-section__input feedback-section__input_name"
+                                type="hidden"
+                                name="vendorCode"
+                                value="<?php echo htmlspecialchars($article); ?>"
+                                required>
+                            <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
+                            <input type="hidden" name="site" value="Карточка товара">
+                            <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
+                            <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
+                            <input class="feedback-section__input feedback-section__input_email" type="text" placeholder="ИНН(ОГРН) или ОГРНИП" name="inn" required>
+                            <input type="text" name="robot" style="display: none" class="feedback-section__input_none">
+                            <textarea class="feedback-section__input feedback-section__input_textarea" placeholder="Дополнительная информация" name="text" required></textarea>
+                            <button class="feedback-section__button" type="submit">Запросить счет</button>
+                            <div class="check-box">
+                                <input type="checkbox" name="chekBox" required>
+                                <a class="check-box__input check-box__pp-page" href="https://encomponent.ru/pp-page.html">
+                                    Даю согласие на обработку персональных данных
+                                </a>
+                                <input type="hidden" name="active-form" value="massage">
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!--/Форма заказа счета со страницы товара-->
                 <section class="attention-section">
                     <h2 class="h1-min">Важная информация</h2>
                     <div class="container attention-container">

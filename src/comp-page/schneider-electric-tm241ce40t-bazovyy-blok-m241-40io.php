@@ -19,38 +19,38 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $canonical = $scheme . '://' . $host . $path;
 
 
-// --- API ---
-$url = rtrim($apiServer, '/') . '/api/SearchArticle/' . urlencode($article);
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json
-",
-        "timeout" => 10
-    ]
-];
-$context = stream_context_create($options);
-$response = @file_get_contents($url, false, $context);
+    // --- API ---
+    $url = rtrim($apiServer, '/') . '/api/SearchArticle/' . urlencode($article);
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json
+    ",
+            "timeout" => 10
+        ]
+    ];
+    $context = stream_context_create($options);
+    $response = @file_get_contents($url, false, $context);
 
 
-if ($response === FALSE) {
-    error_log("[TM241CE40T] Ошибка API: " . $url);
-    $data = [];
-} else {
-    $data = json_decode($response, true);
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        error_log("[TM241CE40T] JSON ошибка: " . json_last_error_msg());
+    if ($response === FALSE) {
+        error_log("[TM241CE40T] Ошибка API: " . $url);
         $data = [];
+    } else {
+        $data = json_decode($response, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log("[TM241CE40T] JSON ошибка: " . json_last_error_msg());
+            $data = [];
+        }
     }
-}
 
 
-$offers = [];
-$quantity = 0;
-$lowPrice = null;
-$highPrice = null;
-$offerCount = 0;
-$price = 0;
+    $offers = [];
+    $quantity = 0;
+    $lowPrice = null;
+    $highPrice = null;
+    $offerCount = 0;
+    $price = 0;
 
 
 if (is_array($data)) {
@@ -71,20 +71,20 @@ if (is_array($data)) {
 }
 
 
-if (count($offers)) {
-    usort($offers, fn($a, $b) => $a['price'] <=> $b['price']);
-    $lowPrice = $offers[0]['price'];
-    $highPrice = $offers[count($offers) - 1]['price'];
-    $offerCount = count($offers);
-    $price = $lowPrice;
-    $quantity = array_sum(array_column($offers, 'quantity'));
-}
+    if (count($offers)) {
+        usort($offers, fn($a, $b) => $a['price'] <=> $b['price']);
+        $lowPrice = $offers[0]['price'];
+        $highPrice = $offers[count($offers) - 1]['price'];
+        $offerCount = count($offers);
+        $price = $lowPrice;
+        $quantity = array_sum(array_column($offers, 'quantity'));
+    }
 
 
-function e($s)
-{
-    return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
-}
+    function e($s)
+    {
+        return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
+    }
 ?>
 
 <!DOCTYPE html>

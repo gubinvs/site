@@ -1,7 +1,7 @@
 <?php
 include "../../php/class/api_Connector.php";
 
-$article = "LC1D32M7";
+$article = "LC1D32M7C";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
 $options = [
@@ -72,31 +72,31 @@ foreach ($data as $item) {
 
 <head>
     <meta charset='UTF-8'>
-    <title>LC1D32M7 — контактор Schneider Electric 32А | Купить TeSys D</title>
-    <meta name='description' content='LC1D32M7 — электромеханический контактор Schneider Electric серии TeSys D на 32 А с катушкой 220 В AC. 
+    <title>LC1D32M7C — контактор Schneider Electric 32А | Купить TeSys D</title>
+    <meta name='description' content='LC1D32M7C — электромеханический контактор Schneider Electric серии TeSys D на 32 А с катушкой 220 В AC. 
         Применяется для пуска электродвигателей, насосов и вентиляции. Цена: <?php echo $price ?> ₽.'>
-    <meta name='keywords' content='LC1D32M7, контактор 32А, контактор Schneider Electric, LC1D32, контактор 220В, контактор для двигателя, 
+    <meta name='keywords' content='LC1D32M7C, контактор 32А, контактор Schneider Electric, LC1D32, контактор 220В, контактор для двигателя, 
         силовой контактор TeSys D'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D32M7.php'>
+    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_articleLC1D32M7C.php'>
 
     <!-- Open Graph -->
-    <meta property='og:title' content='LC1D32M7 — контактор Schneider Electric 32А | TeSys D'>
-    <meta property='og:description' content='Контактор LC1D32M7 32 А, 220 В AC для управления электродвигателями и промышленными нагрузками.'>
+    <meta property='og:title' content='LC1D32M7C — контактор Schneider Electric 32А | TeSys D'>
+    <meta property='og:description' content='Контактор LC1D32M7C 32 А, 220 В AC для управления электродвигателями и промышленными нагрузками.'>
     <meta property='og:image' content='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png'>
     <meta property='og:type' content='product'>
-    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D32M7.php'>
+    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_articleLC1D32M7C.php'>
 
     <!-- JSON-LD -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "LC1D32M7 Контактор Schneider Electric",
+            "name": "LC1D32M7C Контактор Schneider Electric",
             "image": "https://encomponent.ru/img/img-product/LC1D32M7/LC1D32M7_site.png",
-            "description": "Силовой контактор LC1D32M7 Schneider Electric серии TeSys D. Номинальный ток 32 А, катушка управления 220 В AC.",
-            "sku": "LC1D32M7",
+            "description": "Силовой контактор LC1D32M7C Schneider Electric серии TeSys D. Номинальный ток 32 А, катушка управления 220 В AC.",
+            "sku": "LC1D32M7C",
             "brand": {
                 "@type": "Brand",
                 "name": "Schneider Electric"
@@ -156,7 +156,7 @@ foreach ($data as $item) {
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D32M7 — Электромеханический контактор Schneider Electric</h1>
+                <h1 class='discription-product-section__title NKUPages_h1'>LC1D32M7C — Электромеханический контактор Schneider Electric</h1>
 
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
@@ -166,8 +166,8 @@ foreach ($data as $item) {
 
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D32M7
-                                <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_articleLC1D32M7C.php">(LC1D32M7C)</a>
+                            <h6 class='article-name'>LC1D32M7C
+                                <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D32M7.php">(LC1D32M7)</a>
                             </h6>
                         </div>
                         <hr>
@@ -212,7 +212,7 @@ foreach ($data as $item) {
                         </div>
                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
-                            <a href="https://www.ozon.ru/product/lc1d32m7-kontaktor-schneider-electric-3430344861/?oos_search=false" id="button-link">
+                            <a href="https://www.ozon.ru/product/lc1d32m7c-kontaktor-schneider-electric-tesys-d-lc1d32m7c-32-a-universalnaya-katushka-240-v-ac-3498147942/" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
@@ -277,7 +277,7 @@ foreach ($data as $item) {
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                            <b>Контактор LC1D32M7 Schneider Electric</b> — это надёжный силовой контактор серии
+                            <b>Контактор LC1D32M7C Schneider Electric</b> — это надёжный силовой контактор серии
                             <b>TeSys D</b>, предназначенный для управления трёхфазными электродвигателями
                             и промышленными силовыми нагрузками.
 
@@ -287,9 +287,10 @@ foreach ($data as $item) {
                             НКУ и распределительных щитах без дополнительного оборудования.
 
                             <br><br>
-                            LC1D32M7 применяется для пуска и остановки насосов, вентиляторов,
-                            компрессоров, конвейеров и другого промышленного оборудования,
-                            где требуется стабильная и долговечная коммутация цепей переменного тока.
+                            Обозначение <b>«C» в конце артикула LC1D32M7C</b> указывает на версию изделия,
+                            предназначенную для <b>китайского рынка</b>. Электрические и эксплуатационные
+                            характеристики контактора полностью соответствуют базовой модели LC1D32M7,
+                            различия касаются маркировки и набора международных сертификатов.
                         </div>
                     </div>
                 </section>
@@ -486,8 +487,8 @@ foreach ($data as $item) {
         </div>
         <!-- LSI -->
         <p style="font-size:0;line-height:0">
-            LC1D32M7 контактор 32А 220В купить Schneider Electric TeSys D
-            контактор для электродвигателя цена характеристики
+            LC1D32M7C контактор 220В 32А  купить TeSys D Schneider Electric 
+            контактор для электродвигателя цена характеристики наличие
         </p>
     </main>
     <?php include '../../php/modules/footer.php'; ?>

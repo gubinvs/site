@@ -1,7 +1,7 @@
 <?php
     include "../../php/class/api_Connector.php";
 
-    $article = "LC1D25M7";
+    $article = "LC1D25M7C";
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
     $options = [
         "http" => [
@@ -71,30 +71,33 @@
 
 <head>
     <meta charset='UTF-8'>
-    <title>LC1D25M7, Электромеханический контактор - Schneider Electric | Компоненты энергии</title>
-    <meta name='description' content='LC1D25M7 — это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D, который можно купить на сайте Компоненты энергии. Продлагаем его по цене:  <?php echo $price ?> RUB.'>
-    <meta name='keywords' content='LC1D25M7 — контактор Schneider Electric для управления двигателями'>
+    <title>LC1D25M7C, Электромеханический контактор - Schneider Electric | Компоненты энергии</title>
+    <meta name='description' content='LC1D25M7C — это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией 
+        Schneider Electric в серии TeSys D, который можно купить на сайте Компоненты энергии. Продлагаем его по цене:  <?php echo $price ?> RUB.'>
+    <meta name='keywords' content='LC1D25M7C — контактор Schneider Electric для управления двигателями'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
-    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php'>
+    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D25M7C.php'>
     <!--Open Graph-->
-    <meta property='og:title' content='LC1D18M7, Электромеханический контактор Schneider Electric продается на сайте компоненты энергии, его артикул LC1D18M7 — купить можно по цене <?php echo $price ?> ₽'>
-    <meta property='og:description' content='LC1D18M7 это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>
+    <meta property='og:title' content='LC1D18M7C, Электромеханический контактор Schneider Electric продается на сайте компоненты энергии, его артикул LC1D18M7C — 
+        купить можно по цене <?php echo $price ?> ₽'>
+    <meta property='og:description' content='LC1D18M7C это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией 
+        Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>
     <meta property='og:image' content='https://encomponent.ru/img/img-product/LC1D25M7/LC1D25M7_Image_1500_2.jpg'>
     <meta property='og:type' content='product'>
-    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php'>
+    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D25M7C.php'>
     <!-- JSON-LD Product schema -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "LC1D25M7, Электромеханический контактор - Schneider Electric",
+            "name": "LC1D25M7C, Электромеханический контактор - Schneider Electric",
             "image": "https://encomponent.ru/img/img-product/LC1D25M7/LC1D25M7_Image_1500_2.jpg",
-            "description": "LC1D25M7 это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.",
-            "sku": "LC1D25M7",
+            "description": "LC1D25M7C это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.",
+            "sku": "LC1D25M7C",
             "brand": {
                 "@type": "Brand",
                 "name": "Schneider Electric"
@@ -104,7 +107,7 @@
                 "price": <?php echo number_format($price, 2, '.', ''); ?>,
                 "priceCurrency": "RUB",
                 "availability": "<?php echo ($quantityBestseller > 0) ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"; ?>",
-                "url": "https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php",
+                "url": "https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D25M7C.php",
                 "inventoryLevel": {
                     "@type": "QuantitativeValue",
                     "value": <?php echo $quantityBestseller; ?>
@@ -157,7 +160,7 @@
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D25M7, Электромеханический контактор - Schneider Electric</h1>
+                <h1 class='discription-product-section__title NKUPages_h1'>LC1D25M7C, Электромеханический контактор - Schneider Electric</h1>
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
                         <img src='https://encomponent.ru/img/img-product/LC1D25M7/LC1D25M7_Image.jpg' alt='Изображен Электромеханический контактор Schneider Electric ' class='discription-product__img main-section__img'>
@@ -165,7 +168,7 @@
                     <div class='main-section__discription'>
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D25M7 <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D25M7C.php"> (LC1D25M7C)</a></h6>
+                            <h6 class='article-name'>LC1D25M7C <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php"> (LC1D25M7)</a></h6>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
@@ -242,7 +245,7 @@
                         </div>
                         <!--Кнопки купить в магазинах-->
                             <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/lc1d25m7-kontaktor-schneider-electric-3234055868/" id="button-link">
+                                <a href="https://www.ozon.ru/product/3502482205/" id="button-link">
                                     <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                                 </a>
                                 <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
@@ -307,7 +310,7 @@
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                            <b>Контактор LC1D25M7 Schneider Electric</b> из серии <b>TeSys D</b> предназначен
+                            <b>Контактор LC1D25M7C Schneider Electric</b> из серии <b>TeSys D</b> предназначен
                             для управления электродвигателями и промышленными нагрузками средней мощности.
 
                             <br><br>
@@ -317,6 +320,10 @@
                             Имеет 3 нормально разомкнутых силовых контакта и встроенные
                             вспомогательные контакты <b>1 NO + 1 NC</b>, подходит для пуска двигателей,
                             сигнализации и автоматизации.
+
+                            <br><br>
+                            Суффикс <b>«C»</b> обозначает версию для <b>китайского рынка</b>, при этом
+                            электрические характеристики совпадают с базовой моделью.
 
                             <br><br>
                             Поддерживает рабочее напряжение до <b>690 В AC</b>, монтаж на DIN-рейку или панель.

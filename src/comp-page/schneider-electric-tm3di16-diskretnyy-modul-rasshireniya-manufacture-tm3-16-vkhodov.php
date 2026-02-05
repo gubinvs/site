@@ -1,31 +1,40 @@
 <?php
-include "../php/class/api_Connector.php";
+    include "../php/class/api_Connector.php";
 
-$article = "TM3DI16"; // Замените на нужный артикул
-$titlePage = "TM3DI16, Дискретный модуль расширения ТМ3-16 входов, Schneider Electric";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "TM3DI16"; // Замените на нужный артикул
+    $titlePage = "TM3DI16, Дискретный модуль расширения ТМ3-16 входов, Schneider Electric";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
+    $product = null;
 
-foreach ($data as $item) {
-    $price = $item["price"];
-    $quantity = $item["quantity"];
-    //echo "ID: " . $item["id"] . ", Name: " . $item["name"] . ", Price: " . $item["price"] . ", Quantity: " . $item["quantity"] . "<br>";
-}
+    if (is_array($data)) {
+        foreach ($data as $item) {
+            if (
+                trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+            ) {
+                $product = $item;
+                break;
+            }
+        }
+    }
+
+    $price    = $product['price']    ?? 0;
+    $quantity = $product['quantity'] ?? 0;
 
 ?>
 

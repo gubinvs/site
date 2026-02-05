@@ -1,71 +1,40 @@
 <?php
-        include "../php/class/api_Connector.php";
+include "../../php/class/api_Connector.php";
 
-        $article = "TM3AI8"; // Замените на нужный артикул
-        $titlePage = "TM3AI8, Аналог Модуль расширения ТМ3-8 аналоговых входов";
-        $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+$article = "TM3DI8"; // Замените на нужный артикул
+$titlePage = "TM3DI8, Дискретный модуль расширения ТМ3-8 входов, Schneider Electric";
+$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-        $options = [
-            "http" => [
-                "method" => "GET",
-                "header" => "Content-Type: application/json"
-            ]
-        ];
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
 
-        $context = stream_context_create($options);
-        $response = file_get_contents($url, false, $context);
+$context = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
 
-        if ($response === FALSE) {
-            die("Ошибка запроса");
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
+
+$data = json_decode($response, true);
+$product = null;
+
+if (is_array($data)) {
+    foreach ($data as $item) {
+        if (
+            trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+        ) {
+            $product = $item;
+            break;
         }
+    }
+}
 
-        $data = json_decode($response, true);
-        $product = null;
-
-        if (is_array($data)) {
-            foreach ($data as $item) {
-                if (
-                    trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
-                ) {
-                    $product = $item;
-                    break;
-                }
-            }
-        }
-
-        $price    = $product['price']    ?? 0;
-        $quantity = $product['quantity'] ?? 0;
-
-        $urlBestsellers = $apiServer . "/api/Bestsellers/";
-
-        $options = [
-            "http" => [
-                "method" => "GET",
-                "header" => "Content-Type: application/json"
-            ]
-        ];
-
-        $context = stream_context_create($options);
-        $response = file_get_contents($urlBestsellers, false, $context);
-
-        if ($response === FALSE) {
-            die("Ошибка запроса");
-        }
-
-        $data = json_decode($response, true);
-
-        foreach ($data as $item) {
-            $id = $item["id"];
-            $imgLinkIconCard = $item["imgLinkIconCard"];
-            $vendorCodeBestseller = $item["vendorCode"];
-            $nameComponent = $item["nameComponent"];
-            $quantityBestseller = $item["quantity"];
-            $linkPage = $item["linkPage"];
-            $priceBestseller = $item["price"];
-            $basketImgPath = $item["basketImgPath"];
-            $guidId = $item["guid"];
-            $manufacturer = $item["manufacturer"];
-        }
+$price    = $product['price']    ?? 0;
+$quantity = $product['quantity'] ?? 0;
 
 ?>
 
@@ -77,22 +46,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
+    <link rel="stylesheet" href="https://encomponent.ru/css/encomp-nku-project-style.css" media="all">
 
     <!-- 🔹 Базовое SEO -->
     <title><?php echo $titlePage ?></title>
     <meta name="description" content="Купить <?php echo $titlePage ?>. Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
     <meta name="keywords" content="<?php echo $article ?>, <?php echo $manufacturer ?>, модуль расширения, источник питания, купить, цена, характеристики">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php">
+    <link rel="canonical" href="https://encomponent.ru/products/schneider/schneider-electric-tm3di8-diskretnyy-modul-rasshireniya-manufacture-tm3-8-vkhodov.php">
 
     <!-- 🔹 Open Graph для соцсетей -->
     <meta property="og:type" content="product">
     <meta property="og:title" content="<?php echo $titlePage ?>">
     <meta property="og:description" content="Цена: <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии: <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.">
-    <meta property="og:image" content="https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg">
-    <meta property="og:url" content="https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php">
-    <meta property="og:site_name" content="Компоненты энергии">
+    <meta property="og:image" content="https://encomponent.ru/img/img-product/TM3DI16/TM3DI16_big_1920.jpg">
+    <meta property="og:url" content="https://encomponent.ru/products/schneider/schneider-electric-tm3di8-diskretnyy-modul-rasshireniya-manufacture-tm3-8-vkhodov.php">
+    <meta property="og:site_name" content="Encomponent">
 
     <!-- 🔹 Schema.org — структурированные данные -->
     <script type="application/ld+json">
@@ -100,8 +69,7 @@
             "@context": "https://schema.org/",
             "@type": "Product",
             "name": "<?php echo $titlePage ?>",
-            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
-            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.",
+            "image": "https://encomponent.ru/img/img-product/TM3DI16/TM3DI16_big_1920.jpg",
             "sku": "<?php echo $article ?>",
             "brand": {
                 "@type": "Brand",
@@ -109,12 +77,12 @@
             },
             "offers": {
                 "@type": "Offer",
-                "url": "https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php",
                 "priceCurrency": "RUB",
                 "price": "<?php echo $price ?>",
                 "availability": "<?php echo $quantity > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>",
-                "itemCondition": "https://schema.org/NewCondition"
-            }
+                "url": "https://encomponent.ru/products/schneider/schneider-electric-tm3di8-diskretnyy-modul-rasshireniya-manufacture-tm3-8-vkhodov.php"
+            },
+            "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>."
         }
     </script>
 
@@ -153,7 +121,7 @@
 <body>
     <?php
     $color_line_header = $color_line_header ?? null;
-    include_once '../php/modules/header.php';
+    include_once '../../php/modules/header.php';
     error_reporting(0); // Отключение информации об ошибках на странице
     ?>
     <main>
@@ -162,7 +130,7 @@
                 <h1 class="discription-product-section__title NKUPages_h1"><?php echo $titlePage ?></h1>
                 <section class="main-section flex">
                     <div class="main-section__img-block">
-                        <img class="discription-product__img" src="https://encomponent.ru/img/img-product/TM3AI8/TM3AI8_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
+                        <img class="discription-product__img" src="https://encomponent.ru/img/img-product/TM3DI16/TM3DI16_big_1920.jpg" alt=<?php echo 'Фото товара: ' . $titlePage ?> class="main-section__img">
                     </div>
                     <div class="main-section__discription">
                         <div class="article-block flex">
@@ -194,33 +162,33 @@
                             <div class="warehouse-item-quantity__discr">шт.</div>
                         </div>
                         <div class="characteristics-block">
-                            <div class="characteristics-block__title">Основные характеристики:</div>
+                            <div class="characteristics-block__title">Ключевые параметры:</div>
                             <ul class="characteristics-block__list">
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Производитель:</div>
+                                    <div class="characteristics-item__title">Бренд:</div>
                                     <div class="characteristics-item__discr">Schneider Electric</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Серия</div>
-                                    <div class="characteristics-item__discr">OEM ПЛК Modicon</div>
+                                    <div class="characteristics-item__title">Линейка оборудования:</div>
+                                    <div class="characteristics-item__discr">Modicon (OEM-контроллеры)</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Высота, мм</div>
+                                    <div class="characteristics-item__title">Габарит по высоте, мм:</div>
                                     <div class="characteristics-item__discr">90</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Глубина, мм</div>
-                                    <div class="characteristics-item__discr">70</div>
+                                    <div class="characteristics-item__title">Монтажная глубина, мм:</div>
+                                    <div class="characteristics-item__discr">84,6</div>
                                 </li>
                                 <li class="characteristics-block__item flex">
-                                    <div class="characteristics-item__title">Ширина, мм</div>
-                                    <div class="characteristics-item__discr">23,6</div>
+                                    <div class="characteristics-item__title">Габаритная ширина, мм:</div>
+                                    <div class="characteristics-item__discr">27,4</div>
                                 </li>
                             </ul>
                         </div>
                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
-                            <a href="https://www.ozon.ru/product/tm3ai8-modul-rasshireniya-tm3-8-analogovyh-vhodov-3142772672/?at=pZtp3WgLGc3Do0Y4sOqqDEnu0jj6BPuRDlJvlsRLg9N2" id="button-link">
+                            <a href="https://www.ozon.ru/product/3502873498/" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
@@ -285,21 +253,14 @@
                         </div>
                         <hr class="hr">
                         <div class="attention-section__discription">
-                            <b>Modicon TM3</b> - это система ввода/вывода EcoStruxure Machine. От проектирования и разработки до ввода в эксплуатацию и технического обслуживания, EcoStruxure Machine Expert - это комплексное решение для машиностроения, дающее преимущества на протяжении всего жизненного цикла оборудования.
-                            <br>
-                            <b>Modicon TM3</b> расширяет возможности логических контроллеров Modicon M221, M241, M251 и M262 и предлагает возможность дистанционного размещения некоторых модулей Modicon TM3 в корпусе или другом шкафу.
-                            <br>
-                            <b>Modicon TM3</b> включают 4 типа шинных соединителей, обеспечивающих возможность создания распределенных "островов" модулей ввода/вывода, управляемых логическим контроллером через Ethernet/IP, Modbus TCP, последовательную линию Modbus или шину CANopen Fieldbus.
-                            <br>
-                            <b>Система Modicon TM3</b> включает в себя функциональные защитные модули, специально предназначенные для обеспечения встроенной безопасности оборудования. Они управляют аварийными остановами, защитными выключателями, световыми завесами и сенсорными ковриками.
-
-                            <ul>
-                                <li>Цифровые модули ввода/вывода для создания конфигураций с использованием до 264 цифровых вводов/выводов.</li>
-                                <li>Аналоговые модули ввода/вывода для создания конфигураций с использованием до 114 аналоговых вводов/выводов.</li>
-                                <li>Экспертные модули для управления пускателями двигателей TeSys, которые упрощают подключение устройств управления благодаря соединениям с помощью кабелей RJ45.</li>
-                                <li>Модули расширения для удаленных модулей в оболочке или другом шкафу (на расстоянии до 5 метров) с помощью системы расширения шины.</li>
-                                <li>Функциональные защитные модули, упрощающие проводные соединения, сконфигурированные в программном обеспечении EcoStruxure Machine Expert - Basic.</li>
-                            </ul>
+                            <b>Модули расширения Modicon TM3</b> разработаны с учётом быстрой и удобной установки: продуманный механизм стыковки позволяет без лишних усилий подключать их к логическим контроллерам.
+                            Встроенный шинный интерфейс гарантирует стабильную передачу данных и питание всех модулей, обеспечивая согласованную и надёжную работу системы автоматизации.
+                            <br><br>
+                            <b>Преимущества:</b><br>
+                            Решения Modicon помогают повышать производительность и снижать энергозатраты за счёт гибкого масштабирования управляющих функций. Понятная и логичная среда программирования сокращает время ввода оборудования в эксплуатацию и облегчает внедрение современных автоматизированных процессов.
+                            <br><br>
+                            <b>Области применения:</b>
+                            Панели оператора и HMI-системы, управление насосами, а также широкий спектр задач промышленной автоматизации.
                         </div>
                     </div>
                 </section>
@@ -323,107 +284,162 @@
                         <div class="technical-specifications-section__table">
                             <ul class="technical-specifications-list">
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Артикул производителя</div>
+                                    <div class="specifications-item__name grey">Заводской артикул</div>
                                     <div class="specifications-item__tech grey"><?php echo $article ?></div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Производитель</div>
+                                    <div class="specifications-item__name">Изготовитель</div>
                                     <div class="specifications-item__tech">Schneider Electric</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Серия</div>
-                                    <div class="specifications-item__tech grey">OEM ПЛК Modicon</div>
+                                    <div class="specifications-item__name grey">Семейство устройств</div>
+                                    <div class="specifications-item__tech grey">Modicon (OEM ПЛК)</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Тип подключения</div>
-                                    <div class="specifications-item__tech">Винт. соединение</div>
+                                    <div class="specifications-item__name">Тип клеммного подключения</div>
+                                    <div class="specifications-item__tech">Винтовое</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name  grey">Уровень исполнения согл. EN ISO 13849-1</div>
-                                    <div class="specifications-item__tech  grey">Нет (без)</div>
+                                    <div class="specifications-item__name grey">
+                                        Уровень функциональной безопасности (EN ISO 13849-1)
+                                    </div>
+                                    <div class="specifications-item__tech grey">Не предусмотрен</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Категория взрывобезопасности по пыли</div>
-                                    <div class="specifications-item__tech">Нет (без)</div>
+                                    <div class="specifications-item__name">
+                                        Пылевая взрывозащита
+                                    </div>
+                                    <div class="specifications-item__tech">Отсутствует</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Категория взрывобезопасности по газу</div>
-                                    <div class="specifications-item__tech grey">Нет (без)</div>
+                                    <div class="specifications-item__name grey">
+                                        Газовая взрывозащита
+                                    </div>
+                                    <div class="specifications-item__tech grey">Отсутствует</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Напряжение питания постоян. тока (DC)</div>
+                                    <div class="specifications-item__name">
+                                        Питание, постоянный ток (DC), В
+                                    </div>
                                     <div class="specifications-item__tech">24</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Количество цифров. выходов</div>
-                                    <div class="specifications-item__tech grey">8</div>
+                                    <div class="specifications-item__name grey">
+                                        Количество цифровых выходов
+                                    </div>
+                                    <div class="specifications-item__tech grey">16</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Тип выход. напряжения</div>
-                                    <div class="specifications-item__tech">AC/DC</div>
+                                    <div class="specifications-item__name">
+                                        Тип выходного напряжения
+                                    </div>
+                                    <div class="specifications-item__tech">AC / DC</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Тип вход. напряжения</div>
-                                    <div class="specifications-item__tech grey">AC/DC</div>
+                                    <div class="specifications-item__name grey">
+                                        Тип входного напряжения
+                                    </div>
+                                    <div class="specifications-item__tech grey">AC / DC</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Категория согл. EN 954-1</div>
+                                    <div class="specifications-item__name">
+                                        Класс безопасности (EN 954-1)
+                                    </div>
                                     <div class="specifications-item__tech">1</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Тип цифров. выхода</div>
-                                    <div class="specifications-item__tech grey">Нет(без).</div>
+                                    <div class="specifications-item__name grey">
+                                        Исполнение цифровых выходов
+                                    </div>
+                                    <div class="specifications-item__tech grey">Не предусмотрено</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Ток на входе на сигнале 1</div>
+                                    <div class="specifications-item__name">
+                                        Ток сигнального входа, мА
+                                    </div>
                                     <div class="specifications-item__tech">7</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Задержка при обмене сигналом</div>
+                                    <div class="specifications-item__name grey">
+                                        Время задержки сигнала, мс
+                                    </div>
                                     <div class="specifications-item__tech grey">4</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Вес нетто, кг</div>
-                                    <div class="specifications-item__tech">0.205</div>
+                                    <div class="specifications-item__name">
+                                        Масса без упаковки, кг
+                                    </div>
+                                    <div class="specifications-item__tech">0,212</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Ширина, мм</div>
-                                    <div class="specifications-item__tech grey">23,7</div>
+                                    <div class="specifications-item__name grey">
+                                        Габаритная ширина, мм
+                                    </div>
+                                    <div class="specifications-item__tech grey">27,4</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name">Высота, мм</div>
+                                    <div class="specifications-item__name">
+                                        Высота корпуса, мм
+                                    </div>
                                     <div class="specifications-item__tech">90</div>
                                 </div>
+
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Глубина, мм</div>
-                                    <div class="specifications-item__tech grey">70</div>
+                                    <div class="specifications-item__name grey">
+                                        Монтажная глубина, мм
+                                    </div>
+                                    <div class="specifications-item__tech grey">84,6</div>
                                 </div>
                             </ul>
+
                         </div>
                     </div>
                 </section>
+
                 <section class="product-additional-info" style="margin-bottom: 40px;">
                     <div class="container">
-                        <h2>Описание и преимущества TM3AI8</h2>
+                        <h2>Описание и преимущества TM3DI8</h2>
+
                         <p>
-                            Модуль расширения TM3AI8 от Schneider Electric предназначен для расширения возможностей логических контроллеров Modicon TM3.
-                            Он обеспечивает до 8 аналоговых входов для подключения датчиков и измерительных приборов, позволяя строить гибкие системы автоматизации.
+                            Модуль расширения <b>TM3DI8</b> от <b>Schneider Electric</b> предназначен для увеличения количества цифровых входов
+                            в системах автоматизации на базе логических контроллеров серии Modicon TM3.
+                            Устройство оснащено 8 дискретными входами и используется для подключения датчиков,
+                            кнопок, концевых выключателей и других сигнальных устройств.
                         </p>
-                        <p>
-                            Преимущества TM3AI8:
+
+                        <p><b>Преимущества TM3DI8:</b></p>
                         <ul>
-                            <li>Легкая интеграция с контроллерами Modicon TM3;</li>
-                            <li>Поддержка дистанционного размещения модулей;</li>
-                            <li>Надежность и долговечность от производителя Schneider Electric;</li>
-                            <li>Простая установка и обслуживание благодаря стандартизированным соединителям.</li>
+                            <li>полная совместимость с контроллерами линейки Modicon TM3;</li>
+                            <li>компактные размеры для удобного размещения в шкафах управления;</li>
+                            <li>высокая надёжность и качество исполнения от Schneider Electric;</li>
+                            <li>простая установка и обслуживание благодаря стандартизированным соединениям.</li>
                         </ul>
-                        </p>
+
                         <p>
-                            Этот модуль идеально подходит для промышленных автоматизированных систем, малых и средних производственных линий, где важны точность, надежность и расширяемость.
-                            И самая полезная информация на этой странице, бузусловно та, что купить модуль расширения TM3AI8 можно перейдя <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>><b>по ссылке ...</b> </a>
+                            TM3DI8 подходит для применения в промышленных системах управления,
+                            распределённых шкафах автоматики, а также на малых и средних производственных линиях,
+                            где требуется надёжное считывание дискретных сигналов и возможность дальнейшего расширения системы.
                         </p>
                     </div>
                 </section>
+
                 <section class="documents-section" id="documents">
                     <div class="container">
                         <div class="attention-section__title-block technical-specifications-section__title-block flex">
@@ -480,85 +496,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="please-note-section">
-                    <div class="container please-note-section__container">
-                        <h3 class="please-note-section__title">Пользователи выбирают:</h3>
-                        <div class="please-note-section__card-product">
-                            <?php
-                            // форматирование цены (intl extension required)
-                            function formatRub($price)
-                            {
-                                if (!class_exists('NumberFormatter')) {
-                                    return number_format((float)$price, 0, ',', ' ') . ' ₽';
-                                }
-                                $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
-                                $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
-                                return $fmt->formatCurrency($price, 'RUB');
-                            }
-
-                            $noImage = '../../img/free-icon-no-photo-4054617.png';
-                            $count = 0;
-
-                            if (is_array($data) && count($data) > 0) {
-                                foreach ($data as $item) {
-
-                                    if ($count == 4) {
-                                        break;
-                                    }
-
-                                    $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
-                                    $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
-                                    $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
-                                    $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
-                                    $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
-                                    $price = isset($item['price']) ? $item['price'] : 0;
-
-                                    $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
-
-                                    $qtyClass = $quantity === 0
-                                        ? 'delivry-block__quantity delivry-block__quantity_0'
-                                        : 'delivry-block__quantity';
-
-                                    $qtyText = $quantity === 0
-                                        ? 'Под заказ'
-                                        : 'Наличие: ' . $quantity . ' шт.';
-
-                                    echo <<<HTML
-                                            <div class="card-component">
-                                                <div class="card-component__top">
-                                                    <img src="{$img}" class="card-component__img" alt="Фото {$name}">
-                                                    <div class="card-component__vendor">Артикул: {$vendor}</div>
-                                                    <div class="card-component__name">
-                                                        <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="card-component__bottom">
-                                                    <div class="cc-basket-block__delivry-block">
-                                                        <div class="{$qtyClass}">{$qtyText}</div>
-                                                    </div>
-
-                                                    <div class="card-component__price-block">
-                                                        <div class="card-component__price">{$fmtPrice}</div>
-                                                        <div class="card-component__price-nalog">в т.ч. НДС</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        HTML;
-
-                                    $count++;
-                                }
-                            } else {
-                                echo '<p>Пока нет рекомендаций.</p>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </section>
-
             </div>
     </main>
-    <?php include "../php/modules/footer.php" ?>
+    <?php include "../../php/modules/footer.php" ?>
 </body>
 
 </html>

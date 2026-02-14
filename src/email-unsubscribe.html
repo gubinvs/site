@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +10,7 @@
     body {
       background-color: #f8f9fa;
     }
+
     .unsubscribe-box {
       max-width: 600px;
       margin: 60px auto;
@@ -19,67 +21,85 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="unsubscribe-box shadow-sm">
-  <h4 class="fw-bold mb-3">Вы отписались от рассылки</h4>
+  <div class="unsubscribe-box shadow-sm">
+    <h4 class="fw-bold mb-3">Подтверждение отписки</h4>
 
-  <p class="mb-2">
-    <strong>office@encomponent.ru</strong> отписан от рассылки <strong>hmru.ru</strong>.
-  </p>
+    <p class="mb-2">
+      <strong id="emailText"></strong> будет отписан от рассылки <strong>encomponent.ru</strong>.
+    </p>
 
-  <p class="mb-3">Пожалуйста, укажите причину отписки (не обязательно):</p>
+    <p class="mb-3">Пожалуйста, укажите причину отписки (не обязательно):</p>
 
-  <form>
-    <div class="form-check mb-2">
-      <input class="form-check-input" type="radio" name="reason" id="r1">
-      <label class="form-check-label" for="r1">
-        Не интересно
-      </label>
+    <form id="unsubscribeForm">
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="reason" value="Не интересно">
+        <label class="form-check-label">Не интересно</label>
+      </div>
+
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="reason" value="Не подписывался">
+        <label class="form-check-label">Не подписывался</label>
+      </div>
+
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="reason" value="Письма приходят часто">
+        <label class="form-check-label">Письма приходят часто</label>
+      </div>
+
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="radio" name="reason" value="Более не актуально">
+        <label class="form-check-label">Более не актуально</label>
+      </div>
+
+      <div class="d-flex gap-2 mb-3">
+        <button type="submit" class="btn btn-dark">
+          Подтвердить отписку
+        </button>
+      </div>
+    </form>
+
+    <div id="resultMessage" class="mt-3 fw-bold text-success" style="display:none;">
+      Вы успешно отписались от рассылки.
     </div>
+  </div>
 
-    <div class="form-check mb-2">
-      <input class="form-check-input" type="radio" name="reason" id="r2">
-      <label class="form-check-label" for="r2">
-        Не подписывался
-      </label>
-    </div>
+  <script>
+    // Получаем email из URL
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
 
-    <div class="form-check mb-2">
-      <input class="form-check-input" type="radio" name="reason" id="r3">
-      <label class="form-check-label" for="r3">
-        Письма приходят часто
-      </label>
-    </div>
+    document.getElementById("emailText").innerText = email ?? "Email не указан";
 
-    <div class="form-check mb-4">
-      <input class="form-check-input" type="radio" name="reason" id="r4">
-      <label class="form-check-label" for="r4">
-        Более не актуально
-      </label>
-    </div>
+    document.getElementById("unsubscribeForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    <div class="d-flex gap-2 mb-3">
-      <button type="submit" class="btn btn-dark">
-        Отправить
-      </button>
-      <button type="button" class="btn btn-danger">
-        Это спам
-      </button>
-    </div>
-  </form>
+      const selectedReason = document.querySelector('input[name="reason"]:checked');
+      const reason = selectedReason ? selectedReason.value : null;
 
-  <p class="mb-2">Спасибо, мы учли ваш ответ</p>
+      const response = await fetch("http://localhost:8080/api/Unsubscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: email,
+          reason: reason
+        })
+      });
 
-  <p class="mb-3">
-    Отписались случайно? Всегда можете восстановить подписку.
-  </p>
+      if (response.ok) {
+        document.getElementById("unsubscribeForm").style.display = "none";
+        document.getElementById("resultMessage").style.display = "block";
+      } else {
+        alert("Ошибка при отписке");
+      }
+    });
+  </script>
 
-  <button class="btn btn-primary">
-    Восстановить подписку
-  </button>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

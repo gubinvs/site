@@ -28,7 +28,7 @@
     <h4 class="fw-bold mb-3">Подтверждение отписки</h4>
 
     <p class="mb-2">
-      <strong id="emailText"></strong> будет отписан от рассылки <strong>encomponent.ru</strong>.
+      <strong id="emailText"></strong> будет отписан от рассылки <strong>Компоненты энергии</strong>.
     </p>
 
     <p class="mb-3">Пожалуйста, укажите причину отписки (не обязательно):</p>
@@ -79,7 +79,7 @@
       const selectedReason = document.querySelector('input[name="reason"]:checked');
       const reason = selectedReason ? selectedReason.value : null;
 
-      const response = await fetch("http://localhost:8080/api/Unsubscribe", {
+      const response = await fetch("https://api.encomponent.ru/api/Unsubscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

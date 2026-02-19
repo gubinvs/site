@@ -481,6 +481,7 @@
         <p style="font-size:0;line-height:0">
             LC1D09M7C контактор 9А 220В купить Schneider Electric TeSys D
             контактор для электродвигателя цена характеристики,полный аналог LC1D09M7C
+            <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D09M7C_seo1.php">LC1D09M7C контактор 9А 220В</a>
         </p>
     </main>
     <?php include '../../php/modules/footer.php'; ?>

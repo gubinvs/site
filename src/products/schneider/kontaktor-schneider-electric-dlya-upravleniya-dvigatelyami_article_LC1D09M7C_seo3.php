@@ -1,7 +1,7 @@
 <?php
     include "../../php/class/api_Connector.php";
 
-    $article = "LC1D09M7";
+    $article = "LC1D09M7C";
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
     $options = [
@@ -33,8 +33,7 @@
 
     $price    = $product['price']    ?? 0;
     $quantity = $product['quantity'] ?? 0;
-    
-    
+
     // Загружаем только свои товары
     $urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
 
@@ -73,29 +72,29 @@
 
 <head>
     <meta charset='UTF-8'>
-    <title>LC1D09M7 — контактор Schneider Electric 9А | Купить TeSys D</title>
-    <meta name='description' content='LC1D09M7 — электромеханический контактор Schneider Electric серии TeSys D на 9 А с катушкой 220 В AC. Применяется для пуска электродвигателей, насосов и вентиляции. Цена: <?php echo $price ?> ₽.'>
-    <meta name='keywords' content='LC1D09M7, контактор 9А, контактор Schneider Electric, LC1D09, контактор 220В, контактор для двигателя, силовой контактор TeSys D'>
+    <title>LC1D09M7C — контактор пускатель 9А 220В | Как выбрать контактор</title>
+    <meta name='description' content='LC1D09M7C — контактор-пускатель 9А 220В Schneider Electric TeSys D. Подходит для пуска электродвигателей. Поможем выбрать контактор для вашего оборудования. Цена: <?php echo $price ?> ₽.'>
+    <meta name='keywords' content='контактор пускатель 220в, контактор тока 9а, выбрать контактор для двигателя, контактор модульный 3p, lc1d09m7c'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D09M7.php'>
+    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D09M7C_seo3.php'>
 
     <!-- Open Graph -->
-    <meta property='og:title' content='LC1D09M7 — контактор Schneider Electric 9А | TeSys D'>
-    <meta property='og:description' content='Контактор LC1D09M7 9 А, 220 В AC для управления электродвигателями и промышленными нагрузками.'>
+    <meta property='og:title' content='LC1D09M7C — контактор Schneider Electric 9А | TeSys D'>
+    <meta property='og:description' content='Контактор LC1D09M7C 9 А, 220 В AC для управления электродвигателями и промышленными нагрузками.'>
     <meta property='og:image' content='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png'>
     <meta property='og:type' content='product'>
-    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D09M7.php'>
+    <meta property='og:url' content='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D09M7C_seo3.php'>
 
     <!-- JSON-LD -->
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "LC1D09M7 Контактор Schneider Electric",
+        "name": "LC1D09M7C Контактор Schneider Electric",
         "image": "https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png",
-        "description": "Силовой контактор LC1D09M7 Schneider Electric серии TeSys D. Номинальный ток 9 А, катушка управления 220 В AC.",
-        "sku": "LC1D09M7",
+        "description": "Силовой контактор LC1D09M7C Schneider Electric серии TeSys D. Номинальный ток 9 А, катушка управления 220 В AC.",
+        "sku": "LC1D09M7C",
         "brand": {
             "@type": "Brand",
             "name": "Schneider Electric"
@@ -155,17 +154,22 @@
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D09M7 — Электромеханический контактор Schneider Electric</h1>
+              <h1 class='discription-product-section__title NKUPages_h1'>
+                LC1D09M7C — Контактор-пускатель 9А 220В для электродвигателей
+                </h1>
+
+
 
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
-                        <img src='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png' alt='Контактор Schneider Electric LC1D09M7' class='discription-product__img main-section__img'>
+                        <img src='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png' alt='Контактор Schneider Electric LC1D09M7C' 
+                            class='discription-product__img main-section__img'>
                     </div>
                     <div class='main-section__discription'>
 
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D09M7 <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D09M7C.php">(LC1D09M7C)</a></h6>
+                            <h6 class='article-name'>LC1D09M7C <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D09M7.php"> (LC1D09M7)</a></h6>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
@@ -209,7 +213,7 @@
                         </div>
                            <!--Кнопки купить в магазинах-->
                             <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-3424066591/?from_sku=3424066591&oos_search=false" id="button-link">
+                                <a href="https://www.ozon.ru/product/lc1d09m7c-kontaktor-schneider-electric-tesys-d-lc1d09m7c-9-a-universalnaya-katushka-240-v-ac-3498131933/" id="button-link">
                                     <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                                 </a>
                                 <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
@@ -274,25 +278,15 @@
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                            <b>Контактор LC1D09M7 (LC1D09M7C) Schneider Electric</b> из серии <b>TeSys D</b> предназначен
-                            для управления маломощными трёхфазными электродвигателями и промышленными нагрузками.
+                            <b>LC1D09M7C</b> применяется как контактор-пускатель для дистанционного управления электродвигателями малой мощности.
 
-                            <br><br>
-                            Номинальный ток устройства — <b>9 А</b> (AC-3), катушка управления <b>220 В AC</b>, 50/60 Гц.
-                            Это обеспечивает надёжное дистанционное включение и отключение силовых цепей.
+                            При выборе контактора важно учитывать номинальный ток (9 А AC-3), напряжение катушки (220 В AC) и количество полюсов (3P). Данная модель соответствует этим требованиям и подходит для большинства стандартных схем пуска.
 
-                            <br><br>
-                            Контактор имеет 3 нормально разомкнутых силовых контакта и встроенные
-                            вспомогательные контакты <b>1 NO + 1 NC</b>, подходящие для схем пуска,
-                            сигнализации и автоматизации.
+                            Контактор тока 9 А обеспечивает надёжную коммутацию силовых цепей до 690 В AC.
 
-                            <br><br>
-                            Суффикс <b>«C»</b> обозначает версию для <b>китайского рынка</b>. Характеристики
-                            LC1D09M7C полностью совпадают с базовой моделью, различается только маркировка
-                            и набор сертификатов.
+                            Устройство может использоваться совместно с тепловыми реле серии TeSys D для создания полноценного пускателя.
 
-                            <br><br>
-                            Рабочее напряжение до <b>690 В AC</b>, монтаж возможен на DIN-рейку или панель.
+                            Монтаж возможен на DIN-рейку или панель.
                         </div>
                     </div>
                 </section>
@@ -313,7 +307,7 @@
                             </tr>
                             <tr>
                                 <td>Серия / Модель</td>
-                                <td>TeSys D / LC1D09M7</td>
+                                <td>TeSys D / LC1D09M7C</td>
                             </tr>
                             <tr>
                                 <td>Тип устройства</td>
@@ -478,13 +472,13 @@
     </div>
         <!-- LSI -->
         <p style="font-size:0;line-height:0">
-            LC1D09M7 контактор 9А 220В купить Schneider Electric TeSys D
-            контактор для электродвигателя цена характеристики
-            <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D09M7_seo1.php">электромагнитный контактор schneider electric</a>
-       
+           контактор пускатель 9а 220в
+            как выбрать контактор для двигателя
+            контактор тока переменного 3p
+            контактор schneider tesys d
+            <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D09M7C_seo2.php">электромагнитный контактор schneider electric</a>
         </p>
     </main>
     <?php include '../../php/modules/footer.php'; ?>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
 </body>
-</html>

@@ -19,38 +19,38 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $canonical = $scheme . '://' . $host . $path;
 
 
-    // --- API ---
-    $url = rtrim($apiServer, '/') . '/api/SearchArticle/' . urlencode($article);
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json
+// --- API ---
+$url = rtrim($apiServer, '/') . '/api/SearchArticle/' . urlencode($article);
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json
     ",
-            "timeout" => 10
-        ]
-    ];
-    $context = stream_context_create($options);
-    $response = @file_get_contents($url, false, $context);
+        "timeout" => 10
+    ]
+];
+$context = stream_context_create($options);
+$response = @file_get_contents($url, false, $context);
 
 
-    if ($response === FALSE) {
-        error_log("[TM241CE40T] Ошибка API: " . $url);
+if ($response === FALSE) {
+    error_log("[TM241CE40T] Ошибка API: " . $url);
+    $data = [];
+} else {
+    $data = json_decode($response, true);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        error_log("[TM241CE40T] JSON ошибка: " . json_last_error_msg());
         $data = [];
-    } else {
-        $data = json_decode($response, true);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            error_log("[TM241CE40T] JSON ошибка: " . json_last_error_msg());
-            $data = [];
-        }
     }
+}
 
 
-    $offers = [];
-    $quantity = 0;
-    $lowPrice = null;
-    $highPrice = null;
-    $offerCount = 0;
-    $price = 0;
+$offers = [];
+$quantity = 0;
+$lowPrice = null;
+$highPrice = null;
+$offerCount = 0;
+$price = 0;
 
 
 if (is_array($data)) {
@@ -71,20 +71,20 @@ if (is_array($data)) {
 }
 
 
-    if (count($offers)) {
-        usort($offers, fn($a, $b) => $a['price'] <=> $b['price']);
-        $lowPrice = $offers[0]['price'];
-        $highPrice = $offers[count($offers) - 1]['price'];
-        $offerCount = count($offers);
-        $price = $lowPrice;
-        $quantity = array_sum(array_column($offers, 'quantity'));
-    }
+if (count($offers)) {
+    usort($offers, fn($a, $b) => $a['price'] <=> $b['price']);
+    $lowPrice = $offers[0]['price'];
+    $highPrice = $offers[count($offers) - 1]['price'];
+    $offerCount = count($offers);
+    $price = $lowPrice;
+    $quantity = array_sum(array_column($offers, 'quantity'));
+}
 
 
-    function e($s)
-    {
-        return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
-    }
+function e($s)
+{
+    return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
+}
 ?>
 
 <!DOCTYPE html>
@@ -241,14 +241,16 @@ if (is_array($data)) {
                                 </li>
                             </ul>
                         </div>
+                        <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block flex">
-                            <a href="#technical" id="button-link">
-                                <button class="button-characteristics__all">Посмотреть все характеристики</button>
+                            <a href="https://www.ozon.ru/product/tm241ce40t-blok-bazovyy-m241-40io-tranzist-istochnik-ethernet-schneider-electric-3539966024/" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/Basket/?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить</button>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
+                        <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
                 <!--Форма заказа счета со страницы товара-->

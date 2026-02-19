@@ -195,7 +195,7 @@
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
-                               <!--Форма заказа счета со страницы товара-->
+                <!--Форма заказа счета со страницы товара-->
                 <section class="feedback-section" id="feedback">
                     <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
                     <div class="container feedback-section__container invoice-request-section__container">

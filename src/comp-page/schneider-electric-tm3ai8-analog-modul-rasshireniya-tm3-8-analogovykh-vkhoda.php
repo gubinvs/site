@@ -100,7 +100,7 @@
             "@context": "https://schema.org/",
             "@type": "Product",
             "name": "<?php echo $titlePage ?>",
-            "image": "https://encomponent.ru/img/img-product/<?php echo $article ?>/<?php echo $article ?>_big_1920.jpg",
+            "image": "https://encomponent.ru/img/img-product/TM3AI8/TM3AI8_big_1920.jpg",
             "description": "Купить <?php echo $titlePage ?> по цене <?php echo number_format($price, 0, ',', ' ') ?> ₽. В наличии <?php echo $quantity ?> шт. Производитель: <?php echo $manufacturer ?>.",
             "sku": "<?php echo $article ?>",
             "brand": {

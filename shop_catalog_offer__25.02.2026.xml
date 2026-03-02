@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2025-12-24T16:50:00+03:00">
+  <shop>
+    <name>Компоненты энергии</name>
+    <company>ИП ГУБИН ВЛАДИМИР СЕРГЕЕВИЧ</company>
+    <url>https://encomponent.ru/</url>
+    <platform>React</platform>
+    <version>v19.2</version>
+    <email>office@encomponent.ru</email>
+
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+
+    <categories>
+      <category id="12" parentId="11">Программируемые контроллеры</category>
+      <category id="13" parentId="11">Модули ввода/вывода для PLC</category>
+    </categories>
+
+    <offers>
+      <offer id="100001" type="vendor.model" available="true">
+        <name>TM3AI8, Модуль расширения ТМ3 - 8 аналоговых входов</name>
+        <categoryId>13</categoryId>
+        <url>https://encomponent.ru/comp-page/schneider-electric-tm3ai8-analog-modul-rasshireniya-tm3-8-analogovykh-vkhoda.php</url>
+        <picture>https://encomponent.ru/img/img-product/TM3AI8/fid-img__tm3ai8.webp</picture>
+        <price>16800</price>
+        <oldprice>18000</oldprice>
+        <currencyId>RUR</currencyId>
+        <typePrefix>Модуль расширения ТМ3</typePrefix>
+        <model>TM3</model>
+        <vendor>Schneider Electric</vendor>
+        <vendorCode>TM3AI8</vendorCode>
+        <description>Купить из наличия. Полный пакет закрывающих документов. НДС</description>
+      </offer>
+
+      <offer id="100002" type="vendor.model" available="true">
+        <name>TM3DI16, Дискретный модуль расширения ТМ3- 16 входов</name>
+        <categoryId>13</categoryId>
+        <url>https://encomponent.ru/comp-page/schneider-electric-tm3di16-diskretnyy-modul-rasshireniya-manufacture-tm3-16-vkhodov.php</url>
+        <picture>https://encomponent.ru/img/img-product/TM3DI16/fid-img__tm3di16.webp</picture>
+        <price>8200</price>
+        <oldprice>9800</oldprice>
+        <currencyId>RUB</currencyId>
+        <typePrefix>Модуль расширения ТМ3</typePrefix>
+        <model>TM3</model>
+        <vendor>Schneider Electric</vendor>
+        <vendorCode>TM3DI16</vendorCode>
+        <description>В наличии на складе! Быстрая отгрузка в день оплаты. Работаем с НДС, полный комплект документов.</description>
+      </offer>
+
+      <offer id="100003" type="vendor.model" available="true">
+        <name>TM241CE24T, Блок базовый M241-24IO транзист источник Ethernet, Schneider Electric</name>
+        <categoryId>12</categoryId>
+        <url>https://encomponent.ru/comp-page/schneider-electric-tm241ce24t-bazovyy-blok-plk-m241-24io-tranzist-istochnik-ethernet.php</url>
+        <picture>https://encomponent.ru/img/img-product/TM241CE24T/fid-img__TM241CE24T.webp</picture>
+        <price>46400</price>
+        <oldprice>48800</oldprice>
+        <currencyId>RUB</currencyId>
+        <typePrefix>Базовый блок ПЛК</typePrefix>
+        <model>M241-24</model>
+        <vendor>Schneider Electric</vendor>
+        <vendorCode>TM241CE24T</vendorCode>
+        <description>В наличии. Работаем с НДС. Бесплатная доставка по РФ</description>
+      </offer>
+
+    </offers>
+  </shop>
+</yml_catalog>

@@ -398,6 +398,10 @@ header {
     margin-bottom: 20px;
 }
 
+.hms-title__discr_link:hover {
+    color: #FFFFFF;
+}
+
 
 
 

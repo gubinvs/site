@@ -158,7 +158,6 @@
                     LC1D09M7C — Электромагнитный контактор 220В переменного тока 9А
                 </h1>
 
-
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
                         <img src='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png' alt='Контактор Schneider Electric LC1D09M7C' 
@@ -463,6 +462,7 @@
                         </div>
                     </div>
                 </section>
+                
             </div>
         </div>
     </div>

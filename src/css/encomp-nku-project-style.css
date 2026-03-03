@@ -1112,8 +1112,11 @@ header {
 
 .footer {
   height: 400px;
+  padding: 0px;
   padding-top: 40px;
   background-color: #1D252C;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footer__container {
@@ -2111,7 +2114,6 @@ header {
   }
 
   .footer {
-    width: 480px;
     height: 300px;
   }
 
@@ -2119,13 +2121,12 @@ header {
     width: 480px;
   }
 
-  .footer-nav {
-    width: 218px;
+  .footer__content {
+    justify-content: space-between;
   }
 
-  .footer-contact {
-    width: 50%;
-    padding-left: 50px;
+  .footer-nav {
+    width: 218px;
   }
 
   .technical-specifications-section {

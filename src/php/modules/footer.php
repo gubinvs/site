@@ -16,9 +16,9 @@
             </div>
             <div class="footer-nav">
                 <div class="footer-nav__list">
-                    <div class="footer-nav__item"><a href="https://encomponent.ru/snab.php" class="footer-nav__link">Аутсорсинг рутины снабжения</a></div>
+                    <div class="footer-nav__item"><a href="https://encomponent.ru/snab.php" class="footer-nav__link">Аутсорсинг отдела снабжения</a></div>
                     <div class="footer-nav__item"><a href="https://shop.encomponent.ru/" class="footer-nav__link">Интернет-магазин комплектующих</a></div>
-                    <div class="footer-nav__item"><a href="https://supply.encomponent.ru/" class="footer-nav__link">Сервис для снабженца</a></div>
+                    <div class="footer-nav__item"><a href="https://supply.encomponent.ru/" class="footer-nav__link">Сервис для снабжения</a></div>
                     <div class="footer-nav__item"><a href="https://encomponent.ru/pp-page.html" class="footer-nav__link">Политика обработки персональных данных</a></div>
                     <div class="footer-nav__item"><a href="https://encomponent.ru/about.php" class="footer-nav__link">Страница контактов</a></div>
                 </div>

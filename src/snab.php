@@ -92,8 +92,8 @@
                 <div class="bordercard_bground__discr_text bordercard_bground__discr_text-white">экономии фонда заработной платы</div>
               </div>
             </div>
-            <div class="bordercard">
-              <div class="bordercard_bground">
+            <div class="bordercard bordercard_3">
+              <div class="bordercard_bground bordercard_bground_3">
                 <div class="bordercard_bground__discr_number">100%</div>
                 <div class="bordercard_bground__discr_text">довольных клиентов</div>
               </div>
@@ -278,7 +278,7 @@
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
             <div class="check-box">
-              <input class="check-box__input" type="checkbox" name="chekBox" checked required><a href="https://encomponent.ru/pp-page.html" target="blank">
+              <input class="check-box__input" type="checkbox" name="chekBox" required><a href="https://encomponent.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
             </div>

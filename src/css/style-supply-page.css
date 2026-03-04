@@ -1379,7 +1379,55 @@ footer {
   .container {
     width: 1000px;
   }
+
+  .content-block_ip-title {
+    width: 350px;
+  }
+
+  .ip-title {
+    width: 350px;
+    font-size: 23px;
+  }
+
+  .dark-description-block {
+    padding-left: 10px;
+    border-radius: 8px;
+    font-size: 26px;
+  }
+
+  .content-block_ip-title {
+    position: relative;
+  }
+
+  .card-block {
+    position: absolute;
+    bottom: -2px;
+    left: 0px;
+  }
+
+  .bordercard_3 {
+    border: 0px;
+  }
+
+  .bordercard_bground_3 {
+    border-radius: 50px;
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 1024px) {
   .container {

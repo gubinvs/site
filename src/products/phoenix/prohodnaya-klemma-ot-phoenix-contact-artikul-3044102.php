@@ -216,14 +216,17 @@
                             </ul>
                         </div>
                         <!--Кнопки купить в магазинах-->
-                            <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/3044102-ut4-klemma-prohodnaya-seraya-feniks-kontakt-1-sht-3384663656/?_bctx=CAQQi6TdAQ&hs=1" id="button-link">
-                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
-                                </a>
-                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
-                                </a>
-                            </div>
+                        <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
+                            <a href="https://www.ozon.ru/product/3044102-ut4-klemma-prohodnaya-seraya-feniks-kontakt-1-sht-3384663656/?_bctx=CAQQi6TdAQ&hs=1" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                            </a>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                            </a>
+                        </div>
+                        <a href=<?php echo $shopURL . '/CatalogSection/?chapter=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F' ?>>
+                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой источник</button>
+                        </a>
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>

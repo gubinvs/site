@@ -284,7 +284,7 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
-                        <div class="characteristics-block__button-block flex">
+                        <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
                             <a href="https://www.ozon.ru/product/2903148-istochnik-pitaniya-feniks-kontakt-5a-3173258980/?at=lRt6N8WKyuyMZMygcZZQRKpIymRyk5fN3zDgAu17vVxn" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНe</button>
                             </a>
@@ -292,6 +292,9 @@ foreach ($data as $item) {
                                 <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
+                        <a href=<?php echo $shopURL . '/CatalogSection/?chapter=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F' ?>>
+                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой источник</button>
+                        </a>
                     </div>
                 </section>
                                <!--Форма заказа счета со страницы товара-->

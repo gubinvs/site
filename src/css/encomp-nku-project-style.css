@@ -253,6 +253,11 @@ a:hover {
   justify-content: space-between;
 }
 
+.characteristics-block__button-block_offer {
+  margin-bottom: 20px;
+}
+
+
 .warehouse-item-quantity {
   display: flex;
   justify-content: flex-end;

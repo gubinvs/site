@@ -1,69 +1,69 @@
 <?php
-    include "../../php/class/api_Connector.php";
+include "../../php/class/api_Connector.php";
 
-    $article = "LC1D25M7C";
-    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
-    $context = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+$article = "LC1D25M7C";
+$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
+$context = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
 
-    $data = json_decode($response, true);
-    $product = null;
+$data = json_decode($response, true);
+$product = null;
 
-    if (is_array($data)) {
-        foreach ($data as $item) {
-            if (
-                trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
-            ) {
-                $product = $item;
-                break;
-            }
+if (is_array($data)) {
+    foreach ($data as $item) {
+        if (
+            trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+        ) {
+            $product = $item;
+            break;
         }
     }
+}
 
-    $price    = $product['price']    ?? 0;
-    $quantity = $product['quantity'] ?? 0;
+$price    = $product['price']    ?? 0;
+$quantity = $product['quantity'] ?? 0;
 
 
-    // Загружаем только свои товары
-    $urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
+// Загружаем только свои товары
+$urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($urlBestsellers, false, $context);
+$context = stream_context_create($options);
+$response = file_get_contents($urlBestsellers, false, $context);
 
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
 
-    $data = json_decode($response, true);
+$data = json_decode($response, true);
 
-    foreach ($data as $item) {
-        $id = $item["id"];
-        $imgLinkIconCard = $item["imgLinkIconCard"];
-        $vendorCodeBestseller = $item["vendorCode"];
-        $nameComponent = $item["nameComponent"];
-        $quantityBestseller = $item["quantity"];
-        $linkPage = $item["linkPage"];
-        $priceBestseller = $item["price"];
-        $basketImgPath = $item["basketImgPath"];
-        $guidId = $item["guid"];
-        $manufacturer = $item["manufacturer"];
-    }
+foreach ($data as $item) {
+    $id = $item["id"];
+    $imgLinkIconCard = $item["imgLinkIconCard"];
+    $vendorCodeBestseller = $item["vendorCode"];
+    $nameComponent = $item["nameComponent"];
+    $quantityBestseller = $item["quantity"];
+    $linkPage = $item["linkPage"];
+    $priceBestseller = $item["price"];
+    $basketImgPath = $item["basketImgPath"];
+    $guidId = $item["guid"];
+    $manufacturer = $item["manufacturer"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -244,18 +244,21 @@
                             </ul>
                         </div>
                         <!--Кнопки купить в магазинах-->
-                            <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/3502482205/" id="button-link">
-                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
-                                </a>
-                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
-                                </a>
-                            </div>
+                        <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
+                            <a href="https://www.ozon.ru/product/3502482205/" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                            </a>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                            </a>
+                        </div>
+                        <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>
+                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
+                        </a>
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
-                               <!--Форма заказа счета со страницы товара-->
+                <!--Форма заказа счета со страницы товара-->
                 <section class="feedback-section" id="feedback">
                     <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
                     <div class="container feedback-section__container invoice-request-section__container">

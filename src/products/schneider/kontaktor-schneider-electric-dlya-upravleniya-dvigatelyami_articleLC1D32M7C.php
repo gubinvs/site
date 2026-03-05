@@ -211,7 +211,7 @@ foreach ($data as $item) {
                             </ul>
                         </div>
                         <!--Кнопки купить в магазинах-->
-                        <div class="characteristics-block__button-block flex">
+                        <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
                             <a href="https://www.ozon.ru/product/lc1d32m7c-kontaktor-schneider-electric-tesys-d-lc1d32m7c-32-a-universalnaya-katushka-240-v-ac-3498147942/" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
@@ -219,6 +219,9 @@ foreach ($data as $item) {
                                 <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
                             </a>
                         </div>
+                        <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>
+                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
+                        </a>
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
@@ -487,7 +490,7 @@ foreach ($data as $item) {
         </div>
         <!-- LSI -->
         <p style="font-size:0;line-height:0">
-            LC1D32M7C контактор 220В 32А  купить TeSys D Schneider Electric 
+            LC1D32M7C контактор 220В 32А купить TeSys D Schneider Electric
             контактор для электродвигателя цена характеристики наличие
         </p>
     </main>

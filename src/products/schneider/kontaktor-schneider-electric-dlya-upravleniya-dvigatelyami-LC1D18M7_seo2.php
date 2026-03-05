@@ -1,67 +1,67 @@
 <?php
-    include "../../php/class/api_Connector.php";
+include "../../php/class/api_Connector.php";
 
-    $article = "LC1D18M7";
-    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
-    $context = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+$article = "LC1D18M7";
+$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
+$context = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
 
-    $data = json_decode($response, true);
-    $product = null;
+$data = json_decode($response, true);
+$product = null;
 
-    if (is_array($data)) {
-        foreach ($data as $item) {
-            if (
-                trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
-            ) {
-                $product = $item;
-                break;
-            }
+if (is_array($data)) {
+    foreach ($data as $item) {
+        if (
+            trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+        ) {
+            $product = $item;
+            break;
         }
     }
+}
 
-    $price    = $product['price']    ?? 0;
-    $quantity = $product['quantity'] ?? 0;
+$price    = $product['price']    ?? 0;
+$quantity = $product['quantity'] ?? 0;
 
-    $urlBestsellers = $apiServer . "/api/Bestsellers/";
+$urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($urlBestsellers, false, $context);
+$context = stream_context_create($options);
+$response = file_get_contents($urlBestsellers, false, $context);
 
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
 
-    $data = json_decode($response, true);
+$data = json_decode($response, true);
 
-    foreach ($data as $item) {
-        $id = $item["id"];
-        $imgLinkIconCard = $item["imgLinkIconCard"];
-        $vendorCodeBestseller = $item["vendorCode"];
-        $nameComponent = $item["nameComponent"];
-        $quantityBestseller = $item["quantity"];
-        $linkPage = $item["linkPage"];
-        $priceBestseller = $item["price"];
-        $basketImgPath = $item["basketImgPath"];
-        $guidId = $item["guid"];
-        $manufacturer = $item["manufacturer"];
-    }
+foreach ($data as $item) {
+    $id = $item["id"];
+    $imgLinkIconCard = $item["imgLinkIconCard"];
+    $vendorCodeBestseller = $item["vendorCode"];
+    $nameComponent = $item["nameComponent"];
+    $quantityBestseller = $item["quantity"];
+    $linkPage = $item["linkPage"];
+    $priceBestseller = $item["price"];
+    $basketImgPath = $item["basketImgPath"];
+    $guidId = $item["guid"];
+    $manufacturer = $item["manufacturer"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -71,14 +71,14 @@
     <meta charset='UTF-8'>
     <title>LC1D18M7 — контактор Schneider Electric 18А | Купить силовой контактор</title>
     <meta name='description' content='Купить контактор LC1D18M7 Schneider Electric TeSys D. Силовой контактор тока 18 А, катушка 220 В AC, 3 полюса. Цена и наличие — <?php echo $price ?> ₽.'>
-    <meta name='keywords' content='контактор купить 18а, контактор schneider electric lc1d18m7, контакторы tesys d 18а, контактор тока 220в, lc1d18m7 цена'>  
+    <meta name='keywords' content='контактор купить 18а, контактор schneider electric lc1d18m7, контакторы tesys d 18а, контактор тока 220в, lc1d18m7 цена'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
     <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7_seo2.php'>
-    
+
     <!--Open Graph-->
     <meta property='og:title' content='LC1D18M7, Электромеханический контактор Schneider Electric продается на сайте компоненты энергии, его артикул LC1D18M7 — купить можно по цене <?php echo $price ?> ₽'>
     <meta property='og:description' content='LC1D18M7 это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>
@@ -156,9 +156,9 @@
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-             <h1 class='discription-product-section__title NKUPages_h1'>
-                 LC1D18M7 — Силовой контактор Schneider Electric 18А
-            </h1>
+                <h1 class='discription-product-section__title NKUPages_h1'>
+                    LC1D18M7 — Силовой контактор Schneider Electric 18А
+                </h1>
 
 
                 <section class='main-section flex'>
@@ -244,18 +244,21 @@
                             </ul>
                         </div>
                         <!--Кнопки купить в магазинах-->
-                            <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/lc1d18m7-kontaktor-schneider-electric-3225715829/?at=J8tgEJoZRh8RWnABiA8XZgWhkMnor2tQZ0wBji2XNN0Z" id="button-link">
-                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
-                                </a>
-                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
-                                </a>
-                            </div>
+                        <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
+                            <a href="https://www.ozon.ru/product/lc1d18m7-kontaktor-schneider-electric-3225715829/?at=J8tgEJoZRh8RWnABiA8XZgWhkMnor2tQZ0wBji2XNN0Z" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                            </a>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                            </a>
+                        </div>
+                        <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>
+                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
+                        </a>
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
-                               <!--Форма заказа счета со страницы товара-->
+                <!--Форма заказа счета со страницы товара-->
                 <section class="feedback-section" id="feedback">
                     <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
                     <div class="container feedback-section__container invoice-request-section__container">
@@ -309,8 +312,8 @@
                             <div class='attention-section-title__title'>ОБРАТИТЕ ВНИМАНИЕ</div>
                         </div>
                         <hr class='hr'>
-                      <div class='attention-section__discription'>
-                           <b>LC1D18M7</b> — силовой контактор Schneider Electric серии TeSys D, предназначенный для промышленного применения.
+                        <div class='attention-section__discription'>
+                            <b>LC1D18M7</b> — силовой контактор Schneider Electric серии TeSys D, предназначенный для промышленного применения.
 
                             Если требуется купить контактор 18 А для управления электродвигателем — данная модель рассчитана на работу в категории AC-3 и оснащена катушкой 220 В AC.
 
@@ -492,14 +495,14 @@
             </div>
         </section>
         <!-- LSI -->
-            <p style="font-size:0;line-height:0">
-                контакторы schneider electric 18а купить
-                контактор 18а 220в цена
-                силовой контактор для двигателя 18а
-                контактор lc1d18m7 заказать
-                <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7_seo3.php">контактор lc1d18m7 заказать</a>
-        
-            </p>
+        <p style="font-size:0;line-height:0">
+            контакторы schneider electric 18а купить
+            контактор 18а 220в цена
+            силовой контактор для двигателя 18а
+            контактор lc1d18m7 заказать
+            <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7_seo3.php">контактор lc1d18m7 заказать</a>
+
+        </p>
         <div class='container link-next-page'>
             <div class='link-next-page__text'>
                 <span class="yellow-diamond"></span>

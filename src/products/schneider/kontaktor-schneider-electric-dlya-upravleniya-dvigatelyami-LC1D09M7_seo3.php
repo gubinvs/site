@@ -1,71 +1,71 @@
 <?php
-    include "../../php/class/api_Connector.php";
+include "../../php/class/api_Connector.php";
 
-    $article = "LC1D09M7";
-    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+$article = "LC1D09M7";
+$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+$context = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
 
-    $data = json_decode($response, true);
-    $product = null;
+$data = json_decode($response, true);
+$product = null;
 
-    if (is_array($data)) {
-        foreach ($data as $item) {
-            if (
-                trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
-            ) {
-                $product = $item;
-                break;
-            }
+if (is_array($data)) {
+    foreach ($data as $item) {
+        if (
+            trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+        ) {
+            $product = $item;
+            break;
         }
     }
+}
 
-    $price    = $product['price']    ?? 0;
-    $quantity = $product['quantity'] ?? 0;
-    
-    
-    // Загружаем только свои товары
-    $urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
+$price    = $product['price']    ?? 0;
+$quantity = $product['quantity'] ?? 0;
 
-    $options = [
-        "http" => [
-            "method" => "GET",
-            "header" => "Content-Type: application/json"
-        ]
-    ];
 
-    $context = stream_context_create($options);
-    $response = file_get_contents($urlBestsellers, false, $context);
+// Загружаем только свои товары
+$urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
 
-    if ($response === FALSE) {
-        die("Ошибка запроса");
-    }
+$options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Content-Type: application/json"
+    ]
+];
 
-    $data = json_decode($response, true);
+$context = stream_context_create($options);
+$response = file_get_contents($urlBestsellers, false, $context);
 
-    foreach ($data as $item) {
-        $id = $item["id"];
-        $imgLinkIconCard = $item["imgLinkIconCard"];
-        $vendorCodeBestseller = $item["vendorCode"];
-        $nameComponent = $item["nameComponent"];
-        $quantityBestseller = $item["quantity"];
-        $linkPage = $item["linkPage"];
-        $priceBestseller = $item["price"];
-        $basketImgPath = $item["basketImgPath"];
-        $guidId = $item["guid"];
-        $manufacturer = $item["manufacturer"];
-    }
+if ($response === FALSE) {
+    die("Ошибка запроса");
+}
+
+$data = json_decode($response, true);
+
+foreach ($data as $item) {
+    $id = $item["id"];
+    $imgLinkIconCard = $item["imgLinkIconCard"];
+    $vendorCodeBestseller = $item["vendorCode"];
+    $nameComponent = $item["nameComponent"];
+    $quantityBestseller = $item["quantity"];
+    $linkPage = $item["linkPage"];
+    $priceBestseller = $item["price"];
+    $basketImgPath = $item["basketImgPath"];
+    $guidId = $item["guid"];
+    $manufacturer = $item["manufacturer"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@
 
 <head>
     <meta charset='UTF-8'>
-   <title>LC1D09M7 — контактор-пускатель 9А 220В | Выбрать контактор для двигателя</title>
+    <title>LC1D09M7 — контактор-пускатель 9А 220В | Выбрать контактор для двигателя</title>
     <meta name='description' content='LC1D09M7 — контактор-пускатель 9А 220В Schneider Electric TeSys D. Подходит для пуска электродвигателей и управления промышленными нагрузками. Поможем выбрать контактор по параметрам. Цена: <?php echo $price ?> ₽.'>
     <meta name='keywords' content='контактор пускатель 220в, выбрать контактор 9а, контактор напряжения 220в, контактор для двигателя 3p, lc1d09m7'>
     <meta name='robots' content='index, follow'>
@@ -90,22 +90,22 @@
     <!-- JSON-LD -->
     <script type="application/ld+json">
         {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "LC1D09M7 Контактор Schneider Electric",
-        "image": "https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png",
-        "description": "Силовой контактор LC1D09M7 Schneider Electric серии TeSys D. Номинальный ток 9 А, катушка управления 220 В AC.",
-        "sku": "LC1D09M7",
-        "brand": {
-            "@type": "Brand",
-            "name": "Schneider Electric"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "<?php echo number_format($price, 2, '.', ''); ?>",
-            "priceCurrency": "RUB",
-            "availability": "<?php echo ($quantity > 0) ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"; ?>"
-        }
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "LC1D09M7 Контактор Schneider Electric",
+            "image": "https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png",
+            "description": "Силовой контактор LC1D09M7 Schneider Electric серии TeSys D. Номинальный ток 9 А, катушка управления 220 В AC.",
+            "sku": "LC1D09M7",
+            "brand": {
+                "@type": "Brand",
+                "name": "Schneider Electric"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "<?php echo number_format($price, 2, '.', ''); ?>",
+                "priceCurrency": "RUB",
+                "availability": "<?php echo ($quantity > 0) ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"; ?>"
+            }
         }
     </script>
     <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
@@ -136,27 +136,27 @@
             accurateTrackBounce: true,
             webvisor: true
         });
-    </script>        
+    </script>
     <!--Yandex.Metrika counter-->
-        <noscript>
-            <div>
-                <img src='https://mc.yandex.ru/watch/98501628' style='position:absolute; left:-9999px;' alt='Яндекс метрика'>
-            </div>
+    <noscript>
+        <div>
+            <img src='https://mc.yandex.ru/watch/98501628' style='position:absolute; left:-9999px;' alt='Яндекс метрика'>
+        </div>
     </noscript>
     <!--/Yandex.Metrika counter-->
 </head>
 
 <body>
     <?php
-        $color_line_header = $color_line_header ?? null;
-        include_once '../../php/modules/header.php';
+    $color_line_header = $color_line_header ?? null;
+    include_once '../../php/modules/header.php';
     ?>
 
     <main>
         <div class='discription-product-section'>
             <div class='container'>
-               <h1 class='discription-product-section__title NKUPages_h1'>
-                 LC1D09M7 — Контактор-пускатель 9А 220В для электродвигателя
+                <h1 class='discription-product-section__title NKUPages_h1'>
+                    LC1D09M7 — Контактор-пускатель 9А 220В для электродвигателя
                 </h1>
 
 
@@ -210,15 +210,18 @@
                                 </li>
                             </ul>
                         </div>
-                           <!--Кнопки купить в магазинах-->
-                            <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-3424066591/?from_sku=3424066591&oos_search=false" id="button-link">
-                                    <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
-                                </a>
-                                <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                    <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
-                                </a>
-                            </div>
+                        <!--Кнопки купить в магазинах-->
+                        <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
+                            <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-3424066591/?from_sku=3424066591&oos_search=false" id="button-link">
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                            </a>
+                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                            </a>
+                        </div>
+                        <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>
+                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
+                        </a>
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>
@@ -277,7 +280,7 @@
                         </div>
                         <hr class='hr'>
                         <div class='attention-section__discription'>
-                           <b>LC1D09M7</b> применяется как контактор-пускатель для дистанционного запуска и остановки трёхфазных электродвигателей малой мощности.
+                            <b>LC1D09M7</b> применяется как контактор-пускатель для дистанционного запуска и остановки трёхфазных электродвигателей малой мощности.
 
                             При выборе контактора важно учитывать:<br>
                             — номинальный ток (9 А AC-3)<br>
@@ -399,45 +402,45 @@
                         <h3 class="please-note-section__title">Пользователи выбирают:</h3>
                         <div class="please-note-section__card-product">
                             <?php
-                                // форматирование цены (intl extension required)
-                                function formatRub($price)
-                                {
-                                    if (!class_exists('NumberFormatter')) {
-                                        return number_format((float)$price, 0, ',', ' ') . ' ₽';
-                                    }
-                                    $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
-                                    $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
-                                    return $fmt->formatCurrency($price, 'RUB');
+                            // форматирование цены (intl extension required)
+                            function formatRub($price)
+                            {
+                                if (!class_exists('NumberFormatter')) {
+                                    return number_format((float)$price, 0, ',', ' ') . ' ₽';
                                 }
+                                $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
+                                $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
+                                return $fmt->formatCurrency($price, 'RUB');
+                            }
 
-                                $noImage = '../../img/free-icon-no-photo-4054617.png';
-                                $count = 0;
+                            $noImage = '../../img/free-icon-no-photo-4054617.png';
+                            $count = 0;
 
-                                if (is_array($data) && count($data) > 0) {
-                                    foreach ($data as $item) {
+                            if (is_array($data) && count($data) > 0) {
+                                foreach ($data as $item) {
 
-                                        if ($count == 4) {
-                                            break;
-                                        }
+                                    if ($count == 4) {
+                                        break;
+                                    }
 
-                                        $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
-                                        $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
-                                        $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
-                                        $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
-                                        $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
-                                        $price = isset($item['price']) ? $item['price'] : 0;
+                                    $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
+                                    $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
+                                    $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
+                                    $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
+                                    $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
+                                    $price = isset($item['price']) ? $item['price'] : 0;
 
-                                        $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
+                                    $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
 
-                                        $qtyClass = $quantity === 0
-                                            ? 'delivry-block__quantity delivry-block__quantity_0'
-                                            : 'delivry-block__quantity';
+                                    $qtyClass = $quantity === 0
+                                        ? 'delivry-block__quantity delivry-block__quantity_0'
+                                        : 'delivry-block__quantity';
 
-                                        $qtyText = $quantity === 0
-                                            ? 'Под заказ'
-                                            : 'Наличие: ' . $quantity . ' шт.';
+                                    $qtyText = $quantity === 0
+                                        ? 'Под заказ'
+                                        : 'Наличие: ' . $quantity . ' шт.';
 
-                                        echo <<<HTML
+                                    echo <<<HTML
                                         <div class="card-component">
                                             <div class="card-component__top">
                                                 <img src="{$img}" class="card-component__img" alt="Фото {$name}">
@@ -460,29 +463,30 @@
                                         </div>
                                     HTML;
 
-                                        $count++;
-                                    }
-                                } else {
-                                    echo '<p>Пока нет рекомендаций.</p>';
+                                    $count++;
                                 }
+                            } else {
+                                echo '<p>Пока нет рекомендаций.</p>';
+                            }
                             ?>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-    </div>
+        </div>
         <!-- LSI -->
         <p style="font-size:0;line-height:0">
             контактор пускатель 9а 220в
             как выбрать контактор для двигателя
             контактор напряжения 3p
             <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D09M7.php">
-                контактор schneider tesys d 9а  
-            </a>    
+                контактор schneider tesys d 9а
+            </a>
         </p>
     </main>
     <?php include '../../php/modules/footer.php'; ?>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
 </body>
+
 </html>

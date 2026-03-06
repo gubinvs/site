@@ -1422,6 +1422,21 @@ footer {
   }
 }
 
+@media only screen and (max-width: 960px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 640px;
+  }
+  
+  .topblock-img {
+    display: none;
+  }
+}
 
 
 

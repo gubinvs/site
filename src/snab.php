@@ -102,7 +102,13 @@
         </div>
         <div class="content-block">
           <picture>
-            <img class="topblock-img" src="img/snab-page-img/topblock-img_1920.jpg" alt="Мужчина и женьшина за компьютером изучают предложения рынка по комплектующим">
+            <source srcset="img/snab-page-img/topblock-img_1920.jpg" media="(min-width: 1281px)">
+            <source srcset="img/snab-page-img/topblock-img_1280.png" media="(min-width: 1025px)">
+            <source srcset="img/snab-page-img/topblock-img_1024.png" media="(min-width: 961px)">
+            <source srcset="img/snab-page-img/topblock-img_960.png" media="(min-width: 801px)">
+            <img 
+              class="topblock-img" src="img/snab-page-img/topblock-img_1920.jpg" 
+              alt="Мужчина и женьшина за компьютером изучают предложения рынка по комплектующим">
           </picture>
         </div>
         <div class="content-block">

@@ -79,7 +79,7 @@
             <button class="button-offer">Получить предложение</button>
           </form>
           <div class="card-block">
-            <div class="bordercard">
+            <div class="bordercard bordercard_one">
               <div class="bordercard_bground">
                 <div class="bordercard_bground__discr_number">20+</div>
                 <div class="bordercard_bground__discr_text">лет на рынке аутсорсинга</div>
@@ -87,7 +87,7 @@
             </div>
             <div class="bordercard bordercard_white">
               <div class="bordercard bordercard_mini"></div>
-              <div class="bordercard_bground bordercard_bground-white">
+              <div class="bordercard_bground bordercard_bground-white bordercard_bground-white_2">
                 <div class="bordercard_bground__discr_number bordercard_bground__discr_number-white">+30%</div>
                 <div class="bordercard_bground__discr_text bordercard_bground__discr_text-white">экономии фонда заработной платы</div>
               </div>
@@ -105,7 +105,6 @@
             <source srcset="img/snab-page-img/topblock-img_1920.jpg" media="(min-width: 1281px)">
             <source srcset="img/snab-page-img/topblock-img_1280.png" media="(min-width: 1025px)">
             <source srcset="img/snab-page-img/topblock-img_1024.png" media="(min-width: 961px)">
-            <source srcset="img/snab-page-img/topblock-img_960.png" media="(min-width: 801px)">
             <img 
               class="topblock-img" src="img/snab-page-img/topblock-img_1920.jpg" 
               alt="Мужчина и женьшина за компьютером изучают предложения рынка по комплектующим">

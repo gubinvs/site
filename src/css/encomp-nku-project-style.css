@@ -1864,7 +1864,7 @@ header {
   }
 
   .header-navigation__list li:not(:last-of-type) {
-        display: none;
+    display: none;
   }
 
   .haader__line,

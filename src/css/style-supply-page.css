@@ -1536,36 +1536,12 @@ footer {
   .bordercard_one {
     display: none;
   }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 960px) {
-  .container {
-    width: 800px;
+  .footer__container {
+    padding-top: 0px;
   }
-}
 
-@media only screen and (max-width: 800px) {
-  .container {
-    width: 640px;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .container {
-    width: 480px;
+  .footer__copyright {
+    padding-top: 28px !important;
   }
 }

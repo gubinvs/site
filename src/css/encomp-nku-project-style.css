@@ -1869,11 +1869,11 @@ header {
 
   .haader__line,
   .haader__square {
-        display: none;
+    display: none;
   }
 
   .header__container {
-        flex-direction: row !important;
+    flex-direction: row !important;
   }
 
   .header-logo-block {

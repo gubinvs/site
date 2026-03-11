@@ -128,7 +128,7 @@
         </div>
       </div>
     </section>
-    <!--<section class="ip-task-section">
+    <section class="ip-task-section">
       <div class="container ip-task-secrion-container">
         <div class="h2-ip-title-block">
           <h2 class="ip-h2-section-title">Передайте задачу обеспечения материалами <br> и комплектующими профессионалам</h2>
@@ -155,7 +155,7 @@
         </div>
       </div>
     </section>
-    <section class="ip-feedback-section">
+    <!--<section class="ip-feedback-section">
       <div class="container ip-feedback-section-container">
         <div class="ip-feedback-section-container__content">
           <div class="h2-ip-title-block">

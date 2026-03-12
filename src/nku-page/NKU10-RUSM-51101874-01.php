@@ -15,7 +15,7 @@ $price = $out;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encomponent.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/encomp-nku-project-style.css" media="all">
+    <link rel="stylesheet" href="../css/encomp-nku-project-style.css" media="all">
     <meta name="description" content="Щит управления РУСМ5110-1874 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 0,6А IEK">
     <title>NKU10-RUSM-51101874-01, Щит управления РУСМ5110-1874 нереверсивный 1 фидер автоматический выключатель на каждый фидер без переключателя на автоматический режим 0,6А IEK</title>
     <!-- Yandex.Metrika counter -->

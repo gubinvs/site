@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="/css/encomp-nku-project-style.css" media="all">
   <link rel="stylesheet" href="/css/style-supply-page.css">
 
-  <!-- 🔹 Yandex.Metrika -->
+  <!-- 🔹 Yandex.Metrika
   <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
       m[i] = m[i] || function() {
@@ -61,7 +61,7 @@
       font-size: 15px;
       line-height: 1.6;
     }
-  </style>
+  </style>-->
 </head>
 
 

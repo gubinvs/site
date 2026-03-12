@@ -1538,6 +1538,14 @@ footer {
     width: 259px;
   }
 
+  .task-card-container .task-section-card:last-of-type {
+    display: none;
+  }
+
+  .task-section-card__discr {
+    font-size: 18px;
+  }
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -1606,6 +1614,57 @@ footer {
   .bordercard_bground__discr_text-white {
     left: 3px;
     font-size: 14px;
+  }
+
+  .task-card-container .task-section-card:last-of-type {
+    display: inline;
+  }
+
+  .ip-top-section__container .content-block:nth-last-of-type(2n) {
+    display: none;
+  }
+
+  .content-block_ip-title {
+    width: 100%;
+    margin-right: 0px;
+  }
+  
+  .content-block:not(:last-of-type) {
+    margin-right: 0px;
+  }
+
+  .ip-title {
+    width: 100%;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 900;
+  }
+
+  .ip-h2-section-title {
+    width: 478px;
+    font-size: 21px;
+  }
+
+  .fon-h2-block_red175 {
+    height: 27px;
+    top: 3px;
+    width: 198px;
+  }
+
+  .fon-h2-block_red180 {
+    height: 28px;
+    top: 34px;
+    left: 204px;
+    width: 192px;
+  }
+
+  .task-section-card:not(:last-of-type) {
+      margin-right: 8px;
+  }
+
+  .task-section-card {
+    width: 230px;
+    margin-bottom: 8px;
   }
 }
 

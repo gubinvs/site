@@ -211,7 +211,7 @@
                             </a>
                         </div>
                         <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>
-                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
+                            <button class="button-characteristics__offer" style="width:100%;">Выбрать другой ЩАП</button>
                         </a>
                         <!--/ Кнопки купить в магазинах-->
                     </div>

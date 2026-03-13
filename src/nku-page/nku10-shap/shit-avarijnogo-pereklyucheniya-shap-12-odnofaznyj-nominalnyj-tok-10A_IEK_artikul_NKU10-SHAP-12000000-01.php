@@ -203,7 +203,7 @@
                         </div>
                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
-                            <a href="https://www.ozon.ru/product/lc1d09m7c-kontaktor-schneider-electric-tesys-d-lc1d09m7c-9-a-universalnaya-katushka-240-v-ac-3498131933/" id="button-link">
+                            <a href="" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>

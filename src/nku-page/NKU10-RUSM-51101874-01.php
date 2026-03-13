@@ -1,11 +1,11 @@
 <?php
 include "php/class/api_Connector.php";
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, $apiServer . '/api/PriceNku/NKU10-RUSM-51101874-01');
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-$out = curl_exec($curl);
-curl_close($curl);
-$price = $out;
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $apiServer . '/api/PriceNku/NKU10-RUSM-51101874-01');
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    $out = curl_exec($curl);
+    curl_close($curl);
+    $price = $out;
 ?>
 <!DOCTYPE html>
 <html lang="ru">

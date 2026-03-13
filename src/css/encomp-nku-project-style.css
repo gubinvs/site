@@ -1692,6 +1692,14 @@ header {
   .specifications-item__tech {
     width: 200px;
   }
+
+  .equipment-section-item__article,
+  .equipment-section-item__name,
+  .equipment-section-item__quantity {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    line-height: 18px;
+  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -2001,6 +2009,13 @@ header {
     width: 190px;
     font-size: 16px;
   }
+
+  .equipment-section-item__article,
+  .equipment-section-item__name,
+  .equipment-section-item__quantity {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -2181,6 +2196,28 @@ header {
     width: 480px;
   }
 
+  .equipment-section-item__article,
+  .equipment-section-item__name,
+  .equipment-section-item__quantity {
+    font-size: 10px;
+  }
+
+  .equipment-section-item__article {
+    padding: 0px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 140px;
+  }
+
+  .equipment-section-item__name {
+    width: 300px;
+  }
+
+  .equipment-section-item__quantity {
+    padding: 0px;
+    width: 50px;
+  }
 
 }
 
@@ -2275,6 +2312,14 @@ header {
 
   .discription-section-right-block__download-file {
     margin-bottom: 10px;
+  }
+
+  .equipment-section-item__name {
+    width: 300px;
+  }
+
+  .equipment-section-item__quantity {
+    width: 64px;
   }
 
 }

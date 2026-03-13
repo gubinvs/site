@@ -135,7 +135,7 @@
 
                 <section class='main-section flex'>
                     <div class='main-section__img-block'>
-                        <img src=' ' alt='<?php echo $description ?>'
+                        <img src='../../img/img-product/NKU10-SHAP-12000000-01/NKU10-SHAP-12000000-01.avif' alt='<?php echo $description ?>'
                             class='discription-product__img main-section__img'>
                     </div>
                     <div class='main-section__discription'>

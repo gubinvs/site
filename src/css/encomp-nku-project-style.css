@@ -196,6 +196,11 @@ a:hover {
   margin-right: auto;
 }
 
+
+.discription-product-section__container {
+  margin-bottom: 40px;
+}
+
 .article-block {
   width: 100%;
 }
@@ -215,15 +220,21 @@ a:hover {
 
 .main-section-price-block {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   font-size: 34px;
   font-weight: 800;
 }
 
 .main-section-price__price {
   color: #1D252C;
-  margin-right: 10px;
   font-family: "Roboto Condensed", serif;
+  line-height: 25px;
+}
+
+.main-section-price__price-discr {
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .main-section-price__icon {
@@ -528,12 +539,7 @@ a:hover {
 
 .technical-specifications-list__item {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.technical-specifications-list__item {
-  display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .equipment-section {
@@ -557,7 +563,7 @@ a:hover {
 .specifications-item__name,
 .equipment-section-item__article,
 .equipment-section-item__name {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .specifications-item__tech {

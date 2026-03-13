@@ -128,7 +128,7 @@
 
     <main>
         <div class='discription-product-section'>
-            <div class='container'>
+            <div class='container discription-product-section__container'>
                 <h1 class='discription-product-section__title NKUPages_h1'>
                     <?php echo $article . ", " . $title ?>
                 </h1>
@@ -142,13 +142,14 @@
 
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h4 class='article-name'><?php echo $article ?></h4>
+                            <h5 class='article-name'><?php echo $article ?></h5>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
                             <div class='main-section-price__price'>
                                 <?php echo number_format($price, 0, ',', ' '); ?>
                             </div>
+                            <div class="main-section-price__price-discr">в т.ч. НДС</div>
                         </div>
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
                             <div class='warehouse-item-quantity__name'>В наличии:</div>
@@ -284,7 +285,7 @@
                         <thead class='table-secondary'>
                             <tr>
                                 <th>Параметр</th>
-                                <th>Значение</th>
+                                <th style="width: 60%;">Значение</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -371,105 +372,80 @@
                 <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
                 <ul class='files-and-documents-section__list'>
                     <li class='files-and-documents-section__item'>
-                        Общий каталог контакторов TeSys D (PDF) —
-                        <a href='../../files/LC1D09M7/schneider-Electric_TeSys-Deca-contactors_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                        Схема подключения (PNG) —
+                        <a href='../../files/NKU10-SHAP-12000000-01/4679e867d6fb7ccdfb07b90805daefa67204fdd81393cdf2b954aad1e276d4c1.png' target='_blank' rel='nofollow'>
                             <b>Открыть</b>
                         </a>
                     </li>
                     <li class='files-and-documents-section__item'>
-                        Инструкция для подключения LC1D09M7 —
-                        <a href='../../files/LC1D09M7/Catalog_LC1D09M7.pdf' target='_blank' rel='nofollow'>
-                            <b>Открыть</b>
+                        AutoCad, Чертеж и спецификация решения (DWG, 243.70 KB)
+                        <a href='../../files/NKU10-SHAP-12000000-01/252ed1b5fd53619675d6a2dc6530e6179cd51318c8d0dcc3f2da10ae6d4ac90e.dwg' target='_blank' rel='nofollow'>
+                            <b>Скачать</b>
                         </a>
                     </li>
                 </ul>
-                <br><br><br>
-                <section class="please-note-section">
-                    <div class="container please-note-section__container">
-                        <h3 class="please-note-section__title">Пользователи выбирают:</h3>
-                        <div class="please-note-section__card-product">
-                            <?php
-                            // форматирование цены (intl extension required)
-                            function formatRub($price)
-                            {
-                                if (!class_exists('NumberFormatter')) {
-                                    return number_format((float)$price, 0, ',', ' ') . ' ₽';
-                                }
-                                $fmt = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
-                                $fmt->setAttribute(NumberFormatter::MIN_FRACTION_DIGITS, 0);
-                                return $fmt->formatCurrency($price, 'RUB');
-                            }
-
-                            $noImage = '../../img/free-icon-no-photo-4054617.png';
-                            $count = 0;
-
-                            if (is_array($data) && count($data) > 0) {
-                                foreach ($data as $item) {
-
-                                    if ($count == 4) {
-                                        break;
-                                    }
-
-                                    $img = !empty($item['imgLinkIconCard']) ? $item['imgLinkIconCard'] : $noImage;
-                                    $vendor = htmlspecialchars($item['vendorCode'] ?? '', ENT_QUOTES, 'UTF-8');
-                                    $name = htmlspecialchars($item['nameComponent'] ?? 'Без названия', ENT_QUOTES, 'UTF-8');
-                                    $link = htmlspecialchars($item['linkPage'] ?? '#', ENT_QUOTES, 'UTF-8');
-                                    $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
-                                    $price = isset($item['price']) ? $item['price'] : 0;
-
-                                    $fmtPrice = htmlspecialchars(formatRub($price), ENT_QUOTES, 'UTF-8');
-
-                                    $qtyClass = $quantity === 0
-                                        ? 'delivry-block__quantity delivry-block__quantity_0'
-                                        : 'delivry-block__quantity';
-
-                                    $qtyText = $quantity === 0
-                                        ? 'Под заказ'
-                                        : 'Наличие: ' . $quantity . ' шт.';
-
-                                    echo <<<HTML
-                                        <div class="card-component">
-                                            <div class="card-component__top">
-                                                <img src="{$img}" class="card-component__img" alt="Фото {$name}">
-                                                <div class="card-component__vendor">Артикул: {$vendor}</div>
-                                                <div class="card-component__name">
-                                                    <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="card-component__bottom">
-                                                <div class="cc-basket-block__delivry-block">
-                                                    <div class="{$qtyClass}">{$qtyText}</div>
-                                                </div>
-
-                                                <div class="card-component__price-block">
-                                                    <div class="card-component__price">{$fmtPrice}</div>
-                                                    <div class="card-component__price-nalog">в т.ч. НДС</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    HTML;
-
-                                    $count++;
-                                }
-                            } else {
-                                echo '<p>Пока нет рекомендаций.</p>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </section>
-
             </div>
-        </div>
+            <section class="equipment-section">
+                <div class="container">
+                    <div class="attention-section__title-block technical-specifications-section__title-block flex">
+                        <div class="attention-section-title-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" fill="#F3DE09" stroke="#1D252C" />
+                                <line x1="9" y1="12" x2="23" y2="12" stroke="black" stroke-width="2" />
+                                <line x1="11" y1="18" x2="21" y2="18" stroke="black" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="attention-section-title__title">Комплектация</div>
+                    </div>
+                    <div class="technical-specifications-section__table mb-40">
+                        <ul class="technical-specifications-list">
+                            <div class="technical-specifications-list__item">
+                                <div class="equipment-section-item__article grey title">Артикул</div>
+                                <div class="equipment-section-item__name grey title">Наименование</div>
+                                <div class="equipment-section-item__quantity grey title">Кол-во</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="equipment-section-item__article">BLS10-ADDS-230-K04</div>
+                                <div class="equipment-section-item__name">Лампа AD22DS(LED)матрица d22мм красный 230В AC/DC IEK</div>
+                                <div class="equipment-section-item__quantity">1</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="equipment-section-item__article grey">RRP10-4-10-220A</div>
+                                <div class="equipment-section-item__name grey">Реле РЭК77/4(LY4) 10А 220В AC IEK</div>
+                                <div class="equipment-section-item__quantity grey">1</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="equipment-section-item__article">YKM40-321-31</div>
+                                <div class="equipment-section-item__name">Корпус металлический ЩМП-3.2.1-0 (300х210х150мм) УХЛ3 IP31 IEK</div>
+                                <div class="equipment-section-item__quantity">1</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="equipment-section-item__article grey">MVA20-1-010-C</div>
+                                <div class="equipment-section-item__name grey">KARAT Автоматический выключатель ВА47-29 1P C 10А 4,5кА IEK</div>
+                                <div class="equipment-section-item__quantity grey">2</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="equipment-section-item__article">BLS10-ADDS-230-K06</div>
+                                <div class="equipment-section-item__name">Лампа AD22DS(LED)матрица d22мм зеленый 230В AC/DC IEK</div>
+                                <div class="equipment-section-item__quantity">1</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="equipment-section-item__article grey">RRP10D-RRM-4</div>
+                                <div class="equipment-section-item__name grey">Разъем РРМ77/4(PTF14A) для РЭК77/4(LY4) модульный IEK</div>
+                                <div class="equipment-section-item__quantity grey">1</div>
+                            </div>
+                        </ul>
+                    </div>
+                    <a href="../../files/NKU10-SHAP-12000000-01/NKU10-SHAP-12000000-01.csv">
+                        <div class="button-equipment">Скачать</div>
+                    </a>
+                </div>
+            </section>
         </div>
         <!-- LSI -->
         <p style="font-size:0;line-height:0">
-            контактор 220в переменного тока 9а
-            электромагнитный контактор schneider electric
-            контактор напряжения 3p купить
-            контактор 220–240 в ac для двигателя
-            <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D09M7C.php">электромагнитный контактор schneider electric</a>
+            Щиты автоматического ввода резерва (АВР) типа ЩАП предназначены для автоматического переключения силового электрооборудования и систем освещения на резервный источник питания при пропадании основного напряжения. После восстановления нормальных параметров сети устройство автоматически возвращает электроснабжение на основной ввод, обеспечивая стабильную и бесперебойную работу оборудования.
+            Конструктивно щиты ЩАП изготавливаются в металлических корпусах навесного исполнения. Корпус обеспечивает степень защиты IP31, что позволяет использовать оборудование в распределительных и технических помещениях для организации надежной системы резервного электропитания.
         </p>
     </main>
     <?php include '../../php/modules/footer.php'; ?>

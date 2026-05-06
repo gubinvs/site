@@ -148,6 +148,8 @@
                                 </svg>
                             </div>
                         </div>
+                        <div class="warehouse-item-quantity__name warehouse-item-quantity__name_sklad">На складе в Санкт-Петербурге:</div>
+                        
                         <!-- // Количество на складе -->
                         <div class="<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>">
                             <div class="warehouse-item-quantity__name">В наличии:</div>
@@ -188,13 +190,13 @@
                             <a href="https://www.ozon.ru/product/tm241ce24t-blok-bazovyy-m241-24io-tranzist-istochnik-ethernet-schneider-electric-3442839311/" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
-                            <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
+                            <!-- <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
                                 <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
-                            </a>
+                            </a> -->
                         </div>
-                        <a href=<?php echo $shopURL . '/CatalogSection/?chapter=%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%BB%D0%B5%D1%80%D1%8B' ?>>
+                        <!-- <a href=<?php echo $shopURL . '/CatalogSection/?chapter=%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%BB%D0%B5%D1%80%D1%8B' ?>>
                             <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контроллер</button>
-                        </a>
+                        </a> -->
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>

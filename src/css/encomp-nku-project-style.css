@@ -177,6 +177,7 @@ a:hover {
 /*-------------- main-section -----------------------*/
 .main-section {
   margin-bottom: 80px;
+  justify-content: space-between;
 }
 
 .main-section__img-block {
@@ -220,8 +221,10 @@ a:hover {
 
 .main-section-price-block {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
   font-size: 34px;
   font-weight: 800;
 }
@@ -230,6 +233,7 @@ a:hover {
   color: #1D252C;
   font-family: "Roboto Condensed", serif;
   line-height: 25px;
+  margin-right: 10px;
 }
 
 .main-section-price__price-discr {
@@ -238,7 +242,7 @@ a:hover {
 }
 
 .main-section-price__icon {
-  padding-top: 3px;
+  padding-top: 6px;
 }
 
 .characteristics-block {
@@ -278,6 +282,13 @@ a:hover {
 
 .warehouse-item-quantity__name {
   margin-right: 10px;
+}
+
+.warehouse-item-quantity__name_sklad {
+  font-weight: 600;
+  margin-right: 0px;
+  text-align: right;
+
 }
 
 .warehouse-item-quantity__quantity {

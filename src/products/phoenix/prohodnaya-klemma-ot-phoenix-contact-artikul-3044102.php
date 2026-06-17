@@ -243,7 +243,7 @@
                                 оформит счет и согласует удобный способ доставки!
                             </div>
                         </div>
-                        <form class="feedback-section__form" action="../php/invoice-request.php" method="POST">
+                        <form class="feedback-section__form" action="../../php/invoice-request.php" method="POST">
                             <input
                                 class="feedback-section__input feedback-section__input_name"
                                 type="hidden"

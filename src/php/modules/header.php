@@ -7,14 +7,14 @@
         </div>
         <div class="header-navigation-block">
             <ul class="header-navigation__list">
-                <li class="header-navigation__item">
+                <!-- <li class="header-navigation__item">
                     <a href="https://encomponent.ru/snab.php">Аутсорсинг снабжения</a>
-                </li>
-                <li class="header-navigation__item">
+                </li> -->
+                <!-- <li class="header-navigation__item">
                     <a href="https://supply.encomponent.ru/">Сервис для снабжения</a>
-                </li>
+                </li> -->
                 <li class="header-navigation__item">
-                    <a href="https://shop.encomponent.ru/">
+                    <a href="http://178.208.79.34:1020/">
                         <div class="header-navigation-block__button">Интернет-магазин</div>
                     </a>
                 </li>

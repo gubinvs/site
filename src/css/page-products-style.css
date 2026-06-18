@@ -1,0 +1,31 @@
+/* Стили для страницы товара сайта магазина - статичные страницы */
+
+
+@media only screen and (max-width: 1280px) {
+    .main-section__desktop {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 960px) {
+
+}
+
+@media only screen and (max-width: 800px) {
+
+}
+
+@media only screen and (max-width: 640px) {
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}

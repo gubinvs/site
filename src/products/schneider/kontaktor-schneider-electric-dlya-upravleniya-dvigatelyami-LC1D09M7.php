@@ -111,6 +111,7 @@ foreach ($data as $item) {
     <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
+    <link rel='stylesheet' href='../../css/page-products-style.css'>
     <!-- Yandex.Metrika counter -->
     <script>
         (function(m, e, t, r, i, k, a) {
@@ -151,13 +152,11 @@ foreach ($data as $item) {
     $color_line_header = $color_line_header ?? null;
     include_once '../../php/modules/header.php';
     ?>
-
     <main>
         <div class='discription-product-section'>
-            <div class='container'>
+            <div class='container '>
                 <h1 class='discription-product-section__title NKUPages_h1'>LC1D09M7 — Электромеханический контактор Schneider Electric</h1>
-
-                <section class='main-section flex'>
+                <section class='main-section main-section__desktop flex'>
                     <div class='main-section__img-block'>
                         <img src='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png' alt='Контактор Schneider Electric LC1D09M7' class='discription-product__img main-section__img'>
                     </div>
@@ -477,7 +476,6 @@ foreach ($data as $item) {
                     </div>
                 </section>
             </div>
-        </div>
         </div>
         <!-- LSI -->
         <p style="font-size:0;line-height:0">

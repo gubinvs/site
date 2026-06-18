@@ -169,8 +169,7 @@ foreach ($data as $item) {
                         <hr>
                         <div class='main-section-price-block'>
                             <div class='main-section-price__price'>
-                                <?php echo number_format($price, 0, ',', ' '); ?>
-                                <div class="main-section-price__nds">в т.ч. НДС</div>
+                                <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
                             </div>
                         </div>
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>

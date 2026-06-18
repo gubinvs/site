@@ -233,18 +233,13 @@ a:hover {
   color: #1D252C;
   font-family: "Roboto Condensed", serif;
   line-height: 25px;
+  margin-bottom: 4px;
   
 }
 
 .main-section-price__price-discr {
   font-size: 12px;
   font-weight: 300;
-}
-
-.main-section-price__nds {
-  padding-top: 4px;
-  font-size: 16px;
-  font-weight: 100;
 }
 
 .main-section-price__icon {

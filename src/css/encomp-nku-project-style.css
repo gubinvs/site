@@ -392,6 +392,7 @@ a:hover {
 }
 
 .attention-section__discription {
+  text-align: justify;
   font-size: 20px;
   font-weight: 200;
 }

@@ -1,7 +1,7 @@
 <header>
     <div class="container header__container">
         <div class="header-logo-block">
-            <a href="https://encomponent.ru">
+            <a href="https://shop.encomponent.ru/">
                 <img src="https://encomponent.ru/img/header_logo_1920.svg" class="header-logo-block__img" alt="Логотип компании">
             </a>
         </div>
@@ -14,8 +14,8 @@
                     <a href="https://supply.encomponent.ru/">Сервис для снабжения</a>
                 </li> -->
                 <li class="header-navigation__item">
-                    <a href="http://178.208.79.34:1020/">
-                        <div class="header-navigation-block__button">Интернет-магазин</div>
+                    <a href="https://shop.encomponent.ru/CompanyDashboard">
+                        <div class="header-navigation-block__button">Личный кабинет</div>
                     </a>
                 </li>
             </ul>    

@@ -233,12 +233,18 @@ a:hover {
   color: #1D252C;
   font-family: "Roboto Condensed", serif;
   line-height: 25px;
-  margin-right: 10px;
+  
 }
 
 .main-section-price__price-discr {
   font-size: 12px;
   font-weight: 300;
+}
+
+.main-section-price__nds {
+  padding-top: 4px;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .main-section-price__icon {
@@ -335,12 +341,24 @@ a:hover {
 .button-characteristics__ozon {
   background-color: #1a55eb;
   color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#button-buy {
+  background-color: #009E4D;
+  color: #ffffff;
+  border: 0px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .button-characteristics__offer:hover,
 .button-characteristics__ozon:hover {
   font-weight: 800;
 }
+
+
 
 
 /* ------------------------ attention-section --------------------- */
@@ -767,7 +785,7 @@ header {
   position: absolute;
   right: 12px;
   bottom: 0px;
-  width: 78%;
+  width: 65%;
   height: 30px;
   border-top-left-radius: 10px;
   background-color: #F7F7F5;
@@ -1461,6 +1479,20 @@ header {
 
 .link-next-page {
   margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 2500px) {
+  .haader__line {
+    width: 70%;
+  }
+}
+
+
+@media only screen and (max-width: 1920px) {
+  .haader__line {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 1280px) {

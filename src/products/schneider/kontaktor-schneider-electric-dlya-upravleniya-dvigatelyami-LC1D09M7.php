@@ -164,12 +164,13 @@ foreach ($data as $item) {
 
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D09M7 <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D09M7C.php">(LC1D09M7C)</a></h6>
+                            <h6 class='article-name'>LC1D09M7</h6>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
                             <div class='main-section-price__price'>
                                 <?php echo number_format($price, 0, ',', ' '); ?>
+                                <div class="main-section-price__nds">в т.ч. НДС</div>
                             </div>
                         </div>
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
@@ -209,10 +210,10 @@ foreach ($data as $item) {
                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
                             <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-3424066591/?from_sku=3424066591&oos_search=false" id="button-link">
-                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
+                                <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОН</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">В интернет-магазинe</button>
+                                <button class="button-characteristics__offer" id="button-buy">Купить сейчас</button>
                             </a>
                         </div>
                         <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>

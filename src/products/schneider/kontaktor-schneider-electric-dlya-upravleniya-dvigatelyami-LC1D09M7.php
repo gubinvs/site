@@ -216,6 +216,10 @@ foreach ($data as $item) {
                         <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>
                             <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
                         </a>
+                        <a href="https://shop.encomponent.ru/">
+                            <button class="button-characteristics__offer" style="width:100%;">Покупки для бизнеса</button>
+                        </a>
+                        
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>

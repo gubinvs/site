@@ -337,6 +337,7 @@ a:hover {
   border-radius: 8px;
   /* background-color: #1D252C; */
   color: #1D252C;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 

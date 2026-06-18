@@ -197,6 +197,12 @@ a:hover {
   margin-right: auto;
 }
 
+.msib-img {
+  width: 500px;
+  margin-right: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 
 .discription-product-section__container {
   margin-bottom: 40px;
@@ -328,6 +334,7 @@ a:hover {
   padding-top: 0px;
   text-align: center;
   border: 1px solid #1D252C;
+  border-radius: 8px;
   /* background-color: #1D252C; */
   color: #1D252C;
   cursor: pointer;
@@ -338,6 +345,7 @@ a:hover {
   color: #ffffff;
   font-size: 18px;
   font-weight: 600;
+  border-radius: 8px;
 }
 
 #button-buy {
@@ -346,6 +354,10 @@ a:hover {
   border: 0px;
   font-size: 18px;
   font-weight: 600;
+}
+
+#button-buy:hover {
+  font-weight: 800;
 }
 
 .button-characteristics__offer:hover,

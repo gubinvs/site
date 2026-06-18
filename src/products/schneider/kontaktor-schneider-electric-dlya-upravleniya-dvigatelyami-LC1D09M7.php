@@ -157,9 +157,7 @@ foreach ($data as $item) {
             <div class='container '>
                 <h1 class='discription-product-section__title NKUPages_h1'>LC1D09M7 — Электромеханический контактор Schneider Electric</h1>
                 <section class='main-section main-section__desktop flex'>
-                    <div class='main-section__img-block'>
-                        <img src='https://encomponent.ru/img/img-product/LC1D09M7/LC1D09M7_norm.png' alt='Контактор Schneider Electric LC1D09M7' class='discription-product__img main-section__img'>
-                    </div>
+                    <img src='../../img/img-product/LC1D09M7/contactor-LC1D09M7.jpg' alt='Контактор Schneider Electric LC1D09M7' class='msib-img'>
                     <div class='main-section__discription'>
 
                         <div class='article-block flex'>

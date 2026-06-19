@@ -1679,6 +1679,10 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
+  .main-section__desktop {
+        display: none;
+  }
+
   .container {
     width: 960px;
     min-width: 960px;

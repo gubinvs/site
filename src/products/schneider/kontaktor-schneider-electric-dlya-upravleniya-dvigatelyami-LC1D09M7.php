@@ -333,7 +333,7 @@ foreach ($data as $item) {
                             </div>
                             <div class="technical-specifications-list__item">
                                 <div class="specifications-item__name">Тип подключения</div>
-                                <div class="specifications-item__tech">Винтовые зажимы (Screw Clamp)</div>
+                                <div class="specifications-item__tech">Винтовые зажимы</div>
                             </div>
                             <div class="technical-specifications-list__item">
                                 <div class="specifications-item__name grey">Тип крепления</div>

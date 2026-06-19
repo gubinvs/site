@@ -1538,6 +1538,14 @@ header {
     width: 1000px;
   }
 
+  .msib-img {
+    width: 460px;
+  }
+
+  .characteristics-block__button-block_offer {
+    margin-bottom: 0px;
+  }
+
   .feedback-section__title-block {
     width: 490px;
   }
@@ -1658,15 +1666,16 @@ header {
   }
 
   .main-section__discription {
-    width: 60%;
+    width: 470px;
   }
 
   .button-characteristics__all {
-    width: 320px;
+    width: 254px;
+    margin-right: 0px;
   }
 
   .button-characteristics__offer {
-    width: 245px;
+    width: 210px;
   }
 
   .specifications-item__name {
@@ -1688,9 +1697,9 @@ header {
     min-width: 960px;
   }
 
-  .main-section__img {
+  /*.main-section__img {
     max-height: 280px;
-  }
+  }*/
 
   .feedback-section__title-block {
     width: 540px;

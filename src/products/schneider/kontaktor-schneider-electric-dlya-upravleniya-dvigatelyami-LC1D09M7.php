@@ -317,7 +317,7 @@ foreach ($data as $item) {
                             </div>
                             <div class="technical-specifications-list__item">
                                 <div class="specifications-item__name">Напряжение катушки управления</div>
-                                <div class="specifications-item__tech">220–240 В AC, 50/60 Гц</div>
+                                <div class="specifications-item__tech">220–240В (AC)</div>
                             </div>
                             <div class="technical-specifications-list__item">
                                 <div class="specifications-item__name grey">Номинальное рабочее напряжение силовой цепи</div>

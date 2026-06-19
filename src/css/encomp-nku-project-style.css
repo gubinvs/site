@@ -370,7 +370,7 @@ a:hover {
 .delivery-block {
   display: flex;
   justify-content: flex-end;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 40px;
   color: #1a55eb;
 }

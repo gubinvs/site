@@ -284,7 +284,7 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   color: #32C120;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .warehouse-item-quantity__name {
@@ -367,7 +367,13 @@ a:hover {
 }
 
 
-
+.delivery-block {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #1a55eb;
+}
 
 /* ------------------------ attention-section --------------------- */
 

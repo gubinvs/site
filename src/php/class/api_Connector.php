@@ -6,7 +6,7 @@
 
 
     // $shopURL = "http://178.208.79.34:1020";
-    $shopURL = "http://shop.encomponent.ru";
+    $shopURL = "https://shop.encomponent.ru";
     // $shopURL = "http://localhost:3000";
 
 

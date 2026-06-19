@@ -31,8 +31,9 @@ if (is_array($data)) {
     }
 }
 
-$price    = $product['price']    ?? 0;
+$price = $product['price']    ?? 0;
 $quantity = $product['quantity'] ?? 0;
+$delivery = $product['deliveryТime'] ?? 0;
 
 
 // Загружаем только свои товары
@@ -174,6 +175,9 @@ foreach ($data as $item) {
                             <div class='warehouse-item-quantity__name'>В наличии:</div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
+                        </div>
+                        <div class="delivery-block">
+                            <?php echo $quantity > 8 ? "" : 'Под заказ: от ' .  $delivery . ' до ' . $delivery+4 . ' нед. '?> 
                         </div>
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>

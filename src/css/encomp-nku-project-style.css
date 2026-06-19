@@ -1490,6 +1490,35 @@ header {
   margin-bottom: 50px;
 }
 
+/*---------------------- technical-section ------------------*/
+
+.technical-section {
+  margin-bottom: 20px;
+}
+
+.technical-section__title {
+  margin-bottom: 20px;
+}
+
+
+/* ------------------ document-section -------------------------  */
+
+.document-section {
+  position: relative;
+  border: 1px solid #DFE0E1;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  background-color: #F7F7F5;
+}
+
+.document-section__img {
+  position: absolute;
+  top: -10px;
+  right: 50px;
+  width: 250px;
+}
+
 
 @media only screen and (max-width: 2500px) {
   .haader__line {

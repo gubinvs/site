@@ -291,108 +291,91 @@ foreach ($data as $item) {
                         </div>
                     </div>
                 </section>
-                <div class='container' id='technical'>
-                    <h3 class='mt-5'>Технические характеристики</h3>
-
-                    <table class='table table-bordered table-striped mt-3'>
-                        <thead class='table-secondary'>
-                            <tr>
-                                <th>Параметр</th>
-                                <th>Значение</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Производитель</td>
-                                <td>Schneider Electric</td>
-                            </tr>
-                            <tr>
-                                <td>Серия / Модель</td>
-                                <td>TeSys D / LC1D09M7</td>
-                            </tr>
-                            <tr>
-                                <td>Тип устройства</td>
-                                <td>Силовой контактор для управления электродвигателями и промышленными нагрузками</td>
-                            </tr>
-                            <tr>
-                                <td>Номинальный ток</td>
-                                <td>9 А (категория применения AC-3)</td>
-                            </tr>
-                            <tr>
-                                <td>Напряжение катушки управления</td>
-                                <td>220–240 В AC, 50/60 Гц (код M7)</td>
-                            </tr>
-                            <tr>
-                                <td>Номинальное рабочее напряжение силовой цепи</td>
-                                <td>до 690 В AC</td>
-                            </tr>
-                            <tr>
-                                <td>Количество силовых полюсов</td>
-                                <td>3 NO (3 нормально разомкнутых контакта)</td>
-                            </tr>
-                            <tr>
-                                <td>Вспомогательные контакты</td>
-                                <td>1 NO + 1 NC (для цепей управления и сигнализации)</td>
-                            </tr>
-                            <tr>
-                                <td>Тип подключения</td>
-                                <td>Винтовые зажимы (Screw Clamp)</td>
-                            </tr>
-                            <tr>
-                                <td>Тип крепления</td>
-                                <td>DIN-рейка NS 35 или винтовой монтаж на панель</td>
-                            </tr>
-                            <tr>
-                                <td>Габаритные размеры (Д × Ш × В)</td>
-                                <td>77 × 45 × 86 мм</td>
-                            </tr>
-                            <tr>
-                                <td>Вес (без упаковки)</td>
-                                <td>≈ 330 г</td>
-                            </tr>
-                            <tr>
-                                <td>Степень защиты</td>
-                                <td>IP20</td>
-                            </tr>
-                            <tr>
-                                <td>Диапазон рабочих температур</td>
-                                <td>-5…+60 °C</td>
-                            </tr>
-                            <tr>
-                                <td>Область применения</td>
-                                <td>
-                                    Пуск и остановка трёхфазных электродвигателей малой мощности,
-                                    управление насосами, вентиляторами, компрессорами и
-                                    промышленными механизмами
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Особенности</td>
-                                <td>
-                                    Компактная конструкция, высокая надёжность,
-                                    совместимость с тепловыми реле серии TeSys D,
-                                    соответствие стандартам IEC и UL
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class='container technical-section' id='technical'>
+                    <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
+                    <div class="technical-specifications-section__table">
+                        <div class="technical-specifications-list">
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Заводской артикул</div>
+                                <div class="specifications-item__tech grey"><?php echo $article ?></div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name">Изготовитель</div>
+                                <div class="specifications-item__tech">Schneider Electric</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Серия</div>
+                                <div class="specifications-item__tech grey">TeSys D</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name">Тип устройства</div>
+                                <div class="specifications-item__tech">Силовой контактор</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Номинальный ток</div>
+                                <div class="specifications-item__tech grey">9А (AC-3)</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name">Напряжение катушки управления</div>
+                                <div class="specifications-item__tech">220–240 В AC, 50/60 Гц</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Номинальное рабочее напряжение силовой цепи</div>
+                                <div class="specifications-item__tech grey">до 690В (AC)</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name">Количество силовых полюсов</div>
+                                <div class="specifications-item__tech">3 NO</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Вспомогательные контакты</div>
+                                <div class="specifications-item__tech grey">1 NO + 1 NC</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name">Тип подключения</div>
+                                <div class="specifications-item__tech">Винтовые зажимы (Screw Clamp)</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Тип крепления</div>
+                                <div class="specifications-item__tech grey">DIN-рейка</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name">Габаритные размеры (Д × Ш × В)</div>
+                                <div class="specifications-item__tech">77 × 45 × 86 мм</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Вес (без упаковки)</div>
+                                <div class="specifications-item__tech grey">≈ 330 г</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name">Степень защиты</div>
+                                <div class="specifications-item__tech">IP20</div>
+                            </div>
+                            <div class="technical-specifications-list__item">
+                                <div class="specifications-item__name grey">Диапазон рабочих температур</div>
+                                <div class="specifications-item__tech grey">-5…+60 °C</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
-                <ul class='files-and-documents-section__list'>
-                    <li class='files-and-documents-section__item'>
-                        Общий каталог контакторов TeSys D (PDF) —
-                        <a href='../../files/LC1D09M7/schneider-Electric_TeSys-Deca-contactors_LC1D09M7.pdf' target='_blank' rel='nofollow'>
-                            <b>Открыть</b>
-                        </a>
-                    </li>
-                    <li class='files-and-documents-section__item'>
-                        Инструкция для подключения LC1D09M7 —
-                        <a href='../../files/LC1D09M7/Catalog_LC1D09M7.pdf' target='_blank' rel='nofollow'>
-                            <b>Открыть</b>
-                        </a>
-                    </li>
-                </ul>
-                <br><br><br>
+                <div class="document-section">
+                    <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
+                    <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
+                    <ul class='files-and-documents-section__list'>
+                        <li class='files-and-documents-section__item'>
+                            Общий каталог контакторов TeSys D (PDF) —
+                            <a href='../../files/LC1D09M7/schneider-Electric_TeSys-Deca-contactors_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                                <b>Открыть</b>
+                            </a>
+                        </li>
+                        <li class='files-and-documents-section__item'>
+                            Инструкция для подключения LC1D09M7 —
+                            <a href='../../files/LC1D09M7/Catalog_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                                <b>Открыть</b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <section class="please-note-section">
                     <div class="container please-note-section__container">
                         <h3 class="please-note-section__title">Пользователи выбирают:</h3>

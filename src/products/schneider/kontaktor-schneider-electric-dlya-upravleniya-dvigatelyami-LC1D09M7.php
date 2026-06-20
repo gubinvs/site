@@ -113,6 +113,7 @@ foreach ($data as $item) {
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
     <link rel='stylesheet' href='../../css/page-products-style.css'>
+    <link rel='stylesheet' href='../../css/encomp-nku-project-mobile-style.css'>
     <!-- Yandex.Metrika counter -->
     <script>
         (function(m, e, t, r, i, k, a) {
@@ -150,8 +151,8 @@ foreach ($data as $item) {
 
 <body>
     <?php
-    $color_line_header = $color_line_header ?? null;
-    include_once '../../php/modules/header.php';
+        $color_line_header = $color_line_header ?? null;
+        include_once '../../php/modules/header.php';
     ?>
     <main>
         <div class='discription-product-section'>

@@ -173,6 +173,10 @@ a:hover {
   display: inline;
 }
 
+.mobile-header {
+  display: none;
+}
+
 
 /*-------------- main-section -----------------------*/
 .main-section {
@@ -199,6 +203,7 @@ a:hover {
 
 .msib-img {
   width: 500px;
+  height: 667px;
   margin-right: 40px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -1163,8 +1168,6 @@ header {
   color: #ffffff;
 }
 
-
-
 .footer {
   height: 400px;
   padding: 0px;
@@ -1532,7 +1535,6 @@ header {
   }
 }
 
-
 @media only screen and (max-width: 1920px) {
   .haader__line {
     width: 75%;
@@ -1546,10 +1548,15 @@ header {
 
   .msib-img {
     width: 460px;
+    height: 613px;
   }
 
   .characteristics-block__button-block_offer {
     margin-bottom: 0px;
+  }
+
+  .button-characteristics__ozon {
+    width: 220px !important;
   }
 
   .feedback-section__title-block {
@@ -1694,8 +1701,10 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
-  .main-section__desktop {
-        display: none;
+
+  .msib-img {
+      width: 420px;
+      height: 560px;
   }
 
   .container {
@@ -1803,6 +1812,21 @@ header {
 }
 
 @media only screen and (max-width: 960px) {
+
+  .msib-img {
+      width: 330px;
+      height: 440px;
+  }
+
+  .card-component:last-child(4) {
+    display: none;
+  }
+
+  .document-section__img {
+    top: -43px;
+    right: 5px;
+    width: 200px;
+  }
 
   .feedback-section__container {
     flex-direction: column;
@@ -1972,6 +1996,10 @@ header {
 }
 
 @media only screen and (max-width: 800px) {
+
+  .document-section__img {
+    width: 130px;
+  }
   .container {
     width: 640px;
     min-width: 640px;
@@ -2119,6 +2147,10 @@ header {
 }
 
 @media only screen and (max-width: 640px) {
+  .document-section__img {
+   display: none;
+  }
+
   .container {
     min-width: 480px;
     width: 480px;

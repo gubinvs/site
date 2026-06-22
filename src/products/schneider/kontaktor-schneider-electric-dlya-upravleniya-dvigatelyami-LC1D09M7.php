@@ -215,16 +215,12 @@ foreach ($data as $item) {
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОН</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
-                                <button class="button-characteristics__offer" id="button-buy">Купить сейчас</button>
+                                <button class="button-characteristics__offer" id="button-buy">Купить для бизнеса</button>
                             </a>
                         </div>
                         <a href=<?php echo $shopURL . '/CatalogSection/?chapter=Силовые%20контакторы' ?>>
                             <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
                         </a>
-                        <a href="https://shop.encomponent.ru/">
-                            <button class="button-characteristics__offer" style="width:100%;">Покупки для бизнеса</button>
-                        </a>
-                        
                         <!--/ Кнопки купить в магазинах-->
                     </div>
                 </section>

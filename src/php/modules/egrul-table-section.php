@@ -28,6 +28,10 @@
                 <td class="egrul-table-section__td">325784700338340</td>
             </tr>
             <tr>
+                <td class="egrul-table-section__td">Адрес местонахождения</td>
+                <td class="egrul-table-section__td">197371, г. Санкт-Петербург, ул. Парашютная, д. 34, стр. 1, кв. 851</td>
+            </tr>
+            <tr>
                 <td class="egrul-table-section__td">ОКВЭД</td>
                 <td class="egrul-table-section__td">47.91.2, 52.21.1, 62.01, 63.11.1, 70.22, 82.99</td>
             </tr>

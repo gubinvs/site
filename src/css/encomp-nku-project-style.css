@@ -179,6 +179,11 @@ a:hover {
 
 
 /*-------------- main-section -----------------------*/
+
+.main-section__mobile {
+  display: none;
+}
+
 .main-section {
   margin-bottom: 80px;
   justify-content: space-between;
@@ -2000,6 +2005,7 @@ header {
   .document-section__img {
     width: 130px;
   }
+
   .container {
     width: 640px;
     min-width: 640px;

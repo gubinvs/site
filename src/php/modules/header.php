@@ -7,12 +7,6 @@
         </div>
         <div class="header-navigation-block">
             <ul class="header-navigation__list">
-                <!-- <li class="header-navigation__item">
-                    <a href="https://encomponent.ru/snab.php">Аутсорсинг снабжения</a>
-                </li> -->
-                <!-- <li class="header-navigation__item">
-                    <a href="https://supply.encomponent.ru/">Сервис для снабжения</a>
-                </li> -->
                 <li class="header-navigation__item">
                     <a href="https://shop.encomponent.ru/CompanyDashboard">
                         <div class="header-navigation-block__button">Личный кабинет</div>
@@ -50,5 +44,4 @@
             </div>
         </div>  
     </div>
-
 </header>

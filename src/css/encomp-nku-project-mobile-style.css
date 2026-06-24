@@ -1,5 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 @media only screen and (max-width: 800px) {
+
+    /* ------------ header ------------------ */
 
     .mobile-header {
         display: flex;
@@ -9,7 +13,7 @@
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
         background-color: #F7FAFB;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
     
     .header__container,
@@ -17,7 +21,8 @@
     .haader__square,
     .discription-product-section__title,
     .NKUPages_h1,
-    .main-section__desktop {
+    .main-section__desktop,
+    .feedback-section {
         display: none;
     }
 
@@ -146,20 +151,99 @@
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
     .card-component:last-child(4) {
         display: inline;
     }
+
+    /* ------------ main-section__desktop ------------- */
+
+    .main-section__mobile {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
+        height: 220px;
+        border-radius: 20px;
+        background-color: #F7FAFB;
+        margin-bottom: 10px;
+    }
+
+    .msm-backround-block {
+        position: relative;
+        height: 120px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #F0F1F3, #059134);
+    }
+
+    .msm-backround-block__img {
+        position: absolute;
+        top: -30px;
+        left: 120px;
+        height: 216px;
+    }
+
+    .msm-backround-block__discr-block {
+        position: absolute;
+        top: 0px;
+        right: 120px;
+    }
+
+    .msm-bb-db__title {
+        font-family: "Oswald", sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .msm-bb-db__discr_big {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 700;
+    }
+
+    .msm-bb-db__discr_min {
+        font-size: 12px;
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+
+    .msm-bb-db__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 20px;
+        font-size: 8px;
+        font-weight: 500;
+        border-radius: 4px;
+        background-color: #F3DE09;
+        color: #342F2C;
+    }
+
+    .msm-backround-block__discription {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .msm-bb-d__discr {
+        padding-top: 10px;
+        padding-right: 20px;
+
+    }
+
+    .msm-bb-d-discr__title {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+    }
+
+    .msm-bb-d-discr__price {
+        font-family: "Oswald", sans-serif;
+        font-size: 26px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+
 }
 
 @media only screen and (max-width: 640px) {

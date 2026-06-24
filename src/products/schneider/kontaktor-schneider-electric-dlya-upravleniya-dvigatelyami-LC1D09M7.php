@@ -155,6 +155,29 @@ foreach ($data as $item) {
         include_once '../../php/modules/header.php';
     ?>
     <main>
+        <section class="main-section__mobile">
+            <div class="msm-backround-block">
+                <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
+                <div class="msm-backround-block__discr-block">
+                    <div class="msm-bb-db__title">LC1D09M7</div>
+                    <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
+                    <div class="msm-bb-db__discr_min">серия - TeSys D</div>
+                    <div class="msm-bb-db__button">Купить в ОЗОН</div>
+                </div>
+            </div>
+            <div class="msm-backround-block__discription">
+                <img src="../../img/img-product/logo-shneider-min.png" alt="#" class="msm-bb-d__logo">
+                <div class="msm-bb-d__discr">
+                    <div class="msm-bb-d-discr__title">Артикул: LC1D09M7</div>
+                    <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
+                    <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
+                        <div class='warehouse-item-quantity__name'>В наличии:</div>
+                        <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
+                        <div class='warehouse-item-quantity__discr'>шт.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class='discription-product-section'>
             <div class='container '>
                 <h1 class='discription-product-section__title NKUPages_h1'>LC1D09M7 — Электромеханический контактор Schneider Electric</h1>

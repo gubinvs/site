@@ -155,14 +155,14 @@
         display: inline;
     }
 
-    /* ------------ main-section__desktop ------------- */
+    /* ------------ main-section__mobile ------------- */
 
     .main-section__mobile {
         display: block;
         margin-right: auto;
         margin-left: auto;
         padding: 20px;
-        height: 220px;
+        height: 200px;
         border-radius: 20px;
         background-color: #F7FAFB;
         margin-bottom: 10px;
@@ -170,22 +170,30 @@
 
     .msm-backround-block {
         position: relative;
-        height: 120px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 150px;
         border-radius: 10px;
         background: linear-gradient(135deg, #F0F1F3, #059134);
     }
 
     .msm-backround-block__img {
         position: absolute;
-        top: -30px;
-        left: 120px;
-        height: 220px;
+        top: -10px;
+        left: 140px;
+        height: 180px;
+    }
+
+    .msm-bb-d__logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 80px;
     }
 
     .msm-backround-block__discr-block {
-        position: absolute;
-        top: 0px;
-        right: 120px;
+        margin-right: 40px;
     }
 
     .msm-bb-db__title {
@@ -219,31 +227,47 @@
         color: #342F2C;
     }
 
-    .msm-backround-block__discription {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+    .msm-bb-db__button_null {
+        display: none;
     }
+
 
     .msm-bb-d__discr {
-        padding-top: 10px;
         padding-right: 20px;
-
     }
 
-    .msm-bb-d-discr__title {
+    /*.msm-bb-d-discr__title {
         font-size: 12px;
         line-height: 14px;
         font-weight: 400;
-    }
+    }*/
+
+
 
     .msm-bb-d-discr__price {
         font-family: "Oswald", sans-serif;
         font-size: 26px;
         line-height: 30px;
         font-weight: 600;
+        margin-bottom: 10px;
     }
 
+    .msm-bb-d-discr__quantity {
+        display: flex;
+        margin-bottom: 4px;
+    }
+
+    .msm-bb-d-discr__quantity_name,
+    .msm-bb-d-discr__quantity__quantity,
+    .msm-bb-d-discr__quantity__discr {
+        font-size: 10px;
+        margin-right: 6px;
+        color: #F3DE09;
+    }
+
+    .msm-bb-d-discr__quantity_null div {
+        color: #FFFFFF;
+    }
 }
 
 @media only screen and (max-width: 640px) {

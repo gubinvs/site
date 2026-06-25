@@ -158,23 +158,27 @@ foreach ($data as $item) {
         <section class="main-section__mobile">
             <div class="msm-backround-block">
                 <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
+                <img src="../../img/img-product/logo-shneider-min.svg" alt="#" class="msm-bb-d__logo">
                 <div class="msm-backround-block__discr-block">
                     <div class="msm-bb-db__title">LC1D09M7</div>
                     <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
                     <div class="msm-bb-db__discr_min">серия - TeSys D</div>
-                    <div class="msm-bb-db__button">Купить в ОЗОН</div>
+                    <div class='<?php echo $quantity > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
                 </div>
-            </div>
-            <div class="msm-backround-block__discription">
-                <img src="../../img/img-product/logo-shneider-min.png" alt="#" class="msm-bb-d__logo">
-                <div class="msm-bb-d__discr">
-                    <div class="msm-bb-d-discr__title">Артикул: LC1D09M7</div>
-                    <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
-                    <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                        <div class='warehouse-item-quantity__name'>В наличии:</div>
-                        <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
-                        <div class='warehouse-item-quantity__discr'>шт.</div>
+                <div class="msm-bb-d__discr">                  
+                    <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
+                        <div class='msm-bb-d-discr__quantity_name'>
+                                <?php echo $quantity == 0? "доставка: от" : "В наличии"?>
+                        </div>
+                        <div class='msm-bb-d-discr__quantity__quantity'>
+                            <?php echo $quantity == 0 ? $delivery  :  $quantity ?>
+                        </div>
+                        <div class='msm-bb-d-discr__quantity__discr'>
+                            <?php echo $quantity == 0 ? "нед." : "шт."?>
+                        </div>
                     </div>
+                    <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
+                    <div class="msm-bb-db__button">Для бизнеса</div>
                 </div>
             </div>
         </section>

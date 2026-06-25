@@ -3,6 +3,12 @@
 
 @media only screen and (max-width: 800px) {
 
+    .container {
+        width: 100%;
+        min-width: 100%;
+        padding: 0px;
+    }
+
     /* ------------ header ------------------ */
 
     .mobile-header {
@@ -157,6 +163,10 @@
 
     /* ------------ main-section__mobile ------------- */
 
+    .button-block-row {
+        display: flex;
+    }
+
     .main-section__mobile {
         display: block;
         margin-right: auto;
@@ -214,7 +224,8 @@
         margin-bottom: 10px;
     }
 
-    .msm-bb-db__button {
+    .msm-bb-db__button,
+    .msm-bb-db__button_tut {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -227,6 +238,15 @@
         color: #342F2C;
     }
 
+    .msm-bb-db__button {
+        margin-right: 4px;
+    }
+
+    .msm-bb-db__button_tut {
+        background-color:#342F2C;
+        color: #F3DE09;
+    }
+
     .msm-bb-db__button_null {
         display: none;
     }
@@ -235,14 +255,6 @@
     .msm-bb-d__discr {
         padding-right: 20px;
     }
-
-    /*.msm-bb-d-discr__title {
-        font-size: 12px;
-        line-height: 14px;
-        font-weight: 400;
-    }*/
-
-
 
     .msm-bb-d-discr__price {
         font-family: "Oswald", sans-serif;
@@ -268,6 +280,48 @@
     .msm-bb-d-discr__quantity_null div {
         color: #FFFFFF;
     }
+
+    /* -------------- attention-section ---------------------*/
+
+    .attention-section {
+        display: flex;
+        padding: 20px;
+        height: 424px;
+        border-radius: 20px;
+        background-color: #F7FAFB;
+    }
+
+    .attention-section__title-block {
+        padding-left: 12px;
+    }
+
+    .attention-container {
+        padding-top: 10px;
+    }
+
+    .attention-section__mobile-hr {
+        display: none;
+    }
+
+    .attention-section-title-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .attention-section-title-icon__icon {
+        height: 16px;
+    }
+
+    .attention-section-title__title {
+        font-size: 28px !important;
+    }
+
+    .attention-section__discription {
+        padding: 10px;
+        font-size: 12px;
+    }
+ 
 }
 
 @media only screen and (max-width: 640px) {

@@ -163,7 +163,10 @@ foreach ($data as $item) {
                     <div class="msm-bb-db__title">LC1D09M7</div>
                     <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
                     <div class="msm-bb-db__discr_min">серия - TeSys D</div>
-                    <div class='<?php echo $quantity > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                    <div class="button-block-row">
+                        <div class='<?php echo $quantity > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                        <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
+                    </div>
                 </div>
                 <div class="msm-bb-d__discr">                  
                     <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
@@ -183,12 +186,11 @@ foreach ($data as $item) {
             </div>
         </section>
         <div class='discription-product-section'>
-            <div class='container '>
+            <div class='container'>
                 <h1 class='discription-product-section__title NKUPages_h1'>LC1D09M7 — Электромеханический контактор Schneider Electric</h1>
                 <section class='main-section main-section__desktop flex'>
                     <img src='../../img/img-product/LC1D09M7/contactor-LC1D09M7.jpg' alt='Контактор Schneider Electric LC1D09M7' class='msib-img'>
                     <div class='main-section__discription'>
-
                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
                             <div class='article-name'>LC1D09M7</div>
@@ -295,16 +297,11 @@ foreach ($data as $item) {
                     <div class='attention-container'>
                         <div class='attention-section__title-block flex'>
                             <div class='attention-section-title-icon'>
-                                <svg width='24' height='24' viewBox='0 0 33 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                    <circle cx='15' cy='15' r='14.5' fill='#F3DE09' stroke='#1D252C' />
-                                    <line x1='8' y1='14.5' x2='23' y2='14.5' stroke='black' />
-                                    <line x1='15.5' y1='23' x2='15.5' y2='7' stroke='black' />
-                                    <line x1='25.3536' y1='25.6464' x2='32.4246' y2='32.7175' stroke='black' />
-                                </svg>
+                                <img src="../../img/attention-section-title-icon.svg" alt="A" class="attention-section-title-icon__icon">
                             </div>
                             <div class='attention-section-title__title'>ОПИСАНИЕ</div>
                         </div>
-                        <hr>
+                        <hr class="attention-section__mobile-hr">
                         <div class='attention-section__discription'>
                             &nbsp;&nbsp;Контактор LC1D09M7 Schneider Electric серии TeSys D — это компактное и надёжное коммутационное устройство, разработанное для эффективного управления трёхфазными электродвигателями, насосным оборудованием, вентиляционными системами, компрессорами и другими промышленными нагрузками. Благодаря высокому качеству исполнения и длительному ресурсу работы контактор широко применяется в системах автоматизации, распределительных шкафах и электротехнических установках различного назначения.
 

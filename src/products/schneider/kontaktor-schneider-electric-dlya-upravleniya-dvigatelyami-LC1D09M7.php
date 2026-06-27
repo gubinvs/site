@@ -159,6 +159,7 @@ foreach ($data as $item) {
             <div class="msm-backround-block">
                 <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
                 <img src="../../img/img-product/logo-shneider-min.svg" alt="#" class="msm-bb-d__logo">
+                <img src="../../img/ch-znack.svg" alt="#" class="msm-bb-d__ch-znack">
                 <div class="msm-backround-block__discr-block">
                     <div class="msm-bb-db__title">LC1D09M7</div>
                     <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
@@ -317,89 +318,93 @@ foreach ($data as $item) {
                     </div>
                 </section>
                 <div class='container technical-section' id='technical'>
-                    <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
-                    <div class="technical-specifications-section__table">
-                        <div class="technical-specifications-list">
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Заводской артикул</div>
-                                <div class="specifications-item__tech grey"><?php echo $article ?></div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name">Изготовитель</div>
-                                <div class="specifications-item__tech">Schneider Electric</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Серия</div>
-                                <div class="specifications-item__tech grey">TeSys D</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name">Тип устройства</div>
-                                <div class="specifications-item__tech">Силовой контактор</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Номинальный ток</div>
-                                <div class="specifications-item__tech grey">9А (AC-3)</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name">Напряжение катушки управления</div>
-                                <div class="specifications-item__tech">220–240В (AC)</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Номинальное рабочее напряжение силовой цепи</div>
-                                <div class="specifications-item__tech grey">до 690В (AC)</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name">Количество силовых полюсов</div>
-                                <div class="specifications-item__tech">3 NO</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Вспомогательные контакты</div>
-                                <div class="specifications-item__tech grey">1 NO + 1 NC</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name">Тип подключения</div>
-                                <div class="specifications-item__tech">Винтовые зажимы</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Тип крепления</div>
-                                <div class="specifications-item__tech grey">DIN-рейка</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name">Габаритные размеры (Д × Ш × В)</div>
-                                <div class="specifications-item__tech">77 × 45 × 86 мм</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Вес (без упаковки)</div>
-                                <div class="specifications-item__tech grey">≈ 330 г</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name">Степень защиты</div>
-                                <div class="specifications-item__tech">IP20</div>
-                            </div>
-                            <div class="technical-specifications-list__item">
-                                <div class="specifications-item__name grey">Диапазон рабочих температур</div>
-                                <div class="specifications-item__tech grey">-5…+60 °C</div>
+                    <div class="technical-section__container">
+                        <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
+                        <div class="technical-specifications-section__table">
+                            <div class="technical-specifications-list">
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Заводской артикул</div>
+                                    <div class="specifications-item__tech grey"><?php echo $article ?></div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Изготовитель</div>
+                                    <div class="specifications-item__tech">Schneider Electric</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Серия</div>
+                                    <div class="specifications-item__tech grey">TeSys D</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Тип устройства</div>
+                                    <div class="specifications-item__tech">Силовой контактор</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Номинальный ток</div>
+                                    <div class="specifications-item__tech grey">9А (AC-3)</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Напряжение катушки управления</div>
+                                    <div class="specifications-item__tech">220–240В (AC)</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Номинальное рабочее напряжение силовой цепи</div>
+                                    <div class="specifications-item__tech grey">до 690В (AC)</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Количество силовых полюсов</div>
+                                    <div class="specifications-item__tech">3 NO</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Вспомогательные контакты</div>
+                                    <div class="specifications-item__tech grey">1 NO + 1 NC</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Тип подключения</div>
+                                    <div class="specifications-item__tech">Винтовые зажимы</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Тип крепления</div>
+                                    <div class="specifications-item__tech grey">DIN-рейка</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Габаритные размеры (Д × Ш × В)</div>
+                                    <div class="specifications-item__tech">77 × 45 × 86 мм</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Вес (без упаковки)</div>
+                                    <div class="specifications-item__tech grey">≈ 330 г</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Степень защиты</div>
+                                    <div class="specifications-item__tech">IP20</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Диапазон рабочих температур</div>
+                                    <div class="specifications-item__tech grey">-5…+60 °C</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="document-section">
-                    <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
-                    <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
-                    <ul class='files-and-documents-section__list'>
-                        <li class='files-and-documents-section__item'>
-                            Общий каталог контакторов TeSys D (PDF) —
-                            <a href='../../files/LC1D09M7/schneider-Electric_TeSys-Deca-contactors_LC1D09M7.pdf' target='_blank' rel='nofollow'>
-                                <b>Открыть</b>
-                            </a>
-                        </li>
-                        <li class='files-and-documents-section__item'>
-                            Инструкция для подключения LC1D09M7 —
-                            <a href='../../files/LC1D09M7/Catalog_LC1D09M7.pdf' target='_blank' rel='nofollow'>
-                                <b>Открыть</b>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="document-section__container">
+                        <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
+                        <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
+                        <ul class='files-and-documents-section__list'>
+                            <li class='files-and-documents-section__item'>
+                                Общий каталог контакторов TeSys D (PDF) —
+                                <a href='../../files/LC1D09M7/schneider-Electric_TeSys-Deca-contactors_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                                    <b>Открыть</b>
+                                </a>
+                            </li>
+                            <li class='files-and-documents-section__item'>
+                                Инструкция для подключения LC1D09M7 —
+                                <a href='../../files/LC1D09M7/Catalog_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                                    <b>Открыть</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <section class="please-note-section">
                     <div class="container please-note-section__container">

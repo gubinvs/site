@@ -443,6 +443,21 @@
         height: 90px;
     }
 
+    /*----------------- footer ------------------------*/
+    .footer{
+        padding: 20px;
+    }
+
+    .footer__content {
+        justify-content: space-between;
+    }
+
+    .footer-contact-item__icon {
+        width: 50px;
+        text-align: center;
+        margin-right: 0px;
+    }
+
 }
 
 @media only screen and (max-width: 640px) {

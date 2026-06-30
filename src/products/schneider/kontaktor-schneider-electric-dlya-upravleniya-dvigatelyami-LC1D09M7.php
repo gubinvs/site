@@ -182,7 +182,7 @@ foreach ($data as $item) {
                         </div>
                     </div>
                     <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
-                    <div class="msm-bb-db__button">Для бизнеса</div>
+                    <a href="https://shop.encomponent.ru/"><div class="msm-bb-db__button">Для бизнеса</div></a>
                 </div>
             </div>
         </section>

@@ -30,15 +30,15 @@
                         <div class="mhbn-contact-list__item email-item">office@encomponent.ru</div>
                     </ul>
                     <div class="header-searche-block">
-                        <div class="header-searche-block__button-catalog">Каталог</div>
-                        <div class="header-searche-block__input-searhe"></div>
-                        <div class="header-searche-block__button-room">Личный кабинет</div>
+                        <a href="https://shop.encomponent.ru/"><div class="header-searche-block__button-catalog">Каталог</div></a>
+                        <a href="https://shop.encomponent.ru/"><div class="header-searche-block__input-searhe"></div></a>
+                        <a href="https://shop.encomponent.ru/CompanyDashboard"><div class="header-searche-block__button-room">Личный кабинет</div></a>
                     </div> 
                     <ul class="navigation-list">
-                        <li class="navigation-list__item">Типовые решения</li>
-                        <li class="navigation-list__item">Комплектующие</li>
-                        <li class="navigation-list__item">Доставка и оплата</li>
-                        <li class="navigation-list__item">Контакты</li>
+                        <a href="https://shop.encomponent.ru/CatalogSection/?chapter=%D0%A2%D0%B8%D0%BF%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%9D%D0%9A%D0%A3"><li class="navigation-list__item">Типовые решения</li></a>
+                        <a href="https://shop.encomponent.ru/"><li class="navigation-list__item">Комплектующие</li></a>
+                        <a href="https://shop.encomponent.ru/DeliveryAndPayment"><li class="navigation-list__item">Доставка и оплата</li></a>
+                        <a href="https://encomponent.ru/about.php"><li class="navigation-list__item">Контакты</li></a>
                     </ul>
                 </div>
             </div>

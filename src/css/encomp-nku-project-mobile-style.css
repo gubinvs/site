@@ -33,7 +33,7 @@
     }
 
     .mobile-container {
-        width: 760px;
+        width: 720px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -120,7 +120,7 @@
     }
 
     .header-searche-block__input-searhe {
-        width: 375px;
+        width: 342px;
         height: 20px;
         background-color: #FFFFFF;
         border-radius: 2px;
@@ -171,7 +171,7 @@
         display: block;
         margin-right: auto;
         margin-left: auto;
-        padding: 20px;
+        padding-top: 20px;
         height: 200px;
         border-radius: 20px;
         background-color: #F7FAFB;

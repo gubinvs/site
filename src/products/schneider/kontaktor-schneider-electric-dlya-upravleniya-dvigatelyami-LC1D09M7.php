@@ -156,33 +156,35 @@ foreach ($data as $item) {
     ?>
     <main>
         <section class="main-section__mobile">
-            <div class="msm-backround-block">
-                <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
-                <img src="../../img/img-product/logo-shneider-min.svg" alt="#" class="msm-bb-d__logo">
-                <img src="../../img/ch-znack.svg" alt="#" class="msm-bb-d__ch-znack">
-                <div class="msm-backround-block__discr-block">
-                    <div class="msm-bb-db__title">LC1D09M7</div>
-                    <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
-                    <div class="msm-bb-db__discr_min">серия - TeSys D</div>
-                    <div class="button-block-row">
-                        <div class='<?php echo $quantity > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
-                        <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
-                    </div>
-                </div>
-                <div class="msm-bb-d__discr">                  
-                    <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
-                        <div class='msm-bb-d-discr__quantity_name'>
-                                <?php echo $quantity == 0? "доставка: от" : "В наличии"?>
-                        </div>
-                        <div class='msm-bb-d-discr__quantity__quantity'>
-                            <?php echo $quantity == 0 ? $delivery  :  $quantity ?>
-                        </div>
-                        <div class='msm-bb-d-discr__quantity__discr'>
-                            <?php echo $quantity == 0 ? "нед." : "шт."?>
+            <div class="mobile-container">
+                <div class="msm-backround-block">
+                    <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
+                    <img src="../../img/img-product/logo-shneider-min.svg" alt="#" class="msm-bb-d__logo">
+                    <img src="../../img/ch-znack.svg" alt="#" class="msm-bb-d__ch-znack">
+                    <div class="msm-backround-block__discr-block">
+                        <div class="msm-bb-db__title">LC1D09M7</div>
+                        <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
+                        <div class="msm-bb-db__discr_min">серия - TeSys D</div>
+                        <div class="button-block-row">
+                            <div class='<?php echo $quantity > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                            <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
                         </div>
                     </div>
-                    <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
-                    <a href="https://shop.encomponent.ru/"><div class="msm-bb-db__button">Для бизнеса</div></a>
+                    <div class="msm-bb-d__discr">                  
+                        <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
+                            <div class='msm-bb-d-discr__quantity_name'>
+                                    <?php echo $quantity == 0? "доставка: от" : "В наличии"?>
+                            </div>
+                            <div class='msm-bb-d-discr__quantity__quantity'>
+                                <?php echo $quantity == 0 ? $delivery  :  $quantity ?>
+                            </div>
+                            <div class='msm-bb-d-discr__quantity__discr'>
+                                <?php echo $quantity == 0 ? "нед." : "шт."?>
+                            </div>
+                        </div>
+                        <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
+                        <a href="https://shop.encomponent.ru/"><div class="msm-bb-db__button">Для бизнеса</div></a>
+                    </div>
                 </div>
             </div>
         </section>

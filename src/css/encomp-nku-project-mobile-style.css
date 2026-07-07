@@ -460,6 +460,44 @@
 
 }
 
+@media only screen and (max-width: 720px) {
+    /* ------------ header ------------------ */
+
+    .mobile-container {
+        width: 640px;
+    }
+
+    .mobile-haeder-block__img {
+        margin-right: 16px;
+    }
+
+    .header-searche-block__button-catalog {
+        width: 99px;
+    }
+
+    .header-searche-block__input-searhe {
+        width: 315px;
+    }
+
+    .header-searche-block__button-room {
+        width: 88px;
+        font-size: 8px;
+    }
+
+    
+    
+    
+    
+    /* ------------ main-section__mobile ------------- */
+    
+    .msm-backround-block__img {
+        position: absolute;
+        top: -10px;
+        left: 110px;
+        height: 180px;
+    }
+}
+
 @media only screen and (max-width: 640px) {
 
 }

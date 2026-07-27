@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="/css/style-supply-page.css">
 
   <!-- 🔹 Yandex.Metrika -->
-  <script type="text/javascript">
+  <!--<script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
       m[i] = m[i] || function() {
         (m[i].a = m[i].a || []).push(arguments)
@@ -61,7 +61,7 @@
       font-size: 15px;
       line-height: 1.6;
     }
-  </style>
+  </style>-->
 </head>
 
 
@@ -155,7 +155,7 @@
         </div>
       </div>
     </section>
-    <section class="ip-feedback-section">
+    <!--<section class="ip-feedback-section">
       <div class="container ip-feedback-section-container">
         <div class="ip-feedback-section-container__content">
           <div class="h2-ip-title-block">
@@ -378,7 +378,7 @@
           <div class="getup"></div>
           <h3 class="ip-advertising__title">Помогаем систематизировать процесс снабжения</h3>
           <div class="ip-advertising__discr">Управлять закупками проще: единая экосистема и умный анализ предложений собственной разработки.</div>
-            <!--<button class="button-offer">Сервис анализа предложений</button>-->
+            <button class="button-offer">Сервис анализа предложений</button>
         </div><img class="ip-advertising_img" src="img/snab-page-img/ip-advertising_img_1920.svg" alt="Мужчина и женьщина стоя на складе смтрят в ноутбук">
         <div class="ip-advertising__content-block ip-advertising__content-block_right">
           <div class="square-block">
@@ -493,7 +493,7 @@
           </a>
         </p>
       </div>
-    </section>
+    </section> -->
 
   </main>
   <?php include "php/modules/footer.php" ?>

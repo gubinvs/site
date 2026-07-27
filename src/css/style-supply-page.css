@@ -1553,6 +1553,10 @@ footer {
     width: 480px;
   }
 
+  header {
+    display: none;
+  }
+
   .header__container {
     margin-bottom: 20px;
   }
@@ -1668,7 +1672,6 @@ footer {
   }
 }
 
-
 @media only screen and (max-width: 480px) {
   .container {
     width: 380px;
@@ -1725,4 +1728,46 @@ footer {
   .footer__copyright {
     padding-top: 28px !important;
   }
+}
+
+@media only screen and (max-width: 380px) {
+  .container {
+    width: 320px;
+  }
+
+  .ip-top-section {
+    padding: 20px 10px 0px 10px;
+  }
+
+  .ip-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .dark-description-block {
+    width: 360px;
+    border-radius: 4px;
+  }
+
+  .button-offer {
+    width: 360px;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .content-block {
+    height: 406px;
+  }
+
+  .card-block{
+    bottom: 30px;
+  }
+
+  .ip-task-secrion-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
 }

@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="/css/encomp-nku-project-style.css" media="all">
   <link rel="stylesheet" href="/css/style-supply-page.css">
 
-  <!-- 🔹 Yandex.Metrika
+  <!-- 🔹 Yandex.Metrika -->
   <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
       m[i] = m[i] || function() {
@@ -61,7 +61,7 @@
       font-size: 15px;
       line-height: 1.6;
     }
-  </style>-->
+  </style>
 </head>
 
 
@@ -155,7 +155,7 @@
         </div>
       </div>
     </section>
-    <!--<section class="ip-feedback-section">
+    <section class="ip-feedback-section">
       <div class="container ip-feedback-section-container">
         <div class="ip-feedback-section-container__content">
           <div class="h2-ip-title-block">
@@ -168,7 +168,7 @@
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
             <div class="check-box">
-              <input class="check-box__input" type="checkbox" name="chekBox" checked required>
+              <input class="check-box__input" type="checkbox" name="chekBox" required>
               <a href="https://encomponent.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
@@ -283,7 +283,7 @@
             <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
             <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
             <div class="check-box">
-              <input class="check-box__input" type="checkbox" name="chekBox" required><a href="https://encomponent.ru/pp-page.html" target="blank">
+                <input class="check-box__input" type="checkbox" name="chekBox" required><a href="https://encomponent.ru/pp-page.html" target="blank">
                 <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
               </a>
             </div>
@@ -377,10 +377,8 @@
           </div>
           <div class="getup"></div>
           <h3 class="ip-advertising__title">Помогаем систематизировать процесс снабжения</h3>
-          <div class="ip-advertising__discr">Единым инфопространством для всех участников процесса</div>
-          <form action="https://supply.encomponent.ru/">
-            <button class="button-offer">Сервис для снабжения</button>
-          </form>
+          <div class="ip-advertising__discr">Управлять закупками проще: единая экосистема и умный анализ предложений собственной разработки.</div>
+            <!--<button class="button-offer">Сервис анализа предложений</button>-->
         </div><img class="ip-advertising_img" src="img/snab-page-img/ip-advertising_img_1920.svg" alt="Мужчина и женьщина стоя на складе смтрят в ноутбук">
         <div class="ip-advertising__content-block ip-advertising__content-block_right">
           <div class="square-block">
@@ -495,7 +493,7 @@
           </a>
         </p>
       </div>
-    </section>-->
+    </section>
 
   </main>
   <?php include "php/modules/footer.php" ?>

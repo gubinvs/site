@@ -1438,6 +1438,10 @@ footer {
     width: 620px;
   }
 
+  .ip-h2-section-title_task-section {
+    width: 800px;
+  }
+
   .h2-ip-title-block {
     margin-bottom: 80px;
   }
@@ -1510,7 +1514,14 @@ footer {
   .task-section-card__discr {
     font-weight: 300;
   }
-   
+
+  .advantages-card:not(:nth-child(3)) {
+    margin-right: 10px;
+  }
+
+  .advantages-card:not(:nth-child(6)) {
+    margin-right: 10px;
+  }  
 }
 
 @media only screen and (max-width: 960px) {
@@ -1583,6 +1594,37 @@ footer {
     top: 50px;
     left: 210px;
   }
+
+  .ip-h2-section-title_advantages-section {
+    width: 790px;
+  }
+
+  .title-h2_write-text {
+    font-size: 45px;
+  }
+
+  .fon-h2-block_advantages {
+    width: 715px;
+  }
+
+  .advantages-card:not(:nth-child(3)) {
+    margin-right: 8px;
+  }
+
+  .advantages-card:not(:nth-child(6)) {
+    margin-right: 8px;
+  }
+
+  .advantages-card {
+    padding-left: 18px;
+    width: 258px;
+    height: 340px;
+  }
+
+  .advantages-card__title {
+    width: 185px;
+  }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -1614,7 +1656,6 @@ footer {
   .ip-h2-section-title {
     width: 638px;
     font-size: 28px;
-
   }
   
   .h2-ip-title-block {
@@ -1681,6 +1722,36 @@ footer {
   .fon-h2-block_red180 {
     top: 37px;
   }
+
+  .title-h2_write-text {
+    font-size: 38px;
+  }
+
+  .fon-h2-block_advantages {
+    width: 602px;
+  }
+
+  .advantages-card {
+    padding-left: 18px;
+    width: 258px;
+    height: 340px;
+  }
+
+  .advantages-card {
+    border-radius: 8px;
+    width: 205px;
+    height: 306px;
+  }
+
+  .advantages-card__title {
+    font-size: 20px;
+    width: 173px;
+  }
+  
+  .advantages-card__discription {
+    width: 186px;
+  }
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -1828,6 +1899,27 @@ footer {
   .feedback-section__button {
     left: 258px;
   }
+
+  .title-h2_write-text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .fon-h2-block_advantages {
+    width: 450px;
+  }
+
+  .fon-h2-block_advantages {
+    top: 33px;
+  }
+
+  .advantages-card {
+    padding-bottom: 40px;
+    padding-left: 40px;
+    width: 232px;
+    height: 354px;
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1920,7 +2012,6 @@ footer {
     left: 191px;
     width: 179px;
   }
-
 }
 
 @media only screen and (max-width: 380px) {

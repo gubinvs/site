@@ -131,7 +131,7 @@
     <section class="ip-task-section">
       <div class="container ip-task-secrion-container">
         <div class="h2-ip-title-block">
-          <h2 class="ip-h2-section-title">Передайте задачу обеспечения материалами <br> и комплектующими профессионалам</h2>
+          <h2 class="ip-h2-section-title ip-h2-section-title_task-section">Передайте задачу обеспечения материалами <br> и комплектующими профессионалам</h2>
           <div class="fon-h2-block fon-h2-block_red175"> </div>
           <div class="fon-h2-block fon-h2-block_red180"></div>
         </div>
@@ -190,7 +190,6 @@
         <div class="h2-ip-title-block h2-ip-title-block_advantages">
           <div class="ip-h2-section-title ip-h2-section-title_advantages-section">
             <h2 class="title-h2_write-text">Клиенты выбрали нас и перешли на аутсорсинг</h2>
-            <p>по следующим причинам:</p>
           </div>
           <div class="fon-h2-block fon-h2-block_advantages"></div>
         </div>

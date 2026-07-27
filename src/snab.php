@@ -188,7 +188,7 @@
     <section class="ip-advantages-section">
       <div class="container ip-advantages-section-container">
         <div class="h2-ip-title-block h2-ip-title-block_advantages">
-          <div class="ip-h2-section-title ip-h2-section-title_advantages-section ">
+          <div class="ip-h2-section-title ip-h2-section-title_advantages-section">
             <h2 class="title-h2_write-text">Клиенты выбрали нас и перешли на аутсорсинг</h2>
             <p>по следующим причинам:</p>
           </div>

@@ -1912,14 +1912,6 @@ footer {
   .fon-h2-block_advantages {
     top: 33px;
   }
-
-  .advantages-card {
-    padding-bottom: 40px;
-    padding-left: 40px;
-    width: 232px;
-    height: 354px;
-    margin-bottom: 10px;
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2012,6 +2004,21 @@ footer {
     left: 191px;
     width: 179px;
   }
+
+  .advantages-card {
+    width: 182px;
+    height: 280px;
+  }
+
+  .advantages-card__title {
+    font-size: 20px;
+    width: 142px;
+  }
+
+  .advantages-card__discription {
+    width: 150px;
+    font-size: 15px;
+  }
 }
 
 @media only screen and (max-width: 380px) {
@@ -2048,6 +2055,10 @@ footer {
 
   .feedback-section__input:not(:last-of-type) {
     margin-right: 4px;
+  }
+
+  .footer__container {
+      padding-left: 8px;
   }
 
 }

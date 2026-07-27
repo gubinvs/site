@@ -1433,8 +1433,69 @@ footer {
     font-weight: 100;
     line-height: 24px;
   }
-}
 
+  .ip-h2-section-title {
+    width: 620px;
+  }
+
+  .h2-ip-title-block {
+    margin-bottom: 80px;
+  }
+
+  .footer__container {
+    padding-left: 40px;
+  }
+
+  .ip-feedback-section-container__icon_first-icon {
+    right: 60px;
+  }
+
+  .ip-feedback-section-container__icon_second-icon {
+    right: 32px;
+  }
+
+  .ip-h2-section-title_advantages-section {
+    width: 1000px;
+  }
+
+
+
+  .title-h2_write-text {
+    font-size: 50px;
+    line-height: 54px;
+    color: #11125F;
+    margin-bottom: 10px;
+  }
+
+  .fon-h2-block_advantages {
+    top: 49px;
+    height: 10px;
+    left: 0px;
+    width: 777px;
+    background-color: #ca540c;
+  }
+
+  .advantages-card:not(:last-of-type) {
+    margin-right: 0px;
+  }
+  .advantages-card:not(:nth-child(3)) {
+    margin-right: 20px;
+  }
+
+  .advantages-card:not(:nth-child(6)) {
+    margin-right: 20px;
+  }
+
+  .advantages-card:nth-child(7) {
+    display: none;
+  }
+
+  .advantages-card:nth-child(8) {
+    display: none;
+  }
+
+
+}
 
 @media only screen and (max-width: 1024px) {
   .container {
@@ -1488,6 +1549,42 @@ footer {
   .task-section-card__discr {
     width: 180px;
     font-weight: 300;
+  }
+
+  .ip-feedback-section-container__icon_first-icon {
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+  }
+
+  .ip-feedback-section-container__icon_second-icon {
+    top: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #ca540c;
+  }
+
+  .ip-h2-section-title {
+    width: 500px;
+    font-size: 24px;
+  }
+
+  .fon-h2-block_feedback-section {
+    width: 380px;
+    height: 30px;
+    top: 6px;
+    left: 48px;
+  }
+
+  .h2-ip-title-block {
+    margin-bottom: 20px;
+  }
+
+  .feedback-section__button {
+    top: 50px;
+    left: 210px;
   }
 }
 
@@ -1546,6 +1643,47 @@ footer {
     font-size: 18px;
   }
 
+  .ip-feedback-section-container__icon_first-icon,
+  .ip-feedback-section-container__icon_second-icon {
+    display: none;
+  }
+
+  .check-box {
+    width: 400px;
+    align-items: flex-start;
+  }
+
+  .feedback-section__button {
+    top: 50px;
+    left: 418px;
+  }
+
+  .check-box__input {
+      margin-top: 6px;
+  }
+
+  .fon-h2-block_feedback-section {
+    width: 441px;
+    height: 30px;
+    top: 9px;
+    left: 56px;
+  }
+
+  .ip-h2-section-title {
+    line-height: 36px;
+  }
+
+  .fon-h2-block_feedback-section {
+    top: 7px;
+  }
+
+  .fon-h2-block_red175 {
+    top: 0px;
+  }
+
+  .fon-h2-block_red180 {
+    top: 37px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -1670,6 +1808,29 @@ footer {
     width: 230px;
     margin-bottom: 8px;
   }
+
+  .fon-h2-block_red175{
+    height: 27px;
+    left: -5px;
+    top: 6px;
+    width: 203px;
+  }
+
+  .fon-h2-block_red180 {
+    height: 28px;
+    top: 41px;
+    left: 204px;
+    width: 192px;
+  }
+
+  .fon-h2-block_feedback-section {
+    left: 40px;
+    width: 343px;
+  }
+
+  .feedback-section__button {
+    left: 258px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1728,6 +1889,41 @@ footer {
   .footer__copyright {
     padding-top: 28px !important;
   }
+
+  .button-offer {
+    width: 360px;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .dark-description-block {
+    width: 360px;
+    border-radius: 4px;
+  }
+
+  .h2-ip-title-block {
+    display: none;
+  }
+
+  .ip-task-secrion-container {
+    padding-top: 30px;
+    margin-bottom: 0px;
+  }
+
+  .ip-feedback-section {
+    padding-top: 20px;
+  }
+
+  .feedback-section__input {
+    width: 179px;
+  }
+
+  .feedback-section__button {
+    left: 191px;
+    width: 179px;
+  }
+
 }
 
 @media only screen and (max-width: 380px) {
@@ -1744,18 +1940,6 @@ footer {
     line-height: 30px;
   }
 
-  .dark-description-block {
-    width: 360px;
-    border-radius: 4px;
-  }
-
-  .button-offer {
-    width: 360px;
-    height: 40px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-
   .content-block {
     height: 406px;
   }
@@ -1769,5 +1953,13 @@ footer {
     padding-bottom: 20px;
   }
 
+  .feedback-section__form {
+    padding-left: 4px;
+    width: 96%;
+  }
+
+  .feedback-section__input:not(:last-of-type) {
+    margin-right: 4px;
+  }
 
 }

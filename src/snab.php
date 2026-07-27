@@ -155,7 +155,7 @@
         </div>
       </div>
     </section>
-    <!--<section class="ip-feedback-section">
+    <section class="ip-feedback-section">
       <div class="container ip-feedback-section-container">
         <div class="ip-feedback-section-container__content">
           <div class="h2-ip-title-block">
@@ -188,7 +188,7 @@
     <section class="ip-advantages-section">
       <div class="container ip-advantages-section-container">
         <div class="h2-ip-title-block h2-ip-title-block_advantages">
-          <div class="ip-h2-section-title">
+          <div class="ip-h2-section-title ip-h2-section-title_advantages-section ">
             <h2 class="title-h2_write-text">Клиенты выбрали нас и перешли на аутсорсинг</h2>
             <p>по следующим причинам:</p>
           </div>
@@ -230,7 +230,7 @@
         </div>
       </div>
     </section>
-    <section class="ip-question-section">
+    <!--<section class="ip-question-section">
       <div class="container ip-question-container">
         <div class="ip-question-container__content">
           <div class="ip-h2-section-title ip-h2-section-title_question ip-h2-section-title_write">Интересно? Давайте общаться дальше!

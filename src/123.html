@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стоимость аутсорсинга снабжения</title>
+
+<style>
+    body{
+        background:#f4f6f9;
+        font-family:"Segoe UI",Arial,sans-serif;
+        color:#333;
+    }
+
+    .pricing{
+        max-width:1320px;
+        margin:70px auto;
+        padding:20px;
+    }
+
+    .pricing h2{
+        text-align:center;
+        font-size:42px;
+        color:#114d7c;
+        margin-bottom:10px;
+    }
+
+    .subtitle{
+        text-align:center;
+        color:#666;
+        font-size:18px;
+        margin-bottom:50px;
+    }
+
+    .pricing-grid{
+        display:flex;
+        gap:30px;
+        align-items:stretch;
+    }
+
+    .plan{
+        position:relative;
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        background:#fff;
+        border-radius:14px;
+        padding:35px;
+        box-shadow:0 15px 35px rgba(0,0,0,.08);
+        transition:.3s;
+    }
+
+    .plan:hover{
+        transform:translateY(-8px);
+        box-shadow:0 20px 45px rgba(0,0,0,.12);
+    }
+
+    .featured{
+        border:3px solid #ff8800;
+        transform:scale(1.03);
+    }
+
+    .featured:hover{
+        transform:scale(1.03) translateY(-8px);
+    }
+
+    .label{
+        position:absolute;
+        top:-16px;
+        left:50%;
+        transform:translateX(-50%);
+        background:#ff8800;
+        color:#fff;
+        padding:7px 20px;
+        border-radius:20px;
+        font-size:13px;
+        font-weight:600;
+        letter-spacing:.5px;
+    }
+
+    .plan-title{
+        text-align:center;
+        font-size:28px;
+        font-weight:700;
+        color:#114d7c;
+        margin-bottom:20px;
+    }
+
+    .volume{
+        text-align:center;
+        font-size:19px;
+        margin-bottom:20px;
+        color:#555;
+    }
+
+    .volume strong{
+        font-size:28px;
+        color:#222;
+    }
+
+    .price{
+        text-align:center;
+        margin-bottom:30px;
+        color:#16964d;
+        font-weight:700;
+    }
+
+    .price span{
+        display:block;
+        font-size:42px;
+        line-height:1;
+    }
+
+    .price small{
+        color:#777;
+        font-size:15px;
+        font-weight:400;
+    }
+
+    .plan ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+        flex:1;
+    }
+
+    .plan li{
+        position:relative;
+        padding:11px 0 11px 34px;
+        border-bottom:1px solid #edf0f4;
+        font-size:15px;
+        line-height:1.4;
+    }
+
+    .plan li:last-child{
+        border-bottom:none;
+    }
+
+    /* Доступно */
+
+    .plan li.yes::before{
+        content:"✔";
+        position:absolute;
+        left:0;
+        top:10px;
+        color:#22c55e;
+        font-size:17px;
+        font-weight:bold;
+    }
+
+    /* Недоступно */
+
+    .plan li.no{
+        color:#b5bcc7;
+        text-decoration:line-through;
+    }
+
+    .plan li.no::before{
+        content:"—";
+        position:absolute;
+        left:2px;
+        top:10px;
+        color:#cfd5dc;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    /* Бейдж */
+
+    .badge{
+        float:right;
+        background:#eef5ff;
+        color:#1565c0;
+        font-size:11px;
+        font-weight:600;
+        padding:3px 8px;
+        border-radius:12px;
+        margin-left:8px;
+    }
+
+    /* Кнопка */
+
+    .btn{
+        display:block;
+        margin-top:30px;
+        padding:16px;
+        text-align:center;
+        text-decoration:none;
+        color:#fff;
+        background:#114d7c;
+        border-radius:7px;
+        font-weight:600;
+        transition:.25s;
+    }
+
+    .btn:hover{
+        background:#0b3f67;
+    }
+
+    /* Адаптив */
+
+    @media(max-width:1100px){
+
+        .pricing-grid{
+            flex-direction:column;
+        }
+
+        .featured{
+            transform:none;
+        }
+
+        .featured:hover{
+            transform:translateY(-8px);
+        }
+
+    }
+</style>
+
+</head>
+<body>
+    <section class="pricing">
+
+        <h2>Тарифы на аутсорсинг снабжения</h2>
+        <p class="subtitle">Стоимость зависит от ежемесячного объема закупок.</p>
+        <div class="pricing-grid">
+
+            <!-- Карточка 1 -->
+            <div class="plan">
+                <div class="plan-title">СТАРТ</div>
+
+                <div class="volume">
+                    Закупки до<br>
+                    <strong>1 000 000 ₽</strong>
+                </div>
+
+                <div class="price">
+                    <span>45 000 ₽</span><small>/ месяц</small>
+                </div>
+
+            <ul>
+                <li class="yes">До 50 заказов в месяц</li>
+                <li class="yes">Поиск поставщиков</li>
+                <li class="yes">Запрос коммерческих предложений</li>
+                <li class="yes">Анализ предложений поставщиков</li>
+                <li class="no">Персональный менеджер</li>
+                <li class="yes">Размещение заказов и запрос счетов</li>
+                <li class="no">Контроль оплаты счетов</li>
+                <li class="no">Контроль логистики поставок</li>
+                <li class="no">Система учета 1С УНФ</li>
+                <li class="no">Расчет спецификаций</li>
+                <li class="no">Доступ к системе анализа предложений</li>
+                <li class="no">Оприходование номенклатуры в 1С УНФ</li>
+                <li class="no">Оформление производства в 1С УНФ</li>
+                <li class="yes">Ежемесячный отчет</li>
+            </ul>
+
+                <a href="#" class="btn">Оставить заявку</a>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="plan featured">
+
+                <div class="label">
+                    Популярный
+                </div>
+
+                <div class="plan-title">
+                    БИЗНЕС
+                </div>
+
+                <div class="volume">
+                    Закупки от<br>
+                    <strong>1–5 млн ₽</strong>
+                </div>
+
+                <div class="price">
+                    <span>75 000 ₽</span><small>/ месяц</small>
+                </div>
+                <ul>
+                    <li class="yes">До 100 заказов в месяц</li>
+                    <li class="yes">Поиск поставщиков</li>
+                    <li class="yes">Запрос коммерческих предложений</li>
+                    <li class="yes">Анализ предложений поставщиков</li>
+                    <li class="yes">Персональный менеджер</li>
+                    <li class="yes">Размещение заказов и запрос счетов</li>
+                    <li class="yes">Контроль оплаты счетов</li>
+                    <li class="yes">Контроль логистики поставок</li>
+                    <li class="yes">
+                        Система учета 1С УНФ
+                        <span class="badge">Подарок</span>
+                    </li>
+                    <li class="no">Расчет спецификаций</li>
+                    <li class="yes">Доступ к системе анализа предложений</li>
+                    <li class="no">Оприходование номенклатуры в 1С УНФ</li>
+                    <li class="no">Оформление производства в 1С УНФ</li>
+                    <li class="yes">Ежемесячный отчет</li>
+                </ul>
+
+                <a href="#" class="btn">Оставить заявку</a>
+
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="plan">
+
+                <div class="plan-title">
+                    КОРПОРАТИВНЫЙ
+                </div>
+
+                <div class="volume">
+                    Закупки свыше<br>
+                    <strong>5 млн ₽</strong>
+                </div>
+
+                <div class="price">
+                    Индивидуально
+                </div>
+
+                <ul>
+                    <li class="yes">Неограниченное количество заказов</li>
+                    <li class="yes">Поиск поставщиков</li>
+                    <li class="yes">Запрос коммерческих предложений</li>
+                    <li class="yes">Анализ предложений поставщиков</li>
+                    <li class="yes">
+                        Персональный менеджер
+                        <span class="badge">VIP</span>
+                    </li>
+                    <li class="yes">Размещение заказов и запрос счетов</li>
+                    <li class="yes">Контроль оплаты счетов</li>
+                    <li class="yes">Контроль логистики поставок</li>
+                    <li class="yes">Система учета 1С УНФ</li>
+                    <li class="yes">Расчет спецификаций</li>
+                    <li class="yes">
+                        Доступ к системе анализа предложений
+                        <span class="badge">PRO</span>
+                    </li>
+                    <li class="yes">Оприходование номенклатуры в 1С УНФ</li>
+                    <li class="yes">Оформление производства в 1С УНФ</li>
+                    <li class="yes">Ежемесячный отчет</li>
+                </ul>
+                <a href="#" class="btn">Получить расчет</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

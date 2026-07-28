@@ -398,89 +398,39 @@
         </div><img class="accounting-system-img" src="img/snab-page-img/accounting-system_1920.svg" alt="Монитор с открытой 1С">
       </div>
     </section>
-    <!--<section class="accounting-system-section__square-block">
+    <section class="accounting-system-section__square-block">
       <div class="container">
         <h4 class="h1__visually">Сервис для анализа предложений поставщиков</h4>
         <div class="square-block">
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square square-block__square_accounting-system"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
-          <div class="square-block__square"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
+          <div class="square-block__square square-block__square_accounting"></div>
         </div>
       </div>
     </section>
-    <section class="ip-info-section">
-      <h4 class="h1__visually">Снабженец на аутсорсинге</h4>
-      <div class="container ip-info-container">
-        <div class="content-block-section">
-          <div class="ip-info-discr">
-            Берем на себя полный цикл обеспечения предприятий материалами и комплектующими, проводим анализ цен и условий на рынке,
-            формируем и направляем поставщикам заявки на закупку,
-            отслеживаем сроки поставок, ведем складской учет, оформляем первичные документы.
-          </div>
-        </div>
-        <div class="content-block-section content-block-section_right">
-          <a href="https://shop.encomponent.ru"><img src="img/banner-shop.svg"></a>
-        </div>
-      </div>
-    </section>
-    <section class="seo-text">
-      <div class="container">
-
-        <h2>Аутсорсинг снабжения — профессиональное управление закупками</h2>
-        <p>
-          <strong>«Компоненты Энергии»</strong> предлагает комплексную услугу
-          <strong>аутсорсинга снабжения</strong> для производственных и инженерных предприятий.
-          Мы берём на себя все процессы по обеспечению вашего бизнеса комплектующими, материалами
-          и оборудованием — от анализа потребности до поставки на склад.
-        </p>
-        <p>
-          Наши специалисты ежедневно работают с ведущими поставщиками и маркетплейсами,
-          проводят сравнение цен, анализ сроков и надёжности поставок.
-          Благодаря этому мы сокращаем издержки клиентов и повышаем стабильность снабжения.
-          Работа ведётся в 1С и интегрируется с системами учёта и логистики заказчика.
-        </p>
-        <p>
-          Передача функций снабжения на аутсорсинг позволяет вам сосредоточиться
-          на производстве и развитии продукта, а рутинные задачи закупок, контроля
-          и документооборота — доверить профессионалам. Мы обеспечиваем прозрачность
-          всех операций, отчётность и доступ к аналитике по каждой номенклатуре.
-        </p>
-        <p>
-          Услуга аутсорсинга снабжения особенно востребована у компаний,
-          стремящихся к <strong>бережливому производству</strong> и цифровизации процессов.
-          Оптимизируйте логистику и закупки с «Компонентами Энергии» —
-          надёжным партнёром в сфере промышленной автоматизации и управления поставками.
-          <a href="/comp-page/phoenix-contact_article_2903148_trio-ps-2g_1ac_24dc_5.php"
-            style="font-size: 12px; color: #888; text-decoration: none;">
-            Источник питания TRIO-PS-2G/1AC/24DC/5
-          </a>
-        </p>
-      </div>
-    </section> -->
-
   </main>
   <?php include "php/modules/footer.php" ?>
 </body>

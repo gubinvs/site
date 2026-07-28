@@ -1553,6 +1553,15 @@ footer {
     margin-bottom: 30px;
   }
 
+  .accounting-system-img {
+    width: 450px; 
+  }
+
+  .fon-h2-block_.accounting-system {
+    top: 7px;
+    width: 495px;
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1762,6 +1771,20 @@ footer {
     width: 297px;
   }
 
+  .accounting-system-img {
+    width: 300px;
+  }
+
+  .fon-h2-block_.accounting-system {
+    top: 1px;
+    width: 366px;
+    height: 36px;
+  }
+
+  .accounting-system-section {
+    height: 470px;
+  }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -1919,6 +1942,36 @@ footer {
     line-height: 20px;
   }
 
+  .accounting-system-img {
+    display: none;
+  }
+
+  .fon-h2-block_.accounting-system {
+    top: 1px;
+    width: 460px;
+  }
+
+  .blue-h2 {
+    margin-bottom: 0px;
+  }
+
+  .accounting-system__mini-title {
+    margin-bottom: 0px;
+  }
+
+  .accounting-system-section {
+    padding-bottom: 10px;
+  }
+
+  .accounting-system-section {
+    height: 420px;
+  }
+
+
+  .square-block__square_accounting {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -2242,6 +2295,37 @@ footer {
   .button-offer {
     width: 370px;
   }
+
+  .fon-h2-block_.accounting-system {
+    width: 257px;
+  }
+
+  .blue-h2 {
+    width: 310px
+  }
+
+  .h2-ip-title-block__discr_accounting-system {
+    width: 376px;
+    margin-bottom: 12px;
+  }
+
+  .accounting-system__mini-title {
+    margin-bottom: 0px;
+    width: 387px;
+  }
+
+  .accounting-system__mini-discr {
+    width: 388px;
+  }
+
+  .accounting-system-section__square-block {
+    display: none;
+  }
+
+  .accounting-system-section {
+    height: 460px;
+  }
+
 }
 
 @media only screen and (max-width: 380px) {
@@ -2307,4 +2391,25 @@ footer {
       width: 360px;
   }
 
+  .accounting-system-section {
+    padding-left: 20px;
+  }
+
+  .h2-ip-title-block__discr_accounting-system {
+    width: 333px;
+  }
+
+  .accounting-system__mini-discr {
+    width: 355px;
+  }
+
+  .accounting-system__mini-title {
+    margin-bottom: 0px;
+    width: 367px;
+    margin-bottom: 10px;
+  }
+
+  .accounting-system-section {
+    height: 500px;
+  }
 }

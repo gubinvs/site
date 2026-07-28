@@ -275,7 +275,7 @@ foreach ($data as $item) {
                         </div>
                         <!--Кнопки купить в магазинах-->
                             <div class="characteristics-block__button-block flex">
-                                <a href="https://www.ozon.ru/product/3044128-ut4-pe-klemma-prohodnaya-zhelto-zelenaya-feniks-kontakt-1-sht-3385021717/?_bctx=CAQQi6TdAQ&hs=1" id="button-link">
+                                <a href="https://www.ozon.ru/product/zazemlyayushchaya-klemma-phoenix-contact-ut-4-pe-artikul-3044128-3-sht-3211017630/?oos_search=false&sh=WLyS9USbJA" id="button-link">
                                     <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                                 </a>
                                 <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>

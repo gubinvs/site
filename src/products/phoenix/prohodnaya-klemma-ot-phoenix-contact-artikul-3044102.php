@@ -217,7 +217,7 @@
                         </div>
                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
-                            <a href="https://www.ozon.ru/product/3044102-ut4-klemma-prohodnaya-seraya-feniks-kontakt-1-sht-3384663656/?_bctx=CAQQi6TdAQ&hs=1" id="button-link">
+                            <a href="https://www.ozon.ru/product/prohodnaya-vintovaya-klemma-phoenix-contact-ut-4-artikul-3044102-3-sht-3196804556/?sh=WLyS9Yfqag" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>

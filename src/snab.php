@@ -229,20 +229,7 @@
         </div>
       </div>
     </section>
-    <section class="ip-question-section">
-      <div class="container ip-question-container">
-        <div class="ip-question-container__content">
-          <div class="ip-h2-section-title ip-h2-section-title_question ip-h2-section-title_write">Интересно? Давайте общаться дальше!
-            <div class="fon-h2-block fon-h2-block_question-section"></div>
-            <h2 class="h2-ip-title-block__discr h2-ip-title-block__discr_blue">В ответ пришлем подробное предложение по сотрудничеству</h2>
-          </div>
-          <form action="#feedback">
-            <button class="button-offer button-offer_question">Получить предложение</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!--<section class="ip-triptych-section" id="feedback">
+    <section class="ip-triptych-section" id="feedback">
       <div class="container ip-triptych-section-container">
         <div class="triptych-card triptych-card_blue">
           <div class="triptych-card__title">Логистика +</div>
@@ -269,7 +256,7 @@
         </div>
       </div>
     </section>
-    <section class="ip-feedback-section">
+    <!--<section class="ip-feedback-section">
       <div class="container ip-feedback-section-container">
         <div class="ip-feedback-section-container__content">
           <div class="h2-ip-title-block">

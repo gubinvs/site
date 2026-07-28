@@ -166,6 +166,10 @@ body {
   margin-right: auto;
 }
 
+.header-navigation-block {
+  display: none;
+}
+
 .haader__line, .haader__square {
   background-color: #C1C9F3 !important;
 }
@@ -1520,6 +1524,10 @@ footer {
   .footer-nav {
     width: 444px;
   }
+
+  .square-block  div:nth-child(n+21){
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1546,6 +1554,10 @@ footer {
   .advantages-card:not(:nth-child(6)) {
     margin-right: 10px;
   }  
+
+  .square-block  div:nth-child(n+20){
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -1659,6 +1671,10 @@ footer {
     padding-right: 10px;
     font-size: 13px;
     font-weight: 200;
+  }
+
+  .square-block  div:nth-child(n+17){
+    display: none;
   }
 
 }
@@ -1799,6 +1815,10 @@ footer {
 
   .triptych-card__discr-block__discr {
     padding-left: 7px;
+  }
+
+  .square-block  div:nth-child(n+14){
+    display: none;
   }
 
 }
@@ -1990,6 +2010,10 @@ footer {
     font-size: 19px;
   }
 
+  .square-block  div:nth-child(n+11){
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -2106,6 +2130,10 @@ footer {
     padding-left: 20px;
     width: 324px;
   }
+
+  .square-block  div:nth-child(n+9){
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 380px) {
@@ -2148,5 +2176,16 @@ footer {
       padding-left: 8px;
   }
 
-  
+  .square-block  div:nth-child(n+8){
+    display: none;
+  }
+
+ .ip-separator-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 }

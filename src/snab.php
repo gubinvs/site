@@ -256,7 +256,7 @@
         </div>
       </div>
     </section>
-    <!--<section class="ip-feedback-section">
+    <section class="ip-feedback-section">
       <div class="container ip-feedback-section-container">
         <div class="ip-feedback-section-container__content">
           <div class="h2-ip-title-block">
@@ -382,7 +382,7 @@
         </div>
       </div>
     </section>
-    <section class="accounting-system-section">
+    <!--<section class="accounting-system-section">
       <div class="container accounting-system-container">
         <div class="accounting-system__content-block">
           <div class="ip-h2-section-title ip-h2-section-title_question ip-h2-section-title_write">Предоставляем систему учета<br>

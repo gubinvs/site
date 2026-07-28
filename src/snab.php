@@ -364,7 +364,9 @@
           <div class="getup"></div>
           <h3 class="ip-advertising__title">Помогаем систематизировать процесс снабжения</h3>
           <div class="ip-advertising__discr">Управлять закупками проще: единая экосистема и умный анализ предложений собственной разработки.</div>
-            <button class="button-offer">Тарифы на обслуживание</button>
+            <form action="https://encomponetn.ru/stoimost-autsorsinga-snabzheniya.html">
+              <button class="button-offer">Тарифы на обслуживание</button>
+            </form>
         </div><img class="ip-advertising_img" src="img/snab-page-img/ip-advertising_img_1920.svg" alt="Мужчина и женьщина стоя на складе смтрят в ноутбук">
         <div class="ip-advertising__content-block ip-advertising__content-block_right">
           <div class="square-block square-block_advertising">
@@ -400,7 +402,6 @@
     </section>
     <section class="accounting-system-section__square-block">
       <div class="container">
-        <h4 class="h1__visually">Сервис для анализа предложений поставщиков</h4>
         <div class="square-block">
           <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>
           <div class="square-block__square square-block__square_accounting square-block__square_accounting-system"></div>

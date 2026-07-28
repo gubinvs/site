@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="/css/style-supply-page.css">
 
   <!-- 🔹 Yandex.Metrika -->
-  <!--<script type="text/javascript">
+  <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
       m[i] = m[i] || function() {
         (m[i].a = m[i].a || []).push(arguments)
@@ -61,7 +61,7 @@
       font-size: 15px;
       line-height: 1.6;
     }
-  </style>-->
+  </style>
 </head>
 
 
@@ -364,7 +364,7 @@
           <div class="getup"></div>
           <h3 class="ip-advertising__title">Помогаем систематизировать процесс снабжения</h3>
           <div class="ip-advertising__discr">Управлять закупками проще: единая экосистема и умный анализ предложений собственной разработки.</div>
-            <form action="https://encomponetn.ru/stoimost-autsorsinga-snabzheniya.html">
+            <form action="https://encomponent.ru/stoimost-autsorsinga-snabzheniya.html">
               <button class="button-offer">Тарифы на обслуживание</button>
             </form>
         </div><img class="ip-advertising_img" src="img/snab-page-img/ip-advertising_img_1920.svg" alt="Мужчина и женьщина стоя на складе смтрят в ноутбук">

@@ -1528,6 +1528,31 @@ footer {
   .square-block  div:nth-child(n+21){
     display: none;
   }
+
+  .ip-advertising_img {
+    width: 700px;
+    top: -40px;
+  }
+
+  .ip-advertising-section {
+    height: 429px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  .getup {
+    margin-bottom: 0px;
+  }
+
+  .ip-advertising__title {
+    font-size: 30px;
+  }
+
+  .ip-advertising__discr {
+    width: 365px;
+    margin-bottom: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1557,6 +1582,29 @@ footer {
 
   .square-block  div:nth-child(n+20){
     display: none;
+  }
+
+  .square-block__square_advertising:not(:last-of-type) {
+    margin-right: 10px;
+  }
+
+  .square-block_advertising:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  .ip-advertising__title {
+    font-size: 27px;
+    line-height: 37px;
+  }
+
+  .button-offer {
+    width: 270px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .ip-advertising-section {
+    height: 431px;
   }
 }
 
@@ -1675,6 +1723,43 @@ footer {
 
   .square-block  div:nth-child(n+17){
     display: none;
+  }
+
+  .ip-advertising-section {
+    height: 362px;
+  }
+
+  .ip-advertising_img {
+    width: 590px;
+  }
+
+  .square-block__square_advertising {
+    width: 20px;
+    height: 20px;
+  }
+
+  .square-block__square_advertising:not(:last-of-type) {
+    margin-right: 8px;
+  }
+
+  .square-block_advertising:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+
+  .ip-advertising__title {
+      width: 346px;
+      font-size: 22px;
+      line-height: 27px;
+  }
+
+  .button-offer {
+    width: 216px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .ip-advertising__discr {
+    width: 297px;
   }
 
 }
@@ -1819,6 +1904,19 @@ footer {
 
   .square-block  div:nth-child(n+14){
     display: none;
+  }
+
+  .ip-advertising_img {
+    display: none;
+  }
+
+  .getup {
+    margin-bottom: 30px;
+  }
+
+  .ip-advertising__discr {
+    width: 272px;
+    line-height: 20px;
   }
 
 }
@@ -2014,6 +2112,8 @@ footer {
     display: none;
   }
 
+
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -2134,6 +2234,14 @@ footer {
   .square-block  div:nth-child(n+9){
     display: none;
   }
+
+  .ip-advertising__content-block_right {
+    display: none;
+  }
+
+  .button-offer {
+    width: 370px;
+  }
 }
 
 @media only screen and (max-width: 380px) {
@@ -2187,5 +2295,16 @@ footer {
     align-items: center;
   }
 
+  .ip-advertising-section {
+      padding-left: 20px;
+  }
+
+  .button-offer {
+    width: 330px;
+  }
+
+  .footer__content {
+      width: 360px;
+  }
 
 }

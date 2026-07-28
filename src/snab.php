@@ -349,40 +349,40 @@
     <section class="ip-advertising-section">
       <div class="container ip-advertising-container">
         <div class="ip-advertising__content-block">
-          <div class="square-block">
-            <div class="square-block__square square-block__square_red"></div>
-            <div class="square-block__square square-block__square_red"></div>
-            <div class="square-block__square square-block__square_red"></div>
-            <div class="square-block__square square-block__square_red"></div>
+          <div class="square-block square-block_advertising">
+            <div class="square-block__square square-block__square_advertising square-block__square_red"></div>
+            <div class="square-block__square square-block__square_advertising square-block__square_red"></div>
+            <div class="square-block__square square-block__square_advertising square-block__square_red"></div>
+            <div class="square-block__square square-block__square_advertising square-block__square_red"></div>
           </div>
-          <div class="square-block square-block_left-block">
-            <div class="square-block__square square-block__square_red"></div>
-            <div class="square-block__square square-block__square_red"></div>
-            <div class="square-block__square square-block__square_red"></div>
-            <div class="square-block__square square-block__square_red"></div>
+          <div class="square-block square-block_advertising square-block_left-block">
+            <div class="square-block__square square-block__square_advertising  square-block__square_red"></div>
+            <div class="square-block__square square-block__square_advertising  square-block__square_red"></div>
+            <div class="square-block__square square-block__square_advertising  square-block__square_red"></div>
+            <div class="square-block__square square-block__square_advertising  square-block__square_red"></div>
           </div>
           <div class="getup"></div>
           <h3 class="ip-advertising__title">Помогаем систематизировать процесс снабжения</h3>
           <div class="ip-advertising__discr">Управлять закупками проще: единая экосистема и умный анализ предложений собственной разработки.</div>
-            <button class="button-offer">Сервис анализа предложений</button>
+            <button class="button-offer">Тарифы на обслуживание</button>
         </div><img class="ip-advertising_img" src="img/snab-page-img/ip-advertising_img_1920.svg" alt="Мужчина и женьщина стоя на складе смтрят в ноутбук">
         <div class="ip-advertising__content-block ip-advertising__content-block_right">
-          <div class="square-block">
-            <div class="square-block__square"></div>
-            <div class="square-block__square"></div>
-            <div class="square-block__square"></div>
-            <div class="square-block__square"></div>
+          <div class="square-block square-block_advertising">
+            <div class="square-block__square square-block__square_advertising"></div>
+            <div class="square-block__square square-block__square_advertising"></div>
+            <div class="square-block__square square-block__square_advertising"></div>
+            <div class="square-block__square square-block__square_advertising"></div>
           </div>
-          <div class="square-block">
-            <div class="square-block__square"></div>
-            <div class="square-block__square"></div>
-            <div class="square-block__square"></div>
-            <div class="square-block__square"></div>
+          <div class="square-block square-block_advertising">
+            <div class="square-block__square square-block__square_advertising"></div>
+            <div class="square-block__square square-block__square_advertising"></div>
+            <div class="square-block__square square-block__square_advertising"></div>
+            <div class="square-block__square square-block__square_advertising"></div>
           </div>
         </div>
       </div>
     </section>
-    <!--<section class="accounting-system-section">
+    <section class="accounting-system-section">
       <div class="container accounting-system-container">
         <div class="accounting-system__content-block">
           <div class="ip-h2-section-title ip-h2-section-title_question ip-h2-section-title_write">Предоставляем систему учета<br>
@@ -398,7 +398,7 @@
         </div><img class="accounting-system-img" src="img/snab-page-img/accounting-system_1920.svg" alt="Монитор с открытой 1С">
       </div>
     </section>
-    <section class="accounting-system-section__square-block">
+    <!--<section class="accounting-system-section__square-block">
       <div class="container">
         <h4 class="h1__visually">Сервис для анализа предложений поставщиков</h4>
         <div class="square-block">

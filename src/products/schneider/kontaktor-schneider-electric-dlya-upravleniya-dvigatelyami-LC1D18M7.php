@@ -1,72 +1,74 @@
 <?php
-include "../../php/class/api_Connector.php";
+    include "../../php/class/api_Connector.php";
 
-$article = "LC1D18M7";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $article = "LC1D18M7";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
 
-// Запрос на свой сервер Api
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    // Запрос на свой сервер Api
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
-$product = null;
+    $data = json_decode($response, true);
+    $product = null;
 
-if (is_array($data)) {
-    foreach ($data as $item) {
-        if (
-            trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
-        ) {
-            $product = $item;
-            break;
+    if (is_array($data)) {
+        foreach ($data as $item) {
+            if (
+                trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+            ) {
+                $product = $item;
+                break;
+            }
         }
     }
-}
 
-$price    = $product['price']    ?? 0;
-$quantity = $product['quantity'] ?? 0;
+    $price    = $product['price']    ?? 0;
+    $quantity = $product['quantity'] ?? 0;
 
-$urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    // Запрос данных о бесцеллерах
+    $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-$context = stream_context_create($options);
-$response = file_get_contents($urlBestsellers, false, $context);
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    $context = stream_context_create($options);
+    
+    $response = file_get_contents($urlBestsellers, false, $context);
 
-$data = json_decode($response, true);
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-foreach ($data as $item) {
-    $id = $item["id"];
-    $imgLinkIconCard = $item["imgLinkIconCard"];
-    $vendorCodeBestseller = $item["vendorCode"];
-    $nameComponent = $item["nameComponent"];
-    $quantityBestseller = $item["quantity"];
-    $linkPage = $item["linkPage"];
-    $priceBestseller = $item["price"];
-    $basketImgPath = $item["basketImgPath"];
-    $guidId = $item["guid"];
-    $manufacturer = $item["manufacturer"];
-}
+    $data = json_decode($response, true);
 
-    // Запрос на сервер OZON
-    // 1. Строка запроса о информации о наличии товара на FBO
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
+
+    // Запрос на сервер OZON о наличии товара на FBO
     $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
 
     // 2. Ваши авторизационные данные
@@ -110,8 +112,7 @@ foreach ($data as $item) {
     $dataResult = json_decode($responseOzon, true);
 
     foreach ($dataResult['products'] as $item) {
-        // Сохраняем количество в переменную (с одним знаком $)
-        $quantityOzon = $item["present"];
+        $quantityOzon = $item["present"];        // Сохраняем количество в переменную
     }
 ?>
 

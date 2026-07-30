@@ -3,6 +3,8 @@ include "../../php/class/api_Connector.php";
 
 $article = "LC1D18M7";
 $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+
+// Запрос на свой сервер Api
 $options = [
     "http" => [
         "method" => "GET",
@@ -62,6 +64,55 @@ foreach ($data as $item) {
     $guidId = $item["guid"];
     $manufacturer = $item["manufacturer"];
 }
+
+    // Запрос на сервер OZON
+    // 1. Строка запроса о информации о наличии товара на FBO
+    $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
+
+    // 2. Ваши авторизационные данные
+    $clientId = $clientId; 
+    $apiKey = $apiKeyProductFBO; 
+
+    // 3. Строго валидное тело запроса по схеме Ozon
+    $dataOZON = [
+        'limit' => 1, 
+        'skus' => [
+            '3225715829' 
+        ]
+    ];
+
+    // Кодируем массив в JSON-строку
+    $jsonData = json_encode($dataOZON);
+
+    // НАСТРОЙКА КОНТЕКСТА: заголовки и тело запроса
+    $optionsOzon = [
+        "http" => [
+            "method" => "POST",
+            // Все заголовки передаются единой строкой через \r\n
+            "header" => "Content-Type: application/json\r\n" .
+                        "Client-Id: " . $clientId . "\r\n" .
+                        "Api-Key: " . $apiKey . "\r\n",
+            // Тело запроса передается в параметре content
+            "content" => $jsonData,
+            // Игнорируем ошибки HTTP, чтобы PHP не выдавал Warning при кодах 4xx/5xx, 
+            // а возвращал сырой JSON ответа Ozon для отладки
+            "ignore_errors" => true 
+        ]
+    ];    
+
+    $context = stream_context_create($optionsOzon);
+    $responseOzon = file_get_contents($urlOzonApi, false, $context);
+
+    if ($response === FALSE) {
+        die("Ошибка сетевого соединения с API Ozon");
+    }
+
+    $dataResult = json_decode($responseOzon, true);
+
+    foreach ($dataResult['products'] as $item) {
+        // Сохраняем количество в переменную (с одним знаком $)
+        $quantityOzon = $item["present"];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -185,10 +236,16 @@ foreach ($data as $item) {
                         </div>
                         <!--Количество на складе-->
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>В наличии:</div>
+                            <div class='warehouse-item-quantity__name'>На складе СПБ:</div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
+                        <div class='<?php echo $quantityOzon > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
+                            <div class='warehouse-item-quantity__name'>На сладах ОЗОН:</div>
+                            <div class='warehouse-item-quantity__quantity'><?php echo $quantityOzon ?></div>
+                            <div class='warehouse-item-quantity__discr'>шт.</div>
+                        </div>
+                   
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>
                             <ul class='characteristics-block__list'>

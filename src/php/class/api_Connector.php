@@ -10,4 +10,10 @@
     // $shopURL = "http://localhost:3000";
 
 
+    // API-KEY OZON
+    // - Ключ для работы с информацией о товарах
+    $apiKeyProductFBO = "5ce5701b-8083-453f-9f9b-cceddb589445";
+    $clientId = "3625483";
+
+
 ?>

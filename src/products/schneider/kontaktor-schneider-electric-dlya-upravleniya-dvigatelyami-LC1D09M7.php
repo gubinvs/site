@@ -232,7 +232,9 @@
                         <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
                             <?php echo "На заказ: " . "<br>". "от " . $delivery . " до " . $delivery + 4 . " недель" ?>
                         </div>
-                        <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
+                        <div class="msm-bb-d-discr__price">
+                            <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
+                        </div>
                         <a href="https://shop.encomponent.ru/"><div class="msm-bb-db__button">Для бизнеса</div></a>
                     </div>
                 </div>

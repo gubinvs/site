@@ -40,7 +40,8 @@
     }
 
     $price = $product['price']    ?? 0;
-    $quantity = $product['quantity'] ?? 0;
+    //$quantity = $product['quantity'] ?? 0;
+    $quantity = 1;
     $delivery = $product['deliveryТime'] ?? 0;
 
 
@@ -226,7 +227,7 @@
                         <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
                             <?php echo "Склад СПб: " . "<br>" . "в наличии " .  $quantity . " шт." ?>
                         </div>
-                        <div class='<?php echo $quantityOzon > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
+                        <div class='<?php echo $quantityOzon > 0  ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
                             <?php echo "Cклад OZON " . "<br>" . "в наличии " . $quantityOzon. " шт." ?>
                         </div>
                         <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>

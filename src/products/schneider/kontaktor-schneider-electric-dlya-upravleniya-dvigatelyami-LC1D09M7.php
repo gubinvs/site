@@ -8,7 +8,7 @@
     // API СЕРВЕР ОЗОНА
     $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
     // $SKU = "3424066591";
-    $SKU = "3225715829";
+    $SKU = "3225715829"; // чужой ску, временный для настройки
     $clientId = $clientId; 
     $apiKey = $apiKeyProductFBO; 
 

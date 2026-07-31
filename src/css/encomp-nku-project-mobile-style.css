@@ -271,21 +271,17 @@
     }
 
     .msm-bb-d-discr__quantity {
-        display: flex;
-        margin-bottom: 4px;
-    }
-
-    .msm-bb-d-discr__quantity_name,
-    .msm-bb-d-discr__quantity__quantity,
-    .msm-bb-d-discr__quantity__discr {
+        margin-bottom: 2px;
         font-size: 10px;
-        margin-right: 6px;
         color: #F3DE09;
+
     }
 
-    .msm-bb-d-discr__quantity_null div {
-        color: #FFFFFF;
+    .msm-bb-d-discr__quantity_null {
+        display: none;
     }
+
+
 
     /* -------------- attention-section ---------------------*/
 

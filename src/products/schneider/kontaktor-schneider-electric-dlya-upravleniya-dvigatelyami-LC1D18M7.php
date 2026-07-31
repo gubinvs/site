@@ -3,6 +3,12 @@
 
     $article = "LC1D18M7";
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    // Запрос на сервер OZON о наличии товара на FBO
+    $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
+    // 2. Ваши авторизационные данные OZON
+    $clientId = $clientId; 
+    $apiKey = $apiKeyProductFBO; 
+    $SKU = "3225715829";
 
     // Запрос на свой сервер Api
     $options = [
@@ -11,6 +17,7 @@
             "header" => "Content-Type: application/json"
         ]
     ];
+
     $context = stream_context_create($options);
     $response = file_get_contents($url, false, $context);
     if ($response === FALSE) {
@@ -68,18 +75,11 @@
         $manufacturer = $item["manufacturer"];
     }
 
-    // Запрос на сервер OZON о наличии товара на FBO
-    $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
-
-    // 2. Ваши авторизационные данные
-    $clientId = $clientId; 
-    $apiKey = $apiKeyProductFBO; 
-
     // 3. Строго валидное тело запроса по схеме Ozon
     $dataOZON = [
         'limit' => 1, 
         'skus' => [
-            '3225715829' 
+            $SKU 
         ]
     ];
 
@@ -201,8 +201,8 @@
     </noscript>
     <!--/Yandex.Metrika counter-->
     <?php
-    $color_line_header = $color_line_header ?? null;
-    include_once '../../php/modules/header.php';
+        $color_line_header = $color_line_header ?? null;
+        include_once '../../php/modules/header.php';
     ?>
     <main>
         <div class='discription-product-section'>
@@ -246,7 +246,9 @@
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantityOzon ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
-                   
+                         <div class="delivery-block">
+                            <?php echo $quantity > 0 || $quantityOzon > 0 ? "" : 'На заказ: от ' .  $delivery . ' до ' . $delivery + 4 . ' нед. '?> 
+                        </div>
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>
                             <ul class='characteristics-block__list'>

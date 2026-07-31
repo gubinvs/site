@@ -1,72 +1,122 @@
 <?php
-include "../../php/class/api_Connector.php";
+    include "../../php/class/api_Connector.php";
 
-$article = "LC1D09M7";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    
+    // СВОЙ АПИ СЕРВЕР
+    $article = "LC1D09M7";
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    // API СЕРВЕР ОЗОНА
+    $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
+    // $SKU = "3424066591";
+    $SKU = "3225715829";
+    $clientId = $clientId; 
+    $apiKey = $apiKeyProductFBO; 
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
-$product = null;
+    $data = json_decode($response, true);
+    $product = null;
 
-if (is_array($data)) {
-    foreach ($data as $item) {
-        if (
-            trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
-        ) {
-            $product = $item;
-            break;
+    if (is_array($data)) {
+        foreach ($data as $item) {
+            if (
+                trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+            ) {
+                $product = $item;
+                break;
+            }
         }
     }
-}
 
-$price = $product['price']    ?? 0;
-$quantity = $product['quantity'] ?? 0;
-$delivery = $product['deliveryТime'] ?? 0;
+    $price = $product['price']    ?? 0;
+    $quantity = $product['quantity'] ?? 0;
+    $delivery = $product['deliveryТime'] ?? 0;
 
 
-// Загружаем только свои товары
-$urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
+    // Загружаем только те товары, которые помечены 1 как бесцеллер
+    $urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-$context = stream_context_create($options);
-$response = file_get_contents($urlBestsellers, false, $context);
+    $context = stream_context_create($options);
+    $response = file_get_contents($urlBestsellers, false, $context);
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-$data = json_decode($response, true);
+    $data = json_decode($response, true);
 
-foreach ($data as $item) {
-    $id = $item["id"];
-    $imgLinkIconCard = $item["imgLinkIconCard"];
-    $vendorCodeBestseller = $item["vendorCode"];
-    $nameComponent = $item["nameComponent"];
-    $quantityBestseller = $item["quantity"];
-    $linkPage = $item["linkPage"];
-    $priceBestseller = $item["price"];
-    $basketImgPath = $item["basketImgPath"];
-    $guidId = $item["guid"];
-    $manufacturer = $item["manufacturer"];
-}
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
+
+    // Запрос на сервер OZON о наличии товара на FBO
+
+    // 3. Строго валидное тело запроса по схеме Ozon
+    $dataOZON = [
+        'limit' => 1, 
+        'skus' => [
+            $SKU 
+        ]
+    ];
+
+    // Кодируем массив в JSON-строку
+    $jsonData = json_encode($dataOZON);
+
+    // НАСТРОЙКА КОНТЕКСТА: заголовки и тело запроса
+    $optionsOzon = [
+        "http" => [
+            "method" => "POST",
+            // Все заголовки передаются единой строкой через \r\n
+            "header" => "Content-Type: application/json\r\n" .
+                        "Client-Id: " . $clientId . "\r\n" .
+                        "Api-Key: " . $apiKey . "\r\n",
+            // Тело запроса передается в параметре content
+            "content" => $jsonData,
+            // Игнорируем ошибки HTTP, чтобы PHP не выдавал Warning при кодах 4xx/5xx, 
+            // а возвращал сырой JSON ответа Ozon для отладки
+            "ignore_errors" => true 
+        ]
+    ];    
+
+    $context = stream_context_create($optionsOzon);
+    $responseOzon = file_get_contents($urlOzonApi, false, $context);
+
+    if ($response === FALSE) {
+        die("Ошибка сетевого соединения с API Ozon");
+    }
+
+    $dataResult = json_decode($responseOzon, true);
+
+    foreach ($dataResult['products'] as $item) {
+        $quantityOzon = $item["present"];        // Сохраняем количество в переменную
+    }
 ?>
 
 <!DOCTYPE html>
@@ -166,21 +216,19 @@ foreach ($data as $item) {
                         <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
                         <div class="msm-bb-db__discr_min">серия - TeSys D</div>
                         <div class="button-block-row">
-                            <div class='<?php echo $quantity > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                            <div class='<?php echo $quantityOzon > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
                             <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
                         </div>
                     </div>
                     <div class="msm-bb-d__discr">                  
                         <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
-                            <div class='msm-bb-d-discr__quantity_name'>
-                                    <?php echo $quantity == 0? "доставка: от" : "В наличии"?>
-                            </div>
-                            <div class='msm-bb-d-discr__quantity__quantity'>
-                                <?php echo $quantity == 0 ? $delivery  :  $quantity ?>
-                            </div>
-                            <div class='msm-bb-d-discr__quantity__discr'>
-                                <?php echo $quantity == 0 ? "нед." : "шт."?>
-                            </div>
+                            <?php echo "Склад СПб: " . "<br>" . "в наличии " .  $quantity . " шт." ?>
+                        </div>
+                        <div class='<?php echo $quantityOzon > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
+                            <?php echo "Cклад OZON " . "<br>" . "в наличии " . $quantityOzon. " шт." ?>
+                        </div>
+                        <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
+                            <?php echo "На заказ: " . "<br>". "от " . $delivery . " до " . $delivery + 4 . " недель" ?>
                         </div>
                         <div class="msm-bb-d-discr__price"><?php echo number_format($price, 0, ',', ' '). '  ₽'; ?></div>
                         <a href="https://shop.encomponent.ru/"><div class="msm-bb-db__button">Для бизнеса</div></a>
@@ -205,12 +253,17 @@ foreach ($data as $item) {
                             </div>
                         </div>
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>В наличии:</div>
+                            <div class='warehouse-item-quantity__name'>На складе СПб:</div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
+                        <div class='<?php echo $quantityOzon > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
+                            <div class='warehouse-item-quantity__name'>На сладах ОЗОН:</div>
+                            <div class='warehouse-item-quantity__quantity'><?php echo $quantityOzon > 0? $quantityOzon : "0" ?></div>
+                            <div class='warehouse-item-quantity__discr'>шт.</div>
+                        </div>
                         <div class="delivery-block">
-                            <?php echo $quantity > 0 ? "" : 'На заказ: от ' .  $delivery . ' до ' . $delivery + 4 . ' нед. '?> 
+                             <?php echo $quantity > 0 || $quantityOzon > 0 ? "" : 'На заказ: от ' .  $delivery . ' до ' . $delivery + 4 . ' нед. '?> 
                         </div>
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>

@@ -216,7 +216,9 @@
                         <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
                         <div class="msm-bb-db__discr_min">серия - TeSys D</div>
                         <div class="button-block-row">
-                            <div class='<?php echo $quantityOzon > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                            <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-tesys-d-lc1d09m7-9-a-katushka-230-v-ac-3424066591/?oos_search=false&sh=EkL4mR_oYw">
+                                <div class='<?php echo $quantityOzon > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                            </a>
                             <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
                         </div>
                     </div>
@@ -253,12 +255,12 @@
                             </div>
                         </div>
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>На складе СПб:</div>
+                            <div class='warehouse-item-quantity__name'>Склад СПб:</div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
                         <div class='<?php echo $quantityOzon > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>На сладах ОЗОН:</div>
+                            <div class='warehouse-item-quantity__name'>Склад OZON:</div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantityOzon > 0? $quantityOzon : "0" ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>

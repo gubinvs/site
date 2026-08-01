@@ -9,7 +9,7 @@
     $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
     // $SKU = "3424066591";
     $SKU = "3225715829"; // чужой ску, временный для настройки
-    $clientId = $clientId; 
+    $clientId = $userId; 
     $apiKey = $apiKeyProductFBO; 
 
     $options = [
@@ -467,7 +467,7 @@
                     </div>
                 </div>
                 <section class="please-note-section">
-                    <div class="container please-note-section__container">
+                    <div class="container mobile-container please-note-section__container">
                         <h3 class="please-note-section__title">Пользователи выбирают:</h3>
                         <div class="please-note-section__card-product">
                             <?php
@@ -526,7 +526,6 @@
 
                                                 <div class="card-component__price-block">
                                                     <div class="card-component__price">{$fmtPrice}</div>
-                                                    <div class="card-component__price-nalog">в т.ч. НДС</div>
                                                 </div>
                                             </div>
                                         </div>

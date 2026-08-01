@@ -416,11 +416,12 @@
     }
 
     .card-component {
-        width: 246px;
+        width: 221px;
         height: 310px;
         border-radius: 10px;
         border: 1px solid  #059134;
         background-color: #F7FAFB;
+        padding-bottom: 30px;
     }
 
     .card-component:nth-child(3) {
@@ -438,6 +439,14 @@
     .card-component__img {
         height: 90px;
     }
+
+
+    /*------- -------------*/
+
+    .please-note-section__card-product {
+        justify-content: space-between;
+    }
+
 
     /*----------------- footer ------------------------*/
     .footer{
@@ -479,10 +488,6 @@
         width: 88px;
         font-size: 8px;
     }
-
-    
-    
-    
     
     /* ------------ main-section__mobile ------------- */
     

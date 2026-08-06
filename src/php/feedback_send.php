@@ -36,6 +36,24 @@
             exit('Ошибка: введите корректный номер телефона РФ.');
         }
 
+        // Проверка: если начало email совпадает с номером телефона — вероятнее всего бот
+        if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+            // Логин email (до @)
+            $emailLogin = strtolower(substr($email, 0, strpos($email, '@')));
+
+            // Номер телефона без первой цифры страны (7)
+            $phoneForCompare = substr($cleanPhone, 1); // 9270034101
+
+            // Также сравним с полным номером (79270034101) на всякий случай
+            if (
+                $emailLogin === $phoneForCompare ||
+                $emailLogin === $cleanPhone
+            ) {
+                exit('Ошибка: Ваше сообщение похоже на спам!');
+            }
+        }
+
         // Формируем письмо
         $message = "
         Новая заявка с сайта

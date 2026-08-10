@@ -68,6 +68,11 @@
 <body>
   <!--Подключение header-->
   <?php include "php/modules/header.php" ?>
+  <?php session_start();
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+  ?>
   <!--Основная секция страницы-->
   <main>
     <section class="ip-top-section">
@@ -164,19 +169,17 @@
             <div class="h2-ip-title-block__discr">Задайте вопросы специалисту по снабжению и получите на них развернутые ответы</div>
           </div>
           <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
-            <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
-            <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
-            <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
-            <div class="check-box">
-              <input class="check-box__input" type="checkbox" name="chekBox" required>
-              <a href="https://encomponent.ru/pp-page.html" target="blank">
-                <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
-              </a>
-            </div>
-            <input type="hidden" name="robot_field">
-            <input type="hidden" name="site" value="Аутсорсинг снабжения Компоненты энергии">
-            <input type="hidden" name="active-form" value="massage">
-            <button class="feedback-section__button" type="submit">Оставить заявку</button>
+            <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required> 
+            <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required> 
+            <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required> 
+            <div class="check-box"> <input class="check-box__input" type="checkbox" name="chekBox" required> 
+            <a href="https://encomponent.ru/pp-page.html" target="_blank"> 
+              <div class="check-box__pp-page"> Даю согласие на обработку персональных данных. </div> 
+            </a> </div> <!-- Honeypot: настоящий пользователь его не заполняет --> 
+            <input type="text" name="robot_field" value="" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px; opacity:0;"> 
+            <!-- CSRF --> <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>"> <!-- Время открытия формы --> 
+             <input type="hidden" name="form_time" value="<?= time() ?>"> <input type="hidden" name="site" value="Аутсорсинг снабжения Компоненты энергии"> 
+             <input type="hidden" name="active-form" value="massage"> <button class="feedback-section__button" type="submit"> Оставить заявку </button> 
           </form>
         </div>
         <div class="ip-feedback-section-container__icon">
@@ -265,18 +268,17 @@
             <div class="h2-ip-title-block__discr">Задайте вопросы специалисту по снабжению и получите на них развернутые ответы</div>
           </div>
           <form class="feedback-section__form" action="https://encomponent.ru/php/feedback_send.php" method="POST">
-            <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required>
-            <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required>
-            <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required>
-            <div class="check-box">
-                <input class="check-box__input" type="checkbox" name="chekBox" required><a href="https://encomponent.ru/pp-page.html" target="blank">
-                <div class="check-box__pp-page">Даю согласие на обработку персональных данных. </div>
-              </a>
-            </div>
-            <input type="hidden" name="robot_field">
-            <input type="hidden" name="site" value="Аутсорсинг снабжения Компоненты энергии">
-            <input type="hidden" name="active-form" value="massage">
-            <button class="feedback-section__button" type="submit">Оставить заявку</button>
+            <input class="feedback-section__input feedback-section__input_name" type="text" placeholder="Ваше имя" name="name" required> 
+            <input class="feedback-section__input feedback-section__tel" type="tel" placeholder="+7 (999) 999 99 99" name="phone" required> 
+            <input class="feedback-section__input feedback-section__input_email" type="email" placeholder="Ваш E-mail" name="email" required> 
+            <div class="check-box"> <input class="check-box__input" type="checkbox" name="chekBox" required> 
+            <a href="https://encomponent.ru/pp-page.html" target="_blank"> 
+              <div class="check-box__pp-page"> Даю согласие на обработку персональных данных. </div> 
+            </a> </div> <!-- Honeypot: настоящий пользователь его не заполняет --> 
+            <input type="text" name="robot_field" value="" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px; opacity:0;"> 
+            <!-- CSRF --> <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>"> <!-- Время открытия формы --> 
+             <input type="hidden" name="form_time" value="<?= time() ?>"> <input type="hidden" name="site" value="Аутсорсинг снабжения Компоненты энергии"> 
+             <input type="hidden" name="active-form" value="massage"> <button class="feedback-section__button" type="submit"> Оставить заявку </button> 
           </form>
         </div>
         <div class="ip-feedback-section-container__icon">

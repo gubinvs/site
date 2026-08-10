@@ -1,5 +1,16 @@
 <?php
 
+    file_put_contents(
+        __DIR__ . '/spam-log.txt',
+        date('Y-m-d H:i:s') . "\n" .
+        "IP: " . ($_SERVER['REMOTE_ADDR'] ?? '') . "\n" .
+        "UA: " . ($_SERVER['HTTP_USER_AGENT'] ?? '') . "\n" .
+        "REFERER: " . ($_SERVER['HTTP_REFERER'] ?? '') . "\n" .
+        "POST: " . print_r($_POST, true) .
+        "\n-------------------------\n",
+        FILE_APPEND
+    );
+
     // Email получателя
     $to = "gubinvs@gmail.com";
     $subject = "Новая заявка с сайта";

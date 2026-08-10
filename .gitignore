@@ -4,3 +4,4 @@ admin-mailer.html
 add.html
 add_component.html
 src/php/class/api_Connector.php
+src/php/feedback_send.php

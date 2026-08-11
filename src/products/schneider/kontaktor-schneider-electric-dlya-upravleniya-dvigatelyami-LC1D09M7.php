@@ -1,17 +1,16 @@
 <?php
     include "../../php/class/api_Connector.php";
 
-    
-    // СВОЙ АПИ СЕРВЕР
     $article = "LC1D09M7";
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
-    // API СЕРВЕР ОЗОНА
+    // Запрос на сервер OZON о наличии товара на FBO
     $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
-    // $SKU = "3424066591";
-    $SKU = "3225715829"; // чужой ску, временный для настройки
-    $clientId = $userId; 
+    // 2. Ваши авторизационные данные OZON
+    $clientId = $clientId; 
     $apiKey = $apiKeyProductFBO; 
+    $SKU = "3424066591";
 
+    // Запрос на свой сервер Api
     $options = [
         "http" => [
             "method" => "GET",
@@ -39,14 +38,12 @@
         }
     }
 
-    $price = $product['price']    ?? 0;
-    //$quantity = $product['quantity'] ?? 0;
-    $quantity = 1;
-    $delivery = $product['deliveryТime'] ?? 0;
+    $price    = $product['price']    ?? 0;
+    $quantity = $product['quantity'] ?? 0;
 
 
-    // Загружаем только те товары, которые помечены 1 как бесцеллер
-    $urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
+    // Запрос данных о бесцеллерах
+    $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
     $options = [
         "http" => [
@@ -56,6 +53,7 @@
     ];
 
     $context = stream_context_create($options);
+    
     $response = file_get_contents($urlBestsellers, false, $context);
 
     if ($response === FALSE) {
@@ -76,8 +74,6 @@
         $guidId = $item["guid"];
         $manufacturer = $item["manufacturer"];
     }
-
-    // Запрос на сервер OZON о наличии товара на FBO
 
     // 3. Строго валидное тело запроса по схеме Ozon
     $dataOZON = [

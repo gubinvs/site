@@ -4,7 +4,7 @@
     $article = "LC1D09M7";
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
     // Запрос на сервер OZON о наличии товара на FBO
-    $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
+    $urlOzonApi = $urlOzonApiAdress; 
     // 2. Ваши авторизационные данные OZON
     $clientId = $clientId; 
     $apiKey = $apiKeyProductFBO; 

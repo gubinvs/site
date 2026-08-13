@@ -522,6 +522,7 @@
 
                                                 <div class="card-component__price-block">
                                                     <div class="card-component__price">{$fmtPrice}</div>
+                                                    <div class="card-component__price-nalog">Без НДС</div>
                                                 </div>
                                             </div>
                                         </div>

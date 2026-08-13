@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+
+
 @media only screen and (max-width: 800px) {
 
     .container {
@@ -257,7 +259,6 @@
         display: none;
     }
 
-
     .msm-bb-d__discr {
         padding-right: 20px;
     }
@@ -411,10 +412,6 @@
         margin-bottom: 10px;
     }
 
-    .please-note-section__card-product div:nth-child(4) {
-        display: none;
-    }
-
     .card-component {
         width: 221px;
         height: 310px;
@@ -444,9 +441,8 @@
     /*------- -------------*/
 
     .please-note-section__card-product {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
-
 
     /*----------------- footer ------------------------*/
     .footer{
@@ -500,13 +496,24 @@
 
     .card-component {
         width: 192px;
-        height: 290px;
     }
 }
 
 @media only screen and (max-width: 640px) {
     .mobile-container {
         width: 480px;
+    }
+
+    .card-component__price-nalog {
+        display: none;
+    }
+
+    .card-component__vendor {
+        display: none;
+    }
+    .card-component__vendor_mobile {
+        display: inline;
+        font-size: 20px;
     }
 }
 

@@ -1318,6 +1318,10 @@ header {
     color: #1D252C;
 }
 
+.card-component__vendor_mobile {
+    display: none;
+}
+
 .card-component__name {
     text-align: center;
     font-size: 16px;

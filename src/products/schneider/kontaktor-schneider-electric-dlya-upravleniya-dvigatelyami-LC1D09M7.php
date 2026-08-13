@@ -10,6 +10,10 @@
     $apiKey = $apiKeyProductFBO; 
     $SKU = "3424066591";
 
+    // Количество карточек на экране в зависимости от его ширины
+    $screen_width = isset($_COOKIE['screen_width']) ? (int)$_COOKIE['screen_width'] : null;
+    $is_mobile = 4; // По умолчанию 4
+
     // Запрос на свой сервер Api
     $options = [
         "http" => [
@@ -481,10 +485,14 @@
                             $noImage = '../../img/free-icon-no-photo-4054617.png';
                             $count = 0;
 
+                            if (isset($_COOKIE['screen_width']) && $_COOKIE['screen_width'] <= 1024) {
+                                $is_mobile = 8;
+                            }
+                        
                             if (is_array($data) && count($data) > 0) {
                                 foreach ($data as $item) {
 
-                                    if ($count == 4) {
+                                    if ($count == $is_mobile) {
                                         break;
                                     }
 
@@ -510,6 +518,7 @@
                                             <div class="card-component__top">
                                                 <img src="{$img}" class="card-component__img" alt="Фото {$name}">
                                                 <div class="card-component__vendor">Артикул: {$vendor}</div>
+                                                <div class="card-component__vendor_mobile">{$vendor}</div>
                                                 <div class="card-component__name">
                                                     <a href="https://shop.encomponent.ru/SearchResults?vendorCode={$vendor}" target="_blank">{$name}</a>
                                                 </div>

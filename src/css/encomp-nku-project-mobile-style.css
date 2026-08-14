@@ -493,9 +493,13 @@
         left: 110px;
         height: 180px;
     }
+    
+    .please-note-section__card-product {
+        justify-content: center;
+    }
 
     .card-component {
-        width: 192px;
+        width: 194px;
     }
 }
 
@@ -504,17 +508,10 @@
         width: 480px;
     }
 
-    .card-component__price-nalog {
-        display: none;
-    }
+   .please-note-section {
+    display: none;
+   }
 
-    .card-component__vendor {
-        display: none;
-    }
-    .card-component__vendor_mobile {
-        display: inline;
-        font-size: 20px;
-    }
 }
 
 @media only screen and (max-width: 480px) {

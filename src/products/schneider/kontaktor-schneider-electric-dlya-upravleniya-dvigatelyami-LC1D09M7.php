@@ -10,9 +10,6 @@
     $apiKey = $apiKeyProductFBO; 
     $SKU = "3424066591";
 
-    // Количество карточек на экране в зависимости от его ширины
-    $screen_width = isset($_COOKIE['screen_width']) ? (int)$_COOKIE['screen_width'] : null;
-    $is_mobile = 4; // По умолчанию 4
 
     // Запрос на свой сервер Api
     $options = [
@@ -484,15 +481,11 @@
 
                             $noImage = '../../img/free-icon-no-photo-4054617.png';
                             $count = 0;
-
-                            if (isset($_COOKIE['screen_width']) && $_COOKIE['screen_width'] <= 1024) {
-                                $is_mobile = 8;
-                            }
                         
                             if (is_array($data) && count($data) > 0) {
                                 foreach ($data as $item) {
 
-                                    if ($count == $is_mobile) {
+                                    if ($count == 4) {
                                         break;
                                     }
 

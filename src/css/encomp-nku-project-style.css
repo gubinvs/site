@@ -1725,6 +1725,15 @@ header {
     max-height: 280px;
   }*/
 
+  .attention-section-title-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .attention-section-title__title {
+    font-size: 40px;
+  }
+
   .feedback-section__title-block {
     width: 540px;
   }
@@ -1797,10 +1806,10 @@ header {
   }
 
   .card-component {
-      width: 302px;
-      height: 410px;
-      margin-right: 10px;
-      margin-bottom: 10px;
+    width: 226px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 
   .specifications-item__name {
@@ -1823,8 +1832,8 @@ header {
 @media only screen and (max-width: 960px) {
 
   .msib-img {
-      width: 330px;
-      height: 440px;
+    width: 330px;
+    height: 440px;
   }
 
   .card-component:last-child(4) {

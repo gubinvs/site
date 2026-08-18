@@ -273,8 +273,8 @@
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantityOzon > 0? $quantityOzon : "0" ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
-                        <div class="delivery-block">
-                             <?php echo $quantity > 0 || $quantityOzon > 0 ? "" : 'На заказ: от ' .  $delivery . ' до ' . $delivery + 4 . ' нед. '?> 
+                        <div class="warehouse-item-quantity">
+                             <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?> 
                         </div>
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>

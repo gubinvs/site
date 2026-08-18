@@ -11,6 +11,16 @@
         display: none;
     }
 
+    .whs-icon-block {
+        width: 300px;
+        height: 150px;
+        background-color: #059134;
+    }
+
+    .whs-icon-block__img {
+        height: 140px;
+    }
+
     .warehouse-section__mobile {
         height: 150px !important;
         margin-bottom: 20px;

@@ -231,6 +231,9 @@
         </section>
         <section class="main-section__mobile warehouse-section__mobile">
             <div class="mobile-container">
+                <div class="whs-icon-block">
+                    <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="">
+                </div>
                 <div class="whs-backround-block">
                     <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity' ?>'>
                             <?php echo "Склад СПб: " . "<br>" . "в наличии " .  $quantity . " шт." ?>

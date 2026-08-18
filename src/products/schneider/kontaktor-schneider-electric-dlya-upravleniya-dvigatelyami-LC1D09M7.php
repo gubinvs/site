@@ -221,15 +221,6 @@
                         </div>
                     </div>
                     <div class="msm-bb-d__discr">                  
-                        <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
-                            <?php echo "Склад СПб: " . "<br>" . "в наличии " .  $quantity . " шт." ?>
-                        </div>
-                        <div class='<?php echo $quantityOzon > 0  ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
-                            <?php echo "Cклад OZON " . "<br>" . "в наличии " . $quantityOzon. " шт." ?>
-                        </div>
-                        <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_null' ?>'>
-                            <?php echo "На заказ: " . "<br>". "от " . $delivery . " до " . $delivery + 4 . " недель" ?>
-                        </div>
                         <div class="msm-bb-d-discr__price">
                             <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
                         </div>
@@ -237,6 +228,21 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="main-section__mobile warehouse-section__mobile">
+            <div class="mobile-container">
+                <div class="whs-backround-block">
+                    <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity' ?>'>
+                            <?php echo "Склад СПб: " . "<br>" . "в наличии " .  $quantity . " шт." ?>
+                    </div>
+                    <div class='<?php echo $quantityOzon > 0  ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity' ?>'>
+                            <?php echo "Cклад OZON " . "<br>" . "в наличии " . $quantityOzon. " шт." ?>
+                    </div>
+                    <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity' ?>'>
+                            <?php echo "На заказ: " . "<br>". "от " . $delivery . " до " . $delivery + 4 . " недель" ?>
+                    </div>
+                </div>
+            </div>    
         </section>
         <div class='discription-product-section'>
             <div class='container'>

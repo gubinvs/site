@@ -1,4 +1,9 @@
 <?php
+
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+    error_reporting(E_ALL);
+
     include "../../php/class/api_Connector.php";
 
     $article = "LC1D09M7";
@@ -6,7 +11,7 @@
     // Запрос на сервер OZON о наличии товара на FBO
     $urlOzonApi = $urlOzonApiAdress; 
     // 2. Ваши авторизационные данные OZON
-    $clientId = $clientId; 
+    $clientId = $userId; 
     $apiKey = $apiKeyProductFBO; 
     $SKU = "3424066591";
 
@@ -41,6 +46,7 @@
 
     $price    = $product['price']    ?? 0;
     $quantity = $product['quantity'] ?? 0;
+    $delivery = 1;
 
 
     // Запрос данных о бесцеллерах

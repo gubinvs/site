@@ -565,11 +565,17 @@
 }
 
 @media only screen and (max-width: 640px) {
- 
-
     .mobile-container {
-        padding-right: 20px;
-        padding-left: 20px;
+        width: 480px;
+    }
+
+
+    .attention-container,
+    .technical-section__container,
+    .document-section__container {
+        width: 440px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .please-note-section {
@@ -627,11 +633,19 @@
         height: 220px;
     }
 
-
-
 }
 
 @media only screen and (max-width: 480px) {
+    .mobile-container {
+        width: 360px;
+    }
+
+
+    .attention-container,
+    .technical-section__container,
+    .document-section__container {
+        width: 320px;
+    }
 
 
 }

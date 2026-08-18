@@ -41,7 +41,6 @@
 
     $price    = $product['price']    ?? 0;
     $quantity = $product['quantity'] ?? 0;
-    $deliveryPrice = 2400;
 
 
     // Запрос данных о бесцеллерах
@@ -241,18 +240,11 @@
                     <div class='msm-bb-d-discr__quantity'>
                         <?php echo "Cклад OZON " . "в наличии " . $quantityOzon. " шт." ?>
                     </div>
-                    
+                    <div class='msm-bb-d-discr__quantity'>
+                        <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?>
+                    </div>             
                 </div>
-                <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'warehouse-section-mobile__delivery-block' : 'warehouse-section-mobile__delivery-block' ?>'>
-                    <img src="../../img/delivery-block__img.jpg" class="delivery-block__img" alt="@">
-                    <div class="whsm-delivery-block__disr">
-                        <h3 class="warehouse-section__title whsm-db-disr__title">Под заказ</h3>
-                        <div class="msm-bb-d-discr__price whsm-db-disr__price">
-                            <?php echo number_format($deliveryPrice, 0, ',', ' '). '  ₽'; ?>
-                        </div>
-                        <?php echo "от " . $delivery . " до " . $delivery + 4 . " нед." ?>
-                    </div>
-                </div>
+                
             </div>    
         </section>
         <div class='discription-product-section'>

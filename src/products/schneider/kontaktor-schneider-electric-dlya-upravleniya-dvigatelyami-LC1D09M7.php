@@ -41,6 +41,7 @@
 
     $price    = $product['price']    ?? 0;
     $quantity = $product['quantity'] ?? 0;
+    $deliveryPrice = 2400;
 
 
     // Запрос данных о бесцеллерах
@@ -230,19 +231,26 @@
             </div>
         </section>
         <section class="main-section__mobile warehouse-section__mobile">
-            <div class="mobile-container">
-                <div class="whs-icon-block">
-                    <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="">
-                </div>
+            <div class="mobile-container warehouse-section-mobile__container">
+                <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="@">
                 <div class="whs-backround-block">
-                    <div class='<?php echo $quantity > 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity' ?>'>
-                            <?php echo "Склад СПб: " . "<br>" . "в наличии " .  $quantity . " шт." ?>
+                    <h3 class="warehouse-section__title">Наличие на складах</h3>
+                    <div class='msm-bb-d-discr__quantity'>
+                        <?php echo "Склад СПб " . "в наличии " .  $quantity . " шт." ?>
                     </div>
-                    <div class='<?php echo $quantityOzon > 0  ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity' ?>'>
-                            <?php echo "Cклад OZON " . "<br>" . "в наличии " . $quantityOzon. " шт." ?>
+                    <div class='msm-bb-d-discr__quantity'>
+                        <?php echo "Cклад OZON " . "в наличии " . $quantityOzon. " шт." ?>
                     </div>
-                    <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity' ?>'>
-                            <?php echo "На заказ: " . "<br>". "от " . $delivery . " до " . $delivery + 4 . " недель" ?>
+                    
+                </div>
+                <div class='<?php echo $quantityOzon == 0 && $quantity == 0 ? 'warehouse-section-mobile__delivery-block' : 'warehouse-section-mobile__delivery-block' ?>'>
+                    <img src="../../img/delivery-block__img.jpg" class="delivery-block__img" alt="@">
+                    <div class="whsm-delivery-block__disr">
+                        <h3 class="warehouse-section__title whsm-db-disr__title">Под заказ</h3>
+                        <div class="msm-bb-d-discr__price whsm-db-disr__price">
+                            <?php echo number_format($deliveryPrice, 0, ',', ' '). '  ₽'; ?>
+                        </div>
+                        <?php echo "от " . $delivery . " до " . $delivery + 4 . " нед." ?>
                     </div>
                 </div>
             </div>    

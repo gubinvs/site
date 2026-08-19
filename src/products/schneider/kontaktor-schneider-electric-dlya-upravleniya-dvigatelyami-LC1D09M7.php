@@ -7,14 +7,17 @@
     include "../../php/class/api_Connector.php";
 
     $article = "LC1D09M7";
+    $quantityOzon = 0;
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $urlApiServerSupply = $apiSupply . $article;
+    
     // Запрос на сервер OZON о наличии товара на FBO
     $urlOzonApi = $urlOzonApiAdress; 
-    // 2. Ваши авторизационные данные OZON
+    
+    // авторизационные данные OZON
     $clientId = $userId; 
     $apiKey = $apiKeyProductFBO; 
     $SKU = "3424066591";
-
 
     // Запрос на свой сервер Api
     $options = [
@@ -44,12 +47,11 @@
         }
     }
 
-    $price    = $product['price']    ?? 0;
+    $price = $product['price']  ?? 0;
     $quantity = $product['quantity'] ?? 0;
-    $delivery = 0;
-    $quantityOzon = 0;
 
-    // Запрос данных о бесцеллерах
+
+    // Запрос данных о бесцеллерах помеченных 1
     $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
     $options = [
@@ -60,7 +62,6 @@
     ];
 
     $context = stream_context_create($options);
-    
     $response = file_get_contents($urlBestsellers, false, $context);
 
     if ($response === FALSE) {
@@ -82,7 +83,8 @@
         $manufacturer = $item["manufacturer"];
     }
 
-    // 3. Строго валидное тело запроса по схеме Ozon
+
+    // Запрос данных о наличии товара на сервер ОЗОН
     $dataOZON = [
         'limit' => 1, 
         'skus' => [
@@ -121,6 +123,39 @@
     foreach ($dataResult['products'] as $item) {
         $quantityOzon = $item["present"];        // Сохраняем количество в переменную
     }
+
+    // Запрос на сервер о сроках доставки и ценах
+    $optionsSupply = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
+
+    $contextSupply = stream_context_create($optionsSupply);
+    $responseSupply = file_get_contents($urlApiServerSupply, false, $contextSupply);
+
+    if ($responseSupply === FALSE) {
+        die("Ошибка запроса");
+    }
+
+    $dataSupply = json_decode($responseSupply, true);
+
+    // Сортируем данные СТРОГО по минимальной цене
+    usort($dataSupply['offers'], function($a, $b) {
+        return $a['priceComponent'] <=> $b['priceComponent'];
+    });
+
+    // Берем самое первое предложение (оно гарантированно с лучшей ценой)
+    $bestOffer = $dataSupply['offers'][0];
+
+    // Применяем наценку к лучшей цене
+    $priceComponent = $bestOffer['priceComponent'] * $markup;
+
+    // Подгружаем срок из этого же предложения с заменой "В наличии" на "от 1 до 2 нед"
+    $deliveryTimeComponent = ($bestOffer['deliveryTimeComponent'] === "В наличии") 
+        ? "от 1 до 2 нед" 
+        : $bestOffer['deliveryTimeComponent'];
 ?>
 
 <!DOCTYPE html>
@@ -240,14 +275,14 @@
                 <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="@">
                 <div class="whs-backround-block">
                     <h3 class="warehouse-section__title">Наличие на складах</h3>
-                    <div class="<?php echo $quantity > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_0'?>">
+                    <div class="<?php echo $quantity > 3 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
                         <?php echo "Склад СПб " . "в наличии " .  $quantity . " шт." ?>
                     </div>
-                    <div class="<?php echo $quantityOzon > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_0'?>">
+                    <div class="<?php echo $quantityOzon > 3 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
                         <?php echo "Cклад OZON " . "в наличии " . $quantityOzon . " шт." ?>
                     </div>
-                    <div class="<?php echo $delivery > 0  ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
-                        <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?>
+                    <div class="<?php echo $quantity == 1 && $quantityOzon == 2  ?  'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_delivery' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                        <?php echo "На заказ " . $deliveryTimeComponent . "<br>" ." по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
                     </div>             
                 </div>
                 

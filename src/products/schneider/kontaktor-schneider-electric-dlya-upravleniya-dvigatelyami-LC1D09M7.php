@@ -6,8 +6,8 @@
 
     include "../../php/class/api_Connector.php";
 
-    $article = "LC1D09M7";
-    $quantityOzon = 0;
+    $article = "LC1D09M7"; // Основной артикул товара
+    $SKU = "3424066591"; // Идентификатор товара на ОЗОН
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
     $urlApiServerSupply = $apiSupply . $article;
     
@@ -17,7 +17,7 @@
     // авторизационные данные OZON
     $clientId = $userId; 
     $apiKey = $apiKeyProductFBO; 
-    $SKU = "3424066591";
+    
 
     // Запрос на свой сервер Api
     $options = [
@@ -275,13 +275,13 @@
                 <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="@">
                 <div class="whs-backround-block">
                     <h3 class="warehouse-section__title">Наличие на складах</h3>
-                    <div class="<?php echo $quantity > 3 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                    <div class="<?php echo $quantity > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
                         <?php echo "Склад СПб " . "в наличии " .  $quantity . " шт." ?>
                     </div>
-                    <div class="<?php echo $quantityOzon > 3 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                    <div class="<?php echo $quantityOzon > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
                         <?php echo "Cклад OZON " . "в наличии " . $quantityOzon . " шт." ?>
                     </div>
-                    <div class="<?php echo $quantity == 1 && $quantityOzon == 2  ?  'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_delivery' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                    <div class="<?php echo $quantity == 0 && $quantityOzon == 0  ?  'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_delivery' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
                         <?php echo "На заказ " . $deliveryTimeComponent . "<br>" ." по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
                     </div>             
                 </div>
@@ -316,8 +316,8 @@
                             </div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
-                        <div class='<?php echo $quantityOzon == 0 &&  $quantity == 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?> 
+                        <div class="<?php echo $quantity == 0 && $quantityOzon == 0  ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null_delivery'?>">
+                            <?php echo "На заказ " . $deliveryTimeComponent . " по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
                         </div>
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>

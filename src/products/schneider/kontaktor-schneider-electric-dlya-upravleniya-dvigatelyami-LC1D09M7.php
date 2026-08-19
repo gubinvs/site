@@ -119,7 +119,7 @@
     $dataResult = json_decode($responseOzon, true);
 
     foreach ($dataResult['products'] as $item) {
-        $quantityOzon = $item["present"] ?? 0;        // Сохраняем количество в переменную
+        $quantityOzon = $item["present"];        // Сохраняем количество в переменную
     }
 ?>
 

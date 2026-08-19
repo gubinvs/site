@@ -74,6 +74,20 @@
         color: #F3DE09;
     }
 
+    .main-section__discription {
+        width: 404px;
+    }
+
+    .characteristics-block__button-block_offer {
+        flex-direction: column;
+    }
+
+    .button-characteristics__ozon,
+    #button-buy {
+        width: 402px !important;
+        margin-bottom: 8px;
+    }
+
 }
 
 @media only screen and (max-width: 800px) {

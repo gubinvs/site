@@ -1021,8 +1021,13 @@ header {
 }
 
 .feedback-section__button {
-  margin-bottom: 10px;
-  cursor: pointer;
+    width: 150px;
+    height: 40px;
+    background-color: #F3DE09;
+    
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .egrul-table-section {

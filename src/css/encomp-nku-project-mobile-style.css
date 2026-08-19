@@ -692,4 +692,140 @@
         width: 320px;
     }
 
+    .mobile-haeder-block__img,
+    .card-component__bottom {
+        display: none;
+    }
+
+    .mhbn-contact-list__item {
+        padding-left: 20px;
+        font-size: 8px; 
+    }
+
+    .header-searche-block__input-searhe {
+        width: 230px;
+        margin-right: 0px;
+    }
+
+    .navigation-list__item {
+        font-size: 10px;
+        margin-right: 9px;
+    }
+
+    .warehouse-section__mobile {
+        border-radius: 8px;
+    }
+
+    .main-section__mobile_top {
+        height: 270px;
+    }
+
+    .warehouse-section__mobile {
+        height: 112px;
+    }
+
+    .msm-backround-block {
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .msm-backround-block__discr-block {
+        padding-top: 20px;
+        margin-right: 8px;
+        margin-bottom: 30px;
+    }
+
+    .msm-bb-d__logo {
+        top: 168px;
+    }
+
+    .msm-bb-d__ch-znack {
+        top: 13px;
+        left: 309px;
+    }
+
+    .msm-backround-block__img {
+        top: 14px;
+    }
+
+    .whs-icon-block__img {
+        height: 70px;
+    }
+
+    .warehouse-section__title {
+        font-size: 14px;
+    }
+
+    .msm-bb-d-discr__quantity {
+        font-size: 11px;
+    }
+
+    .section__container_technical {
+        width: 320px;
+    } 
+
+    .specifications-item__tech,
+    .specifications-item__name {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    .specifications-item__tech {
+        width: 170px;
+    }
+
+    .section__container {
+        width: 320px;
+        padding: 20px;
+    }
+
+    .files-and-documents-section__item {
+        font-size: 14px;
+    }
+
+    .document-section__container,
+    .please-note-section__container {
+        width: 320px;
+    }
+
+    .card-component {
+        width: 156px;
+        height: 240px;
+    }
+
+    .attention-container {
+        min-width: 316px !important;
+    }
+
+    .attention-section__discription {
+        font-size: 10px;
+    }
+
+    .technical-section__title {
+        font-size: 18px;
+    }
+
+    .footer {
+        height: 280px;
+    }
+    
+    .footer__content {
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        width: 311px;
+        margin-bottom: 20px;
+        padding-left: 0px;
+    }
+
+    .footer-contact__item {
+        font-size: 14px;
+    }
+
+    .footer-contact {
+        width: 280px;
+    }
+
 }

@@ -244,7 +244,7 @@
         include_once '../../php/modules/header.php';
     ?>
     <main>
-        <section class="main-section__mobile">
+        <section class="main-section__mobile main-section__mobile_top">
             <div class="mobile-container">
                 <div class="msm-backround-block">
                     <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
@@ -427,7 +427,7 @@
                     </div>
                 </section>
                 <div class='container technical-section' id='technical'>
-                    <div class="technical-section__container">
+                    <div class="technical-section__container section__container_technical">
                         <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
                         <div class="technical-specifications-section__table">
                             <div class="technical-specifications-list">

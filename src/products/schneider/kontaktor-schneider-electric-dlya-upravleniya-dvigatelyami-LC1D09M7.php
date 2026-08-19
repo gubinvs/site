@@ -246,7 +246,7 @@
                     <div class="<?php echo $quantityOzon > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_0'?>">
                         <?php echo "Cклад OZON " . "в наличии " . $quantityOzon . " шт." ?>
                     </div>
-                     <div class="<?php echo $delivery > 0  ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                    <div class="<?php echo $delivery > 0  ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
                         <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?>
                     </div>             
                 </div>
@@ -270,17 +270,19 @@
                             </div>
                         </div>
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>Склад СПб:</div>
+                            <div class='warehouse-item-quantity__name'>Склад СПб в наличии </div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
                         <div class='<?php echo $quantityOzon > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>Склад OZON:</div>
-                            <div class='warehouse-item-quantity__quantity'><?php echo $quantityOzon > 0? $quantityOzon : "0" ?></div>
+                            <div class='warehouse-item-quantity__name'>Склад OZON в наличии </div>
+                            <div class='warehouse-item-quantity__quantity'>
+                                <?php echo $quantityOzon > 0? $quantityOzon : "0" ?>
+                            </div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
-                        <div class="warehouse-item-quantity">
-                             <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?> 
+                        <div class='<?php echo $quantityOzon == 0 &&  $quantity == 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
+                            <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?> 
                         </div>
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>

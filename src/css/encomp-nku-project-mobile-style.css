@@ -1,5 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    
+    .msm-bb-d-discr__quantity_0 {
+        font-size: 12px;
+        color: #9A9C9C;
+    }
+
+    .msm-bb-d-discr__quantity_none,
+    .warehouse-item-quantity__null {
+        display: none;
+    }
 
 @media only screen and (max-width: 960px) {
     .container {
@@ -489,7 +499,7 @@
     }
 
 
-    /*------- -------------*/
+    /*------- please-note-section -------------*/
 
     .please-note-section__card-product {
         justify-content: space-evenly;
@@ -519,7 +529,6 @@
     .footer {
         height: 183px;
     }
-
 }
 
 @media only screen and (max-width: 720px) {
@@ -569,7 +578,6 @@
         width: 480px;
     }
 
-
     .attention-container,
     .technical-section__container,
     .document-section__container {
@@ -577,14 +585,6 @@
         margin-right: auto;
         margin-left: auto;
     }
-
-    /* .please-note-section {
-        display: none;
-    }    */
-
-     /* .please-note-section__card-product {
-        justify-content: space-evenly;
-    } */
 
     .please-note-section__card-product {
         justify-content: left;
@@ -649,15 +649,6 @@
         font-size: 14px;
     }
 
-    .msm-bb-d-discr__quantity_0 {
-        font-size: 12px;
-        color: #9A9C9C;
-    }
-
-    .msm-bb-d-discr__quantity_none {
-        display: none;
-    }
-
     .files-and-documents-section__title {
         font-size: 20px;
     }
@@ -677,12 +668,10 @@
         width: 360px;
     }
 
-
     .attention-container,
     .technical-section__container,
     .document-section__container {
         width: 320px;
     }
-
 
 }

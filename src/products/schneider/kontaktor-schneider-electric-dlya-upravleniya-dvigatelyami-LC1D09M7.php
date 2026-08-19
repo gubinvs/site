@@ -46,8 +46,8 @@
 
     $price    = $product['price']    ?? 0;
     $quantity = $product['quantity'] ?? 0;
-    $delivery = 1;
-
+    $delivery = 0;
+    $quantityOzon = 0;
 
     // Запрос данных о бесцеллерах
     $urlBestsellers = $apiServer . "/api/Bestsellers/";
@@ -119,7 +119,7 @@
     $dataResult = json_decode($responseOzon, true);
 
     foreach ($dataResult['products'] as $item) {
-        $quantityOzon = $item["present"];        // Сохраняем количество в переменную
+        $quantityOzon = $item["present"] ?? 0;        // Сохраняем количество в переменную
     }
 ?>
 
@@ -240,13 +240,13 @@
                 <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="@">
                 <div class="whs-backround-block">
                     <h3 class="warehouse-section__title">Наличие на складах</h3>
-                    <div class='msm-bb-d-discr__quantity'>
+                    <div class="<?php echo $quantity > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_0'?>">
                         <?php echo "Склад СПб " . "в наличии " .  $quantity . " шт." ?>
                     </div>
-                    <div class='msm-bb-d-discr__quantity'>
-                        <?php echo "Cклад OZON " . "в наличии " . $quantityOzon. " шт." ?>
+                    <div class="<?php echo $quantityOzon > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_0'?>">
+                        <?php echo "Cклад OZON " . "в наличии " . $quantityOzon . " шт." ?>
                     </div>
-                    <div class='msm-bb-d-discr__quantity'>
+                     <div class="<?php echo $delivery > 0  ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
                         <?php echo "На заказ от " . $delivery . " до " . $delivery + 4 . " нед. " ?>
                     </div>             
                 </div>

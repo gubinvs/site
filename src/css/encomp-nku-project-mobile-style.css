@@ -600,10 +600,9 @@
         margin-left: auto;
     }
 
-    .please-note-section__card-product {
-        justify-content: left;
+    .please-note-section__title {
+        display: none;
     }
-
     .please-note-section__card-product .card-component:last-of-type {
         display: flex;
     }

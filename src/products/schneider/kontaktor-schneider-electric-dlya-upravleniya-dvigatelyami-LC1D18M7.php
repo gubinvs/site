@@ -304,7 +304,7 @@
                         <img src='https://encomponent.ru/img/img-product/LC1D18M7/LC1D18M7_Image_1500_2.jpg' alt='Изображен Электромеханический контактор Schneider Electric ' class='discription-product__img main-section__img'>
                     </div>
                     <div class='main-section__discription'>
-                         <div class='article-block flex'>
+                        <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
                             <div class='article-name'><?php echo $article ?></div>
                         </div>
@@ -314,6 +314,7 @@
                                 <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
                             </div>
                         </div>
+
                         <!--Количество на складе-->
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
                             <div class='warehouse-item-quantity__name'>Склад СПб в наличии </div>
@@ -331,6 +332,7 @@
                             <?php echo "На заказ " . $deliveryTimeComponent . " по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
                         </div>
                         <!--/Количество на складе-->
+
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>
                             <ul class='characteristics-block__list'>
@@ -397,6 +399,7 @@
 
                     </div>
                 </section>
+
                 <!--Форма заказа счета со страницы товара-->
                 <section class="feedback-section" id="feedback">
                     <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
@@ -436,6 +439,7 @@
                     </div>
                 </section>
                 <!--/Форма заказа счета со страницы товара-->
+
                 <section class='attention-section'>
                     <h2 class='h1-min'>Важная информация</h2>
                     <div class='attention-container'>
@@ -447,7 +451,7 @@
                         </div>
                        <hr class="attention-section__mobile-hr">
                         <div class='attention-section__discription'>
-                            <b>Контактор LC1D18M7 Schneider Electric из серии TeSys D предназначен для надёжного управления электродвигателями 
+                            Контактор LC1D18M7 Schneider Electric из серии TeSys D предназначен для надёжного управления электродвигателями 
                             и другими силовыми нагрузками в промышленной автоматике. Устройство рассчитано на номинальный ток 18 А (категория AC-3) и
                             оснащено катушкой управления 220 В AC 50/60 Гц, что обеспечивает удобное дистанционное включение и отключение оборудования. 
                             Трёхполюсная конфигурация с нормально разомкнутыми силовыми контактами и встроенные вспомогательные контакты 1 NO + 1 NC
@@ -457,8 +461,10 @@
                         </div>
                     </div>
                 </section>
+
             </div>
         </div>
+
         <!--/ Технические характеристики-->
         <section class='container technical-section' id='technical'>
             <div class="technical-section__container section__container_technical">
@@ -530,6 +536,7 @@
             </div>
         </section>
         <!--/ Технические характеристики-->
+
         <!--Файлы и документы --> 
         <section class="document-section container">
             <div class="container document-section__container">
@@ -552,6 +559,7 @@
             </div>
         </section>
         <!--/ Файлы и документы -->
+        
         <section class="please-note-section">
             <div class="container please-note-section__container">
                 <h3 class="please-note-section__title">Пользователи выбирают:</h3>

@@ -1,70 +1,163 @@
 <?php
-include "../../php/class/api_Connector.php";
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+    error_reporting(E_ALL);
 
-$article = "LC1D32M7";
-$url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    include "../../php/class/api_Connector.php";
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
 
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    $article = "LC1D32M7"; // Основной артикул товара
+    $pageTitle = "LC1D32M7 — Электромеханический контактор Schneider Electric";
+    $ozonCardLink = "https://www.ozon.ru/product/lc1d32m7-kontaktor-schneider-electric-tesys-d-lc1d32m7-32-a-katushka-230-v-ac-3430344861/?sh=EkL4mXQ-Vw";
+    $SKU = "3430344861"; // Идентификатор товара на ОЗОН
+    $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $urlApiServerSupply = $apiSupply . $article;
+    
+    // Запрос на сервер OZON о наличии товара на FBO
+    $urlOzonApi = $urlOzonApiAdress; 
+    
+    // авторизационные данные OZON
+    $clientId = $userId; 
+    $apiKey = $apiKeyProductFBO;
+    
 
-$data = json_decode($response, true);
-$product = null;
+    // Запрос на свой сервер Api
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-if (is_array($data)) {
-    foreach ($data as $item) {
-        if (
-            trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
-        ) {
-            $product = $item;
-            break;
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
+
+    $data = json_decode($response, true);
+    $product = null;
+
+    if (is_array($data)) {
+        foreach ($data as $item) {
+            if (
+                trim(strtoupper($item['vendorCode'])) === trim(strtoupper($article))
+            ) {
+                $product = $item;
+                break;
+            }
         }
     }
-}
 
-$price    = $product['price']    ?? 0;
-$quantity = $product['quantity'] ?? 0;
+    $price = $product['price']  ?? 0;
+    $quantity = $product['quantity'] ?? 0;
 
-// Загружаем только свои товары
-$urlBestsellers = $apiServer . "/api/BestsellersAdmin/";
 
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Content-Type: application/json"
-    ]
-];
+    // Запрос данных о бесцеллерах помеченных 1
+    $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
-$context = stream_context_create($options);
-$response = file_get_contents($urlBestsellers, false, $context);
+    $options = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
 
-if ($response === FALSE) {
-    die("Ошибка запроса");
-}
+    $context = stream_context_create($options);
+    $response = file_get_contents($urlBestsellers, false, $context);
 
-$data = json_decode($response, true);
+    if ($response === FALSE) {
+        die("Ошибка запроса");
+    }
 
-foreach ($data as $item) {
-    $id = $item["id"];
-    $imgLinkIconCard = $item["imgLinkIconCard"];
-    $vendorCodeBestseller = $item["vendorCode"];
-    $nameComponent = $item["nameComponent"];
-    $quantityBestseller = $item["quantity"];
-    $linkPage = $item["linkPage"];
-    $priceBestseller = $item["price"];
-    $basketImgPath = $item["basketImgPath"];
-    $guidId = $item["guid"];
-    $manufacturer = $item["manufacturer"];
-}
+    $data = json_decode($response, true);
+
+    foreach ($data as $item) {
+        $id = $item["id"];
+        $imgLinkIconCard = $item["imgLinkIconCard"];
+        $vendorCodeBestseller = $item["vendorCode"];
+        $nameComponent = $item["nameComponent"];
+        $quantityBestseller = $item["quantity"];
+        $linkPage = $item["linkPage"];
+        $priceBestseller = $item["price"];
+        $basketImgPath = $item["basketImgPath"];
+        $guidId = $item["guid"];
+        $manufacturer = $item["manufacturer"];
+    }
+
+
+    // Запрос данных о наличии товара на сервер ОЗОН
+    $dataOZON = [
+        'limit' => 1, 
+        'skus' => [
+            $SKU 
+        ]
+    ];
+
+    // Кодируем массив в JSON-строку
+    $jsonData = json_encode($dataOZON);
+
+    // НАСТРОЙКА КОНТЕКСТА: заголовки и тело запроса
+    $optionsOzon = [
+        "http" => [
+            "method" => "POST",
+            // Все заголовки передаются единой строкой через \r\n
+            "header" => "Content-Type: application/json\r\n" .
+                        "Client-Id: " . $clientId . "\r\n" .
+                        "Api-Key: " . $apiKey . "\r\n",
+            // Тело запроса передается в параметре content
+            "content" => $jsonData,
+            // Игнорируем ошибки HTTP, чтобы PHP не выдавал Warning при кодах 4xx/5xx, 
+            // а возвращал сырой JSON ответа Ozon для отладки
+            "ignore_errors" => true 
+        ]
+    ];    
+
+    $context = stream_context_create($optionsOzon);
+    $responseOzon = file_get_contents($urlOzonApi, false, $context);
+
+    if ($response === FALSE) {
+        die("Ошибка сетевого соединения с API Ozon");
+    }
+
+    $dataResult = json_decode($responseOzon, true);
+
+    foreach ($dataResult['products'] as $item) {
+        $quantityOzon = $item["present"];        // Сохраняем количество в переменную
+    }
+
+    // Запрос на сервер о сроках доставки и ценах
+    $optionsSupply = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
+
+    $contextSupply = stream_context_create($optionsSupply);
+    $responseSupply = file_get_contents($urlApiServerSupply, false, $contextSupply);
+
+    if ($responseSupply === FALSE) {
+        die("Ошибка запроса");
+    }
+
+    $dataSupply = json_decode($responseSupply, true);
+
+    // Сортируем данные СТРОГО по минимальной цене
+    usort($dataSupply['offers'], function($a, $b) {
+        return $a['priceComponent'] <=> $b['priceComponent'];
+    });
+
+    // Берем самое первое предложение (оно гарантированно с лучшей ценой)
+    $bestOffer = $dataSupply['offers'][0];
+
+    // Применяем наценку к лучшей цене
+    $priceComponent = $bestOffer['priceComponent'] * $markup;
+
+    // Подгружаем срок из этого же предложения с заменой "В наличии" на "от 1 до 2 нед"
+    $deliveryTimeComponent = ($bestOffer['deliveryTimeComponent'] === "В наличии") 
+        ? "от 1 до 2 нед" 
+        : $bestOffer['deliveryTimeComponent'];
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +172,7 @@ foreach ($data as $item) {
         силовой контактор TeSys D'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D32M7.php'>
+
 
     <!-- Open Graph -->
     <meta property='og:title' content='LC1D32M7 — контактор Schneider Electric 32А | TeSys D'>
@@ -109,9 +202,13 @@ foreach ($data as $item) {
             }
         }
     </script>
+    
     <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
+    <link rel='stylesheet' href='../../css/encomp-nku-project-mobile-style.css'>
+    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D32M7.php'>
+    
     <!-- Yandex.Metrika counter -->
     <script>
         (function(m, e, t, r, i, k, a) {
@@ -138,6 +235,7 @@ foreach ($data as $item) {
             webvisor: true
         });
     </script>
+
     <!--Yandex.Metrika counter-->
     <noscript>
         <div>
@@ -145,42 +243,101 @@ foreach ($data as $item) {
         </div>
     </noscript>
     <!--/Yandex.Metrika counter-->
+
 </head>
 
 <body>
     <?php
-    $color_line_header = $color_line_header ?? null;
-    include_once '../../php/modules/header.php';
+        $color_line_header = $color_line_header ?? null;
+        include_once '../../php/modules/header.php';
     ?>
 
     <main>
+        <!--Мобильная версия-->
+        <section class="main-section__mobile main-section__mobile_top">
+            <div class="mobile-container">
+                <div class="msm-backround-block">
+                    <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
+                    <img src="../../img/img-product/logo-shneider-min.svg" alt="#" class="msm-bb-d__logo">
+                    <img src="../../img/ch-znack.svg" alt="#" class="msm-bb-d__ch-znack">
+                    <div class="msm-backround-block__discr-block">
+                        <div class="msm-bb-db__title"><?php echo $article ?></div>
+                        <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
+                        <div class="msm-bb-db__discr_min">серия - TeSys D</div>
+                        <div class="button-block-row">
+                            <a href="<?php echo $ozonCardLink ?>">
+                                <div class='<?php echo $quantityOzon > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                            </a>
+                            <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
+                        </div>
+                    </div>
+                    <div class="msm-bb-d__discr">                  
+                        <div class="msm-bb-d-discr__price">
+                            <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
+                        </div>
+                        <a href="https://shop.encomponent.ru/"><div class="msm-bb-db__button">Для бизнеса</div></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-section__mobile warehouse-section__mobile">
+            <div class="mobile-container warehouse-section-mobile__container">
+                <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="@">
+                <div class="whs-backround-block">
+                    <h3 class="warehouse-section__title">Наличие на складах</h3>
+                    <div class="<?php echo $quantity > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                        <?php echo "Склад СПб " . "в наличии " .  $quantity . " шт." ?>
+                    </div>
+                    <div class="<?php echo $quantityOzon > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                        <?php echo "Cклад OZON " . "в наличии " . $quantityOzon . " шт." ?>
+                    </div>
+                    <div class="<?php echo $quantity == 0 && $quantityOzon == 0  ?  'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_delivery' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                        <?php echo "На заказ " . $deliveryTimeComponent . "<br>" ." по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
+                    </div>             
+                </div>
+            </div>    
+        </section>
+        <!--/ Мобильная версия-->
+
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D32M7 — Электромеханический контактор Schneider Electric</h1>
+                <h1 class='discription-product-section__title NKUPages_h1'><?php echo $pageTitle ?></h1>
 
-                <section class='main-section flex'>
+                <section class='main-section main-section__desktop flex'>
                     <div class='main-section__img-block'>
                         <img src='https://encomponent.ru/img/img-product/LC1D32M7/LC1D32M7_site.png' alt='Контактор Schneider Electric LC1D09M7' class='discription-product__img main-section__img'>
                     </div>
                     <div class='main-section__discription'>
 
-                        <div class='article-block flex'>
+                       <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D32M7
-                                <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_articleLC1D32M7C.php">(LC1D32M7C)</a>
-                            </h6>
+                            <div class='article-name'><?php echo $article ?></div>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
                             <div class='main-section-price__price'>
-                                <?php echo number_format($price, 0, ',', ' '); ?>
+                                <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
                             </div>
                         </div>
+
+                        <!--Количество на складе-->
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>В наличии:</div>
+                            <div class='warehouse-item-quantity__name'>Склад СПб в наличии </div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
+                        <div class='<?php echo $quantityOzon > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
+                            <div class='warehouse-item-quantity__name'>Склад OZON в наличии </div>
+                            <div class='warehouse-item-quantity__quantity'>
+                                <?php echo $quantityOzon > 0? $quantityOzon : "0" ?>
+                            </div>
+                            <div class='warehouse-item-quantity__discr'>шт.</div>
+                        </div>
+                        <div class="<?php echo $quantity == 0 && $quantityOzon == 0  ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null_delivery'?>">
+                            <?php echo "На заказ " . $deliveryTimeComponent . " по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
+                        </div>
+                        <!--/Количество на складе-->
+
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>
                             <ul class='characteristics-block__list'>
@@ -210,9 +367,10 @@ foreach ($data as $item) {
                                 </li>
                             </ul>
                         </div>
-                        <!--Кнопки купить в магазинах-->
+
+                    <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
-                            <a href="https://www.ozon.ru/product/lc1d32m7-kontaktor-schneider-electric-3430344861/?oos_search=false" id="button-link">
+                            <a href="<?php echo $ozonCardLink ?>" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
@@ -223,8 +381,10 @@ foreach ($data as $item) {
                             <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
                         </a>
                         <!--/ Кнопки купить в магазинах-->
+
                     </div>
                 </section>
+
                 <!--Форма заказа счета со страницы товара-->
                 <section class="feedback-section" id="feedback">
                     <h2 class="visually-hidden h1-visually h1__visually" style="visibility: hidden;">Форма обратной связи c Компоненты энергии </h2>
@@ -264,151 +424,143 @@ foreach ($data as $item) {
                     </div>
                 </section>
                 <!--/Форма заказа счета со страницы товара-->
-                <section class='attention-section'>
+                
+               <section class='attention-section'>
                     <h2 class='h1-min'>Важная информация</h2>
                     <div class='attention-container'>
                         <div class='attention-section__title-block flex'>
                             <div class='attention-section-title-icon'>
-                                <svg width='24' height='24' viewBox='0 0 33 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                    <circle cx='15' cy='15' r='14.5' fill='#F3DE09' stroke='#1D252C' />
-                                    <line x1='8' y1='14.5' x2='23' y2='14.5' stroke='black' />
-                                    <line x1='15.5' y1='23' x2='15.5' y2='7' stroke='black' />
-                                    <line x1='25.3536' y1='25.6464' x2='32.4246' y2='32.7175' stroke='black' />
-                                </svg>
+                                <img src="../../img/attention-section-title-icon.svg" alt="A" class="attention-section-title-icon__icon">
                             </div>
-                            <div class='attention-section-title__title'>ОБРАТИТЕ ВНИМАНИЕ</div>
+                            <div class='attention-section-title__title'>ОПИСАНИЕ</div>
                         </div>
-                        <hr class='hr'>
+                       <hr class="attention-section__mobile-hr">
                         <div class='attention-section__discription'>
-                            <b>Контактор LC1D32M7 Schneider Electric</b> — это надёжный силовой контактор серии
-                            <b>TeSys D</b>, предназначенный для управления трёхфазными электродвигателями
-                            и промышленными силовыми нагрузками.
-
-                            <br><br>
-                            Контактор рассчитан на <b>номинальный ток 32 А</b> (категория AC-3) и оснащён катушкой управления
-                            <b>220 В AC</b>, что позволяет использовать его в стандартных шкафах автоматики,
-                            НКУ и распределительных щитах без дополнительного оборудования.
-
-                            <br><br>
-                            LC1D32M7 применяется для пуска и остановки насосов, вентиляторов,
-                            компрессоров, конвейеров и другого промышленного оборудования,
-                            где требуется стабильная и долговечная коммутация цепей переменного тока.
+                           Контактор Schneider Electric LC1D32M7 из линейки TeSys D представляет собой компактный трехполюсный коммутационный аппарат, 
+                           разработанный для надежного дистанционного управления силовыми электрическими цепями. Данное устройство широко применяется в 
+                           промышленной автоматизации, системах вентиляции, кондиционирования и водоснабжения для прямого пуска, остановки и реверсирования 
+                           трехфазных асинхронных электродвигателей, а также для коммутации других индуктивных и резистивных нагрузок.Магнитный пускатель 
+                           рассчитан на работу в сетях переменного тока и обладает номинальным током 32 Ампер при эксплуатации в режиме АС-3, что позволяет 
+                           эффективно управлять двигателями мощностью до 15 киловатт при стандартном напряжении 400 Вольт. При работе с чисто резистивными 
+                           нагрузками по категории АС-1 прибор способен выдерживать токовую нагрузку до 50 Ампер. Управление исполнительным механизмом 
+                           осуществляется посредством встроенной электромагнитной катушки, рассчитанной на номинальное напряжение 220 Вольт переменного 
+                           тока с частотой 50 или 60 Герц.Конструктивной особенностью модели является наличие встроенных вспомогательных контактов, одного 
+                           нормально открытого и одного нормально закрытого, что существенно упрощает построение схем сигнализации, взаимной блокировки и 
+                           интеграции в общие системы диспетчеризации. Прочный корпус из высококачественного пластика обеспечивает высокий уровень 
+                           электрической безопасности и долговечности. Устройство монтируется на стандартную DIN-рейку шириной 35 миллиметров или крепится 
+                           винтами на плоскую монтажную панель внутри распределительного щита. Подключение проводников выполняется с помощью надежных 
+                           винтовых зажимов, гарантирующих стабильный контакт и стойкость к вибрационным нагрузкам в процессе эксплуатации. Данная модель 
+                           полностью соответствует международным стандартам качества и экологической безопасности промышленного электрооборудования.
                         </div>
                     </div>
                 </section>
-                <div class='container' id='technical'>
-                    <h3 class='mt-5'>Технические характеристики</h3>
-                    <table class='table table-bordered table-striped mt-3'>
-                        <thead class='table-secondary'>
-                            <tr>
-                                <th>Параметр</th>
-                                <th>Значение</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Производитель</td>
-                                <td>Schneider Electric</td>
-                            </tr>
-                            <tr>
-                                <td>Серия / Модель</td>
-                                <td>TeSys D / LC1D32M7</td>
-                            </tr>
-                            <tr>
-                                <td>Тип устройства</td>
-                                <td>Силовой контактор для управления электродвигателями и промышленными нагрузками</td>
-                            </tr>
-                            <tr>
-                                <td>Номинальный ток</td>
-                                <td>32 А (категория применения AC-3)</td>
-                            </tr>
-                            <tr>
-                                <td>Напряжение катушки управления</td>
-                                <td>220–240 В AC, 50/60 Гц (код M7)</td>
-                            </tr>
-                            <tr>
-                                <td>Номинальное рабочее напряжение силовой цепи</td>
-                                <td>до 690 В AC</td>
-                            </tr>
-                            <tr>
-                                <td>Количество силовых полюсов</td>
-                                <td>3 NO (3 нормально разомкнутых контакта)</td>
-                            </tr>
-                            <tr>
-                                <td>Вспомогательные контакты</td>
-                                <td>1 NO + 1 NC (для цепей управления и сигнализации)</td>
-                            </tr>
-                            <tr>
-                                <td>Тип подключения</td>
-                                <td>Винтовые зажимы (Screw Clamp)</td>
-                            </tr>
-                            <tr>
-                                <td>Тип крепления</td>
-                                <td>DIN-рейка NS 35 или винтовой монтаж на панель</td>
-                            </tr>
-                            <tr>
-                                <td>Габаритные размеры (Д × Ш × В)</td>
-                                <td>77 × 45 × 86 мм</td>
-                            </tr>
-                            <tr>
-                                <td>Вес (без упаковки)</td>
-                                <td>≈ 360 г</td>
-                            </tr>
-                            <tr>
-                                <td>Степень защиты</td>
-                                <td>IP20</td>
-                            </tr>
-                            <tr>
-                                <td>Диапазон рабочих температур</td>
-                                <td>-5…+60 °C</td>
-                            </tr>
-                            <tr>
-                                <td>Область применения</td>
-                                <td>
-                                    Пуск и остановка трёхфазных электродвигателей средней мощности,
-                                    управление насосами, вентиляторами, компрессорами,
-                                    конвейерами и другим промышленным оборудованием
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Особенности</td>
-                                <td>
-                                    Компактная конструкция, высокая коммутационная износостойкость,
-                                    совместимость с тепловыми реле серии TeSys D,
-                                    соответствие стандартам IEC, UL и CSA
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
-                <ul class='files-and-documents-section__list'>
-                    <li class='files-and-documents-section__item'>
-                        Общий каталог контакторов TeSys D (PDF) —
-                        <a href='../../files/LC1D32M7/catalog__LC1D32M7.pdf' target='_blank' rel='nofollow'>
-                            <b>Открыть</b>
-                        </a>
-                    </li>
-                    <li class='files-and-documents-section__item'>
-                        Инструкция для подключения LC1D32M7 —
-                        <a href='../../files/LC1D32M7/instruction__LC1D32M7.pdf' target='_blank' rel='nofollow'>
-                            <b>Открыть</b>
-                        </a>
-                    </li>
-                    <li class='files-and-documents-section__item'>
-                        CAD (.zip) —
-                        <a href='../../files/LC1D32M7/MCADPP0003728_3D-CAD.zip' target='_blank' rel='nofollow'>
-                            <b>Скачать</b>
-                        </a>
-                    </li>
-                    <li class='files-and-documents-section__item'>
-                        Технические характеристики —
-                        <a href='../../files/LC1D32M7/schneider-electric_teSys-Deca-contactors_LC1D32M7.pdf' target='_blank' rel='nofollow'>
-                            <b>Скачать</b>
-                        </a>
-                    </li>
-                </ul>
-                <br><br><br>
+                <!--/ Технические характеристики-->
+                <section class='container technical-section' id='technical'>
+                    <div class="technical-section__container section__container_technical">
+                        <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
+                        <div class="technical-specifications-section__table">
+                            <div class="technical-specifications-list">
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Заводской артикул</div>
+                                    <div class="specifications-item__tech grey"><?php echo $article ?></div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Изготовитель</div>
+                                    <div class="specifications-item__tech">Schneider Electric</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Серия</div>
+                                    <div class="specifications-item__tech grey">TeSys D</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Тип устройства</div>
+                                    <div class="specifications-item__tech">Силовой контактор</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Номинальный ток</div>
+                                    <div class="specifications-item__tech grey">32 А (AC-3)</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Напряжение катушки управления</div>
+                                    <div class="specifications-item__tech">220–240В (AC)</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Рабочее напряжение силовой цепи</div>
+                                    <div class="specifications-item__tech grey">до 690В (AC)</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Количество силовых полюсов</div>
+                                    <div class="specifications-item__tech">3 NO</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Вспомогательные контакты</div>
+                                    <div class="specifications-item__tech grey">1 NO + 1 NC</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Тип подключения</div>
+                                    <div class="specifications-item__tech">Винтовые зажимы</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Тип крепления</div>
+                                    <div class="specifications-item__tech grey">DIN-рейка</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Габаритные размеры (Д × Ш × В)</div>
+                                    <div class="specifications-item__tech">77 × 45 × 86 мм</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Вес (без упаковки)</div>
+                                    <div class="specifications-item__tech grey">≈ 330 г</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name">Степень защиты</div>
+                                    <div class="specifications-item__tech">IP20</div>
+                                </div>
+                                <div class="technical-specifications-list__item">
+                                    <div class="specifications-item__name grey">Диапазон рабочих температур</div>
+                                    <div class="specifications-item__tech grey">-5…+60 °C</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/ Технические характеристики-->
+
+                <!--Файлы и документы --> 
+                <section class="document-section container">
+                    <div class="container document-section__container">
+                        <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
+                        <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
+                        <ul class='files-and-documents-section__list'>
+                            <li class='files-and-documents-section__item'>
+                                Общий каталог контакторов TeSys D (PDF) —
+                                <a href='../../files/LC1D32M7/catalog__LC1D32M7.pdf' target='_blank' rel='nofollow'>
+                                    <b>Открыть</b>
+                                </a>
+                            </li>
+                            <li class='files-and-documents-section__item'>
+                                Инструкция для подключения LC1D32M7 —
+                                <a href='../../files/LC1D32M7/instruction__LC1D32M7.pdf' target='_blank' rel='nofollow'>
+                                    <b>Открыть</b>
+                                </a>
+                            </li>
+                            <li class='files-and-documents-section__item'>
+                                CAD (.zip) —
+                                <a href='../../files/LC1D32M7/MCADPP0003728_3D-CAD.zip' target='_blank' rel='nofollow'>
+                                    <b>Скачать</b>
+                                </a>
+                            </li>
+                            <li class='files-and-documents-section__item'>
+                                Технические характеристики —
+                                <a href='../../files/LC1D32M7/schneider-electric_teSys-Deca-contactors_LC1D32M7.pdf' target='_blank' rel='nofollow'>
+                                    <b>Скачать</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!--/ Файлы и документы -->
+
                 <section class="please-note-section">
                     <div class="container please-note-section__container">
                         <h3 class="please-note-section__title">Пользователи выбирают:</h3>
@@ -469,7 +621,7 @@ foreach ($data as $item) {
 
                                                 <div class="card-component__price-block">
                                                     <div class="card-component__price">{$fmtPrice}</div>
-                                                    <div class="card-component__price-nalog">в т.ч. НДС</div>
+                                                    <div class="card-component__price-nalog">Без НДС</div>
                                                 </div>
                                             </div>
                                         </div>

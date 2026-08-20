@@ -1,14 +1,25 @@
 <?php
+
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+    error_reporting(E_ALL);
+
     include "../../php/class/api_Connector.php";
 
-    $article = "LC1D18M7";
+    $article = "LC1D18M7"; // Основной артикул товара
+    $pageTitle = "LC1D18M7, Электромеханический контактор - Schneider Electric";
+    $ozonCardLink = "https://www.ozon.ru/product/lc1d18m7-kontaktor-schneider-electric-3225715829/?at=J8tgEJoZRh8RWnABiA8XZgWhkMnor2tQZ0wBji2XNN0Z";
+    $SKU = "3225715829"; // Идентификатор товара на ОЗОН
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
+    $urlApiServerSupply = $apiSupply . $article;
+    
     // Запрос на сервер OZON о наличии товара на FBO
-    $urlOzonApi = "https://api-seller.ozon.ru/v1/product/info/stocks-by-warehouse/fbo"; 
-    // 2. Ваши авторизационные данные OZON
-    $clientId = $clientId; 
-    $apiKey = $apiKeyProductFBO; 
-    $SKU = "3225715829";
+    $urlOzonApi = $urlOzonApiAdress; 
+    
+    // авторизационные данные OZON
+    $clientId = $userId; 
+    $apiKey = $apiKeyProductFBO;
+    
 
     // Запрос на свой сервер Api
     $options = [
@@ -38,11 +49,11 @@
         }
     }
 
-    $price    = $product['price']    ?? 0;
+    $price = $product['price']  ?? 0;
     $quantity = $product['quantity'] ?? 0;
 
 
-    // Запрос данных о бесцеллерах
+    // Запрос данных о бесцеллерах помеченных 1
     $urlBestsellers = $apiServer . "/api/Bestsellers/";
 
     $options = [
@@ -53,7 +64,6 @@
     ];
 
     $context = stream_context_create($options);
-    
     $response = file_get_contents($urlBestsellers, false, $context);
 
     if ($response === FALSE) {
@@ -75,7 +85,8 @@
         $manufacturer = $item["manufacturer"];
     }
 
-    // 3. Строго валидное тело запроса по схеме Ozon
+
+    // Запрос данных о наличии товара на сервер ОЗОН
     $dataOZON = [
         'limit' => 1, 
         'skus' => [
@@ -114,6 +125,39 @@
     foreach ($dataResult['products'] as $item) {
         $quantityOzon = $item["present"];        // Сохраняем количество в переменную
     }
+
+    // Запрос на сервер о сроках доставки и ценах
+    $optionsSupply = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Content-Type: application/json"
+        ]
+    ];
+
+    $contextSupply = stream_context_create($optionsSupply);
+    $responseSupply = file_get_contents($urlApiServerSupply, false, $contextSupply);
+
+    if ($responseSupply === FALSE) {
+        die("Ошибка запроса");
+    }
+
+    $dataSupply = json_decode($responseSupply, true);
+
+    // Сортируем данные СТРОГО по минимальной цене
+    usort($dataSupply['offers'], function($a, $b) {
+        return $a['priceComponent'] <=> $b['priceComponent'];
+    });
+
+    // Берем самое первое предложение (оно гарантированно с лучшей ценой)
+    $bestOffer = $dataSupply['offers'][0];
+
+    // Применяем наценку к лучшей цене
+    $priceComponent = $bestOffer['priceComponent'] * $markup;
+
+    // Подгружаем срок из этого же предложения с заменой "В наличии" на "от 1 до 2 нед"
+    $deliveryTimeComponent = ($bestOffer['deliveryTimeComponent'] === "В наличии") 
+        ? "от 1 до 2 нед" 
+        : $bestOffer['deliveryTimeComponent'];
 ?>
 
 <!DOCTYPE html>
@@ -126,10 +170,7 @@
     <meta name='keywords' content='LC1D18M7 — контактор Schneider Electric для управления двигателями'>
     <meta name='robots' content='index, follow'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
-    <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
-    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7.php'>
+
     <!--Open Graph-->
     <meta property='og:title' content='LC1D18M7, Электромеханический контактор Schneider Electric продается на сайте компоненты энергии, его артикул LC1D18M7 — купить можно по цене <?php echo $price ?> ₽'>
     <meta property='og:description' content='LC1D18M7 это электромеханический контактор (устройство для дистанционного коммутации силовых цепей), выпускаемый компанией Schneider Electric в серии TeSys D можно купить на сайте Компоненты энергии. Продлагаем ее по цене:  <?php echo $price ?> RUB.'>
@@ -163,6 +204,11 @@
         }
     </script>
 
+    <link rel='icon' href='https://encomponent.ru/favicon.svg' type='image/svg+xml'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
+    <link rel='stylesheet' href='../../css/encomp-nku-project-mobile-style.css'>
+    <link rel='canonical' href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D18M7.php'>
 
     <!-- Yandex.Metrika counter -->
     <script>
@@ -205,50 +251,87 @@
         include_once '../../php/modules/header.php';
     ?>
     <main>
+        <!--Мобильная версия-->
+        <section class="main-section__mobile main-section__mobile_top">
+            <div class="mobile-container">
+                <div class="msm-backround-block">
+                    <img src="../../img/img-product/LC1D09M7/msm-backround-block__img.png" alt="@" class="msm-backround-block__img">
+                    <img src="../../img/img-product/logo-shneider-min.svg" alt="#" class="msm-bb-d__logo">
+                    <img src="../../img/ch-znack.svg" alt="#" class="msm-bb-d__ch-znack">
+                    <div class="msm-backround-block__discr-block">
+                        <div class="msm-bb-db__title"><?php echo $article ?></div>
+                        <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
+                        <div class="msm-bb-db__discr_min">серия - TeSys D</div>
+                        <div class="button-block-row">
+                            <a href="<?php echo $ozonCardLink ?>">
+                                <div class='<?php echo $quantityOzon > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
+                            </a>
+                            <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
+                        </div>
+                    </div>
+                    <div class="msm-bb-d__discr">                  
+                        <div class="msm-bb-d-discr__price">
+                            <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
+                        </div>
+                        <a href="https://shop.encomponent.ru/"><div class="msm-bb-db__button">Для бизнеса</div></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-section__mobile warehouse-section__mobile">
+            <div class="mobile-container warehouse-section-mobile__container">
+                <img class="whs-icon-block__img" src="../../img/warehouse_item_icon.jpg" alt="@">
+                <div class="whs-backround-block">
+                    <h3 class="warehouse-section__title">Наличие на складах</h3>
+                    <div class="<?php echo $quantity > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                        <?php echo "Склад СПб " . "в наличии " .  $quantity . " шт." ?>
+                    </div>
+                    <div class="<?php echo $quantityOzon > 0 ?  'msm-bb-d-discr__quantity' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                        <?php echo "Cклад OZON " . "в наличии " . $quantityOzon . " шт." ?>
+                    </div>
+                    <div class="<?php echo $quantity == 0 && $quantityOzon == 0  ?  'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_delivery' : 'msm-bb-d-discr__quantity msm-bb-d-discr__quantity_none'?>">
+                        <?php echo "На заказ " . $deliveryTimeComponent . "<br>" ." по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
+                    </div>             
+                </div>
+                
+            </div>    
+        </section>
+        <!--/ Мобильная версия-->
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D18M7, Электромеханический контактор - Schneider Electric</h1>
-                <section class='main-section flex'>
+                <h1 class='discription-product-section__title NKUPages_h1'><?php echo $pageTitle ?></h1>
+                <section class='main-section main-section__desktop flex'>
                     <div class='main-section__img-block'>
                         <img src='https://encomponent.ru/img/img-product/LC1D18M7/LC1D18M7_Image_1500_2.jpg' alt='Изображен Электромеханический контактор Schneider Electric ' class='discription-product__img main-section__img'>
                     </div>
                     <div class='main-section__discription'>
-                        <div class='article-block flex'>
+                         <div class='article-block flex'>
                             <div class='article-title'>Артикул:</div>
-                            <h6 class='article-name'>LC1D18M7 <a href="https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami_article_LC1D18M7C.php"> (LC1D18M7C)</a></h6>
+                            <div class='article-name'><?php echo $article ?></div>
                         </div>
                         <hr>
                         <div class='main-section-price-block'>
                             <div class='main-section-price__price'>
-                                <?php echo number_format($price, 0, ',', ' '); ?>
-                            </div>
-                            <div class='main-section-price__icon'>
-                                <svg width='20' height='34' viewBox='0 0 38 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                    <g clip-path='url(#clip0_49_84)'>
-                                        <path d='M23.375 31.25C31.6875 31.25 37.5 25.4436 37.5 17.0968C37.5 8.75 31.6875 3.125 23.375 3.125H7.42188C6.77471 3.125 6.25 3.64971 6.25 4.29688V24.4758H1.17188C0.524707 24.4758 0 25.0005 0 25.6477V30.0781C0 30.7253 0.524707 31.25 1.17188 31.25H6.25V34.375H1.17188C0.524707 34.375 0 34.8997 0 35.5469V39.4531C0 40.1003 0.524707 40.625 1.17188 40.625H6.25V45.7031C6.25 46.3503 6.77471 46.875 7.42188 46.875H13.1406C13.7878 46.875 14.3125 46.3503 14.3125 45.7031V40.625H30.0781C30.7253 40.625 31.25 40.1003 31.25 39.4531V35.5469C31.25 34.8997 30.7253 34.375 30.0781 34.375H14.3125V31.25H23.375ZM14.3125 9.83867H22C26.5625 9.83867 29.3125 12.6814 29.3125 17.0968C29.3125 21.5726 26.5625 24.4758 21.875 24.4758H14.3125V9.83867Z' fill='#1D252C' />
-                                    </g>
-                                    <defs>
-                                        <clipPath id='clip0_49_84'>
-                                            <rect width='37.5' height='50' fill='white' />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
                             </div>
                         </div>
                         <!--Количество на складе-->
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>На складе СПБ:</div>
+                            <div class='warehouse-item-quantity__name'>Склад СПб в наличии </div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
                         <div class='<?php echo $quantityOzon > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
-                            <div class='warehouse-item-quantity__name'>На сладах ОЗОН:</div>
-                            <div class='warehouse-item-quantity__quantity'><?php echo $quantityOzon ?></div>
+                            <div class='warehouse-item-quantity__name'>Склад OZON в наличии </div>
+                            <div class='warehouse-item-quantity__quantity'>
+                                <?php echo $quantityOzon > 0? $quantityOzon : "0" ?>
+                            </div>
                             <div class='warehouse-item-quantity__discr'>шт.</div>
                         </div>
-                         <div class="delivery-block">
-                            <?php echo $quantity > 0 || $quantityOzon > 0 ? "" : 'На заказ: от ' .  $delivery . ' до ' . $delivery + 4 . ' нед. '?> 
+                        <div class="<?php echo $quantity == 0 && $quantityOzon == 0  ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null_delivery'?>">
+                            <?php echo "На заказ " . $deliveryTimeComponent . " по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
                         </div>
+                        <!--/Количество на складе-->
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>
                             <ul class='characteristics-block__list'>
@@ -298,9 +381,10 @@
                                 </li>
                             </ul>
                         </div>
+
                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
-                            <a href="https://www.ozon.ru/product/lc1d18m7-kontaktor-schneider-electric-3225715829/?at=J8tgEJoZRh8RWnABiA8XZgWhkMnor2tQZ0wBji2XNN0Z" id="button-link">
+                            <a href="<?php echo $ozonCardLink ?>" id="button-link">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОНе</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
@@ -311,6 +395,7 @@
                             <button class="button-characteristics__offer" style="width:100%;">Выбрать другой контактор</button>
                         </a>
                         <!--/ Кнопки купить в магазинах-->
+
                     </div>
                 </section>
                 <!--Форма заказа счета со страницы товара-->
@@ -357,133 +442,117 @@
                     <div class='attention-container'>
                         <div class='attention-section__title-block flex'>
                             <div class='attention-section-title-icon'>
-                                <svg width='24' height='24' viewBox='0 0 33 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                    <circle cx='15' cy='15' r='14.5' fill='#F3DE09' stroke='#1D252C' />
-                                    <line x1='8' y1='14.5' x2='23' y2='14.5' stroke='black' />
-                                    <line x1='15.5' y1='23' x2='15.5' y2='7' stroke='black' />
-                                    <line x1='25.3536' y1='25.6464' x2='32.4246' y2='32.7175' stroke='black' />
-                                </svg>
+                                <img src="../../img/attention-section-title-icon.svg" alt="A" class="attention-section-title-icon__icon">
                             </div>
-                            <div class='attention-section-title__title'>ОБРАТИТЕ ВНИМАНИЕ</div>
+                            <div class='attention-section-title__title'>ОПИСАНИЕ</div>
                         </div>
-                        <hr class='hr'>
+                       <hr class="attention-section__mobile-hr">
                         <div class='attention-section__discription'>
-                            <b>Контактор LC1D18M7 Schneider Electric</b> из серии <b>TeSys D</b> предназначен
-                            для надёжного управления электродвигателями и другими силовыми нагрузками
-                            в промышленной автоматике.
-
-                            <br><br>
-                            Устройство рассчитано на <b>номинальный ток 18 А</b> (категория AC-3) и
-                            оснащено катушкой управления <b>220 В AC</b> 50/60 Гц, что обеспечивает
-                            удобное дистанционное включение и отключение оборудования.
-
-                            <br><br>
-                            Трёхполюсная конфигурация с нормально разомкнутыми силовыми контактами
-                            и встроенные вспомогательные контакты <b>1 NO + 1 NC</b> позволяют применять
-                            LC1D18M7 в схемах пуска электродвигателей, защиты от перегрузок и комплексных
-                            системах управления.
-
-                            <br><br>
-                            Контактор рассчитан на рабочее напряжение до <b>690 В AC</b>, имеет компактные
-                            размеры и может устанавливаться на DIN-рейку или монтажную панель, что упрощает
-                            монтаж и обслуживание.
+                            <b>Контактор LC1D18M7 Schneider Electric из серии TeSys D предназначен для надёжного управления электродвигателями 
+                            и другими силовыми нагрузками в промышленной автоматике. Устройство рассчитано на номинальный ток 18 А (категория AC-3) и
+                            оснащено катушкой управления 220 В AC 50/60 Гц, что обеспечивает удобное дистанционное включение и отключение оборудования. 
+                            Трёхполюсная конфигурация с нормально разомкнутыми силовыми контактами и встроенные вспомогательные контакты 1 NO + 1 NC
+                            позволяют применять LC1D18M7 в схемах пуска электродвигателей, защиты от перегрузок и комплексных системах управления. 
+                            Контактор рассчитан на рабочее напряжение до 690 В AC, имеет компактные размеры и может устанавливаться на DIN-рейку или 
+                            монтажную панель, что упрощает монтаж и обслуживание.
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-        <div class='container' id='technical'>
-            <h3 class='mt-5'>Технические характеристики</h3>
-            <table class='table table-bordered table-striped mt-3'>
-                <thead class='table-secondary'>
-                    <tr>
-                        <th>Параметр</th>
-                        <th>Значение</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Производитель</td>
-                        <td>Schneider Electric</td>
-                    </tr>
-                    <tr>
-                        <td>Серия / Модель</td>
-                        <td>TeSys D / LC1D18M7</td>
-                    </tr>
-                    <tr>
-                        <td>Тип устройства</td>
-                        <td>Силовой контактор для электродвигателя и промышленных нагрузок</td>
-                    </tr>
-                    <tr>
-                        <td>Номинальный ток</td>
-                        <td>18 А (AC-3, управление двигателем)</td>
-                    </tr>
-                    <tr>
-                        <td>Напряжение катушки управления</td>
-                        <td>220 В AC 50/60 Гц</td>
-                    </tr>
-                    <tr>
-                        <td>Рабочее напряжение силовой цепи</td>
-                        <td>до 690 В AC</td>
-                    </tr>
-                    <tr>
-                        <td>Количество полюсов</td>
-                        <td>3 NO (3 нормально разомкнутых контакта)</td>
-                    </tr>
-                    <tr>
-                        <td>Вспомогательные контакты</td>
-                        <td>1 NO + 1 NC для схем управления и сигнализации</td>
-                    </tr>
-                    <tr>
-                        <td>Тип подключения</td>
-                        <td>Винтовой (Screw Clamp) – надёжное подключение проводов</td>
-                    </tr>
-                    <tr>
-                        <td>Тип крепления</td>
-                        <td>DIN-рейка NS 35 или винтовой монтаж в щит</td>
-                    </tr>
-                    <tr>
-                        <td>Габариты (Д × Ш × В)</td>
-                        <td>86 × 45 × 77 мм — компактный размер для щита управления</td>
-                    </tr>
-                    <tr>
-                        <td>Вес без упаковки</td>
-                        <td>330 г — лёгкий и удобный монтаж</td>
-                    </tr>
-                    <tr>
-                        <td>Степень защиты</td>
-                        <td>IP20 — защита от прикосновения и безопасная эксплуатация</td>
-                    </tr>
-                    <tr>
-                        <td>Рабочая температура</td>
-                        <td>-5 °C … +60 °C — подходит для промышленных условий</td>
-                    </tr>
-                    <tr>
-                        <td>Применение</td>
-                        <td>Пуск и остановка трёхфазных электродвигателей, управление насосами, вентиляторами, промышленными механизмами</td>
-                    </tr>
-                    <tr>
-                        <td>Особенности</td>
-                        <td>Компактный, надёжный, сертифицирован по международным стандартам IEC и UL, подходит для автоматизации и промышленных щитов</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
-            <ul class='files-and-documents-section__list'>
-                <li class='files-and-documents-section__item'>
-                    Общий каталог контакторов TeSys D (PDF) —
-                    <a href='../../files/LC1D18M7/tesysd_ct.pdf' target='_blank' rel='nofollow'>
-                        <b>Открыть</b>
-                    </a>
-                </li>
-                <li class='files-and-documents-section__item'>
-                    Электрическая схема подключения LC1D18M7 —
-                    <a href='../../files/LC1D18M7/schneider_electric_tesys-deca-contactors_LC1D18M7.pdf' target='_blank' rel='nofollow'>
-                        <b>Открыть</b>
-                    </a>
-                </li>
-            </ul>
+        <!--/ Технические характеристики-->
+        <div class='container technical-section' id='technical'>
+            <div class="technical-section__container section__container_technical">
+                <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
+                <div class="technical-specifications-section__table">
+                    <div class="technical-specifications-list">
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Заводской артикул</div>
+                            <div class="specifications-item__tech grey"><?php echo $article ?></div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name">Изготовитель</div>
+                            <div class="specifications-item__tech">Schneider Electric</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Серия</div>
+                            <div class="specifications-item__tech grey">TeSys D</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name">Тип устройства</div>
+                            <div class="specifications-item__tech">Силовой контактор</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Номинальный ток</div>
+                            <div class="specifications-item__tech grey">18 А (AC-3)</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name">Напряжение катушки управления</div>
+                            <div class="specifications-item__tech">220–240В (AC)</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Рабочее напряжение силовой цепи</div>
+                            <div class="specifications-item__tech grey">до 690В (AC)</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name">Количество силовых полюсов</div>
+                            <div class="specifications-item__tech">3 NO</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Вспомогательные контакты</div>
+                            <div class="specifications-item__tech grey">1 NO + 1 NC</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name">Тип подключения</div>
+                            <div class="specifications-item__tech">Винтовые зажимы</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Тип крепления</div>
+                            <div class="specifications-item__tech grey">DIN-рейка</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name">Габаритные размеры (Д × Ш × В)</div>
+                            <div class="specifications-item__tech">77 × 45 × 86 мм</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Вес (без упаковки)</div>
+                            <div class="specifications-item__tech grey">≈ 330 г</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name">Степень защиты</div>
+                            <div class="specifications-item__tech">IP20</div>
+                        </div>
+                        <div class="technical-specifications-list__item">
+                            <div class="specifications-item__name grey">Диапазон рабочих температур</div>
+                            <div class="specifications-item__tech grey">-5…+60 °C</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!--/ Технические характеристики-->
+        <!--Файлы и документы -->
+        <div class="document-section">
+            <div class="document-section__container">
+                <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
+                <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
+                <ul class='files-and-documents-section__list'>
+                    <li class='files-and-documents-section__item'>
+                        Общий каталог контакторов TeSys D (PDF) —
+                        <a href='../../files/LC1D18M7/tesysd_ct.pdf' target='_blank' rel='nofollow'>
+                            <b>Открыть</b>
+                        </a>
+                    </li>
+                    <li class='files-and-documents-section__item'>
+                        Электрическая схема подключения LC1D18M7 —
+                        <a href='../../files/LC1D18M7/schneider_electric_tesys-deca-contactors_LC1D18M7.pdf' target='_blank' rel='nofollow'>
+                            <b>Открыть</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/ Файлы и документы -->
         <section class="please-note-section">
             <div class="container please-note-section__container">
                 <h3 class="please-note-section__title">Пользователи выбирают:</h3>
@@ -544,7 +613,7 @@
 
                                     <div class="card-component__price-block">
                                         <div class="card-component__price">{$fmtPrice}</div>
-                                        <div class="card-component__price-nalog">в т.ч. НДС</div>
+                                        <div class="card-component__price-nalog">Без НДС</div>
                                     </div>
                                 </div>
                             </div>
@@ -559,17 +628,6 @@
                 </div>
             </div>
         </section>
-        <div class='container link-next-page'>
-            <div class='link-next-page__text'>
-                <span class="yellow-diamond"></span>
-                Рекомендуем заглянуть на следующую страницу товара:
-            </div>
-            <div class='prev-page-link'>
-                <a href='https://encomponent.ru/products/schneider/kontaktor-schneider-electric-dlya-upravleniya-dvigatelyami-LC1D25M7.php'>
-                    Здесь предоставлена информация о контакторе LC1D25M7.
-                </a>
-            </div>
-        </div>
     </main>
     <?php include '../../php/modules/footer.php' ?>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>

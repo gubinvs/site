@@ -7,6 +7,8 @@
     include "../../php/class/api_Connector.php";
 
     $article = "LC1D09M7"; // Основной артикул товара
+    $pageTitle = "LC1D09M7 — Электромеханический контактор Schneider Electric";
+    $ozonCardLink = "https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-tesys-d-lc1d09m7-9-a-katushka-230-v-ac-3424066591/?oos_search=false&sh=EkL4mR_oYw";
     $SKU = "3424066591"; // Идентификатор товара на ОЗОН
     $url = $apiServer . "/api/SearchArticle/" . urlencode($article);
     $urlApiServerSupply = $apiSupply . $article;
@@ -203,6 +205,7 @@
     <link rel='stylesheet' href='../../css/encomp-nku-project-style.css'>
     <link rel='stylesheet' href='../../css/page-products-style.css'>
     <link rel='stylesheet' href='../../css/encomp-nku-project-mobile-style.css'>
+    
     <!-- Yandex.Metrika counter -->
     <script>
         (function(m, e, t, r, i, k, a) {
@@ -229,6 +232,7 @@
             webvisor: true
         });
     </script>
+
     <!--Yandex.Metrika counter-->
     <noscript>
         <div>
@@ -236,6 +240,7 @@
         </div>
     </noscript>
     <!--/Yandex.Metrika counter-->
+    
 </head>
 
 <body>
@@ -244,6 +249,7 @@
         include_once '../../php/modules/header.php';
     ?>
     <main>
+        <!--Мобильная версия-->
         <section class="main-section__mobile main-section__mobile_top">
             <div class="mobile-container">
                 <div class="msm-backround-block">
@@ -251,11 +257,11 @@
                     <img src="../../img/img-product/logo-shneider-min.svg" alt="#" class="msm-bb-d__logo">
                     <img src="../../img/ch-znack.svg" alt="#" class="msm-bb-d__ch-znack">
                     <div class="msm-backround-block__discr-block">
-                        <div class="msm-bb-db__title">LC1D09M7</div>
+                        <div class="msm-bb-db__title"><?php echo $article ?></div>
                         <div class="msm-bb-db__discr_big">МАГНИТНЫЙ КОНТАКТОР</div>
                         <div class="msm-bb-db__discr_min">серия - TeSys D</div>
                         <div class="button-block-row">
-                            <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-tesys-d-lc1d09m7-9-a-katushka-230-v-ac-3424066591/?oos_search=false&sh=EkL4mR_oYw">
+                            <a href="<?php echo $ozonCardLink ?>">
                                 <div class='<?php echo $quantityOzon > 0 ? "msm-bb-db__button"  :  "msm-bb-db__button_null" ?>'>Купить в ОЗОН</div>
                             </a>
                             <div class='<?php echo $quantity > 0 ? "msm-bb-db__button_tut"  :  "msm-bb-db__button_null" ?>'>Купить сейчас</div>
@@ -288,9 +294,10 @@
                 
             </div>    
         </section>
+        <!--/ Мобильная версия-->
         <div class='discription-product-section'>
             <div class='container'>
-                <h1 class='discription-product-section__title NKUPages_h1'>LC1D09M7 — Электромеханический контактор Schneider Electric</h1>
+                <h1 class='discription-product-section__title NKUPages_h1'><?php echo $pageTitle ?></h1>
                 <section class='main-section main-section__desktop flex'>
                     <img src='../../img/img-product/LC1D09M7/contactor-LC1D09M7.jpg' alt='Контактор Schneider Electric LC1D09M7' class='msib-img'>
                     <div class='main-section__discription'>
@@ -304,6 +311,7 @@
                                 <?php echo number_format($price, 0, ',', ' '). '  ₽'; ?>
                             </div>
                         </div>
+                        <!--Количество на складе-->
                         <div class='<?php echo $quantity > 0 ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null' ?>'>
                             <div class='warehouse-item-quantity__name'>Склад СПб в наличии </div>
                             <div class='warehouse-item-quantity__quantity'><?php echo $quantity ?></div>
@@ -319,6 +327,7 @@
                         <div class="<?php echo $quantity == 0 && $quantityOzon == 0  ? 'warehouse-item-quantity' : 'warehouse-item-quantity warehouse-item-quantity__null_delivery'?>">
                             <?php echo "На заказ " . $deliveryTimeComponent . " по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
                         </div>
+                        <!--/ Количество на складе-->
                         <div class='characteristics-block'>
                             <div class='characteristics-block__title'>Основные характеристики:</div>
                             <ul class='characteristics-block__list'>
@@ -350,7 +359,7 @@
                         </div>
                         <!--Кнопки купить в магазинах-->
                         <div class="characteristics-block__button-block characteristics-block__button-block_offer flex">
-                            <a href="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-3424066591/?from_sku=3424066591&oos_search=false" id="button-link">
+                            <a href="<?php echo $ozonCardLink ?>">
                                 <button class="button-characteristics__all button-characteristics__ozon">Купить в ОЗОН</button>
                             </a>
                             <a href=<?php echo $shopURL . '/SearchResults?vendorCode=' . $article ?>>
@@ -426,6 +435,7 @@
                         </div>
                     </div>
                 </section>
+                <!--/ Технические характеристики-->
                 <div class='container technical-section' id='technical'>
                     <div class="technical-section__container section__container_technical">
                         <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
@@ -456,7 +466,7 @@
                                     <div class="specifications-item__tech">220–240В (AC)</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
-                                    <div class="specifications-item__name grey">Номинальное рабочее напряжение силовой цепи</div>
+                                    <div class="specifications-item__name grey">Рабочее напряжение силовой цепи</div>
                                     <div class="specifications-item__tech grey">до 690В (AC)</div>
                                 </div>
                                 <div class="technical-specifications-list__item">
@@ -495,6 +505,8 @@
                         </div>
                     </div>
                 </div>
+                <!--/ Технические характеристики-->
+                <!--Файлы и документы -->
                 <div class="document-section">
                     <div class="document-section__container">
                         <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
@@ -502,7 +514,7 @@
                         <ul class='files-and-documents-section__list'>
                             <li class='files-and-documents-section__item'>
                                 Общий каталог контакторов TeSys D (PDF) —
-                                <a href='../../files/LC1D09M7/schneider-Electric_TeSys-Deca-contactors_LC1D09M7.pdf' target='_blank' rel='nofollow'>
+                                <a href='../../files/LC1D18M7/tesysd_ct.pdf' target='_blank' rel='nofollow'>
                                     <b>Открыть</b>
                                 </a>
                             </li>
@@ -515,6 +527,7 @@
                         </ul>
                     </div>
                 </div>
+                <!--/ Файлы и документы -->
                 <section class="please-note-section">
                     <div class="container mobile-container please-note-section__container">
                         <h3 class="please-note-section__title">Пользователи выбирают:</h3>

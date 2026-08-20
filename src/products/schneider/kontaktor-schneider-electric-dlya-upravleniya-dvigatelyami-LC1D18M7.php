@@ -293,7 +293,6 @@
                         <?php echo "На заказ " . $deliveryTimeComponent . "<br>" ." по цене " .   number_format($priceComponent, 0, ',', ' '). '  ₽'; ?> 
                     </div>             
                 </div>
-                
             </div>    
         </section>
         <!--/ Мобильная версия-->
@@ -461,7 +460,7 @@
             </div>
         </div>
         <!--/ Технические характеристики-->
-        <div class='container technical-section' id='technical'>
+        <section class='container technical-section' id='technical'>
             <div class="technical-section__container section__container_technical">
                 <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
                 <div class="technical-specifications-section__table">
@@ -529,11 +528,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!--/ Технические характеристики-->
-        <!--Файлы и документы -->
-        <div class="document-section">
-            <div class="document-section__container">
+        <!--Файлы и документы --> 
+        <section class="document-section container">
+            <div class="container document-section__container">
                 <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
                 <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
                 <ul class='files-and-documents-section__list'>
@@ -551,7 +550,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
         <!--/ Файлы и документы -->
         <section class="please-note-section">
             <div class="container please-note-section__container">

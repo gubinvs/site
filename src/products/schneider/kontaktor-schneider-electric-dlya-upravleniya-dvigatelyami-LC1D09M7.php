@@ -436,7 +436,7 @@
                     </div>
                 </section>
                 <!--/ Технические характеристики-->
-                <div class='container technical-section' id='technical'>
+                <section class='container technical-section' id='technical'>
                     <div class="technical-section__container section__container_technical">
                         <h3 class='mt-5 technical-section__title'>Технические характеристики</h3>
                         <div class="technical-specifications-section__table">
@@ -504,10 +504,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!--/ Технические характеристики-->
                 <!--Файлы и документы -->
-                <div class="document-section">
+                <section class="document-section container">
                     <div class="document-section__container">
                         <img src="../../img/file-img.png" alt="Документы" class="document-section__img">
                         <h3 class='files-and-documents-section__title'>Файлы и документы</h3>
@@ -526,7 +526,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </section>
                 <!--/ Файлы и документы -->
                 <section class="please-note-section">
                     <div class="container mobile-container please-note-section__container">

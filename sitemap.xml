@@ -5,5 +5,29 @@
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
-  
+  <url>
+    <loc>https://en-market.ru/products/katalog-kontaktory-i-magnitnye-puskateli==chapterContactor.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://en-market.ru/products/katalog-programmiruemyh-kontroleerov-plk-ili-blokov-bazovyh==chapterPlk.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://en-market.ru/products/katalog-rubilnikov-avtomaticheskih-i-differencirovannyh-avtomatov==chapterSch</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://en-market.ru/products/katalog-istochnikov-pitaniya==chapterBp.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://en-market.ru/products/katalog-modulej-rasshireniya-dlya-plk==chapterMplk.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
 </urlset>

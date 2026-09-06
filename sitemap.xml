@@ -16,7 +16,7 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://en-market.ru/products/katalog-rubilnikov-avtomaticheskih-i-differencirovannyh-avtomatov==chapterSch</loc>
+    <loc>https://en-market.ru/products/katalog-rubilnikov-avtomaticheskih-i-differencirovannyh-avtomatov==chapterSch.html</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -27,6 +27,11 @@
   </url>
   <url>
     <loc>https://en-market.ru/products/katalog-modulej-rasshireniya-dlya-plk==chapterMplk.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://en-market.ru/products/katalog-elektrotehnicheskogo-oborudovaniya-komponentov-energii==catalog.html</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>

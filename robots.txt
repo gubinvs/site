@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /products/
 Allow: /products/phoenix/
 Allow: /products/schneider/
-Sitemap: https://en-market.ru/sitemap.xml
+Sitemap: https://ec-market.ru/sitemap.xml

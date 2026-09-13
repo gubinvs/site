@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Формирование данных товара</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .array-row {
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        #result {
+            min-height: 500px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container py-4">
+    <h1 class="mb-4">Формирование данных товара</h1>
+    <!-- =====================================================
+         ОСНОВНЫЕ ДАННЫЕ
+    ====================================================== -->
+    <div class="card">
+        <div class="card-header"><strong>Основные данные</strong></div>
+        <div class="card-body">
+            <div class="row g-3">
+                <!-- Артикул -->
+                <div class="col-md-4">
+                    <label class="form-label">Артикул</label>
+                    <input type="text" class="form-control" id="vendorCode" value="LC1D32M7">
+                </div>
+                <!-- Производитель -->
+                <div class="col-md-6">
+                    <label class="form-label">Производитель</label>
+                    <input type="text" class="form-control" id="manufacturer" value="Schneider Electric">
+                </div>
+                <!-- Название -->
+                <div class="col-12">
+                    <label class="form-label">Название товара</label>
+                    <input type="text" class="form-control" id="nameComponent" value="Электромеханический контактор - Schneider Electric">
+                </div>
+                <!-- Основное изображение -->
+                <div class="col-md-8">
+                    <label class="form-label">Основное изображение</label>
+                    <input type="text" class="form-control" id="mainImagePage" value="https://encomponent.ru/img/img-product/LC1D09M7/contactor-LC1D09M7.jpg">
+                </div>
+                <!-- Страна -->
+                <div class="col-md-4">
+                    <label class="form-label">Страна производитель</label>
+                    <input type="text" class="form-control" id="origin" value="Франция">
+                </div>
+                <!-- Количество -->
+                <div class="col-md-4">
+                    <label class="form-label">Количество</label>
+                    <input type="number" class="form-control" id="quantity" value="5">
+                </div>
+                <!-- Срок поставки -->
+                <div class="col-md-4">
+                    <label class="form-label">Срок поставки</label>
+                    <input type="number" class="form-control" id="deliveryTime" value="1">
+                </div>
+                <!-- Цена -->
+                <div class="col-md-4">
+                    <label class="form-label">Цена</label>
+                    <input type="number" class="form-control" id="price" value="999500">
+                </div>
+                <!-- Bestseller -->
+                <div class="col-md-4">
+                    <label class="form-label">Bestseller</label>
+                    <select class="form-select" id="bestseller">
+                        <option value="0">Нет</option>
+                        <option value="1">Да</option>
+                    </select>
+                </div>
+                <!-- Раздел -->
+                <div class="col-md-4">
+                    <label class="form-label">Раздел</label>
+                    <select class="form-select" id="chapter">
+                        <option value="Модульное оборудование">Модульное оборудование</option>
+                        <option value="Блоки питания">Блоки питания</option>
+                        <option value="Средства монтажа">Средства монтажа</option>
+                        <option value="Автоматические выключатели">Автоматические выключатели</option>
+                        <option value="Программируемые контроллеры">Программируемые контроллеры</option>
+                        <option value="Модули расширения">Модули расширения</option>
+                        <option value="Индикация">Индикация</option>
+                        <option value="Реле и аксессуары">Реле и аксессуары</option>
+                        <option value="Устройства плавного пуска">Устройства плавного пуска</option>
+                        <option value="Средства измерения и учета">Средства измерения и учета</option>
+                        <option value="Оборудование высоковольтное">Оборудование высоковольтное</option>
+                        <option value="Преобразователи частоты">Преобразователи частоты</option>
+                        <option value="Инструмент электромонтажный">Инструмент электромонтажный</option>
+                        <option value="Корпуса">Корпуса</option>
+                        <option value="Силовые контакторы" selected>Силовые контакторы</option>
+                        <option value="Типовые НКУ">Типовые НКУ</option>
+                    </select>
+                </div>
+                <!-- Ozon -->
+                <div class="col-12">
+
+                    <label class="form-label">
+                        Ссылка Ozon
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="ozonLink"
+                        value="https://www.ozon.ru/product/lc1d09m7-kontaktor-schneider-electric-tesys-d-lc1d09m7-9-a-katushka-230-v-ac-3424066591/"
+                    >
+
+                </div>
+
+
+
+                <!-- Описание -->
+
+                <div class="col-12">
+
+                    <label class="form-label">
+                        Описание товара
+                    </label>
+
+                    <textarea
+                        class="form-control"
+                        id="productDescription"
+                        rows="8"
+                    >Контактор Schneider Electric LC1D25M7 из линейки TeSys D представляет собой компактный трехполюсный коммутационный аппарат, разработанный для надежного дистанционного управления силовыми электрическими цепями. Данное устройство широко применяется в промышленной автоматизации, системах вентиляции, кондиционирования и водоснабжения для прямого пуска, остановки и реверсирования трехфазных асинхронных электродвигателей, а также для коммутации других индуктивных и резистивных нагрузок.</textarea>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ДОПОЛНИТЕЛЬНЫЕ ИЗОБРАЖЕНИЯ
+    ====================================================== -->
+
+    <div class="card">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+
+            <strong>
+                Дополнительные изображения
+            </strong>
+
+        </div>
+
+
+        <div
+            class="card-body"
+            id="images"
+        >
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-11">
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="https://encomponent.ru/img/img-product/LC1D09M7/contactor-LC1D09M7.jpg"
+                        data-image
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-11">
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="https://encomponent.ru/img/img-product/LC1D18M7/contactor-LC1D18M7.jpg"
+                        data-image
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-11">
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="https://encomponent.ru/img/img-product/LC1D25M7/contactor-LC1D25M7.jpg"
+                        data-image
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ПАРАМЕТРЫ
+    ====================================================== -->
+
+    <div class="card">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+
+            <strong>
+                Параметры
+            </strong>
+
+            <button
+                type="button"
+                class="btn btn-sm btn-primary"
+                onclick="addParameter()"
+            >
+                + Добавить
+            </button>
+
+        </div>
+
+
+        <div
+            class="card-body"
+            id="parameters"
+        >
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-5">
+
+                    <input
+                        class="form-control"
+                        value="Серия:"
+                        data-name
+                    >
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input
+                        class="form-control"
+                        value="TeSys D"
+                        data-param
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-5">
+
+                    <input
+                        class="form-control"
+                        value="Номинальный ток:"
+                        data-name
+                    >
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input
+                        class="form-control"
+                        value="9 А (AC-3)"
+                        data-param
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         СКЛАД
+    ====================================================== -->
+
+    <div class="card">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+
+            <strong>
+                Склады
+            </strong>
+
+            <button
+                type="button"
+                class="btn btn-sm btn-primary"
+                onclick="addWarehouse()"
+            >
+                + Добавить
+            </button>
+
+        </div>
+
+
+        <div
+            class="card-body"
+            id="warehouse"
+        >
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-8">
+
+                    <input
+                        class="form-control"
+                        value="Санкт-Петербург:"
+                        data-warehouse-name
+                    >
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <input
+                        type="number"
+                        class="form-control"
+                        value="4"
+                        data-warehouse-quantity
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-8">
+
+                    <input
+                        class="form-control"
+                        value="ОЗОН:"
+                        data-warehouse-name
+                    >
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <input
+                        type="number"
+                        class="form-control"
+                        value="6"
+                        data-warehouse-quantity
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ХАРАКТЕРИСТИКИ
+    ====================================================== -->
+
+    <div class="card">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+
+            <strong>
+                Характеристики
+            </strong>
+
+            <button
+                type="button"
+                class="btn btn-sm btn-primary"
+                onclick="addCharacteristic()"
+            >
+                + Добавить
+            </button>
+
+        </div>
+
+
+        <div
+            class="card-body"
+            id="characteristics"
+        >
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-5">
+
+                    <input
+                        class="form-control"
+                        value="Заводской артикул"
+                        data-characteristic-name
+                    >
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input
+                        class="form-control"
+                        value="LC1D18M7"
+                        data-characteristic-value
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-5">
+
+                    <input
+                        class="form-control"
+                        value="Бренд"
+                        data-characteristic-name
+                    >
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input
+                        class="form-control"
+                        value="TeSys D"
+                        data-characteristic-value
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-5">
+
+                    <input
+                        class="form-control"
+                        value="Тип устройства"
+                        data-characteristic-name
+                    >
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input
+                        class="form-control"
+                        value="Силовой контактор"
+                        data-characteristic-value
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ФАЙЛЫ
+    ====================================================== -->
+
+    <div class="card">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+
+            <strong>
+                Файлы
+            </strong>
+
+            <button
+                type="button"
+                class="btn btn-sm btn-primary"
+                onclick="addFile()"
+            >
+                + Добавить
+            </button>
+
+        </div>
+
+
+        <div
+            class="card-body"
+            id="files"
+        >
+
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-5">
+
+                    <input
+                        class="form-control"
+                        value="Общий каталог контакторов TeSys D (PDF)"
+                        data-file-name
+                    >
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input
+                        class="form-control"
+                        value="https://encomponent.ru/files/LC1D18M7/tesysd_ct.pdf"
+                        data-file-link
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="row g-2 mb-2">
+
+                <div class="col-md-5">
+
+                    <input
+                        class="form-control"
+                        value="Электрическая схема подключения LC1D18M7"
+                        data-file-name
+                    >
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input
+                        class="form-control"
+                        value="https://encomponent.ru/files/LC1D18M7/schneider_electric_tesys-deca-contactors_LC1D18M7.pdf"
+                        data-file-link
+                    >
+
+                </div>
+
+                <div class="col-md-1">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger w-100"
+                        onclick="removeRow(this)"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         КНОПКИ
+    ====================================================== -->
+
+    <div class="d-flex gap-2 mb-4">
+
+        <button
+            type="button"
+            class="btn btn-success btn-lg"
+            onclick="generateJSON()"
+        >
+            Сформировать JSON
+        </button>
+
+
+        <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            onclick="sendToAPI()"
+        >
+            Отправить на API
+        </button>
+
+
+        <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg"
+            onclick="copyJSON()"
+        >
+            Копировать JSON
+        </button>
+
+
+        <button
+            type="button"
+            class="btn btn-outline-danger btn-lg"
+            onclick="clearJSON()"
+        >
+            Очистить
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         РЕЗУЛЬТАТ JSON
+    ====================================================== -->
+
+    <div class="card mb-5">
+
+        <div class="card-header">
+
+            <strong>
+                JSON — проверить перед отправкой
+            </strong>
+
+        </div>
+
+
+        <div class="card-body">
+
+            <textarea
+                id="result"
+                class="form-control"
+                rows="25"
+                spellcheck="false"
+            ></textarea>
+
+
+            <div
+                id="apiResult"
+                class="mt-3"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================================
+   УДАЛЕНИЕ СТРОКИ
+========================================================= */
+
+function removeRow(button) {
+
+    const row = button.closest(".row");
+
+    if (row) {
+
+        row.remove();
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ДОПОЛНИТЕЛЬНЫЕ ИЗОБРАЖЕНИЯ
+========================================================= */
+
+function addImage() {
+
+    const container =
+        document.getElementById("images");
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "row g-2 mb-2";
+
+    row.innerHTML = `
+
+        <div class="col-md-11">
+
+            <input
+                type="text"
+                class="form-control"
+                placeholder="URL изображения"
+                data-image
+            >
+
+        </div>
+
+        <div class="col-md-1">
+
+            <button
+                type="button"
+                class="btn btn-outline-danger w-100"
+                onclick="removeRow(this)"
+            >
+                ×
+            </button>
+
+        </div>
+
+    `;
+
+    container.appendChild(row);
+
+}
+
+
+
+/* =========================================================
+   ПАРАМЕТРЫ
+========================================================= */
+
+function addParameter() {
+
+    const container =
+        document.getElementById("parameters");
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "row g-2 mb-2";
+
+    row.innerHTML = `
+
+        <div class="col-md-5">
+
+            <input
+                class="form-control"
+                placeholder="Название"
+                data-name
+            >
+
+        </div>
+
+        <div class="col-md-6">
+
+            <input
+                class="form-control"
+                placeholder="Значение"
+                data-param
+            >
+
+        </div>
+
+        <div class="col-md-1">
+
+            <button
+                type="button"
+                class="btn btn-outline-danger w-100"
+                onclick="removeRow(this)"
+            >
+                ×
+            </button>
+
+        </div>
+
+    `;
+
+    container.appendChild(row);
+
+}
+
+
+
+/* =========================================================
+   СКЛАД
+========================================================= */
+
+function addWarehouse() {
+
+    const container =
+        document.getElementById("warehouse");
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "row g-2 mb-2";
+
+    row.innerHTML = `
+
+        <div class="col-md-8">
+
+            <input
+                class="form-control"
+                placeholder="Название склада"
+                data-warehouse-name
+            >
+
+        </div>
+
+        <div class="col-md-3">
+
+            <input
+                type="number"
+                class="form-control"
+                placeholder="Количество"
+                data-warehouse-quantity
+            >
+
+        </div>
+
+        <div class="col-md-1">
+
+            <button
+                type="button"
+                class="btn btn-outline-danger w-100"
+                onclick="removeRow(this)"
+            >
+                ×
+            </button>
+
+        </div>
+
+    `;
+
+    container.appendChild(row);
+
+}
+
+
+
+/* =========================================================
+   ХАРАКТЕРИСТИКИ
+========================================================= */
+
+function addCharacteristic() {
+
+    const container =
+        document.getElementById("characteristics");
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "row g-2 mb-2";
+
+    row.innerHTML = `
+
+        <div class="col-md-5">
+
+            <input
+                class="form-control"
+                placeholder="Название характеристики"
+                data-characteristic-name
+            >
+
+        </div>
+
+        <div class="col-md-6">
+
+            <input
+                class="form-control"
+                placeholder="Значение"
+                data-characteristic-value
+            >
+
+        </div>
+
+        <div class="col-md-1">
+
+            <button
+                type="button"
+                class="btn btn-outline-danger w-100"
+                onclick="removeRow(this)"
+            >
+                ×
+            </button>
+
+        </div>
+
+    `;
+
+    container.appendChild(row);
+
+}
+
+
+
+/* =========================================================
+   ФАЙЛЫ
+========================================================= */
+
+function addFile() {
+
+    const container =
+        document.getElementById("files");
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "row g-2 mb-2";
+
+    row.innerHTML = `
+
+        <div class="col-md-5">
+
+            <input
+                class="form-control"
+                placeholder="Название файла"
+                data-file-name
+            >
+
+        </div>
+
+        <div class="col-md-6">
+
+            <input
+                class="form-control"
+                placeholder="URL файла"
+                data-file-link
+            >
+
+        </div>
+
+        <div class="col-md-1">
+
+            <button
+                type="button"
+                class="btn btn-outline-danger w-100"
+                onclick="removeRow(this)"
+            >
+                ×
+            </button>
+
+        </div>
+
+    `;
+
+    container.appendChild(row);
+
+}
+
+
+
+/* =========================================================
+   ПОЛУЧЕНИЕ ДАННЫХ ФОРМЫ
+========================================================= */
+
+function getProductData() {
+
+
+    /* -----------------------------------------------------
+       Дополнительные изображения
+    ----------------------------------------------------- */
+
+    const dopImages = [];
+
+    document
+        .querySelectorAll("[data-image]")
+        .forEach(input => {
+
+            const value =
+                input.value.trim();
+
+            if (value) {
+
+                dopImages.push(value);
+
+            }
+
+        });
+
+
+
+    /* -----------------------------------------------------
+       Параметры
+    ----------------------------------------------------- */
+
+    const discriptionParam = [];
+
+    document
+        .querySelectorAll("#parameters .row")
+        .forEach(row => {
+
+            const name =
+                row.querySelector(
+                    "[data-name]"
+                )?.value.trim() || "";
+
+            const param =
+                row.querySelector(
+                    "[data-param]"
+                )?.value.trim() || "";
+
+
+            if (name || param) {
+
+                discriptionParam.push({
+
+                    name: name,
+
+                    param: param
+
+                });
+
+            }
+
+        });
+
+
+
+    /* -----------------------------------------------------
+       Склады
+    ----------------------------------------------------- */
+
+    const warehouse = [];
+
+    document
+        .querySelectorAll("#warehouse .row")
+        .forEach(row => {
+
+            const name =
+                row.querySelector(
+                    "[data-warehouse-name]"
+                )?.value.trim() || "";
+
+
+            const quantity =
+                Number(
+                    row.querySelector(
+                        "[data-warehouse-quantity]"
+                    )?.value || 0
+                );
+
+
+            if (name) {
+
+                warehouse.push({
+
+                    name: name,
+
+                    quantity: quantity
+
+                });
+
+            }
+
+        });
+
+
+
+    /* -----------------------------------------------------
+       Характеристики
+    ----------------------------------------------------- */
+
+    const characteristics = [];
+
+    document
+        .querySelectorAll("#characteristics .row")
+        .forEach(row => {
+
+            const name =
+                row.querySelector(
+                    "[data-characteristic-name]"
+                )?.value.trim() || "";
+
+
+            const characteristic =
+                row.querySelector(
+                    "[data-characteristic-value]"
+                )?.value.trim() || "";
+
+
+            if (name || characteristic) {
+
+                characteristics.push({
+
+                    name: name,
+
+                    characteristic:
+                        characteristic
+
+                });
+
+            }
+
+        });
+
+
+
+    /* -----------------------------------------------------
+       Файлы
+    ----------------------------------------------------- */
+
+    const file = [];
+
+    document
+        .querySelectorAll("#files .row")
+        .forEach(row => {
+
+            const name =
+                row.querySelector(
+                    "[data-file-name]"
+                )?.value.trim() || "";
+
+
+            const link =
+                row.querySelector(
+                    "[data-file-link]"
+                )?.value.trim() || "";
+
+
+            if (name || link) {
+
+                file.push({
+
+                    name: name,
+
+                    link: link
+
+                });
+
+            }
+
+        });
+
+
+
+    /* -----------------------------------------------------
+       Итоговый объект
+    ----------------------------------------------------- */
+
+    return {
+
+
+        mainImagePage:
+            document.getElementById(
+                "mainImagePage"
+            ).value.trim(),
+
+
+        vendorCode:
+            document.getElementById(
+                "vendorCode"
+            ).value.trim(),
+
+
+        nameComponent:
+            document.getElementById(
+                "nameComponent"
+            ).value.trim(),
+
+
+        manufacturer:
+            document.getElementById(
+                "manufacturer"
+            ).value.trim(),
+
+
+        quantity:
+            Number(
+                document.getElementById(
+                    "quantity"
+                ).value
+            ),
+
+
+        deliveryТime:
+            Number(
+                document.getElementById(
+                    "deliveryTime"
+                ).value
+            ),
+
+
+        price:
+            Number(
+                document.getElementById(
+                    "price"
+                ).value
+            ),
+
+
+        bestseller:
+            Number(
+                document.getElementById(
+                    "bestseller"
+                ).value
+            ),
+
+
+        chapter:
+            document.getElementById(
+                "chapter"
+            ).value,
+
+        productDescription:
+            document.getElementById(
+                "productDescription"
+            ).value.trim(),
+
+
+        origin:
+            document.getElementById(
+                "origin"
+            ).value.trim(),
+
+
+        ozonLink:
+            document.getElementById(
+                "ozonLink"
+            ).value.trim(),
+
+
+        dopImages:
+            dopImages,
+
+
+        discriptionParam:
+            discriptionParam,
+
+
+        warehouse:
+            warehouse,
+
+
+        characteristics:
+            characteristics,
+
+
+        file:
+            file
+
+    };
+
+}
+
+
+
+/* =========================================================
+   СФОРМИРОВАТЬ JSON
+========================================================= */
+
+function generateJSON() {
+
+    const product =
+        getProductData();
+
+
+    document.getElementById(
+        "result"
+    ).value = JSON.stringify(
+        product,
+        null,
+        4
+    );
+
+}
+
+
+
+/* =========================================================
+   КОПИРОВАТЬ JSON
+========================================================= */
+
+async function copyJSON() {
+
+    const result =
+        document.getElementById(
+            "result"
+        );
+
+
+    if (!result.value.trim()) {
+
+        generateJSON();
+
+    }
+
+
+    try {
+
+        await navigator.clipboard.writeText(
+            result.value
+        );
+
+
+        showAPIMessage(
+            "JSON скопирован в буфер обмена.",
+            "success"
+        );
+
+
+    } catch (error) {
+
+        showAPIMessage(
+            "Не удалось скопировать JSON.",
+            "danger"
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ОТПРАВКА НА API
+========================================================= */
+
+async function sendToAPI() {
+
+
+    const result =
+        document.getElementById(
+            "result"
+        );
+
+
+    /*
+        Если JSON ещё не сформирован,
+        формируем его автоматически.
+    */
+
+    if (!result.value.trim()) {
+
+        generateJSON();
+
+    }
+
+
+    let product;
+
+
+    /*
+        Проверяем JSON
+    */
+
+    try {
+
+        product =
+            JSON.parse(
+                result.value
+            );
+
+    } catch (error) {
+
+        showAPIMessage(
+            "Ошибка: JSON имеет неправильный формат.",
+            "danger"
+        );
+
+        return;
+
+    }
+
+
+
+    /*
+        =====================================================
+        ВАЖНО
+
+        Здесь указываем реальный адрес
+        твоего ASP.NET API.
+        =====================================================
+    */
+
+    const API_URL =
+        "https://твой-api.ru/api/products";
+
+
+
+    /*
+        Отправляем JSON
+    */
+
+    try {
+
+        showAPIMessage(
+            "Отправка данных...",
+            "info"
+        );
+
+
+        const response =
+            await fetch(
+                API_URL,
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body:
+                        JSON.stringify(product)
+
+                }
+            );
+
+
+
+        /*
+            Проверяем HTTP статус
+        */
+
+        if (!response.ok) {
+
+            const errorText =
+                await response.text();
+
+
+            throw new Error(
+                "HTTP " +
+                response.status +
+                ": " +
+                errorText
+            );
+
+        }
+
+
+
+        /*
+            Пытаемся получить ответ JSON
+        */
+
+        let data = null;
+
+
+        try {
+
+            data =
+                await response.json();
+
+        } catch {
+
+            data = null;
+
+        }
+
+        showAPIMessage(
+            "Товар успешно отправлен на API.",
+            "success"
+        );
+
+
+        console.log(
+            "Ответ API:",
+            data
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Ошибка API:",
+            error
+        );
+
+
+        showAPIMessage(
+            "Ошибка отправки: " +
+            error.message,
+            "danger"
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   СООБЩЕНИЕ API
+========================================================= */
+
+function showAPIMessage(
+    message,
+    type
+) {
+
+    document.getElementById(
+        "apiResult"
+    ).innerHTML = `
+
+        <div class="alert alert-${type}">
+            ${message}
+        </div>
+
+    `;
+
+}
+
+
+
+/* =========================================================
+   ОЧИСТИТЬ JSON
+========================================================= */
+
+function clearJSON() {
+
+    document.getElementById(
+        "result"
+    ).value = "";
+
+
+    document.getElementById(
+        "apiResult"
+    ).innerHTML = "";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

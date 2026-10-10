@@ -35,4 +35,14 @@
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
+  <url>
+    <loc>https://ec-market.ru/about.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+    <url>
+    <loc>https://ec-market.ru/payment-and-delivery.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
 </urlset>
